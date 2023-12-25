@@ -1,0 +1,135 @@
+# ~/.config/starship.toml
+format = """
+$username\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$c\
+$cmake\
+$rust\
+$python\
+$memory_usage\
+$cmd_duration\
+$fill\
+$time\
+$line_break\
+$character"""
+
+add_newline = true
+
+[fill]
+symbol = ' '
+style = 'bold green'
+
+[username]
+style_root = 'bold red'
+style_user = 'bold yellow'
+show_always = true
+disabled = true
+format = '[$user]($style) '
+
+[directory]
+truncation_length = 6
+truncate_to_repo = false
+style = 'bold cyan'
+disabled = false
+read_only = ' 🔒'
+read_only_style = 'red'
+truncation_symbol = ''
+home_symbol = '~'
+use_os_path_sep = true
+repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+format = '[$path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+always_show_remote = false
+symbol = ' '
+style = 'bold purple'
+# truncation_length = 2^63 - 1
+truncation_symbol = '…'
+only_attached = false
+ignore_branches = []
+disabled = false
+format = '[on $symbol$branch(:$remote_branch)]($style) '
+
+[git_commit]
+commit_hash_length = 7
+style = 'bold green'
+only_detached = true
+tag_disabled = true
+tag_max_candidates = 0
+tag_symbol = ' 🏷 '
+disabled = false
+format = '[\($hash$tag\)]($style) '
+
+[git_status]
+disabled = true
+
+[c]
+version_format = 'v${raw}'
+detect_extensions = ["c", "h", "cc", "cpp", "hh", "hpp", "cxx", ".H", ".C"]
+detect_files = []
+detect_folders = []
+commands = [ [ 'clang', '--version' ] ]
+style = 'bold 148'
+format = '[C/C++ $name $version]($style) '
+
+[cmake]
+version_format = 'v${raw}'
+symbol = '△ '
+detect_extensions = []
+detect_files = ['CMakeLists.txt', 'CMakeCache.txt']
+detect_folders = []
+style = 'bold blue'
+format = '[cmake ($version )]($style)'
+
+[rust]
+version_format = 'v${raw}'
+symbol = '🦀 '
+detect_extensions = ['rs', 'rlib']
+detect_files = ['Cargo.toml', 'Cargo.lock']
+detect_folders = []
+style = 'bold red'
+disabled = false
+format = '[rust ($version )]($style)'
+
+[python]
+version_format = 'v${raw}'
+symbol = '🐍 '
+style = 'green bold'
+pyenv_version_name = false
+# pyenv_prefix = pyenv
+python_binary = ['python', 'python3']
+detect_extensions = ['py']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini']
+detect_folders = []
+disabled = false
+format = '[python ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[memory_usage]
+threshold = 75
+symbol = '🐏'
+style = 'bold dimmed white'
+disabled = false
+format = '[memory ${ram}( / swap ${swap})]($style) '
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+style = 'bold yellow'
+disabled = false
+show_notifications = false
+min_time_to_notify = 45_000
+format = '[took $duration]($style) '
+
+[line_break]
+disabled = false
+
+[time]
+use_12hr = true
+style = 'bold yellow'
+utc_time_offset = 'local'
+disabled = false
+time_range = '-'
+format = '[$time]($style) '
