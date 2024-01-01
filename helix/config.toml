@@ -3,7 +3,7 @@ theme = "dracula"
 [editor]
 scrolloff = 8
 mouse = false
-line-number = "always-relative"
+line-number = "relative"
 cursorline = true
 auto-completion = false
 auto-format = false
