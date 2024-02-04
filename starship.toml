@@ -12,9 +12,9 @@ $python\
 $memory_usage\
 $cmd_duration\
 $fill\
-$time\
 $line_break\
 $character"""
+#$time\
 
 add_newline = true
 

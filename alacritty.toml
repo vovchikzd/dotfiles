@@ -1,11 +1,12 @@
-[colors]
-background = "#1d1f21"
-bright_foreground = "#eaeaea"
-dim_foreground = "#828482"
-foreground = "#c5c8c6"
+working_directory = '/home/vovchik'
+# [colors]
+# background = "#1d1f21"
+# bright_foreground = "#eaeaea"
+# dim_foreground = "#828482"
+# foreground = "#c5c8c6"
 
 [font]
-size = 14
+size = 9
 
 [font.bold]
 family = "HackNerdFont"

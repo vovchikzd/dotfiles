@@ -1,7 +1,9 @@
 theme = "dracula"
+# theme = 'gruber-darker'
+# theme = 'gruvbox_dark_hard'
 
 [editor]
-scrolloff = 8
+scrolloff = 18
 mouse = false
 line-number = "relative"
 cursorline = true
@@ -45,3 +47,8 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+
