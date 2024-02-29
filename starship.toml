@@ -68,7 +68,7 @@ disabled = true
 
 [c]
 version_format = 'v${raw}'
-detect_extensions = ["c", "h", "cc", "cpp", "hh", "hpp", "cxx", ".H", ".C"]
+detect_extensions = ["c", "h", "cc", "cpp", "hh", "hpp", "cxx", ".H", ".C", ".cppm", ".pcm"]
 detect_files = []
 detect_folders = []
 commands = [ [ 'clang', '--version' ] ]
