@@ -1,5 +1,4 @@
-﻿---
-BasedOnStyle: Google
+﻿BasedOnStyle: Google
 AccessModifierOffset: '-2'
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: 'true'
@@ -48,5 +47,3 @@ SpacesInContainerLiterals: 'false'
 SpacesInParentheses: 'false'
 SpacesInSquareBrackets: 'false'
 UseTab: Never
-
-...
