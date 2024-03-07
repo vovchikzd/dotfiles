@@ -29,6 +29,7 @@ IndentCaseLabels: 'true'
 IndentWidth: '2'
 Language: Cpp
 NamespaceIndentation: All
+DerivePointerAlignment: 'false'
 PointerAlignment: Left
 SortIncludes: 'true'
 SortUsingDeclarations: 'true'
