@@ -6,7 +6,7 @@ working_directory = '/home/vovchik'
 # foreground = "#c5c8c6"
 
 [font]
-size = 9
+size = 14
 
 [font.bold]
 family = "HackNerdFont"
