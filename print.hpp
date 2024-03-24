@@ -25,5 +25,5 @@ void eprintln(std::format_string<Args...> str, Args&&... args) {
   std::println(stderr, str, std::forward<Args>(args)...);
 }
 
-#endif // __cplusplus
-#endif // MY_PRINT_WRAPPER__
+#endif  // __cplusplus
+#endif  // MY_PRINT_WRAPPER__
