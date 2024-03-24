@@ -7,22 +7,22 @@
 
 template <typename... Args>
 void print(std::format_string<Args...> str, Args&&... args) {
-  std::print(stdout, str, std::forward<Args>(args)...);
+  std::print(stdout, std::move(str), std::forward<Args>(args)...);
 }
 
 template <typename... Args>
 void eprint(std::format_string<Args...> str, Args&&... args) {
-  std::print(stderr, str, std::forward<Args>(args)...);
+  std::print(stderr, std::move(str), std::forward<Args>(args)...);
 }
 
 template <typename... Args>
 void println(std::format_string<Args...> str, Args&&... args) {
-  std::println(stdout, str, std::forward<Args>(args)...);
+  std::println(stdout, std::move(str), std::forward<Args>(args)...);
 }
 
 template <typename... Args>
 void eprintln(std::format_string<Args...> str, Args&&... args) {
-  std::println(stderr, str, std::forward<Args>(args)...);
+  std::println(stderr, std::move(str), std::forward<Args>(args)...);
 }
 
 #endif  // __cplusplus
