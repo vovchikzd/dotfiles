@@ -1,7 +1,7 @@
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'dracula',
+local opts = {
+    options = {
+    icons_enabled = false,
+    theme = "dracula",
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -36,5 +36,12 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = {},
+}
+
+return {
+  "nvim-lualine/lualine.nvim",
+  config = function()
+    require("lualine").setup(opts)
+  end
 }

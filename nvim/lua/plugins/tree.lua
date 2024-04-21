@@ -18,18 +18,29 @@ local function my_on_attach(bufnr)
   vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
 end
 
-require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    width = 26,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-  on_attach = my_on_attach,
-})
+local opts = { noremap = true, silent = true}
+local keymap = vim.api.nvim_set_keymap
 
+-- open file explorer in left side on "Space-e"
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>o", ":NvimTreeFocus<cr>", opts)
+
+return {
+  "nvim-tree/nvim-tree.lua",
+  config = function()
+    require("nvim-tree").setup({
+      sort_by = "case_sensitive",
+      view = {
+        width = 26,
+      },
+      renderer = {
+        group_empty = true,
+      },
+      filters = {
+        dotfiles = false,
+      },
+      on_attach = my_on_attach,
+    })
+  end
+}
 

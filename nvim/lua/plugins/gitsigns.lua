@@ -1,11 +1,18 @@
-require('gitsigns').setup {
+local opts = { noremap = true, silent = true}
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<leader>j", ":Gitsigns next_hunk<cr>", opts)
+keymap("n", "<leader>k", ":Gitsigns prev_hunk<cr>", opts)
+keymap("n", "<leader>h", ":Gitsigns preview_hunk<cr>", opts)
+keymap("n", "<leader>b", ":Gitsigns blame_line<cr>", opts)
+local opts = {
   signs = {
-    add          = { text = '󱋱' },
-    change       = { text = "󰇝" },
-    delete       = { text = '' },
-    topdelete    = { text = '' },
-    changedelete = { text = '' },
-    untracked    = { text = '┆' },
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '┃' },
+    topdelete    = { text = '┃' },
+    changedelete = { text = '┃' },
+    untracked    = { text = '┃' },
   },
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
@@ -78,5 +85,12 @@ require('gitsigns').setup {
 
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+  end
+}
+
+return {
+  "lewis6991/gitsigns.nvim",
+  config = function()
+    require("gitsigns").setup(opts)
   end
 }

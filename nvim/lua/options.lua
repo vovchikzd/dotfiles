@@ -1,13 +1,14 @@
 -- :help options
 
+
 vim.opt.colorcolumn = '80'                    -- Highlighted column on 80 symbols
 vim.opt.cursorline = true                     -- Highlight the text line of the cursor
 vim.opt.number = true                         -- Print the line number in front of each line
 vim.opt.relativenumber = true                 -- changes the displayed number to be relative
 
 vim.opt.expandtab = true                      -- use spaces instead of tabs
-vim.opt.shiftwidth = 2                        -- shift 4 spaces when tab
-vim.opt.tabstop = 2                           -- 1 tab == 4 spaces
+vim.opt.shiftwidth = 2                        -- shift 2 spaces when tab
+vim.opt.tabstop = 2                           -- 1 tab == 2 spaces
 vim.opt.smartindent = true                    -- autoindent new lines
 
 vim.opt.scrolloff = 8                         -- minimal number of screen lines to keep above and below the cursor
@@ -45,4 +46,7 @@ vim.opt.shortmess:append "c"
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
-vim.cmd [[set formatoptions-=cro]]
+-- since vim.cmd [[set formatoptions-=cro]]
+-- and vim.opt.formatoptions:remove {"c", "r", "o"}
+-- don't work
+vim.cmd([[autocmd BufEnter * set formatoptions-=cro]])
