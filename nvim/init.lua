@@ -24,5 +24,3 @@ opts = {
 }
 
 require("lazy").setup("plugins", opts)
-
-vim.opt.formatoptions:remove {"c", "r", "o"}
