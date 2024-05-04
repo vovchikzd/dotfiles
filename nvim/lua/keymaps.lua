@@ -44,6 +44,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- select to end of line without newline character
 keymap("v", "$", "g_", opts)
+keymap("n", "gs", "_", opts)
+keymap("n", "U", "<C-r>", opts)
 
 -- telescope keymaps
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
