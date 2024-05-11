@@ -1,7 +1,7 @@
 -- :help options
 
 
-vim.opt.colorcolumn = '80'                    -- Highlighted column on 80 symbols
+vim.opt.colorcolumn = '81'                    -- Highlighted column on 80 symbols
 vim.opt.cursorline = true                     -- Highlight the text line of the cursor
 vim.opt.number = true                         -- Print the line number in front of each line
 vim.opt.relativenumber = true                 -- changes the displayed number to be relative
