@@ -1,6 +1,5 @@
 -- :help options
 
-
 vim.opt.colorcolumn = '81'                    -- Highlighted column on 80 symbols
 vim.opt.cursorline = true                     -- Highlight the text line of the cursor
 vim.opt.number = true                         -- Print the line number in front of each line
@@ -21,7 +20,7 @@ vim.opt.cmdheight = 1                         -- more space in the neovim comman
 vim.opt.completeopt = {"menuone", "noselect"} -- list of options for insert
 vim.opt.conceallevel = 0                      -- determine how text with the "conceal" syntax attribute
 vim.opt.fileencoding = "utf-8"                -- the encoding written to a fiel
-vim.opt.hlsearch = true                       -- highlight all matches on previous search pattern
+vim.opt.hlsearch = false                       -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true                     -- ignore case in search
 vim.opt.mouse = "a"                           -- allow mouse to be used in neovim
 vim.opt.pumheight = 10                        -- pop up menu height
