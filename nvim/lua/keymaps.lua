@@ -19,22 +19,22 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+-- keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+-- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+-- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- hide highlight aflet search
-keymap("n", "<A-l>", ":nohlsearch<CR>", opts)
+-- keymap("n", "<A-l>", ":nohlsearch<CR>", opts)
 
 -- stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- move text line up and down A = Alt
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts) -- one of the most important
+-- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+-- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- keymap("v", "p", '"_dP', opts) -- one of the most important
 
 -- move visual block up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
