@@ -1,7 +1,8 @@
 local opts = {
     options = {
     icons_enabled = false,
-    theme = "dracula",
+    -- theme = "dracula",
+    theme = "gruvbox",
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {

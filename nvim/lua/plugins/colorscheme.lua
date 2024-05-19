@@ -1,4 +1,4 @@
-return {
+dracula = {
   "Mofiqul/dracula.nvim",
   priority = 1000,
   colors = { bg = "#282A36", fg = "#F8F8F2", selection = "#44475A",
@@ -19,3 +19,39 @@ return {
     require("dracula").load("dracula")
   end
 }
+
+gruvbox = {
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000,
+  opts = {
+    terminal_colors = true, -- add neovim terminal colors
+    undercurl = true,
+    underline = true,
+    bold = true,
+    italic = {
+      strings = true,
+      emphasis = true,
+      comments = true,
+      operators = false,
+      folds = true,
+    },
+    strikethrough = true,
+    invert_selection = false,
+    invert_signs = false,
+    invert_tabline = false,
+    invert_intend_guides = false,
+    inverse = true, -- invert background for search, diffs, statuslines and errors
+    contrast = "hard", -- can be "hard", "soft" or empty string
+    palette_overrides = {},
+    overrides = {},
+    dim_inactive = false,
+    transparent_mode = false,
+  },
+  config = function()
+    vim.o.background = "dark"
+    require("gruvbox").setup(opts)
+    vim.cmd([[colorscheme gruvbox]])
+  end
+}
+
+return gruvbox
