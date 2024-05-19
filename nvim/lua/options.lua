@@ -15,7 +15,7 @@ vim.opt.sidescrolloff = 8                     -- as above but colums
 
 -- don't sure I need it
 vim.opt.backup = false                        -- create a backup file
-vim.opt.clipboard = "unnamedplus"             -- access the system clipboard
+-- vim.opt.clipboard = "unnamedplus"             -- access the system clipboard
 vim.opt.cmdheight = 1                         -- more space in the neovim command line
 vim.opt.completeopt = {"menuone", "noselect"} -- list of options for insert
 vim.opt.conceallevel = 0                      -- determine how text with the "conceal" syntax attribute

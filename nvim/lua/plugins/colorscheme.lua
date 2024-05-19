@@ -54,4 +54,11 @@ gruvbox = {
   end
 }
 
+-- gruvbox = {
+--   "morhetz/gruvbox",
+--   config = function()
+--     vim.cmd.colorscheme("gruvbox")
+--   end
+-- }
+
 return gruvbox

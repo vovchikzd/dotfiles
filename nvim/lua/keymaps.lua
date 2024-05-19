@@ -1,7 +1,8 @@
 local opts = { noremap = true, silent = true}
 
 -- short function name
-local keymap = vim.api.nvim_set_keymap
+-- local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -25,16 +26,28 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- hide highlight aflet search
-keymap("n", "<esc>", ":nohlsearch<CR>", opts)
+keymap("n", "<esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- move visual block up and down
-keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "J", "<cmd>m '>+1<CR>gv=gv", opts)
+keymap("v", "K", "<cmd>m '<-2<CR>gv=gv", opts)
 
 -- select to end of line without newline character
 keymap("v", "$", "g_", opts)
 keymap("n", "U", "<C-r>", opts)
+
+-- insert new line above/below without insert mode
+keymap("n", "<leader>o", "o<esc>", opts) -- conflict with tree
+keymap("n", "<leader>O", "O<esc>", opts)
+
+-- Telescope keys
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<C-_>",      "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>gf", "<cmd>Telescope git_files<CR>", opts)
+keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", opts)
