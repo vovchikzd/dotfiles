@@ -26,6 +26,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>o", ":NvimTreeFocus<cr>", opts)
 
 return {
+  -- neotree ???
   "nvim-tree/nvim-tree.lua",
   config = function()
     require("nvim-tree").setup({
