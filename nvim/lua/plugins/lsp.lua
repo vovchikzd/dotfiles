@@ -55,12 +55,7 @@ local pyright_setup = {
 
 local lsp = {
   "neovim/nvim-lspconfig",
-  dependencies = {
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-  },
+  dependencies = {},
   config = function()
     require("lspconfig").pyright.setup(pyright_setup)
     require("lspconfig").lua_ls.setup(lua_ls_setup)
