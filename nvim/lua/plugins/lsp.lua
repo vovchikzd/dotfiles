@@ -1,5 +1,3 @@
--- TODO: Toggle virtual text on warnings and errors, make autocomplete
-
 local vim = vim -- because of lsw warnings
 local keymap = vim.keymap.set
 
@@ -13,6 +11,7 @@ local on_attach_default = function()
   keymap("n", "gd", vim.lsp.buf.definition, key_opts("Go to definition of thing under cursor"))
 end
 
+-- TODO: Write toggle virtual text on warnings and errors, make autocomplete
 local toggle_text = function()
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -56,7 +55,12 @@ local pyright_setup = {
 
 local lsp = {
   "neovim/nvim-lspconfig",
-  dependencies = {},
+  dependencies = {
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+  },
   config = function()
     require("lspconfig").pyright.setup(pyright_setup)
     require("lspconfig").lua_ls.setup(lua_ls_setup)
