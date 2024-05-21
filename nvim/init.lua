@@ -14,13 +14,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-opts = {
+local opts = {
   change_detection = {
     -- automatically check for config file changes and reload the ui
     enabled = true,
     notify = false, -- get a notification when changes are found
   },
-
 }
 
 require("lazy").setup("plugins", opts)
