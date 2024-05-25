@@ -15,13 +15,9 @@ alias rsup='cargo install bat eva eza fd-find procs ripgrep sd starship tokei al
 alias pipup="pip --disable-pip-version-check list --outdated --format=json | python -c \"import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))\" | xargs -n1 pip install -U"
 alias du='du -sh'
 alias srb='source $HOME/.bashrc'
-alias video='cd /home/vovchik/External_Drives/1Tb/Видео'
-alias books='cd /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы'
-alias prj='cd /home/vovchik/External_Drives/1Tb/projects'
 alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
 alias libr='libreoffice /home/vovchik/External_Drives/1Tb/Библиотека.ods &>/dev/null &'
 alias cat=bat
-alias zlib='z-library &>/dev/null &'
 alias pwd='echo -n $PWD/'
 alias xclip='xclip -selection c'
 alias xclip_get='xclip -selection c -o'
@@ -31,7 +27,7 @@ alias push='git push origin master'
 check=/home/vovchik/External_Drives/1Tb/Видео/chek.py
 convert=/home/vovchik/External_Drives/1Tb/Видео/convert.py
 duration=/home/vovchik/External_Drives/1Tb/Видео/duration.py
-alias dr=/home/vovchik/External_Drives/1Tb/Видео/duration.py
+alias dr=$duration
 delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
 plt=/home/vovchik/External_Drives/1Tb/Видео/playlists/
 
@@ -69,3 +65,7 @@ fmpv() {
   echo -n "mpv --playlist=$1 &>/dev/null & "
   mpv --playlist=$1 &>/dev/null &
 }
+
+# eval "$(zoxide init --cmd cd bash)"
+# eval "$(starship init bash)"
+
