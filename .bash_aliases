@@ -69,6 +69,3 @@ fmpv() {
   echo -n "mpv --playlist=$1 &>/dev/null & "
   mpv --playlist=$1 &>/dev/null &
 }
-
-# eval "$(zoxide init --cmd cd bash)"
-# eval "$(starship init bash)"
