@@ -1,0 +1,15 @@
+[user]
+	email = vovchikzd@gmail.com
+	name = Vladimir Zdorenko
+[core]
+	editor = nvim
+[diff]
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true
+[alias]
+  dft = difftool

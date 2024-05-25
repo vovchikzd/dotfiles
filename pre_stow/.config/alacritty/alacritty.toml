@@ -1,0 +1,25 @@
+working_directory = '/home/vovchik'
+# [colors]
+# background = "#1d1f21"
+# bright_foreground = "#eaeaea"
+# dim_foreground = "#828482"
+# foreground = "#c5c8c6"
+
+[font]
+size = 12
+
+[font.bold]
+family = "HackNerdFont"
+
+[font.bold_italic]
+family = "HackNerdFont"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "HackNerdFont"
+
+[font.normal]
+family = "HackNerdFont"
