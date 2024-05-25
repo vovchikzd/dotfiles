@@ -23,3 +23,8 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 # =====================================
+
+clang-format
+print.hpp
+wallpaper.jpg
+example_configs.txt
