@@ -1,3 +1,28 @@
+local create_keymaps = function()
+  local keymap = vim.keymap.set
+  local key_opts = function(description)
+    return { noremap = true, silent = true, desc = description }
+  end
+  keymap("n", "<leader>ff", require("telescope.builtin").find_files, key_opts("Find files in directory"))
+  keymap("n", "<C-_>",      "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>", key_opts("Grep current file"))
+  keymap("n", "<leader>fe", "<cmd>Telescope diagnostics sorting_strategy=ascending prompt_position=top<CR>", key_opts("See errors/warnings in current file"))
+  keymap("n", "<leader>fb", require("telescope.builtin").buffers, key_opts("Find open buffers"))
+  keymap("n", "<leader>gf", require("telescope.builtin").git_files, key_opts("Find git files"))
+  keymap("n", "<leader>fk", require("telescope.builtin").keymaps, key_opts("Find keymaps"))
+
+  function local_live_grep()
+    local git_dir = vim.fn.system(string.format("git -C %s rev-parse --show-toplevel", vim.fn.expand("%:p:h")))
+    git_dir = string.gsub(git_dir, "\n", "") -- remove newline character from git_dir
+    local opts = {
+      cwd = git_dir,
+      file_ignore_patterns = { ".git" },
+      additional_args = { "--hidden" }
+    }
+    require('telescope.builtin').live_grep(opts)
+  end
+  keymap("n", "<leader>gg", "<cmd>lua local_live_grep()<CR>", key_opts("Grep files from git root"))
+end
+
 local telescope = {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -18,6 +43,7 @@ local telescope = {
       },
     })
     require("telescope").load_extension("fzf")
+    create_keymaps()
   end
 }
 

@@ -31,11 +31,3 @@ keymap("n", "U", "<C-r>", opts("Redo"))
 keymap("n", "<leader>o", "o<esc>", opts("Insert newline below and stay in normal mode")) -- conflict with tree
 keymap("n", "<leader>O", "O<esc>", opts("Insert newline above and stay in normal mode"))
 
--- Telescope keys
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts("Find files in directory"))
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts("Grep files in directory"))
-keymap("n", "<C-_>",      "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>", opts("Grep current file"))
-keymap("n", "<leader>fe", "<cmd>Telescope diagnostics sorting_strategy=ascending prompt_position=top<CR>", opts("See errors/warnings in current file"))
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts("Find open buffers"))
-keymap("n", "<leader>gf", "<cmd>Telescope git_files<CR>", opts("Find git files"))
-keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", opts("Find keymaps"))
