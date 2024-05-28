@@ -1,6 +1,6 @@
 local scope = {
   show_start = false,
-  show_end = true,
+  show_end = false,
 }
 
 local indentations = {

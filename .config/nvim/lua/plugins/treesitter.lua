@@ -1,6 +1,6 @@
 local opts = {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = {"c", "cpp", "python", "lua", "latex", "bash",
+      ensure_installed = {"c", "cpp", "python", "lua", "bash",
         "rust", "cmake", "git_config", "git_rebase", "gitattributes",
         "gitcommit", "gitignore", "llvm", "nasm", "ninja", "tmux"},
       -- Install parsers synchronously (only applied to `ensure_installed`)
