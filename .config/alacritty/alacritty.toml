@@ -9,17 +9,21 @@ working_directory = '/home/vovchik'
 size = 12
 
 [font.bold]
-family = "HackNerdFont"
+family = "Hack Nerd Font Mono"
+style = "Bold"
 
 [font.bold_italic]
-family = "HackNerdFont"
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-family = "HackNerdFont"
+family = "Hack Nerd Font Mono"
+style = "Italic"
 
 [font.normal]
-family = "HackNerdFont"
+family = "Hack Nerd Font Mono"
+style = "Regular"
