@@ -12,7 +12,6 @@ alias ls='eza -1 --group-directories-first'
 alias lt='eza -1 --tree --group-directories-first'
 
 alias rsup='cargo install bat eva eza fd-find procs ripgrep sd starship tokei alacritty dirstat-rs zoxide difftastic bottom --locked'
-alias pipup="pip --disable-pip-version-check list --outdated --format=json | python -c \"import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))\" | xargs -n1 pip install -U"
 alias du='du -sh'
 alias srb='source $HOME/.bashrc'
 alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
@@ -69,3 +68,17 @@ fmpv() {
 # eval "$(zoxide init --cmd cd bash)"
 # eval "$(starship init bash)"
 
+# alias pipup="pip --disable-pip-version-check list --outdated --format=json | python -c \"import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))\" | xargs -n1 pip install -U"
+
+pipup() {
+  GREEN='\033[0;32m'
+  RED='\033[0;31m'
+  NC='\033[0m' # no color
+  list=$(pip --disable-pip-version-check list --outdated --format=json | python -c 'import json, sys; print(" ".join([x["name"] for x in json.load(sys.stdin)]))')
+  if [ ! -z "$list" ]
+  then
+    pip install -U $list || echo -e "${RED}Failed${NC}"
+  else
+    echo -e "${GREEN}Nothing to upgrade${NC}"
+  fi
+}
