@@ -1,0 +1,44 @@
+% \documentclass[a4paper, 12pt]{article} % proc для двух колонок
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=green,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+\usepackage{wrapfig}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{newtxmath} % возможны конфликты
+\def\margins{10mm}
+\usepackage[left=\margins, right=\margins, top=\margins, bottom=\margins]{geometry}
+\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}} %частная производная
+\renewcommand{\dfrac}[2]{\frac{d#1}{d#2}} %полная производная (переназначена из пакета)
+\renewcommand{\[}{\begin{equation}} % для нумерации
+\renewcommand{\]}{\end{equation}} % для нумерации
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\kappa}{\varkappa}
+\renewcommand{\labelitemi}{--}
+\renewcommand{\labelenumii}{\theenumii}
+%\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\renewcommand{\theenumii}{\arabic{enumii}.}
+\renewcommand{\theenumiii}{\arabic{enumiii}}
+\numberwithin{equation}{section} % нумераця формул от секции
+\numberwithin{figure}{section} % нумераця рисунков от секции
+\numberwithin{table}{section} % нумераця таблиц от секции
+\linespread{0.7}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{1.5pt}
+\selectfont
