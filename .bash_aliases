@@ -33,8 +33,8 @@ plt=/home/vovchik/External_Drives/1Tb/Видео/playlists/
 alias umpv='mpv --ytdl-format="(mp4)[height=1080]+ba / bv*[height=1080]+ba / bv*+ba/b"'
 alias byt-dlp='yt-dlp --cookies-from-browser Firefox'
 # format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
-format="(mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
-lformat="(mp4)[height=1080]+ba / bv*[height=1080]+ba / bv*+ba/b"
+format="bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
+lformat="bv*[height=1080]+ba / bv*+ba/b"
 name='%(title)s [%(id)s](%(channel)s).%(ext)s'
 ename='%(title)s_[%(id)s](%(channel)s).%(ext)s'
 numbering="%(playlist_index)s. $name"
