@@ -691,7 +691,7 @@ Jackpot trilogy (Gibson) ~ 2536
 Sprawl trilogy (Gibson) ~ 2840
 Bridge trilogy (Gibson) ~ 2903
 Blue Ant trilogy (Gibson) ~ 3629
-The Sun Eater Series (Ruocchio, check new) ~ 13734
+The Sun Eater Series (Ruocchio) ~ 16940
 Попытка к бегству (Стругацкие) ~ 374
 За миллиард лет до конца света (Стругацкие) ~ 453
 Извне (Стругацкие) ~ 525
@@ -1170,3 +1170,12 @@ The Voyage Out (Woolf) ~ 1534
 The Waves (Woolf) ~ 849
 The Years (Woolf) ~ 1414
 To the Lighthouse (Woolf) ~ 777
+YouSpace (Parker[Holt]) ~ 4872
+Walled Orchard (Parker[Holt]) ~ 4263
+The Scavenger Trilogy (Parker[Holt]) ~ 6415
+The Fencer Trilogy (Parker[Holt]) ~ 6115
+The Engineer Trilogy (Parker[Holt]) ~ 7194
+Savages (Parker[Holt]) ~ 1885
+J.W. Wells \& Co. (Parker[Holt]) ~ 10705
+Corax (Parker[Holt]) ~ 3488
+This is How You Lose the Time War (Gladstone) ~ 416
