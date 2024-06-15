@@ -31,3 +31,4 @@ keymap("n", "U", "<C-r>", opts("Redo"))
 keymap("n", "<leader>o", "o<esc>", opts("Insert newline below and stay in normal mode")) -- conflict with tree
 keymap("n", "<leader>O", "O<esc>", opts("Insert newline above and stay in normal mode"))
 
+keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
