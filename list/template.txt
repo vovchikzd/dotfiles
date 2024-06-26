@@ -90,17 +90,17 @@ Followers (Angelo) ~ 1324
 Мрачный взвод (Хоффман) ~ 1327
 Собачья голова (Рамсланд) ~ 1330
 The Fifth Realm (Vora) ~ 1331
-The Linkon Lawyer (Connelly) ~ 1336
+The Linkon Lawyer (Connelly) ~ 1409
 Blacktongue seties (Buehlman) ~ 1343
 Glasshouse (Stross) ~ 1353
 The Night Circus (Morgenstern) ~ 1356
 Atonement (McEwan) ~ 1375
-Память - это ты (Бас) ~ 1391
+Память -- это ты (Бас) ~ 1391
 The Black Hole War (Susskind) ~ 1411
 Blook Over Bright Haven (Wang) ~ 1442
 Milkman (Burns) ~ 1452
 I Have Some Questions For You (Makkai) ~ 1458
-Одаренная девочка (Гайворонская) ~ 1474
+Одаренная девочка (Гайворонская) ~ 2910
 To Kill a Mockingbird (Lee) ~ 1483
 Belgravia (Fellowes) ~ 1489
 Lady Chatterley's Lover (Lawrence) ~ 1499
@@ -122,7 +122,7 @@ The Bards of Bone Plain (McKillip) ~ 990
 Rebecca (du Maurier) ~ 1689
 Schindler's Ark (Keneally) ~ 1696
 Family Matters (Mistry) ~ 1698
-Темные святые (Рид) ~ 1727
+Темные святые (Рид) ~ 2696
 Amina al-Sirafi Series (Chakraborty) ~ 1729
 A tree grows in Brooklyn (Smith) ~ 1739
 Hungry as the Sea (Smith) ~ 1753
@@ -142,7 +142,7 @@ Stabat Mater (Козлов) ~ 1943
 Lands of the Firstborn (Hanrahan) ~ 1950
 Heritor's Helm (L.A. Buck) ~ 1955
 Закат Нэптедуна (Жилин) ~ 1989
-Рим - это я (Постегильо) ~ 1996
+Рим -- это я (Постегильо) ~ 1996
 North and South (Gaskell) ~ 2011
 The African Trilogy (Achebe) ~ 2057
 Catch-22 (Heller) ~ 2076
@@ -150,12 +150,12 @@ Catch-22 (Heller) ~ 2076
 The Witch Elm (French) ~ 2125
 Доктор Живаго (Пастернак) ~ 2162
 A Thousand Moons (Barry) ~ 686
-Days Without End (Barry) ~ 1487
-Цыган (Калинин) ~ 2180
+Days Without End (Barry) ~ 806
+Цыган (Калинин) ~ 2178
 Hundred Kingdoms Series (Christo) ~ 2190
 The Talent Trilogy (Miro) ~ 2193
 Uncle Tom's Cabin (Stowe) ~ 2205
-Riders of the Purple Sage (Grey) ~ 2251
+Riders of the Purple Sage (Grey) ~ 2231
 The Princesses of Westfalin (George) ~ 2251
 The Price of Power (Michel) ~ 2267
 Ложится мгла на старые ступени (Чудаков) ~ 2304
@@ -177,7 +177,7 @@ Little, Big (Crowley) ~ 2464
 Bellman \& Black (Setterfield) ~ 1054
 Once Upon A River (Setterfield) ~ 1548
 Фараон (Прус) ~ 2618
-Angelfall (Ee) ~ 2622
+Angelfall (Ee) ~ 2705
 Люди как боги (Снегов) ~ 2626
 Война конца света (Льоса) ~ 2642
 Regency Faerie Tales (Atwater) ~ 2655
@@ -240,7 +240,7 @@ The Dreaming Jewels (Sturgeon) ~ 576
 Venus Plus X (Sturgeon) ~ 675
 More Than Human (Sturgeon) ~ 810
 Препараторы (Летт) ~ 3502
-Dragonslayer (Hamilton) ~ 3537
+Dragonslayer (Hamilton) ~ 3574
 Middlemarch (Eliot) ~ 3553
 Экипаж Меконга (Войскунский, Лукодьянов) ~ 3558
 Low Town Series (Polansky) ~ 3565
@@ -388,7 +388,7 @@ The Winnowind Flame (Williams) ~ 5900
 Картина Сархана (Джафаров) ~ 899
 Его последние дни (Джафаров) ~ 842
 Песнь о Сиде (Джафаров) ~ 863
-Испорченные сказания (Ксен Красс) ~ 6033
+Испорченные сказания (Ксен Красс) ~ 6026
 Fafhrd and the Gray Mouser Series (Leiber) ~ 6208
 The Darkwater Legacy series (Wooding) ~ 6217
 The Roots of Chaos Series (Shannon) ~ 6241
@@ -451,7 +451,7 @@ Three Man in a Boat (Jerome) ~ 1457
 Paul Kelver (Jerome) ~ 1496
 Гарри Поттер и Методы Рационального Мышления (Юдковский) ~ 7206
 Tales of the Ketty Jay (Wooding) ~ 7226
-Ида Мартин ~ 7236
+Ида Мартин ~ 7229
 The Kingkiller Chronicle (Rothfuss) ~ 7264
 The Last Hot Time (Ford) ~ 738
 The Princes of the Air (Ford) ~ 790
@@ -470,7 +470,7 @@ The Scholomance Series (Novik) ~ 3985
 Емельян Пугачев (Шишков) ~ 7511
 Проклятые короли (Дрюон) ~ 7578
 Зал ожидания (Фейхтвангер) ~ 7616
-Разрыв-трава (Калашников) ~ 1948
+Разрыв-трава (Калашников) ~ 1947
 Последнее отступление (Калашников) ~ 2115
 Жестокий век (Калашников) ~ 3565
 The Reborn Empire Series (Madson) ~ 7707
@@ -566,9 +566,9 @@ Commonwealth (Patchett) ~ 1125
 The Dutch House (Patchett) ~ 1099
 Tom Lake (Patchett) ~ 1098
 The Lonesome Dove Chronicles (McMurtry) ~ 10474
-Desolation Road (McDonald) ~ 3042
+Desolation Road (McDonald) ~ 3041
 India 2047 Series (McDonald) ~ 3234
-Luna (McDonald) ~ 4212
+Luna (McDonald) ~ 4220
 The Final Solution (Chabon) ~ 325
 Gentlemen of the Road (Chabon) ~ 464
 The Mysteries of Pittsburgh (Chabon) ~ 823
@@ -590,7 +590,7 @@ Metroland (Barnes) ~ 573
 The Noise of Time (Barnes) ~ 574
 Elizabeth Finch (Barnes) ~ 575
 Before She Met Me (Barnes) ~ 629
-Flaubert's Parrot (Barnes) ~ 719
+Flaubert's Parrot (Barnes) ~ 720
 Staring at the Sun (Barnes) ~ 743
 The Only Story (Barnes) ~ 743
 England, England (Barnes) ~ 993
@@ -632,7 +632,7 @@ The Deptford Trilogy (Davies) ~ 3592
 Cornish Trilogy (Davies) ~ 4712
 Shadov of the Leviathan (Bennett) ~ 1351
 The Divine Cities (Bennett) ~ 5219
-The Founders Trilogy (Bennett) ~ 5441
+The Founders Trilogy (Bennett) ~ 5437
 Codex Alera (Butcher) ~ 12066
 Картежник (Логинов) ~ 628
 Горное селение (Логинов) ~ 669
@@ -648,7 +648,7 @@ Codex Alera (Butcher) ~ 12066
 The Dragon's Blade Trilogy (Miller) ~ 4928
 Songs of Chaos Series (Miller) ~ 7172
 A Chorus of Dragons (Lyons) ~ 12543
-Chronicle of the Unhewn Throne (Staveley) ~ 12570
+Chronicle of the Unhewn Throne (Staveley) ~ 12622
 Башня одиночества (Манфреди) ~ 959
 Оракул мертвых (Манфреди) ~ 1205
 Спартанец (Манфреди) ~ 1283
@@ -769,8 +769,8 @@ The Children's Book (Byatt) ~ 3000
 Россия молодая (Герман) ~ 4439
 Трилогия об Устименко (Герман) ~ 6621
 Kithamar Series (Abraham) ~ 2764
-Long Price Quartet (Abraham) ~ 5650
-The Dagger and the Coin (Abraham) ~ 8113
+Long Price Quartet (Abraham) ~ 5751
+The Dagger and the Coin (Abraham) ~ 8275
 Fractalverse Series (Paolini) ~ 4550
 Inheritance Cycle (Paolini) ~ 12541
 Божьи Воины (Сапковский) ~ 6227
@@ -888,7 +888,7 @@ The First Law world (Abercrombie) ~ 19977
 Azincourt (Cornwell) ~ 1541
 The Warlord Chronicles Series (Cornwell) ~ 5689
 The Last Kingdom (Cornwell) ~ 16451
-Thomas Covenant ~ 24068
+Thomas Covenant ~ 24451
 Ender's Game (Card) ~ 24278
 Emilie (Wells) ~ 1727
 The Murderbot Diaries (Wells) ~ 4005
@@ -1189,3 +1189,23 @@ Flux Catastrophe Series (Weiss) ~ 2673
 Nettle Bone (Kingfisher) ~ 884
 The Old Kingdom Series (Nix) ~ 7802
 Fallen Gods Series (Kaner) ~ 2424
+Семья Резо (Базен) ~ 2287
+Семья Буссардель (Эриа) ~ 5534
+Ругон-Маккары (Золя) ~ 29811
+By Nightfall (Cunningham) ~ 787
+Day (Cunningham) ~ 687
+Flesh and Blood (Cunningham) ~ 1512
+Golden States (Cunningham) ~ 812
+Specimen Days (Cunningham) ~ 1127
+The Hours (Cunningham) ~ 636
+The Snow Queen (Cunningham) ~ 674
+Баудолино (Эко) ~ 1965
+Имя розы (Эко) ~ 2242
+Маятник Фуко (Эко) ~ 2604
+Нулевой номер (Эко) ~ 539
+Остров накануне (Эко) ~ 1767
+Пражское кладбище (Эко) ~ 1543
+Таинственное пламя царицы Лоаны (Эко) ~ 1635
+Amiznt Soul (Makarios) ~ 1147
+Ловец чудес (Хоффман) ~ 1667
+Трилогия об Иосифе Флавии (Фейхтвангер) ~ 5258
