@@ -32,3 +32,4 @@ keymap("n", "<leader>o", "o<esc>", opts("Insert newline below and stay in normal
 keymap("n", "<leader>O", "O<esc>", opts("Insert newline above and stay in normal mode"))
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
+keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
