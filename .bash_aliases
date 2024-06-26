@@ -30,7 +30,6 @@ alias dr=$duration
 delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
 plt=/home/vovchik/External_Drives/1Tb/Видео/playlists/
 
-alias umpv='mpv --ytdl-format="(mp4)[height=1080]+ba / bv*[height=1080]+ba / bv*+ba/b"'
 alias byt-dlp='yt-dlp --cookies-from-browser Firefox'
 # format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 format="bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
@@ -45,6 +44,7 @@ playlist_numbering="$playlist/$numbering"
 eplaylist_numbering="$eplaylist/$enumbering"
 no_space=--restrict-filenames
 # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
+
 
 if ! which 'clang++' &>/dev/null; then
   export CXX=g++
@@ -65,10 +65,13 @@ fmpv() {
   mpv --playlist=$1 &>/dev/null &
 }
 
+umpv() {
+  echo -n "mpv --ytdl-format=\"$lformat\" $1 &>/dev/null & "
+  mpv --ytdl-format="$lformat" $1 &>/dev/null &
+}
+
 # eval "$(zoxide init --cmd cd bash)"
 # eval "$(starship init bash)"
-
-# alias pipup="pip --disable-pip-version-check list --outdated --format=json | python -c \"import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))\" | xargs -n1 pip install -U"
 
 pipup() {
   GREEN='\033[0;32m'
