@@ -65,11 +65,6 @@ fmpv() {
   mpv --playlist=$1 &>/dev/null &
 }
 
-umpv() {
-  echo -n "mpv --ytdl-format=\"$lformat\" $1 &>/dev/null & "
-  mpv --ytdl-format="$lformat" $1 &>/dev/null &
-}
-
 # eval "$(zoxide init --cmd cd bash)"
 # eval "$(starship init bash)"
 
