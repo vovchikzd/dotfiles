@@ -11,7 +11,6 @@ alias lat='eza -lha --icons --tree --group-directories-first'
 alias ls='eza -1 --group-directories-first'
 alias lt='eza -1 --tree --group-directories-first'
 
-alias rsup='cargo install bat eva eza fd-find procs ripgrep sd starship tokei alacritty dua-cli zoxide difftastic bottom gitui --locked'
 alias du='du -sh'
 alias srb='source $HOME/.bashrc'
 alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
@@ -28,7 +27,7 @@ convert=/home/vovchik/External_Drives/1Tb/Видео/convert.py
 duration=/home/vovchik/External_Drives/1Tb/Видео/duration.py
 alias dr=$duration
 delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
-plt=/home/vovchik/External_Drives/1Tb/Видео/playlists/
+plt=/home/vovchik/External_Drives/1Tb/Видео/playlists
 
 alias byt-dlp='yt-dlp --cookies-from-browser Firefox'
 # format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
@@ -81,4 +80,27 @@ pipup() {
   fi
 }
 
-eval $(ssh-agent) &>/dev/null && ssh-add ~/.ssh/id_ed25519 &>/dev/null
+rsup() {
+  progs=("bat"
+         "eva"
+         "eza"
+         "fd-find"
+         "procs"
+         "ripgrep"
+         "sd"
+         "starship"
+         "tokei"
+         "alacritty"
+         "dua-cli"
+         "zoxide"
+         "difftastic"
+         "bottom")
+
+  for prog in ${progs[@]}
+  do
+    cargo install $prog --locked || exit 1
+  done
+}
+
+clanggitcpp='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang++'
+clanggit='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang'
