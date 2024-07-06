@@ -1,5 +1,4 @@
 All the Horses of Iceland (Tolmie) ~ 265
-Второе нашествие марсиан (Стругацкие) ~ 338
 Интердевочка (Кунин) ~ 350
 Hiroshima (Hersey) ~ 353
 A Monster Calls (Ness) ~ 375
@@ -188,7 +187,7 @@ Scenes from Provincial Life (Coetzee) ~ 1944
 The Wakening Series (Renshaw) ~ 2701
 Hierarchy Series (Islington) ~ 2707
 The Idiot dilogy (Batuman) ~ 2730
-Истинное волшебство (Способина) ~ 984
+Истинное волшебство (Способина) ~ 982
 Прядущая (Способина) ~ 1754
 Sword of Honour (Waugh) ~ 2742
 Открытая книга (Каверин) ~ 2766
@@ -279,7 +278,7 @@ The Golden Key (Roberson, Elliot, Rawn) ~ 3827
 Седьмая функция языка (Бине) ~ 1404
 HHhH (Бине) ~ 1444
 Gravity's Rainbow (Pynchon) ~ 3830
-Щит и Меч (Кожевников) ~ 3836
+Щит и Меч (Кожевников) ~ 3837
 Революция (Перес-Реверте) ~ 1309
 Капитан Алатристе (Перес-Реверте) ~ 5338
 Moist von Lipwig (Pratchett) ~ 3956
@@ -428,7 +427,6 @@ Ibis trilogy (Ghosh) ~ 6957
 Дозоры (Лукьяненко) ~ 6960
 The Lord of The Rings (Tolkien) ~ 7024
 The Lays of Anuskaya (Beaulieu) ~ 7078
-Вспоминая моих несчастных шлюшек (Маркес) ~ 270
 Хроника объявленной смерти (Маркес) ~ 319
 Палая листва (Маркес) ~ 342
 О любви и прочих бесах (Маркес) ~ 479
@@ -692,7 +690,6 @@ Sprawl trilogy (Gibson) ~ 2840
 Bridge trilogy (Gibson) ~ 2903
 Blue Ant trilogy (Gibson) ~ 3629
 The Sun Eater Series (Ruocchio) ~ 16940
-Попытка к бегству (Стругацкие) ~ 374
 За миллиард лет до конца света (Стругацкие) ~ 453
 Извне (Стругацкие) ~ 525
 Пикник на обочине (Стругацкие) ~ 594
@@ -750,7 +747,6 @@ Possession (Byatt) ~ 2210
 The Virgin in the Garden (Byatt) ~ 2172
 Babel Tower (Byatt) ~ 2825
 The Children's Book (Byatt) ~ 3000
-Сонечка (Улицкая) ~ 220
 О теле души (Улицкая) ~ 414
 Сквозная линия (Улицкая) ~ 455
 Медея и ее дети (Улицкая) ~ 927
@@ -851,7 +847,6 @@ The Broken Empire trilogy (Lawrence) ~ 3815
 Book of the Ice Series (Lawrence) ~ 4616
 Book of the Ancestor Series (Lawrence) ~ 4652
 The Red Queen's War (Lawrence) ~ 4928
-Адам и Мирьям (Рубина) ~ 104
 На верхней Масловке (Рубина) ~ 501
 Последний кабан из лесов Понтеведра (Рубина) ~ 560
 Бабий ветер (Рубина) ~ 871
@@ -1247,3 +1242,20 @@ Cloven Hooves (Hobb) ~ 1441
 The Gypsy (Hobb) ~ 2175
 The Windsingers (Hobb) ~ 4027
 Wizard of the Pideons (Hobb) ~ 963
+Тропою испытаний. Смерть меня подождет. Злой дух Ямбуя. Последний костер (Федосеев) ~ 5536
+The Sorrow of Satan (Corelli) ~ 1807
+Miss Eliza's English Kitchen (Abbs) ~ 1140
+Путешествие трех королевичей Серендипских (Неизвесте) ~ 448
+Дженни Далфин и Скрытые Земли (Олейников) ~ 6756
+Тени света (Казанцева) ~ 2111
+The Final Architecture (Tchaikovsky) ~ 5441
+Empire of Man (Weber, Ringo) ~ 7420
+Wok World (Benford, Niven) ~ 3960 
+О любви и смерти (Фрай) ~ 566
+Большая телега (Фрай) ~ 1418
+Линии (Фрай) ~ 1506
+Ловцы книг (Фрай) ~ 2120
+НяпиZдинг (Фрай) ~ 1423
+Тяжелый свет Куртейна (Фрай) ~ 9393
+Сказки старого Вильнюса (Фрай) ~ 7244
+Мир Ехо (Фрай) ~ 20122
