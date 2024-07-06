@@ -94,7 +94,9 @@ rsup() {
          "dua-cli"
          "zoxide"
          "difftastic"
-         "bottom")
+         "bottom"
+         "gitui"
+       )
 
   for prog in ${progs[@]}
   do
