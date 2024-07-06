@@ -33,3 +33,4 @@ keymap("n", "<leader>O", "O<esc>", opts("Insert newline above and stay in normal
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
 keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
+keymap("n", "<leader>e", "<cmd>bd!<CR>", opts("\"Kill\" current buffer"))
