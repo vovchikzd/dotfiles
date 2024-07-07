@@ -37,7 +37,7 @@ vim.opt.updatetime = 300                      -- faster completion
 vim.opt.writebackup = false                   -- if a file was edited by another program
 -- vim.opt.numberwidth = 4                    -- set number column width
 vim.opt.signcolumn = "yes"                    -- always show the sign column
-vim.opt.wrap = false                          -- display lines as one long line
+vim.opt.wrap = true                          -- display lines as one long line
 vim.opt.guifont = "monospace:h17"             --the font used in graphical neovim application
 
 vim.opt.shortmess:append "c"
