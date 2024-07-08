@@ -1286,3 +1286,9 @@ The Apt Universe (Tchaikovsky) ~ 25312
 Путешествие в Арзрум во время похода 1829 года (Пушкин) ~ 174
 Роман в письмах (Пушкин) ~ 51
 Рославлев (Пушкин) ~ 42
+Le Morte d'Arthur (Malory) ~ 3632
+Lady Audley's Secret (Braddon) ~ 1664
+Drowned World (Chan) ~ 1458
+Time Salvager Series (Chu) ~ 3221
+The War Arts Saga (Chu) ~ 4548
+Tao series (Chu) ~ 7323
