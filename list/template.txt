@@ -660,7 +660,6 @@ Vlad Taltos (Brust) ~ 12863
 Приговор (Отохико) ~ 4317
 Столица в огне (Отохико) ~ 8565
 The Warded Man (Brett) ~ 13017
-Машенька (Набоков) ~ 335
 Король, дама, валет (Набоков) ~ 748
 Защита Лужина (Набоков) ~ 721
 Подвиг (Набоков) ~ 653
@@ -1259,3 +1258,31 @@ Wok World (Benford, Niven) ~ 3960
 Тяжелый свет Куртейна (Фрай) ~ 9393
 Сказки старого Вильнюса (Фрай) ~ 7244
 Мир Ехо (Фрай) ~ 20122
+Zones of Thought (Vinge) ~ 7929
+Across Realtime (Vinge) ~ 2154
+Rainbows End (Vinge) ~ 1542
+Alien Clay (Tchaikovsky) ~ 1254
+Cage of Souls (Tchaikovsky) ~ 2123
+Service Model (Tchaikovsky) ~ 1359
+Spiderlight (Tchaikovsky) ~ 913
+The Doors of Eden (Tchaikovsky) ~ 1850
+Dogs of War (Tchaikovsky) ~ 2096
+Echoes of the Fall (Tchaikovsky) ~ 5319
+The Tyrant Philosophers (Tchaikovsky) ~ 3947
+Воля вольная (Ремизов) ~ 966
+Guns of the Dawn (Tchaikovsky) ~ 1924
+Terrible Worlds (Tchaikovsky) ~ 2662
+The Apt Universe (Tchaikovsky) ~ 25312
+Арап Петра Великого (Пушкин) ~ 127
+Дубровский (Пушкин) ~ 274
+Капитанская дочка (Пушкин) ~ 385
+Евгений Онегин (Пушкин) ~ 293
+Повести покойного Ивана Петровича Белкина (Пушкин) ~ 302
+Пиковая Дама (Пушкин) ~ 93
+Египетские ночи (Пушкин) ~ 47
+История Пугачева (Пушкин) ~ 533
+История села Горюхино (Пушкин) ~ 63
+Кирджали (Пушкин) ~ 24
+Путешествие в Арзрум во время похода 1829 года (Пушкин) ~ 174
+Роман в письмах (Пушкин) ~ 51
+Рославлев (Пушкин) ~ 42
