@@ -17,7 +17,7 @@ A clockwork orange (Burgess) ~ 638
 The Goblin Reservation (Clifford) ~ 646
 Богоматерь Нильская (Мукасонга) ~ 646
 In Earth We're Briefly Gorgeous (Vuong) ~ 659
-Протагонист (Володина) ~ 682
+Протагонист (Володина) ~ 680
 Pony (Palacio) ~ 708
 Waiting for the Barbarians (Coetzee) ~ 716
 Once There Was a War (Steinbeck) ~ 721
@@ -77,7 +77,7 @@ The structure of scientific relolution (Kuhn) ~ 1211
 If We Were Villains (Rio) ~ 1215
 Звени, монета, звени (Шторм) ~ 1229
 Искушение (Ремизов) ~ 1244
-Песни радости, песни печали (Ракша) ~ 1267
+Песни радости, песни печали (Ракша) ~ 1261
 A home at the end of the world (Cunningham) ~ 1299
 Little Brother (Doctorow) ~ 1301
 The Last Train to London (Clayton) ~ 1304
@@ -125,9 +125,9 @@ Family Matters (Mistry) ~ 1698
 Amina al-Sirafi Series (Chakraborty) ~ 1729
 A tree grows in Brooklyn (Smith) ~ 1739
 Hungry as the Sea (Smith) ~ 1753
-Шестьдесят килограммов солнечного света (Халльгрим) ~ 1753
+Шестьдесят килограммов солнечного света (Халльгрим) ~ 1750
 Бабий Яр (Кузнецов) ~ 1776
-Финист-ясный сокол (Рубанов) ~ 1782
+Финист-ясный сокол (Рубанов) ~ 1781
 Half of a Yellow Sun (Adichie) ~ 1802
 Зверь 44 (Рудашевский) ~ 660
 Солонго. Тайна пропавшей экспедиции (Рудашевский) ~ 1144
@@ -135,7 +135,7 @@ Half of a Yellow Sun (Adichie) ~ 1802
 Pandominion Series (Carey) ~ 1869
 Голод (Гамсун) ~ 585
 Плоды земли (Гамсун) ~ 1301
-Правила выживания в джакарке (Цимеринг) ~ 1935
+Правила выживания в джакарке (Цимеринг) ~ 1933
 The Poisonwood Bible (Kingsolver) ~ 1942
 Stabat Mater (Козлов) ~ 1943
 Lands of the Firstborn (Hanrahan) ~ 1950
@@ -162,14 +162,14 @@ Sisters of the Sky (Kortchik) ~ 1138
 The Countess of the Revolution (Kortchik) ~ 1193
 Спартак (Джованьоли) ~ 2332
 Cutting for Stone (Verghese) ~ 2337
-Война с саламандрами (Чапек) ~ 2352
+Война с саламандрами (Чапек) ~ 2356
 The Sword of Kaigen (Wang) ~ 2383
 The Song of Achilles (Miller) ~ 1091
 Circe (Miller) ~ 1317
 Stranger Times Series (McDonnell) ~ 2442
 The Tortall Universe (Pierce) ~ 17464
-Всадники ниоткуда (Абрамов) ~ 2452
-Обитель (Прилепин) ~ 2459
+Всадники ниоткуда (Абрамовы) ~ 2449
+Обитель (Прилепин) ~ 2457
 Little, Big (Crowley) ~ 2464
 Орда встречного ветра (чуть поломан) ~ 2502
 Птицы (Торин) ~ 2567
@@ -177,10 +177,10 @@ Bellman \& Black (Setterfield) ~ 1054
 Once Upon A River (Setterfield) ~ 1548
 Фараон (Прус) ~ 2618
 Angelfall (Ee) ~ 2705
-Люди как боги (Снегов) ~ 2626
-Война конца света (Льоса) ~ 2642
+Люди как боги (Снегов) ~ 2625
+Война конца света (Льоса) ~ 2641
 Regency Faerie Tales (Atwater) ~ 2655
-Будденброки (Манн) ~ 2668
+Будденброки (Манн) ~ 2629
 Night. Sleep. The Stars. (Oates) ~ 2678
 Disgrace (Coetzee) ~ 749
 Scenes from Provincial Life (Coetzee) ~ 1944
@@ -190,11 +190,11 @@ The Idiot dilogy (Batuman) ~ 2730
 Истинное волшебство (Способина) ~ 982
 Прядущая (Способина) ~ 1754
 Sword of Honour (Waugh) ~ 2742
-Открытая книга (Каверин) ~ 2766
+Открытая книга (Каверин) ~ 2750
 Ледяная скорлупа (Штерн) ~ 594
 Ковчег 47 Либра (Штерн) ~ 1075
 Феникс сапиенс (Штерн) ~ 1151
-Черный Корсар (Сальгари) ~ 2856
+Черный Корсар (Сальгари) ~ 5209
 Daniel Martin (Fowles) ~ 2897
 The Young Elites Series (Lu) ~ 2939
 Пейзаж с падением Икара (Поляринов) ~ 549
@@ -205,7 +205,7 @@ China Room (Sahota) ~ 582
 Ours are the Streets (Sahota) ~ 746
 The Year of the Runaways (Sahota) ~ 1632
 11/22/63 (King) ~ 2962
-Дом в котором… (Петросян) ~ 2974
+Дом в котором… (Петросян) ~ 2971
 Lone Wolf (Picoult) ~ 1308
 Handle With care (Picoult) ~ 1708
 Underworld (DeLillo) ~ 3032
@@ -221,7 +221,7 @@ The Shadow Histories (Parry) ~ 3228
 The Sword and the Scimitar (Ball) ~ 3237
 American Rust (Meyer) ~ 1334
 The Son (Meyer) ~ 1912
-Жизнь и судьба (Гроссман) ~ 3253
+Жизнь и судьба (Гроссман) ~ 3251
 Elektra (Saint) ~ 1030
 Atalanta (Saint) ~ 1073
 Ariadne (Saint) ~ 1188
@@ -230,7 +230,7 @@ Seveneves (Stephenson) ~ 3353
 The Goblin Emperor Series (Addison) ~ 3364
 Внучка (Шлинк) ~ 998
 Зельб (Шлинк) ~ 2455
-Господа офицеры (Васильев) ~ 3477
+Господа офицеры (Васильев) ~ 3474
 Мистер вечный канун (Торин, Яковлев) ~ 3497
 Some of Your Blood (Sturgeon) ~ 452
 The Cosmic Rape (Sturgeon) ~ 455
@@ -257,7 +257,7 @@ Under the Dome (King) ~ 3690
 The Campus Trilogy (Lodge) ~ 3734
 Eidyn Series (Lee) ~ 3735
 Tales of Tremaine Series (Virdi) ~ 3740
-Сельма Лагерлеф ~ 3761
+Сельма Лагерлеф ~ 3845
 City of Sacrifice Series (Fletcher) ~ 3789
 The Forsyte Saga (Galsworthy) ~ 3795
 The Inheritance Games (Barnes) ~ 3801
@@ -313,7 +313,7 @@ A Far Country (Mason) ~ 891
 North Woods (Mason) ~ 1083
 Winter Soldier (Mason) ~ 1139
 Piano Tuner (Mason) ~ 1206
-Благоволительницы (Литтел) ~ 4333
+Благоволительницы (Литтел) ~ 4330
 Russka (Rutherfurd) ~ 4378
 Строговы. Соль земли (Марков) ~ 4379
 Piranesi (Clarke) ~ 705
@@ -366,7 +366,7 @@ The Dragon Misfits Series (Holmberg) ~ 5552
 An Ember in the Ashes (Sabaa) ~ 5626
 Gunmetal Gods Series (Akhtar) ~ 5632
 The Queen's Thief (Turner) ~ 5644
-Гардемарины, вперед! (Соротокина) ~ 5647
+Гардемарины, вперед! (Соротокина) ~ 5645
 The Zimiamvia Series (Eddison) ~ 5693
 Night Angel Trilogy (Weeks) ~ 5694
 A Fine and Private Place (Beagle) ~ 966
@@ -380,7 +380,7 @@ Gormenghast (Peake) ~ 5800
 Петербургские трущобы (Крестовский) ~ 5871
 The Winnowind Flame (Williams) ~ 5900
 Задача трех тел (Лю Цысинь) ~ 5903
-Отверженные (Гюго) ~ 5925
+Отверженные (Гюго) ~ 5924
 Атака мертвецов (Джафаров) ~ 750
 Марк и Эзра (Джафаров) ~ 1760
 Сато (Джафаров) ~ 863
@@ -424,7 +424,7 @@ Bodies of Light (Moss) ~ 1032
 Night Waking (Moss) ~ 1292
 Signs for Lost Children (Moss) ~ 1357
 Ibis trilogy (Ghosh) ~ 6957
-Дозоры (Лукьяненко) ~ 6960
+Дозоры (Лукьяненко) ~ 6957
 The Lord of The Rings (Tolkien) ~ 7024
 The Lays of Anuskaya (Beaulieu) ~ 7078
 Хроника объявленной смерти (Маркес) ~ 319
@@ -478,7 +478,7 @@ The Reborn Empire Series (Madson) ~ 7707
 Я исповедуюсь (Кабре) ~ 2603
 Elizabeth Strout ~ 7757
 Marwood and Lovett Series (Taylor) ~ 7795
-Сказания о людях тайги (Черкасов, Москвитина) ~ 7875
+Сказания о людях тайги (Черкасов, Москвитина) ~ 7873
 The Books of Babel (Bancroft) ~ 7877
 The People in the Trees (Yanagihara) ~ 1674
 To Paradise (Yanagihara) ~ 2939
@@ -1292,3 +1292,28 @@ Drowned World (Chan) ~ 1458
 Time Salvager Series (Chu) ~ 3221
 The War Arts Saga (Chu) ~ 4548
 Tao series (Chu) ~ 7323
+Антоновские яблоки. Жизнь Арсеньева (Бунин) ~ 3565
+Как поймать монстра (Цимеринг) ~ 1566
+Три возраста Окини-сан (Пикуль) ~ 1538
+Крейсера (Пикуль) ~ 1044
+Каторга (Пикуль) ~ 1536
+Богатство (Пикуль) ~ 936
+Океанский патруль (Пикуль) ~ 3530
+Баязет (Пикуль) ~ 1943
+Париж на три часа (Пикуль) ~ 350
+На задворках великой империи (Пикуль) ~ 3656
+Из Тупика (Пикуль) ~ 3318
+Реквием каравану PQ-17 (Пикуль) ~ 846
+Пером и Шпагой (Пикуль) ~ 1559
+Звезды над болотом (Пикуль) ~ 327
+Моонзунд (Пикуль) ~ 1958
+Мальчики с бантиками (Пикуль) ~ 937
+Слово и дело (Пикуль) ~ 4527
+Битва железных канцлеров (Пикуль) ~ 1188
+Русско-Японская война. Дальний Восток (Пикуль) ~ 5305
+Нечистая сила (Пикуль) ~ 2950
+Каждому свое (Пикуль) ~ 1521
+Фаворит (Пикуль) ~ 4543
+Честь имею (Пикуль) ~ 2387
+Ступай и не греши (Пикуль) ~ 589
+Барбаросса (Пикуль) ~ 2324
