@@ -44,6 +44,7 @@ vim.opt.shortmess:append "c"
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+vim.cmd [[cnoreabbrev q1 q!]]
 
 -- since vim.cmd [[set formatoptions-=cro]]
 -- and vim.opt.formatoptions:remove {"c", "r", "o"}
