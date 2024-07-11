@@ -328,7 +328,7 @@ Making History (Fry) ~ 1335
 Убежище 3/9 (Старобинец) ~ 1004
 Первый отряд. Истина (Старобинец) ~ 1087
 Лисьи броды (Старобинец) ~ 2445
-Manifest Delusions Series (Fletcher) ~ 4537
+Manifest Delusions Series (Fletcher) ~ 6018
 Мир двух морей (Звонцова) ~ 4599
 Eden Trilogy (Harrison) ~ 4637
 Таис Афинская (Ефремов) ~ 2028
@@ -1112,18 +1112,12 @@ The Wheel of Time (Jordan) ~ 49618
 Zodiac (Stephenson) ~ 1118
 The Big U (Stephenson) ~ 1194
 The Cobweb (Stephenson) ~ 1742
-Snow Crash (Stephenson) ~ 1798
-The Diamond Age (Stephenson) ~ 2154
 Interface (Stephenson) ~ 2398
 The Rise and Fall of D.O.D.O (Stephenson) ~ 2402
 Termination Shock (Stephenson) ~ 2748
-Fall; or, Dodge in Hell (Stephenson) ~ 3528
 Anathem (Stephenson) ~ 3635
 Rotherweird Series (Stephenson) ~ 4095
-Reamde (Stephenson) ~ 4564
-Cryptonomicon (Stephenson) ~ 4609
 The Mongoliad Cycle (Stephenson) ~ 8050
-The Baroque Cycle (Stephenson) ~ 12632
 Child of an Ancient City (Williams) ~ 296
 Caliban's Hour (Williams) ~ 489
 Tailchaser's Song (Williams) ~ 1212
@@ -1317,3 +1311,17 @@ Tao series (Chu) ~ 7323
 Честь имею (Пикуль) ~ 2387
 Ступай и не греши (Пикуль) ~ 589
 Барбаросса (Пикуль) ~ 2324
+Chosen of the Changeling (Keyes) ~ 3466
+Maxwell's Demon (Hall) ~ 938
+The Age of Unreason (Keyes) ~ 5164
+Звезды (Ци Юэ) ~ 1552
+Идеальное несовершенство (Дукай) ~ 1325
+Иные песни (Дукай) ~ 2195
+Красная тетрадь (Беляева) ~ 1583
+Лед (Дукай) ~ 5706
+Терра (Беляева) ~ 2043
+Giants (Hogan) ~ 6405
+Kingdoms of Thorn and Bone (Keyes) ~ 7206
+The High and Faraway (Keyes) ~ 2997
+Enoch Root (Stephenson) ~ 25333
+Future History (Stephenson) ~ 3952
