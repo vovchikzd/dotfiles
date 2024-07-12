@@ -1325,3 +1325,6 @@ Kingdoms of Thorn and Bone (Keyes) ~ 7206
 The High and Faraway (Keyes) ~ 2997
 Enoch Root (Stephenson) ~ 25333
 Future History (Stephenson) ~ 3952
+Quillifer (Williams) ~ 5655
+Cradle of Sarutn (Hogan) ~ 3196
+Code of the Lifemaker (Hogan) ~ 2802
