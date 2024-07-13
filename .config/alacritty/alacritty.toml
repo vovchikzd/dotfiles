@@ -1,12 +1,12 @@
 working_directory = '/home/vovchik'
 
-import = [
-  "~/dotfiles/.config/alacritty/themes/themes/gruvbox_dark.toml"
-]
-
 # import = [
-#   "~/dotfiles/.config/alacritty/themes/themes/dracula.toml"
+#   "~/dotfiles/.config/alacritty/themes/themes/gruvbox_dark.toml"
 # ]
+
+import = [
+  "~/dotfiles/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
+]
 
 [font]
 size = 11
