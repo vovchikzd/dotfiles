@@ -70,6 +70,7 @@ pipup() {
 }
 
 rsup() {
+  rustup update || return 1
   progs=("bat"
          "eva"
          "eza"
@@ -89,7 +90,7 @@ rsup() {
 
   for prog in ${progs[@]}
   do
-    cargo install $prog --locked || exit 1
+    cargo install $prog --locked || return 1
   done
 }
 
