@@ -10,6 +10,11 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>|", "<C-w>v", opts("Vertical split"))
 keymap("n", "<leader>\\", "<C-w>s", opts("Horizontal split"))
+keymap("n", "<leader>c", "<C-w>c", opts("Close split"))
+keymap("n", "<C-l>", "<C-w>l", opts("Move cursor to right split window"))
+keymap("n", "<C-h>", "<C-w>h", opts("Move cursor to left split window"))
+keymap("n", "<C-j>", "<C-w>j", opts("Move cursor to down split window"))
+keymap("n", "<C-k>", "<C-w>k", opts("Move cursor to up split window"))
 
 keymap("n", "<C-h>", "<C-w>h", opts("Go to left window"))
 keymap("n", "<C-j>", "<C-w>j", opts("Go to below window"))
