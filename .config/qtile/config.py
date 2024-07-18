@@ -151,8 +151,9 @@ keyboard_layouts = widget.KeyboardLayout(
 
 keys.extend([
     Key([mod], "period", lazy.next_screen(), desc="Switch to next screen"),
-    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
+    Key(["mod1"], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
 ])
+
 screens = [
     Screen(
         top=bar.Bar(
