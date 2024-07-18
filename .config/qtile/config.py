@@ -137,15 +137,25 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
+    font="Hack Nerd Font",
+    fontsize=13,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
+keyboard_layouts = widget.KeyboardLayout(
+                    configured_keyboards = ['us', 'ru']
+                    , display_map = {'us': 'en', 'ru': 'ru'}
+                    , background="#00a693"
+)
+
+keys.extend([
+    Key([mod], "period", lazy.next_screen(), desc="Switch to next screen"),
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
+])
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -157,12 +167,12 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
+                widget.TextBox("vovchikzd config", name="default"),
                 widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
-                widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                keyboard_layouts,
                 widget.QuickExit(),
             ],
             24,
@@ -175,7 +185,7 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -187,12 +197,12 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
+                widget.TextBox("vovchikzd config", name="default"),
                 widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
-                widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                keyboard_layouts,
                 widget.QuickExit(),
             ],
             24,
@@ -203,7 +213,7 @@ screens = [
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
-    )
+    ),
 ]
 
 # Drag floating layouts.
