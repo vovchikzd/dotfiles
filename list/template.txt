@@ -1356,3 +1356,48 @@ The Chronicles of Narnia (Lewis) ~ 4385
 Территория (Куваев) ~ 1350
 Тесей. Царь должен умереть. Бык из моря (Рено) ~ 2496
 Я, Клавдий. Божественный Клавдий (Грейвз) ~ 4023
+District of Columbia (Passos) ~ 3464
+Manhattan Transfer (Passos) ~ 1405
+One Man's Initiation: 1917 (Passos) ~ 308
+Streets of Night (Passos) ~ 683
+The Great Days (Passos) ~ 1013
+Three Soldiers (Passos) ~ 1464
+U.S.A. (Passos) ~ 5131
+A Daughter of the Snows (London) ~ 959
+A Son of The Sun (London) ~ 677
+Adventure (London) ~ 786
+Before Adam (London) ~ 428
+Burning Daylight (London) ~ 1246
+Jerry of the Islands. Michael, Brother of Jerry (London) ~ 1867
+Martin Eden (London) ~ 1541
+The Abysmal Brute (London) ~ 255
+The Call of the Wild (London) ~ 358
+The Cruise of the Dazzler (London) ~ 398
+The Game (London) ~ 171
+The Iron Heel (London) ~ 1007
+The Jacket (Star-Rover) (London) ~ 1120
+The Little Lady of the Big House (London) ~ 1115
+The Mutiny of the Elsinore (London) ~ 1239
+The Scarlet Plague (London) ~ 223
+The Sea-Wolf (London) ~ 1150
+The Valley of the Moon (London) ~ 1829
+White Fang (London) ~ 797
+Children of the Frost (London) ~ 543
+Dutch Courage (London) ~ 368
+Lost Face (London) ~ 450
+Love of Life (London) ~ 517
+Moon-face (London) ~ 529
+On the Makaloa Mat (London) ~ 606
+Smoke Bellew (London) ~ 1026
+South Sea Tales (London) ~ 556
+Tales of the Fish Patrol (London) ~ 340
+The Faith of Men (London) ~ 515
+The God of His Fathers (London) ~ 568
+The House of Pride (London) ~ 335
+The Human Drift (London) ~ 353
+The Night-Born (London) ~ 570
+The Red One (London) ~ 417
+The Son of the Wolf (London) ~ 537
+The Strength of the Strong (London) ~ 522
+The Turtles of Tasman (London) ~ 474
+When God Laughs (London) ~ 569
