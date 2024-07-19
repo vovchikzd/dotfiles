@@ -9,6 +9,11 @@ control = "control"
 shift = "shift"
 caps = "lock"
 enter = "Return"
+space = "space"
+period = "period"
+tab = "Tab"
+
+wallpaper = "/home/vovchik/dotfiles/wallpaper.jpg"
 
 terminal = "/home/vovchik/.cargo/bin/alacritty"
 browser = "/usr/bin/firefox"
@@ -20,19 +25,19 @@ keys = [
     Key([super], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([super], "j", lazy.layout.down(), desc="Move focus down"),
     Key([super], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([super], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([super], space, lazy.layout.next(), desc="Move window focus to other window"),
 
-    Key([super, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([super, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([super, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([super, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([super, shift], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([super, shift], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([super, shift], "j", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([super, shift], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
     Key([super], "i", lazy.layout.grow(), desc="Grow window"),
-    Key([super], "m", lazy.layout.shring(), desc="Shrink window"),
+    Key([super], "m", lazy.layout.shrink(), desc="Shrink window"),
     Key([super], "n", lazy.layout.reset(), desc="Reset all window sizes"),
     Key([super, shift], "space", lazy.layout.flip(), desc="Flip windows"),
 
-    Key([super], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([super], tab, lazy.next_layout(), desc="Toggle between layouts"),
     Key([super], "w", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [super]
@@ -52,8 +57,8 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key(
-        [super, "shift"],
-        "Return",
+        [super, shift],
+        enter,
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
@@ -62,7 +67,7 @@ keys = [
     Key([super], enter, lazy.spawn(terminal), desc="Launch terminal"),
     Key([super], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([super], "t", lazy.spawn(telegram), desc="Launch telegram"),
-    Key([super], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([alt], space, lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
     # Config manipulation
     Key([super, control], "r", lazy.reload_config(), desc="Reload the config"),
@@ -116,14 +121,14 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
-        margin = 1
+        margin = 7
         , border_width = 2
     ),
 
     layout.Max(
         margin = 7
     ),
-    # layout.Stack(num_stacks=2),
+    # layout.Stack(num_stacks=10),
 ]
 
 widget_defaults = dict(
@@ -136,41 +141,36 @@ extension_defaults = widget_defaults.copy()
 keyboard_layouts = widget.KeyboardLayout(
                     configured_keyboards = ['us', 'ru']
                     , display_map = {'us': 'en', 'ru': 'ru'}
-                    , background="#00a693"
 )
 
 keys.extend([
-    Key([super], "period", lazy.next_screen(), desc="Switch to next screen"),
-    # Key(["mod1"], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
-    Key(["Shift_L", alt], "", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
+    Key([super], period, lazy.next_screen(), desc="Switch to next screen"),
+    Key([alt, shift], space, lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
 ])
+
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayoutIcon(),
+                widget.CurrentScreen(),
+                keyboard_layouts,
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("vovchikzd config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
+                widget.WindowTabs(),
+                widget.Bluetooth(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                keyboard_layouts,
+                widget.Memory(),
+                widget.StatusNotifier(),
                 widget.QuickExit(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
+        wallpaper = wallpaper,
+        wallpaper_mode = "fill"
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
@@ -179,28 +179,24 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayoutIcon(),
+                widget.CurrentScreen(),
+                keyboard_layouts,
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("vovchikzd config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
+                widget.WindowTabs(),
+                widget.Bluetooth(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                keyboard_layouts,
+                widget.Memory(),
+                widget.StatusNotifier(),
                 widget.QuickExit(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
+        wallpaper = wallpaper,
+        wallpaper_mode = "fill"
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
