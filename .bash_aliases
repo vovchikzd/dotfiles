@@ -29,6 +29,7 @@ numbering="%(playlist_index)s. $name"
 playlist="%(playlist)s [%(playlist_id)s](%(channel)s)"
 # eplaylist="%(playlist)s_[%(playlist_id)s](%(channel)s)"
 playlist_numbering="$playlist/$numbering"
+tor_proxy='socks5://localhost:9150'
 # eplaylist_numbering="$eplaylist/$enumbering"
 # no_space=--restrict-filenames
 # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
