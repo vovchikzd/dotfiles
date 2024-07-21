@@ -42,8 +42,7 @@ keys = [
     Key(
         [super]
         , "f"
-        , lazy.window.toggle_fullscreen()
-        , desc="Toggle fullscreen on the focused window"
+        , lazy.window.toggle_fullscreen() , desc="Toggle fullscreen on the focused window"
     ),
     Key(
         [super, shift]
@@ -68,6 +67,7 @@ keys = [
     Key([super], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([super], "t", lazy.spawn(telegram), desc="Launch telegram"),
     Key([alt], space, lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([shift, alt], "b", lazy.spawn("/usr/bin/obs"), desc="Launch obs-studio"),
 
     # Config manipulation
     Key([super, control], "r", lazy.reload_config(), desc="Reload the config"),
@@ -104,14 +104,14 @@ for i in groups:
             ),
 
             Key(
-                [super, control],
+                [super, shift],
                 i.name,
                 lazy.window.togroup(i.name, switch_group=True),
                 desc=f"Switch to & move focused window to group {i.name}",
             ),
 
             Key(
-                [super, shift],
+                [super, control],
                 i.name,
                 lazy.window.togroup(i.name, switch_group=False),
                 desc=f"Move focused window to group {i.name}",
@@ -128,7 +128,6 @@ layouts = [
     layout.Max(
         margin = 7
     ),
-    # layout.Stack(num_stacks=10),
 ]
 
 widget_defaults = dict(
