@@ -68,6 +68,7 @@ keys = [
     Key([super], "t", lazy.spawn(telegram), desc="Launch telegram"),
     Key([alt], space, lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([shift, alt], "b", lazy.spawn("/usr/bin/obs"), desc="Launch obs-studio"),
+    Key([super], "v", lazy.spawn("/usr/bin/librewolf"), desc="Launch LibreWorl"),
 
     # Config manipulation
     Key([super, control], "r", lazy.reload_config(), desc="Reload the config"),
