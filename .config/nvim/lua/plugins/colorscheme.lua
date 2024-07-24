@@ -122,5 +122,5 @@ catppuccin = {
 }
 
 -- return dracula
--- return gruvbox
-return catppuccin
+return gruvbox
+-- return catppuccin
