@@ -1265,7 +1265,6 @@ The Tyrant Philosophers (Tchaikovsky) ~ 3947
 Guns of the Dawn (Tchaikovsky) ~ 1924
 Terrible Worlds (Tchaikovsky) ~ 2662
 The Apt Universe (Tchaikovsky) ~ 25312
-Арап Петра Великого (Пушкин) ~ 127
 Дубровский (Пушкин) ~ 274
 Капитанская дочка (Пушкин) ~ 385
 Евгений Онегин (Пушкин) ~ 293
@@ -1419,3 +1418,9 @@ Rucciя (Идиатуллин) ~ 1469
 Последнее время (Идиатуллин) ~ 1258
 СССР (Идиатуллин) ~ 1746
 Это просто игра (Идиатуллин) ~ 410
+East of the Mountains (Guterson) ~ 956
+Ed King (Guterson) ~ 1382
+Our Lady of the Forest (Guterson) ~ 1307
+Snow Falling on Cedars (Guterson) ~ 1596
+The Final Case (Guterson) ~ 826
+The Other (Guterson) ~ 1143
