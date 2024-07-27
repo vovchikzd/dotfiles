@@ -2,6 +2,8 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+terminal: str = "/home/vovchik/dotfiles/.config/qtile/script.sh"
+
 alt = "mod1"
 # caps = "mod2" # num lock ????
 super = "mod4"
@@ -15,7 +17,6 @@ tab = "Tab"
 
 wallpaper = "/home/vovchik/dotfiles/wallpaper.jpg"
 
-terminal = "/home/vovchik/.cargo/bin/alacritty"
 browser = "/usr/bin/firefox"
 telegram = "/usr/bin/telegram-desktop"
 
@@ -25,7 +26,8 @@ keys = [
     Key([super], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([super], "j", lazy.layout.down(), desc="Move focus down"),
     Key([super], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([super], space, lazy.layout.next(), desc="Move window focus to other window"),
+    Key([super], space, lazy.layout.next(), desc="Move window focus to next window"),
+    Key([super, alt], space, lazy.layout.previous(), desc="Move window focus to previous window"),
 
     Key([super, shift], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
     Key([super, shift], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
@@ -228,6 +230,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class="mpv"),
     ]
 )
 auto_fullscreen = True
