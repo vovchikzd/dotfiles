@@ -128,6 +128,7 @@ layouts = [
 
     layout.Max(
         margin = 7
+        , border_width = 2
     ),
 ]
 
