@@ -2,7 +2,14 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+import os, subprocess
+
 terminal: str = "/home/vovchik/dotfiles/.config/qtile/script.sh"
+
+@hook.subscribe.startup_once
+def connect_net():
+    home = os.path.expanduser("~/dotfiles/nmconnect.sh")
+    subprocess.Popen([home])
 
 alt = "mod1"
 # caps = "mod2" # num lock ????
@@ -231,7 +238,8 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="mpv"),
-        Match(wm_class="dolphin")
+        Match(wm_class="dolphin"),
+        Match(wm_class="keepassxc"),
     ]
 )
 auto_fullscreen = True
