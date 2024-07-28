@@ -130,12 +130,12 @@ for i in groups:
     )
 
 layouts = [
-    layout.MonadTall(
+    layout.Max(
         margin = 7
         , border_width = 2
     ),
 
-    layout.Max(
+    layout.MonadTall(
         margin = 7
         , border_width = 2
     ),
@@ -240,6 +240,8 @@ floating_layout = layout.Floating(
         Match(wm_class="mpv"),
         Match(wm_class="dolphin"),
         Match(wm_class="keepassxc"),
+        Match(wm_class="OpenGL study"),
+        Match(wm_class="Vulkan study"),
     ]
 )
 auto_fullscreen = True
