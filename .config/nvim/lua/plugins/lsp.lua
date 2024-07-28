@@ -67,6 +67,29 @@ local pyright_setup = function()
   end
 end
 
+local neocmakelsp_setup = function()
+  if vim.fn.executable("neocmakelsp") == 1 then
+    local lspconfig = require("lspconfig")
+    lspconfig.neocmake.setup({
+      capabilities = capabilities,
+      on_attach = function()
+        on_attach_default()
+      end,
+      cmd = {"neocmakelsp", "--stdio"},
+      filetypes = {"cmake"},
+      root_dir = function(fname)
+        return lspconfig.util.find_git_ancestor(fname)
+      end,
+      single_file_support = true,
+      init_options = {
+        format = {enable = true},
+        lint = {enable = true},
+        scan_cmake_in_package = true,
+      }
+    })
+  end
+end
+
 local lsp = {
   "neovim/nvim-lspconfig",
   dependencies = {},
@@ -75,6 +98,7 @@ local lsp = {
     rust_analyzer_setup()
     lua_ls_setup()
     pyright_setup()
+    neocmakelsp_setup()
   end
 }
 

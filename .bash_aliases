@@ -87,6 +87,7 @@ rsup() {
          "difftastic"
          "bottom"
          "gitui"
+         "neocmakelsp"
        )
 
   for prog in ${progs[@]}
