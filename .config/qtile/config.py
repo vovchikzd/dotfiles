@@ -76,7 +76,7 @@ keys = [
     Key([super], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([super], "t", lazy.spawn(telegram), desc="Launch telegram"),
     Key([alt], space, lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([shift, alt], "b", lazy.spawn("/usr/bin/obs"), desc="Launch obs-studio"),
+    Key([shift, alt], "b", lazy.spawn("prime-run /usr/bin/obs"), desc="Launch obs-studio"),
     Key([super], "v", lazy.spawn("/usr/bin/librewolf"), desc="Launch LibreWorl"),
 
     # Config manipulation
@@ -168,7 +168,7 @@ screens = [
                 keyboard_layouts,
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowTabs(),
+                widget.WindowTabs(fontsize = 10),
                 widget.Bluetooth(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.Memory(),
@@ -194,7 +194,7 @@ screens = [
                 keyboard_layouts,
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowTabs(),
+                widget.WindowTabs(fontsize = 10),
                 widget.Bluetooth(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.Memory(),
