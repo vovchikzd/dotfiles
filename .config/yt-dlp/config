@@ -1,5 +1,3 @@
 -f "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
-
---proxy 'socks5://localhost:9150'
