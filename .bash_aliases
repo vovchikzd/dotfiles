@@ -74,7 +74,6 @@ rsup() {
   rustup update || return 1
   progs=("bat"
          "eva"
-         "eza"
          "fd-find"
          "procs"
          "ripgrep"
@@ -88,6 +87,7 @@ rsup() {
          "bottom"
          "gitui"
          "neocmakelsp"
+         "eza"
        )
 
   for prog in ${progs[@]}
