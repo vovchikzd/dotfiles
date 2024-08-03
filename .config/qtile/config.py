@@ -8,7 +8,7 @@ terminal: str = "/home/vovchik/dotfiles/.config/qtile/script.sh"
 
 @hook.subscribe.startup_once
 def connect_net():
-    home = os.path.expanduser("~/dotfiles/nmconnect.sh")
+    home = os.path.expanduser("~/dotfiles/autostart.sh")
     subprocess.Popen([home])
 
 alt = "mod1"

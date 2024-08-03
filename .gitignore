@@ -2,4 +2,5 @@ lazy-lock.json
 .~lock*
 .config/alacritty/themes/
 __pycache__
-nmconnect.sh
+autostart.sh
+spoof/
