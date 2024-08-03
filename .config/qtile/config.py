@@ -133,6 +133,7 @@ layouts = [
     layout.Max(
         margin = 7
         , border_width = 2
+        , border_focus = "#4cbb17"
     ),
 
     layout.MonadTall(
