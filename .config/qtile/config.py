@@ -8,8 +8,10 @@ terminal: str = "/home/vovchik/dotfiles/.config/qtile/script.sh"
 
 @hook.subscribe.startup_once
 def connect_net():
-    home = os.path.expanduser("~/dotfiles/autostart.sh")
-    subprocess.Popen([home])
+    nm_script = os.path.expanduser("~/dotfiles/autostart/nmconnect.sh")
+    spoof_script = os.path.expanduser("~/dotfiles/autostart/spoof.sh")
+    subprocess.Popen([nm_script])
+    subprocess.Popen([spoof_script])
 
 alt = "mod1"
 # caps = "mod2" # num lock ????
