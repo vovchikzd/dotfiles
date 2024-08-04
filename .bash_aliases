@@ -99,3 +99,12 @@ rsup() {
 clanggitcpp='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang++'
 clanggit='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang'
 alias ctags='ctags --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -R .'
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
