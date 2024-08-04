@@ -12,6 +12,7 @@ vim.opt.smartindent = true                    -- autoindent new lines
 
 vim.opt.scrolloff = 8                         -- minimal number of screen lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8                     -- as above but colums
+vim.opt.tags = "./tags;/"
 
 -- don't sure I need it
 vim.opt.backup = false                        -- create a backup file

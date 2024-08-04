@@ -98,3 +98,4 @@ rsup() {
 
 clanggitcpp='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang++'
 clanggit='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang'
+alias ctags='ctags --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -R .'

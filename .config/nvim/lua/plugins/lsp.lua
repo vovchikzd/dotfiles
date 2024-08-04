@@ -22,6 +22,7 @@ end
 local clangd_setup = function()
   if vim.fn.executable("clangd") == 1 then
     require("lspconfig").clangd.setup({
+      autostart = false,
       filetypes = {"c", "h", "cc", "cpp", "hh", "hpp", "cxx", "H", "C", "cppm",
                    "cp", "CPP", "c++", "hp", "hxx", "HPP", "h++"},
       capabilities = capabilities,
