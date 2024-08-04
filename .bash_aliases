@@ -87,6 +87,8 @@ rsup() {
          "bottom"
          "gitui"
          "neocmakelsp"
+         "yazi-fm"
+         "yazi-cli"
          "eza"
        )
 
