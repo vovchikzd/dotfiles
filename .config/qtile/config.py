@@ -13,6 +13,16 @@ def connect_net():
     subprocess.Popen([nm_script])
     subprocess.Popen([spoof_script])
 
+@hook.subscribe.client_new
+def disable_floating(window):
+    rules = [
+        Match(wm_class="mpv")
+    ]
+
+    if any(window.match(rule) for rule in rules):
+        window.togroup(qtile.current_group.name)
+        window.cmd_disable_floating()
+
 alt = "mod1"
 # caps = "mod2" # num lock ????
 super = "mod4"
@@ -29,8 +39,7 @@ wallpaper = "/home/vovchik/dotfiles/wallpaper.jpg"
 browser = "/usr/bin/firefox"
 telegram = "/usr/bin/telegram-desktop"
 
-keys = [
-    # Layout manipulation
+keys = [ # Layout manipulation
     Key([super], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([super], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([super], "j", lazy.layout.down(), desc="Move focus down"),
@@ -240,7 +249,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-        Match(wm_class="mpv"),
+        # Match(wm_class="mpv"),
         Match(wm_class="dolphin"),
         Match(wm_class="keepassxc"),
         Match(wm_class="OpenGL study"),
