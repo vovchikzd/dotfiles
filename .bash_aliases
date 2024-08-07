@@ -7,7 +7,6 @@ alias srb='source $HOME/.bashrc'
 alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
 alias libr='libreoffice /home/vovchik/External_Drives/1Tb/Библиотека.ods &>/dev/null &'
 alias cat=bat
-alias pwd='echo -n $PWD/'
 alias xclip='xclip -selection c'
 alias xclip_get='xclip -selection c -o'
 
@@ -109,4 +108,8 @@ function yy() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+function pwd() {
+  echo -n $PWD/$1
 }
