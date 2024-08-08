@@ -1,3 +1,6 @@
+[submodule ".config/yazi/plugins/compress.yazi"]
+	path = .config/yazi/plugins/compress.yazi
+	url = https://github.com/KKV9/compress.yazi.git
 [submodule ".config/alacritty/themes"]
 	path = .config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme.git
