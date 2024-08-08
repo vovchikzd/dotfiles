@@ -88,6 +88,7 @@ rsup() {
          "neocmakelsp"
          "yazi-fm"
          "yazi-cli"
+         "nu"
          "eza"
        )
 
