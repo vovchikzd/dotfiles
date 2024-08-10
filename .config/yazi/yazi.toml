@@ -7,3 +7,30 @@ show_symlink = true
 
 [preview]
 image_quality = 90
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true },
+]
+foliate = [
+  { run = 'foliate "$@"', orphan = true },
+]
+okular = [
+  { run = 'okular "$@"', orphan = true },
+]
+playlist = [
+  { run = 'mpv --playlist="$@"', orphan = true }
+]
+
+
+[open]
+prepend_rules = [
+	{ name = "*.epub", use = "foliate" },
+  { name = "*.fb2", use = "foliate" },
+  { name = "*.mobi", use = "foliate" },
+
+  { name = "*.pdf", use = "okular" },
+  { name = "*.djvu", use = "okular" },
+
+  { name = "*.plt", use = "playlist" },
+]
