@@ -19,7 +19,10 @@ okular = [
   { run = 'okular "$@"', orphan = true },
 ]
 playlist = [
-  { run = 'mpv --playlist="$@"', orphan = true }
+  { run = 'mpv --playlist="$@"', orphan = true },
+]
+latex = [
+  { run = 'codium "$@"', orphan = true },
 ]
 
 
@@ -33,4 +36,6 @@ prepend_rules = [
   { name = "*.djvu", use = "okular" },
 
   { name = "*.plt", use = "playlist" },
+
+  { name = "*.tex", use = "latex" },
 ]
