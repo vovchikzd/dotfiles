@@ -4,3 +4,6 @@
 [submodule ".config/alacritty/themes"]
 	path = .config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme.git
+[submodule ".config/yazi/plugins/epub-preview.yazi"]
+	path = .config/yazi/plugins/epub-preview.yazi
+	url = https://github.com/kirasok/epub-preview.yazi.git

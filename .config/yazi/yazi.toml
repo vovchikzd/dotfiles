@@ -13,7 +13,7 @@ edit = [
 	{ run = 'nvim "$@"', block = true },
 ]
 foliate = [
-  { run = 'foliate "$@"', orphan = true },
+  { run = 'ebook-viewer "$@"', orphan = true },
 ]
 okular = [
   { run = 'okular "$@"', orphan = true },
@@ -30,6 +30,7 @@ latex = [
 prepend_rules = [
 	{ name = "*.epub", use = "foliate" },
   { name = "*.fb2", use = "foliate" },
+  { name = "*.fb2.zip", use = "foliate" },
   { name = "*.mobi", use = "foliate" },
 
   { name = "*.pdf", use = "okular" },
@@ -39,3 +40,7 @@ prepend_rules = [
 
   { name = "*.tex", use = "latex" },
 ]
+
+[[plugin.prepend_previewers]]
+mime = "application/epub+zip"
+run = "epub-preview"
