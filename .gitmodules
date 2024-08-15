@@ -1,9 +1,18 @@
-[submodule ".config/yazi/plugins/compress.yazi"]
-	path = .config/yazi/plugins/compress.yazi
-	url = https://github.com/KKV9/compress.yazi.git
 [submodule ".config/alacritty/themes"]
 	path = .config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme.git
 [submodule ".config/yazi/plugins/epub-preview.yazi"]
 	path = .config/yazi/plugins/epub-preview.yazi
 	url = https://github.com/kirasok/epub-preview.yazi.git
+[submodule ".config/yazi/plugins/glow.yazi"]
+	path = .config/yazi/plugins/glow.yazi
+	url = https://github.com/Reledia/glow.yazi.git
+[submodule ".config/yazi/plugins/mediainfo.yazi"]
+	path = .config/yazi/plugins/mediainfo.yazi
+	url = https://github.com/Ape/mediainfo.yazi.git
+[submodule ".config/yazi/plugins/ouch.yazi"]
+	path = .config/yazi/plugins/ouch.yazi
+	url = https://github.com/ndtoan96/ouch.yazi.git
+[submodule ".config/yazi/plugins/torrent-preview.yazi"]
+	path = .config/yazi/plugins/torrent-preview.yazi
+	url = https://github.com/kirasok/torrent-preview.yazi.git
