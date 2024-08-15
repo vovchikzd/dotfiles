@@ -16,3 +16,6 @@
 [submodule ".config/yazi/plugins/torrent-preview.yazi"]
 	path = .config/yazi/plugins/torrent-preview.yazi
 	url = https://github.com/kirasok/torrent-preview.yazi.git
+[submodule ".config/yazi/plugins/compress.yazi"]
+	path = .config/yazi/plugins/compress.yazi
+	url = https://github.com/KKV9/compress.yazi.git
