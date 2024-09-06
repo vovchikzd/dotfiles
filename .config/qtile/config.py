@@ -1,5 +1,5 @@
 from libqtile import bar, layout, qtile, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, InvertMatch, Match, MatchAll, Screen, Rule
 from libqtile.lazy import lazy
 
 import os, subprocess
@@ -13,15 +13,15 @@ def connect_net():
     subprocess.Popen([nm_script])
     subprocess.Popen([spoof_script])
 
-@hook.subscribe.client_new
-def disable_floating(window):
-    rules = [
-        Match(wm_class="mpv")
-    ]
-
-    if any(window.match(rule) for rule in rules):
-        window.togroup(qtile.current_group.name)
-        window.cmd_disable_floating()
+# @hook.subscribe.client_new
+# def disable_floating(window):
+#     rules = [
+#         Match(wm_class="mpv")
+#     ]
+# 
+#     if any(window.match(rule) for rule in rules):
+#         window.togroup(qtile.current_group.name)
+#         window.disable_floating()
 
 alt = "mod1"
 # caps = "mod2" # num lock ????
@@ -111,7 +111,7 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i, init=True)  for i in "123456789"]
 
 for i in groups:
     keys.extend(

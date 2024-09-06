@@ -298,7 +298,7 @@ The Windup Girl (Bacigalupi) ~ 1649
 The Balkan Trilogy (Manning) ~ 4007
 The Aurelian Cycle (Munda) ~ 4089
 4 3 2 1 (Auster) ~ 4128
-Московская сага (Аксенов) ~ 4183
+Московская сага (Аксенов) ~ 4172
 His Dark Material trilogy (Pullman) ~ 4195
 Winter Solstice (Pilcher) ~ 1855
 The Shell Seekers (Pilcher) ~ 2401
@@ -879,7 +879,7 @@ The First Law world (Abercrombie) ~ 19977
 Azincourt (Cornwell) ~ 1541
 The Warlord Chronicles Series (Cornwell) ~ 5689
 The Last Kingdom (Cornwell) ~ 16451
-Thomas Covenant ~ 24451
+Thomas Covenant (Donaldson) ~ 24451
 Ender's Game (Card) ~ 24278
 Emilie (Wells) ~ 1727
 The Murderbot Diaries (Wells) ~ 4005
@@ -1457,7 +1457,7 @@ The Far Pavilions (Kaye) ~ 5409
 Чертеж Ньютона (Иличевский) ~ 896
 Угловая комната (Валитов) ~ 678
 The Sound and the Fury (Faulkner) ~ 999
-Тайный год (Гиголашвили) ~ 262k9
+Тайный год (Гиголашвили) ~ 2629
 Люди в голом (Аствацатуров) ~ 673
 Не кормите и не трогайте пеликанов (Аствацатуров) ~ 880
 Осень в карманах (Аствацатуров) ~ 540
@@ -1472,3 +1472,22 @@ The Sound and the Fury (Faulkner) ~ 999
 Хлорофилия (Рубанов) ~ 1914
 Жизнь удалась (Рубанов) ~ 2471
 Готовься к войне (Рубанов) ~ 2524
+Королевские соколы (Чароит) ~ 3363
+Остров Крым. В поисках жанра. Золотая наша Железка (Аксенов) ~ 2786
+Ген Рафаила (Качур) ~ 828
+Любимчик Эпохи (Качур) ~ 803
+Повесть о Гэндзи (Сикибу) ~ 6065
+Дивнозерье (Чароит) ~ 5922
+Dublin Murder Squad (French) ~ 11924
+Shadow Of The Fox (Kagawa) ~ 4207
+Glass immortals (McClellan) ~ 2474
+Gap cycle (Donaldson) ~ 9623
+Gilded Mountain (Manning) ~ 1501
+Nation (Pratchett) ~ 1115
+The Dragonriders of Pern (McCaffrey) ~ 3928
+The Murdstone Trilogy (Peet) ~ 781
+Time and Time Again (Elton) ~ 1272
+И жили они долго и счастливо (Селютина) ~ 2009
+Кафедра (Грекова) ~ 975
+Крабат (Пройслер) ~ 629
+Мисс Черити (Мюрай) ~ 1026

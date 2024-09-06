@@ -45,10 +45,9 @@ prepend_rules = [
 prepend_previewers = [
   { name = "*.md", run = "glow" },
 
-  { mime = "application/epub+zip", run = "epub-preview" },
+  { name = "*.epub", run = "epub-preview" },
 
   { mime = "{image,audio,video}/*", run = "mediainfo"},
-
   { mime = "application/x-subrip", run = "mediainfo"},
 
   { mime = "application/*zip", run = "ouch" },
