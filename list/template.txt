@@ -1491,3 +1491,6 @@ Time and Time Again (Elton) ~ 1272
 Кафедра (Грекова) ~ 975
 Крабат (Пройслер) ~ 629
 Мисс Черити (Мюрай) ~ 1026
+Gutenberg's Apprentice (Christie) ~ 1302
+The Deathless trilogy (Newman) ~ 3829
+The Witch's Compendium of Monsters (Dimova) ~ 1352
