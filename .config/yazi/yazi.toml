@@ -13,7 +13,7 @@ edit = [
 	{ run = 'nvim "$@"', block = true },
 ]
 foliate = [
-  { run = 'ebook-viewer "$@"', orphan = true },
+  { run = 'foliate "$@"', orphan = true },
 ]
 okular = [
   { run = 'okular "$@"', orphan = true },

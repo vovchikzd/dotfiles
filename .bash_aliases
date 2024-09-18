@@ -4,18 +4,18 @@ alias ls='eza -1 --group-directories-first'
 alias lt='eza -1 --tree --group-directories-first'
 
 alias srb='source $HOME/.bashrc'
-alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
-alias libr='libreoffice /home/vovchik/External_Drives/1Tb/Библиотека.ods &>/dev/null &'
+# ??? alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
+# ??? alias libr='libreoffice /home/vovchik/External_Drives/1Tb/Библиотека.ods &>/dev/null &'
 alias cat=bat
-alias xclip='xclip -selection c'
-alias xclip_get='xclip -selection c -o'
+# alias xclip='xclip -selection c'
+# alias xclip_get='xclip -selection c -o'
 
-check=/home/vovchik/External_Drives/1Tb/Видео/chek.py
-convert=/home/vovchik/External_Drives/1Tb/Видео/convert.py
-duration=/home/vovchik/External_Drives/1Tb/Видео/duration.py
-alias dr=$duration
-delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
-plt=/home/vovchik/External_Drives/1Tb/Видео/playlists
+# check=/home/vovchik/External_Drives/1Tb/Видео/chek.py
+# convert=/home/vovchik/External_Drives/1Tb/Видео/convert.py
+# duration=/home/vovchik/External_Drives/1Tb/Видео/duration.py
+# alias dr=$duration
+# delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
+# plt=/home/vovchik/External_Drives/1Tb/Видео/playlists
 
 # 'yt-dlp --cookies-from-browser Firefox'
 # format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
@@ -57,15 +57,12 @@ fmpv() {
 # eval "$(starship init bash)"
 
 pipup() {
-  GREEN='\033[0;32m'
-  RED='\033[0;31m'
-  NC='\033[0m' # no color
   list=$(pip --disable-pip-version-check list --outdated --format=json | python -c 'import json, sys; print(" ".join([x["name"] for x in json.load(sys.stdin)]))')
   if [ ! -z "$list" ]
   then
-    pip install -U $list || echo -e "${RED}Failed${NC}"
+    pip install -U $list
   else
-    echo -e "${GREEN}Nothing to upgrade${NC}"
+    echo -e "Nothing to upgrade"
   fi
 }
 
@@ -79,17 +76,15 @@ rsup() {
          "sd"
          "starship"
          "tokei"
-         "alacritty"
          "dua-cli"
          "zoxide"
          "difftastic"
          "bottom"
-         "gitui"
          "neocmakelsp"
          "yazi-fm"
          "yazi-cli"
-         "nu"
          "eza"
+         "ouch"
        )
 
   for prog in ${progs[@]}
@@ -97,10 +92,6 @@ rsup() {
     cargo install $prog --locked || return 1
   done
 }
-
-clanggitcpp='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang++'
-clanggit='/home/vovchik/External_Drives/1Tb/projects/llvm/clang-project-build/clang-build/bin/clang'
-alias ctags='ctags --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ -R .'
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

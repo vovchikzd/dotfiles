@@ -19,3 +19,6 @@
 [submodule ".config/yazi/plugins/compress.yazi"]
 	path = .config/yazi/plugins/compress.yazi
 	url = https://github.com/KKV9/compress.yazi.git
+[submodule ".config/yazi/plugins/epub-thumbnailer"]
+	path = .config/yazi/plugins/epub-thumbnailer
+	url = https://github.com/marianosimone/epub-thumbnailer

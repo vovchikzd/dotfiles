@@ -1,5 +1,4 @@
 lazy-lock.json
 .~lock*
 __pycache__
-autostart
-spoof
+sudoStart

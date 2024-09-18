@@ -18,6 +18,10 @@ $character"""
 
 add_newline = true
 
+[character]
+success_symbol = '[->](bold green)'
+error_symbol = '[->](bold red)'
+
 [fill]
 symbol = ' '
 style = 'bold green'
