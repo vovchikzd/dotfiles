@@ -4,18 +4,16 @@ alias ls='eza -1 --group-directories-first'
 alias lt='eza -1 --tree --group-directories-first'
 
 alias srb='source $HOME/.bashrc'
-# ??? alias list='codium /home/vovchik/External_Drives/1Tb/Книги/Ближайшие\ планы/0.\ Список/list.tex'
-# ??? alias libr='libreoffice /home/vovchik/External_Drives/1Tb/Библиотека.ods &>/dev/null &'
+alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
 alias cat=bat
-# alias xclip='xclip -selection c'
-# alias xclip_get='xclip -selection c -o'
 
 # check=/home/vovchik/External_Drives/1Tb/Видео/chek.py
 # convert=/home/vovchik/External_Drives/1Tb/Видео/convert.py
 # duration=/home/vovchik/External_Drives/1Tb/Видео/duration.py
 # alias dr=$duration
-# delete=/home/vovchik/External_Drives/1Tb/Видео/Delete
-# plt=/home/vovchik/External_Drives/1Tb/Видео/playlists
+dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
+plt=/home/vovchik/Disks/1Tb/Видео/playlists
+alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие планы/0. Список/list.tex"'
 
 # 'yt-dlp --cookies-from-browser Firefox'
 # format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
@@ -84,7 +82,6 @@ rsup() {
          "yazi-fm"
          "yazi-cli"
          "eza"
-         "ouch"
        )
 
   for prog in ${progs[@]}
