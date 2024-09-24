@@ -16,10 +16,10 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
 window#waybar.empty {
     background-color: transparent;
 }
+/*
 window#waybar.solo {
     background-color: #FFFFFF;
 }
@@ -72,10 +72,11 @@ button:hover {
     background-color: #eb4d4b;
 }
 
+/*
 #workspaces button.active {
   border: solid 0.1em;
   border-color: green;
-}
+}*/
 
 #mode {
     background-color: #64727D;
