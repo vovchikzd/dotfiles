@@ -1,3 +1,13 @@
+@define-color backgroundlight #FFFFFF;
+@define-color backgrounddark #FFFFFF;
+@define-color workspacesbackground1 #FFFFFF;
+@define-color workspacesbackground2 #CCCCCC;
+@define-color bordercolor #FFFFFF;
+@define-color textcolor1 #000000;
+@define-color textcolor2 #000000;
+@define-color textcolor3 #FFFFFF;
+@define-color iconcolor #FFFFFF;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -53,6 +63,7 @@ button:hover {
     background-color: #a37800;
 }
 
+/*
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -72,10 +83,12 @@ button:hover {
     background-color: #eb4d4b;
 }
 
-/*
 #workspaces button.active {
-  border: solid 0.1em;
-  border-color: green;
+    color: @textcolor1;
+    background: @workspacesbackground2;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
 }*/
 
 #mode {
@@ -106,8 +119,49 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: @textcolor1;
 }
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: @textcolor3;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @textcolor1;
+    background: @workspacesbackground2;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: @textcolor1;
+    background: @workspacesbackground2;
+    border-radius: 15px;
+}
+/*
+#workspaces {
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: @textcolor1;
+}*/
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {

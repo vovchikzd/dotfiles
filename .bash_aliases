@@ -51,6 +51,10 @@ fi
 export CMAKE_GENERATOR="Ninja"
 
 fmpv() {
+  if [[ $1 == "" ]]; then
+    echo -e "\033[0;31mWhere is playlist file?\033[0m"
+    return 1
+  fi
   echo -n "mpv --playlist=$1 &>/dev/null & "
   mpv --playlist=$1 &>/dev/null &
 }

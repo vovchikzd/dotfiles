@@ -17,28 +17,20 @@
     ],
 
     // Modules configuration
-    "hyprland/workspaces": {
-        "persistent-workspaces": { "*": 10 },
-        "format": "{icon}",
-        "format-icons": {
-          "focused": "",
-          "active": "",
-          "default": ""
-        }
-        // "disable-scroll": true,
-        // "all-outputs": true,
-        // "warp-on-scroll": false,
-        // "format": "{name}: {icon}",
-        // "format-icons": {
-        //     "1": "",
-        //     "2": "",
-        //     "3": "",
-        //     "4": "",
-        //     "5": "",
-        //     "urgent": "",
-        //     "focused": "",
-        //     "default": ""
-        // }
+    "hyprland/workspaces" : {
+       "on-click": "activate",
+       "active-only": false,
+       "all-outputs": true,
+       "format": "{}",
+       "format-icons": {
+         "urgent": "",
+         "active": "",
+         "default": "",
+         "focused": ""
+       },
+       "persistent-workspaces": {
+            "*": 10
+       }       
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -160,15 +152,15 @@
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}  {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": "{format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -191,7 +183,6 @@
     "custom/power": {
       "format" : "⏻ ",
       "tooltip": false,
-      "width": 10,
       "menu": "on-click",
       "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
       "menu-actions": {

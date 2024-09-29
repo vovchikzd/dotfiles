@@ -14,6 +14,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.filetype.add({
+  extension = {
+    c3 = "c3",
+    c3i = "c3",
+    c3t = "c3",
+  },
+})
+
 local opts = {
   change_detection = {
     -- automatically check for config file changes and reload the ui

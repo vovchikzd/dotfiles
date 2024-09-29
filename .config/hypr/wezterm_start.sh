@@ -3,25 +3,21 @@
 ACTIVE_WM_CLASS=$(hyprctl activewindow | grep 'class:')
 if [[ $ACTIVE_WM_CLASS == *"wezterm"* ]]
 then
-    # Get PID. If _NET_WM_PID isn't set, bail.
     PID=$(hyprctl activewindow | grep 'pid:' | awk '{ print $2; }')
     if [[ "$PID" == "" ]]
     then
-        /usr/bin/wezterm
+        /usr/bin/wezterm start --always-new-process
     fi
-    CHILD_PID=$(pgrep -P $PID | head -1)
+    CHILD_PID=$(pgrep -P $PID)
     if [[ "$CHILD_PID" == "" ]]
     then
-        /usr/bin/wezterm
+        /usr/bin/wezterm start --always-new-process
     fi
     # Get current directory of child. The first child should be the shell.
     pushd "/proc/${CHILD_PID}/cwd" &>/dev/null
     SHELL_CWD=$(pwd -P)
     popd &>/dev/null
-    # Start alacritty with the working directory
-    # /home/vovchik/.cargo/bin/alacritty --working-directory "$SHELL_CWD"
-    /usr/bin/wezterm start --cwd "$SHELL_CWD"
+    /usr/bin/wezterm start --cwd "$SHELL_CWD" --always-new-process
 else
-    # /home/vovchik/.cargo/bin/alacritty
-    /usr/bin/wezterm
+    /usr/bin/wezterm start --always-new-process
 fi
