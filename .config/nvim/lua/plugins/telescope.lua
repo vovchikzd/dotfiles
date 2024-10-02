@@ -4,7 +4,7 @@ local create_keymaps = function()
     return { noremap = true, silent = true, desc = description }
   end
   keymap("n", "<leader>ff", require("telescope.builtin").find_files, key_opts("Find files in directory"))
-  keymap("n", "<C-_>",      "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>", key_opts("Grep current file"))
+  keymap("n", "<C-/>",      "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>", key_opts("Grep current file"))
   keymap("n", "<leader>fe", "<cmd>Telescope diagnostics sorting_strategy=ascending prompt_position=top<CR>", key_opts("See errors/warnings in current file"))
   keymap("n", "<leader>fb", require("telescope.builtin").buffers, key_opts("Find open buffers"))
   keymap("n", "<leader>gf", require("telescope.builtin").git_files, key_opts("Find git files"))

@@ -12,7 +12,7 @@ alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/
 alias cat=bat
 
 check=/home/vovchik/Disks/1Tb/Видео/chek.py
-convert=/home/vovchik/Disks/1Tb/Видео/duration.py
+convert=/home/vovchik/Disks/1Tb/Видео/convert.py
 duration=/home/vovchik/Disks/1Tb/Видео/duration.py
 alias dr=$duration
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
