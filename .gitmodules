@@ -22,3 +22,6 @@
 [submodule ".config/yazi/plugins/epub-thumbnailer"]
 	path = .config/yazi/plugins/epub-thumbnailer
 	url = https://github.com/marianosimone/epub-thumbnailer
+[submodule ".config/yazi/plugins/ebook-preview.yazi"]
+	path = .config/yazi/plugins/ebook-preview.yazi
+	url = https://github.com/vovchikzd/ebook-preview.yazi.git

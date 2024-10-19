@@ -10,6 +10,8 @@ alias lsplt="eza -1 --group-directories-first --absolute --no-quotes"
 alias srb='source $HOME/.bashrc'
 alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
 alias cat=bat
+alias rg="rg --hidden --no-ignore"
+alias grep='grep --color=always -E'
 
 check=/home/vovchik/Disks/1Tb/Видео/chek.py
 convert=/home/vovchik/Disks/1Tb/Видео/convert.py
@@ -52,10 +54,10 @@ export CMAKE_GENERATOR="Ninja"
 
 fmpv() {
   if [[ $1 == "" ]]; then
-    echo -e "\033[0;31mWhere is playlist file?\033[0m"
+    printf "\033[0;31mWhere is playlist file?\033[0m\n"
     return 1
   fi
-  echo -n "mpv --playlist=$1 &>/dev/null & "
+  printf "mpv --playlist=$1 &>/dev/null & "
   mpv --playlist=$1 &>/dev/null &
 }
 

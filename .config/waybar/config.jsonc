@@ -29,7 +29,7 @@
          "focused": ""
        },
        "persistent-workspaces": {
-            "*": 10
+            "*": 20
        }       
     },
     "hyprland/mode": {

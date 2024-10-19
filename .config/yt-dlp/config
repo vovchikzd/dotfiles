@@ -2,6 +2,13 @@
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
---proxy "http://127.0.0.1:8080"
+# tor proxy
+# --proxy socks5://localhost:9150 
 
--R 500
+# --proxy "http://127.0.0.1:8080"
+
+-R 0
+
+--abort-on-error
+
+--abort-on-unavailable-fragments
