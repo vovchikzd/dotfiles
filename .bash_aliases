@@ -13,44 +13,18 @@ alias cat=bat
 alias rg="rg --hidden --no-ignore"
 alias grep='grep --color=always -E'
 
-check=/home/vovchik/Disks/1Tb/Видео/chek.py
-convert=/home/vovchik/Disks/1Tb/Видео/convert.py
-duration=/home/vovchik/Disks/1Tb/Видео/duration.py
-alias dr=$duration
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
 plt=/home/vovchik/Disks/1Tb/Видео/playlists
 alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие планы/0. Список/list.tex"'
 
-# 'yt-dlp --cookies-from-browser Firefox'
-# format="(mp4)[height=480]+ba / bv*[height=480]+ba / (mp4)[height=720]+ba / bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 format="bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 lformat="bv*[height=1080]+ba / bv*+ba/b"
 name='%(title)s [%(id)s](%(channel)s).%(ext)s'
-# ename='%(title)s_[%(id)s](%(channel)s).%(ext)s'
 numbering="%(playlist_index)s. $name"
-# enumbering="%(playlist_index)s._$ename"
-playlist="%(playlist)s [%(playlist_id)s](%(channel)s)"
-# eplaylist="%(playlist)s_[%(playlist_id)s](%(channel)s)"
+playlist="%(playlist)s [%(playlist_id)s](%(playlist_channel)s)"
 playlist_numbering="$playlist/$numbering"
 tor_proxy='socks5://localhost:9150'
-# eplaylist_numbering="$eplaylist/$enumbering"
-# no_space=--restrict-filenames
 # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
-
-
-if ! which 'clang++' &>/dev/null; then
-  export CXX=g++
-else
-  export CXX=clang++
-fi
-
-if ! which 'clang' &>/dev/null; then
-  export CC=gcc
-else
-  export CC=clang
-fi
-
-export CMAKE_GENERATOR="Ninja"
 
 fmpv() {
   if [[ $1 == "" ]]; then
@@ -97,5 +71,5 @@ function yy() {
 }
 
 function pwd() {
-  echo -n $PWD/$1
+  printf $PWD/$1
 }
