@@ -3,7 +3,7 @@
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
 # tor proxy
-# --proxy socks5://localhost:9150 
+--proxy socks5://localhost:9150 
 
 # --proxy "http://127.0.0.1:8080"
 
