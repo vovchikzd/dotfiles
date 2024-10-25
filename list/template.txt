@@ -86,7 +86,7 @@ A History of Loneliness (Boyne) ~ 1308
 Хранители Запредельных земель (Вуд) ~ 1310
 My Dark Vanessa (Russell) ~ 1321
 Followers (Angelo) ~ 1324
-Мрачный взвод (Хоффман) ~ 1327
+Мрачный взвод (Хоффман) ~ 3540
 Собачья голова (Рамсланд) ~ 1330
 The Fifth Realm (Vora) ~ 1331
 The Linkon Lawyer (Connelly) ~ 1409
@@ -187,8 +187,8 @@ Scenes from Provincial Life (Coetzee) ~ 1944
 The Wakening Series (Renshaw) ~ 2701
 Hierarchy Series (Islington) ~ 2707
 The Idiot dilogy (Batuman) ~ 2730
-Истинное волшебство (Способина) ~ 982
-Прядущая (Способина) ~ 1754
+Истинное волшебство (Способина) ~ 2029
+Прядущая (Способина) ~ 4170
 Sword of Honour (Waugh) ~ 2742
 Открытая книга (Каверин) ~ 2750
 Ледяная скорлупа (Штерн) ~ 594
@@ -458,7 +458,7 @@ Web of Angels (Ford) ~ 960
 The Dragon Waiting (Ford) ~ 1362
 Aspects (Ford) ~ 1590
 Arthurian Saga (Stewart) ~ 7341
-Цикл Рубиновый лес (Гор) ~ 1875
+Рубиновый лес (Гор) ~ 4108
 Ковен озера Шамплейн (Гор) ~ 5476
 The Draconis Memoria Series (Ryan) ~ 7358
 Uprooted (Novik) ~ 1680
@@ -489,7 +489,7 @@ The Goldfinch (Tartt) ~ 3270
 Barsoom Series (Burroughs) ~ 8165
 The Soldier Son Trilogy (Hobb) ~ 8182
 Жуга (Скирюк) ~ 8253
-Золотые земли (Черкасова) ~ 8336
+Золотые земли (Черкасова) ~ 9423
 The Legend of Oescienne Series (Johnson) ~ 8475
 The Ascension Cycle Series (Mealing) ~ 8551
 Тени исчезают в полдень (Иванов) ~ 2674
@@ -1217,7 +1217,7 @@ The Cautious Traveller's Guide to the Wasterlands (Brooks) ~ 1124
 Черная изба (Лунева, Колмакова) ~ 1447
 Человек недостойный (Дадзай) ~ 334
 Дети великого Шторма (Осояну) ~ 5554
-Ладный мир (Сова) ~ 1549
+Ладный мир (Сова) ~ 2436
 Бедныe люди. Белые ночи. Мальчик у Христа на ёлке (Достоевский) ~ 728
 Бесы (Достоевский) ~ 2703
 Братья Карамазовы (Достоевский) ~ 3621
@@ -1511,3 +1511,7 @@ Exhalation (Chiang) ~ 1133
 Лебединая песнь (Головкина[Римская-Ккорсакова]) ~ 4310
 2666 (Боланьо) ~ 4276
 Третий рейх (Боланьо) ~ 1055
+Потерял слепой дуду (Григоренко) ~ 563
+Язычник (Кузнецов-Туляпин) ~ 1470
+The Blue Castle (Montgomery) ~ 784
+Ночевала тучка золотая. Солдат и мальчик (Приставкин) ~ 2904
