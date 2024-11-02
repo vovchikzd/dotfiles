@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import sys
+
 names = [
         "Лагерлеф", "Sullivan", "Ида Мартин", "Strout", "Galbraith"
          , "Covenant", "Guy Gavriel Kay"
@@ -16,7 +18,7 @@ def is_cross_names(line: str) -> bool:
             res = True
     return res
 
-def main():
+def main() -> int:
     sorted_tmp: list[tuple[str, int]] = list()
     with open("template.txt", "r") as tmp:
         lines: list[tuple[str, int]] = [get_tuple(line.strip()) for line in tmp.readlines()]
@@ -31,7 +33,8 @@ def main():
             if ("(" not in line[0] or ")" not in line[0]) and not is_cross_names(line[0]):
                 print(line)
         print("\\end{enumerate}\n\n\\end{document}", file=tord)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
