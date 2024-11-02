@@ -399,7 +399,7 @@ The God-King Chronicles Series (Brooks) ~ 6361
 Паруса Эспады (Крапивин) ~ 3428
 A Memoir by Lady Trent (Brennan) ~ 6425
 The Daevabad Trilogy (Chakraborty) ~ 6446
-Ash and Sand Series (Nell) ~ 6486
+Ash and Sand Universe (Nell) ~ 7462
 The Great Book of Amber (Zelazny) ~ 6547
 Baru Cormorant (Dickinson) ~ 6551
 A Suitable Boy (Seth) ~ 6673
@@ -1447,7 +1447,6 @@ The Far Pavilions (Kaye) ~ 5409
 Тьма за спиной (Сычев) ~ 949
 Киндрэт (Пехов) ~ 6540
 Мастер снов (Пехов) ~ 5324
-Заклинатели (Пехов) ~ 3452
 Последний завет (Пехов) ~ 1606
 Воспоминания о прошлом Земли (Лю Цысинь) ~ 5886
 Шаровая молния (Лю Цысинь) ~ 1304
@@ -1515,3 +1514,19 @@ Exhalation (Chiang) ~ 1133
 Язычник (Кузнецов-Туляпин) ~ 1470
 The Blue Castle (Montgomery) ~ 784
 Ночевала тучка золотая. Солдат и мальчик (Приставкин) ~ 2904
+Сухой овраг (Клима) ~ 1155
+The Plot (Korelitz) ~ 1040
+Олений завет (Смышляева) ~ 620
+Олива Денаро (Ардоне) ~ 769
+The Raag of Rta (Mohanty) ~ 2372
+Комиссар Адамберг (Ваграг) ~ 10930
+Alexandria Quartet (Durrell) ~ 4089
+An Instance of the Fingerpost (Pears) ~ 2839
+Sabbatical (Barth) ~ 1493
+Скитальцы (Цзинфан) ~ 2116
+Lost Story (Shaffer) ~ 1008
+Солнце в силках (Сычева) ~ 955
+Стерегущие золото грифы (Перкова) ~ 824
+Демон спускается с гор (Аве) ~ 1218
+Trust (Diaz) ~ 1074
+In the Distance (Diaz) ~ 926
