@@ -35,6 +35,7 @@ prepend_rules = [
 
   { name = "*.pdf", use = "okular" },
   { name = "*.djvu", use = "okular" },
+  { mime = "{image}/*", use = "okular"},
 
   { name = "*.plt", use = "playlist" },
 
@@ -48,6 +49,7 @@ prepend_previewers = [
   { name = "*.epub", run = "ebook-preview" },
   { name = "*.fb2", run =  "ebook-preview" },
   { name = "*.mobi", run = "ebook-preview" },
+  { name = "*.fb2.zip", run = "ebook-preview" },
 
   { mime = "{image,audio,video}/*", run = "mediainfo"},
   { mime = "application/x-subrip", run = "mediainfo"},
