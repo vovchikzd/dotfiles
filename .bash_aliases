@@ -10,7 +10,6 @@ alias lsplt="eza -1 --group-directories-first --absolute --no-quotes"
 alias srb='source $HOME/.bashrc'
 alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
 alias cat=bat
-alias rg="rg --hidden --no-ignore -L"
 alias grep='grep --color=always -E'
 
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
