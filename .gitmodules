@@ -1,9 +1,6 @@
 [submodule ".config/alacritty/themes"]
 	path = .config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme.git
-[submodule ".config/yazi/plugins/epub-preview.yazi"]
-	path = .config/yazi/plugins/epub-preview.yazi
-	url = https://github.com/kirasok/epub-preview.yazi.git
 [submodule ".config/yazi/plugins/glow.yazi"]
 	path = .config/yazi/plugins/glow.yazi
 	url = https://github.com/Reledia/glow.yazi.git
@@ -19,9 +16,6 @@
 [submodule ".config/yazi/plugins/compress.yazi"]
 	path = .config/yazi/plugins/compress.yazi
 	url = https://github.com/KKV9/compress.yazi.git
-[submodule ".config/yazi/plugins/epub-thumbnailer"]
-	path = .config/yazi/plugins/epub-thumbnailer
-	url = https://github.com/marianosimone/epub-thumbnailer
 [submodule ".config/yazi/plugins/ebook-preview.yazi"]
 	path = .config/yazi/plugins/ebook-preview.yazi
 	url = https://github.com/vovchikzd/ebook-preview.yazi.git
