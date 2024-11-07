@@ -166,7 +166,7 @@ Cutting for Stone (Verghese) ~ 2337
 The Sword of Kaigen (Wang) ~ 2383
 The Song of Achilles (Miller) ~ 1091
 Circe (Miller) ~ 1317
-Stranger Times Series (McDonnell) ~ 2442
+Stranger Times Series (McDonnell) ~ 5045
 The Tortall Universe (Pierce) ~ 17464
 Всадники ниоткуда (Абрамовы) ~ 2449
 Обитель (Прилепин) ~ 2457
@@ -256,7 +256,7 @@ Under the Dome (King) ~ 3690
 Семьдесят два градуса ниже нуля (Санин) ~ 3728
 The Campus Trilogy (Lodge) ~ 3734
 Eidyn Series (Lee) ~ 3735
-Tales of Tremaine Series (Virdi) ~ 3740
+Tales of Tremaine Series (Virdi) ~ 7825
 Сельма Лагерлеф ~ 3845
 City of Sacrifice Series (Fletcher) ~ 3789
 The Forsyte Saga (Galsworthy) ~ 3795
@@ -1530,3 +1530,17 @@ Lost Story (Shaffer) ~ 1008
 Демон спускается с гор (Аве) ~ 1218
 Trust (Diaz) ~ 1074
 In the Distance (Diaz) ~ 926
+Babylonia (Casati) ~ 1455
+Clytemnestra (Casati) ~ 1476
+A Thousand Ships (Haynes) ~ 1019
+Defending Jacod (Landay) ~ 1350
+The Saints of Swallow Hill (Everhart) ~ 1159
+В тайниках памяти (Мбугар Сарр) ~ 1329
+Детский поезд (Ардоне) ~ 612
+Пятая печать (Шанта) ~ 707
+Wolf Den Trilogy (Harper) ~ 3812
+Неспящие (Морриган) ~ 1935
+Сердце, что растопит океан (Морриган) ~ 509
+Чудовище и чудовища (Морриган) ~ 983
+Полиция памяти (Огава) ~ 873
+Любимое уравнение профессора (Огава) ~ 610
