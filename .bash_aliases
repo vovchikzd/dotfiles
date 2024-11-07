@@ -1,6 +1,3 @@
-# eval "$(zoxide init --cmd cd bash)"
-# eval "$(starship init bash)"
-
 alias ll='eza -lh --icons --group-directories-first'
 alias la='eza -lhaa --icons --group-directories-first'
 alias ls='eza -1 --group-directories-first'
@@ -29,9 +26,12 @@ fmpv() {
   if [[ $1 == "" ]]; then
     printf "\033[0;31mWhere is playlist file?\033[0m\n"
     return 1
+  elif ! [ -f "$1" ]; then
+    printf "\033[0;31mFile $1 doesn't exist\033[0m\n"
+    return 1
   fi
   printf "mpv --playlist=$1 &>/dev/null & "
-  mpv --playlist=$1 &>/dev/null &
+  mpv --playlist="$1" &>/dev/null &
 }
 
 rsup() {
@@ -52,6 +52,7 @@ rsup() {
          "yazi-fm"
          "yazi-cli"
          "eza"
+         "tealdeer"
        )
 
   for prog in ${progs[@]}
@@ -67,8 +68,13 @@ function yy() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+  clear
 }
 
 function pwd() {
   printf "$PWD/$1"
 }
+
+. "$HOME/.cargo/env"
+eval "$(zoxide init --cmd cd bash)"
+eval "$(starship init bash)"
