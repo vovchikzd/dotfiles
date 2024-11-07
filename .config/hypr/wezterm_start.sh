@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
 ACTIVE_WM_CLASS=$(hyprctl activewindow | grep 'class:')
-if [[ $ACTIVE_WM_CLASS == *"wezterm"* ]]
-then
+if [[ $ACTIVE_WM_CLASS == *"wezterm"* ]]; then
     PID=$(hyprctl activewindow | grep 'pid:' | awk '{ print $2; }')
-    if [[ "$PID" == "" ]]
-    then
+    if [[ "$PID" == "" ]]; then
         /usr/bin/wezterm start --always-new-process &
     fi
     CHILD_PID=$(pgrep -P $PID)
-    if [[ "$CHILD_PID" == "" ]]
-    then
+    if [[ "$CHILD_PID" == "" ]]; then
         /usr/bin/wezterm start --always-new-process &
     fi
     # Get current directory of child. The first child should be the shell.
