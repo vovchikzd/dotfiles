@@ -1,12 +1,11 @@
-alias ll='eza -lh --icons --group-directories-first'
-alias la='eza -lhaa --icons --group-directories-first'
-alias ls='eza -1 --group-directories-first'
-alias lt='eza -1 --tree --group-directories-first'
-alias lsplt="eza -1 --group-directories-first --absolute --no-quotes"
+alias ll='eza -lh --icons --group-directories-first --classify=always'
+alias la='eza -lhaa --icons --group-directories-first --classify=always'
+alias ls='eza -1 --group-directories-first --classify=always'
+alias lt='eza -1 --tree --group-directories-first --classify=always'
+alias lsplt='eza -1 --group-directories-first --absolute --no-quotes --classify=always'
 
 alias srb='source $HOME/.bashrc'
 alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
-alias cat=bat
 alias grep='grep --color=always -E'
 
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
@@ -62,13 +61,13 @@ rsup() {
 }
 
 function yy() {
+  clear
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-  clear
 }
 
 function pwd() {
@@ -78,3 +77,4 @@ function pwd() {
 . "$HOME/.cargo/env"
 eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
+
