@@ -11,7 +11,7 @@ export MANPATH=$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info
 export CMAKE_GENERATOR="Ninja"
 export RIPGREP_CONFIG_PATH="/home/vovchik/.config/ripgrep.conf"
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANPAGER="nvim -c Man! -"
 
 if ! which 'clang++' &>/dev/null; then
   export CXX=g++
