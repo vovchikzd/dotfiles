@@ -69,7 +69,6 @@ The God of Small Things (Arundhati) ~ 1140
 Liar's Poker (Lewis) ~ 1149
 Берег мертвых незабудок (Звонцова) ~ 1149
 The Jane Austen project (Flynn) ~ 1153
-Hollow World (Sullivan) ~ 1160
 Cat's Cradle (Vonnegut) ~ 603
 Slaughterhouse-Five (Vonnegut) ~ 561
 A Canticle for Leibowitz (Miller) ~ 1197
@@ -257,7 +256,8 @@ Under the Dome (King) ~ 3690
 The Campus Trilogy (Lodge) ~ 3734
 Eidyn Series (Lee) ~ 3735
 Tales of Tremaine Series (Virdi) ~ 7825
-Сельма Лагерлеф ~ 3845
+Сага о Йёсте Берлинге (Лагерлёф) ~ 1579
+Перстень Лёвёншёльдов (Лагерлёф) ~ 2213
 City of Sacrifice Series (Fletcher) ~ 3789
 The Forsyte Saga (Galsworthy) ~ 3795
 The Inheritance Games (Barnes) ~ 3801
@@ -448,7 +448,7 @@ Three Man in a Boat (Jerome) ~ 1457
 Paul Kelver (Jerome) ~ 1496
 Гарри Поттер и Методы Рационального Мышления (Юдковский) ~ 7206
 Tales of the Ketty Jay (Wooding) ~ 7226
-Ида Мартин ~ 7229
+Дети Шини (Мартин) ~ 7229
 The Kingkiller Chronicle (Rothfuss) ~ 7264
 The Last Hot Time (Ford) ~ 738
 The Princes of the Air (Ford) ~ 790
@@ -768,7 +768,7 @@ Fractalverse Series (Paolini) ~ 4550
 Inheritance Cycle (Paolini) ~ 12541
 Божьи Воины (Сапковский) ~ 6227
 Ведьмак (Сапковский) ~ 10879
-Robert Galbraith ~ 17803
+Cormoran Strike (Galbraith) ~ 17803
 Освоение Дальнего Востока (Задорнов) ~ 4228
 Сага о русских аргонавтах (Задорнов) ~ 5789
 О капитане Г. И. Невельском (Задорнов) ~ 7824
@@ -911,7 +911,7 @@ The Stormlight Archive (Sanderson) ~ 20865
 Бальтазар Косса (Балашов) ~ 1598
 Марфа-посадница (Балашов) ~ 1926
 Государи Московские (Балашов) ~ 21473
-Guy Gavriel Kay ~ 27505
+Fionavar Universe (Gavriel Kay) ~ 27505
 Golden Fleece (Sawyer) ~ 691
 End of an Era (Sawyer) ~ 748
 Iterations (Sawyer) ~ 908
@@ -940,7 +940,8 @@ The Khan series (Iggulden) ~ 8148
 Black Company (Cook) ~ 13777
 Garret (Cook) ~ 14288
 Derini Cycle (Kurtz) ~ 28298
-Michael J. Sullivan ~ 28353
+Hollow World (Sullivan) ~ 1160
+Riyria World (Sullivan) ~ 28453
 The Dying Earth (Vance) ~ 3362
 Lyonesse (Vance) ~ 5219
 Ecumene (Vance) ~ 21196
@@ -1544,3 +1545,9 @@ Wolf Den Trilogy (Harper) ~ 3812
 Чудовище и чудовища (Морриган) ~ 983
 Полиция памяти (Огава) ~ 873
 Любимое уравнение профессора (Огава) ~ 610
+The Keeper of Night (Baker) ~ 2330
+Thread That Bind (Hatzopoulou) ~ 2172
+Voice of the Fire (Moore) ~ 1368
+Jerusalem (Moore) ~ 7122
+As Long as the Lemon Trees Grow (Katouh) ~ 1114
+Туманы и чудовища (Шабнова) ~ 934

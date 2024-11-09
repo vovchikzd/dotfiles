@@ -2,21 +2,9 @@
 
 import sys
 
-names = [
-        "Лагерлеф", "Sullivan", "Ида Мартин", "Strout", "Galbraith"
-         , "Covenant", "Guy Gavriel Kay"
-         ]
-
 def get_tuple(line: str) -> tuple[str, int]:
     tup: list[str] = line.split(" ~ ")
     return (tup[0], int(tup[1]))
-
-def is_cross_names(line: str) -> bool:
-    res: bool = False
-    for name in names:
-        if name in line:
-            res = True
-    return res
 
 def main() -> int:
     sorted_tmp: list[tuple[str, int]] = list()
@@ -30,8 +18,8 @@ def main() -> int:
         print("\\begin{document}\n\n\\begin{enumerate}", file=tord)
         for line in sorted_tmp:
             print(f"    \\item {line[0]} -- {line[1]}", file=tord)
-            if ("(" not in line[0] or ")" not in line[0]) and not is_cross_names(line[0]):
-                print(line)
+            if ("(" not in line[0] or ")" not in line[0]):
+                print(f"\033[0;33m{line}\033[0m")
         print("\\end{enumerate}\n\n\\end{document}", file=tord)
     return 0
 
