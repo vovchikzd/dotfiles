@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 2                        -- shift 2 spaces when tab
 vim.opt.tabstop = 2                           -- 1 tab == 2 spaces
 vim.opt.smartindent = true                    -- autoindent new lines
 
-vim.opt.scrolloff = 8                         -- minimal number of screen lines to keep above and below the cursor
+vim.opt.scrolloff = 12                         -- minimal number of screen lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8                     -- as above but colums
 vim.opt.tags = "./tags;/"
 
