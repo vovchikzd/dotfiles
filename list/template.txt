@@ -89,7 +89,7 @@ Followers (Angelo) ~ 1324
 Собачья голова (Рамсланд) ~ 1330
 The Fifth Realm (Vora) ~ 1331
 The Linkon Lawyer (Connelly) ~ 1409
-Blacktongue seties (Buehlman) ~ 1343
+Blacktongue seties (Buehlman) ~ 2642
 Glasshouse (Stross) ~ 1353
 The Night Circus (Morgenstern) ~ 1356
 Atonement (McEwan) ~ 1375
@@ -475,7 +475,7 @@ The Reborn Empire Series (Madson) ~ 7707
 Ваша честь (Кабре) ~ 1474
 Голоса Памано (Кабре) ~ 2188
 Я исповедуюсь (Кабре) ~ 2603
-Elizabeth Strout ~ 7757
+Elizabeth Strout ~ 8663
 Marwood and Lovett Series (Taylor) ~ 7795
 Сказания о людях тайги (Черкасов, Москвитина) ~ 7873
 The Books of Babel (Bancroft) ~ 7877
@@ -824,7 +824,7 @@ A Song of Ice and Fire (Martin) ~ 19409
 Бронепароходы (Иванов) ~ 2273
 Золото бунта (Иванов) ~ 2308
 Тобол (Иванов) ~ 4516
-Bloodsworn (Gwynne) ~ 4218
+Bloodsworn (Gwynne) ~ 6193
 Of Blood and Bone (Gwynne) ~ 5460
 The Faithful and the Fallen (Gwynne) ~ 10046
 The Lost Girl in Paris (Costeloe) ~ 1042
@@ -839,7 +839,7 @@ The Throwaway Children (Costeloe) ~ 1777
 The New Neighbours (Costeloe) ~ 1826
 Children of the Siege (Costeloe) ~ 2546
 Girl With No Name (Costeloe) ~ 3483
-The Library Trilogy (Lawrence) ~ 2354
+The Library Trilogy (Lawrence) ~ 3811
 The Broken Empire trilogy (Lawrence) ~ 3815
 Book of the Ice Series (Lawrence) ~ 4616
 Book of the Ancestor Series (Lawrence) ~ 4652
@@ -1130,7 +1130,7 @@ Willful Child (Erikshon) ~ 2486
 The Spearwielder's Tales (Salvatore) ~ 3160
 The Crimson Shadow (Salvatore) ~ 3585
 The Coven (Salvatore) ~ 5073
-Dark Elf (Salvatore) ~ 3287
+Drizzt Do'Urden (Salvatore) ~ 49775
 Chronicles of Ynis Aielle (Salvatore) ~ 3316
 Corona (Salvatore) ~ 22628
 Сказания Меекханского пограничья (Вегнер) ~ 10611
@@ -1551,3 +1551,16 @@ Voice of the Fire (Moore) ~ 1368
 Jerusalem (Moore) ~ 7122
 As Long as the Lemon Trees Grow (Katouh) ~ 1114
 Туманы и чудовища (Шабнова) ~ 934
+The Last Legacy (Logan) ~ 1836
+I'm Afraid You've Got Dragons (Beagle) ~ 855
+The Bright Sword (Grossman) ~ 2119
+Академия Скура (Рид) ~ 1159
+Медвежий угол (Бакман) ~ 4812
+Ассоциация жильцов (Бакман) ~ 3128
+Три новеллы (Бакман) ~ 209
+Что мой сын должен знать об устройстве этого мира (Бакман) ~ 317
+Тревожные люди (Бакман) ~ 936
+Alice Adams (Tarkington) ~ 946
+Голод Рехи (Токарева) ~ 2701
+The Growth Trilogy (Tarkington) ~ 3246
+The Elric Saga (Moorcock) ~ 9231
