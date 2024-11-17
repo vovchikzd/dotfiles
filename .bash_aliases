@@ -14,6 +14,7 @@ alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие пла
 
 format="bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 lformat="bv*[height=1080]+ba / bv*+ba/b"
+bformat="bv*+ba/b"
 name='%(title)s [%(id)s](%(channel)s).%(ext)s'
 numbering="%(playlist_index)s. $name"
 playlist="%(playlist)s [%(playlist_id)s](%(playlist_channel)s)"
