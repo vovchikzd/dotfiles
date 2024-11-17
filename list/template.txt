@@ -1487,7 +1487,7 @@ Nation (Pratchett) ~ 1115
 The Dragonriders of Pern (McCaffrey) ~ 3928
 The Murdstone Trilogy (Peet) ~ 781
 Time and Time Again (Elton) ~ 1272
-И жили они долго и счастливо (Селютина) ~ 2009
+И жили они долго и счастливо (Селютина) ~ 4255
 Кафедра (Грекова) ~ 975
 Крабат (Пройслер) ~ 629
 Мисс Черити (Мюрай) ~ 1026
@@ -1564,3 +1564,14 @@ Alice Adams (Tarkington) ~ 946
 Голод Рехи (Токарева) ~ 2701
 The Growth Trilogy (Tarkington) ~ 3246
 The Elric Saga (Moorcock) ~ 9231
+Смерть и конюший короля (Шойинка) ~ 301
+Все рушится (Ачебе) ~ 559
+Парадокс Тесея (Баснер) ~ 1274
+Сеньор президент (Анхель) ~ 900
+Joe Hill (Stegner) ~ 1567
+Recapitulation (Stegner) ~ 1070
+The Spectator Bird (Stegner) ~ 796
+All the Little Live Things (Stegner) ~ 1095
+Crossing to Safety (Stegner) ~ 1306
+Angle of Repose (Stegner) ~ 2359
+Big Rock Candy Mountain (Stegner) ~ 2701
