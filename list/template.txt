@@ -623,7 +623,7 @@ The Raven's Universe (Ryan) ~ 11770
 Ледяная трилогия (Сорокин) ~ 2359
 Uplift Series (Brin) ~ 11799
 The Sundiver (Brin) ~ 11805
-Powder Mage (McClellan) ~ 11816
+Powder Mage (McClellan) ~ 11832
 Salterton Trilogy (Davies) ~ 3550
 The Deptford Trilogy (Davies) ~ 3592
 Cornish Trilogy (Davies) ~ 4712
@@ -1575,3 +1575,6 @@ All the Little Live Things (Stegner) ~ 1095
 Crossing to Safety (Stegner) ~ 1306
 Angle of Repose (Stegner) ~ 2359
 Big Rock Candy Mountain (Stegner) ~ 2701
+The Autobiography of Henry VIII (George) ~ 4218
+Elizabeth I (George) ~ 2977
+Самшитовый лес (Анчаров) ~ 3389
