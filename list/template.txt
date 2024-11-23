@@ -1168,7 +1168,7 @@ Sailing to Redoubt (Litka) ~ 1216
 The Patron Wars Series (Mortensen) ~ 949
 The Skystone Chronicles (Penn) ~ 3478
 The Lamplight Murder Mesteries (Stang) ~ 1666
-The Grand Game Series (Elliot) ~ 10175
+The Grand Game Series (Elliot) ~ 11698
 The Dark Profit Saga (Pike) ~ 5654
 Flux Catastrophe Series (Weiss) ~ 2673
 Nettle Bone (Kingfisher) ~ 884
@@ -1578,3 +1578,17 @@ Big Rock Candy Mountain (Stegner) ~ 2701
 The Autobiography of Henry VIII (George) ~ 4218
 Elizabeth I (George) ~ 2977
 Самшитовый лес (Анчаров) ~ 3389
+The Shadows of Miskatonic (Cottrell) ~ 1869
+Barry Lyndon (Thackeray) ~ 1396
+The History of Henry Esmond (Thackeray) ~ 2085
+Vanity Fair (Thackeray) ~ 3431
+Dawn of the Black Sun (Burnham) ~ 909
+Река Хронос (Булычев) ~ 10773
+Школа для дураков (Соколов) ~ 698
+Оправдание Острова (Водолазкин) ~ 891
+Брисбен (Водолазкин) ~ 1198
+Лавр (Водолазкин) ~ 1149
+Авиатор (Водолазкин) ~ 1088
+Идти бестрепетно (Водолазкин) ~ 909
+Соловьев и Ларионов (Водолазкин) ~ 1154
+Чагин (Водолазкин) ~ 941
