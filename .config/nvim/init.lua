@@ -23,11 +23,10 @@ vim.filetype.add({
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-  group = vim.api.nvim_create_augroup('highlight_yank', {}),
-  desc = 'Hightlight selection on yank',
-  pattern = '*',
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 250 }
+    vim.highlight.on_yank({ timeout = 250 })
   end,
 })
 
