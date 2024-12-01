@@ -10,7 +10,7 @@ def main():
     with open(sConfigFile, "w") as fConfigFile:
         print(f"preload = {sFilePath}", file=fConfigFile)
         print(f"wallpaper = , {sFilePath}", file=fConfigFile)
-    subprocess.Popen("/usr/bin/hyprpaper", start_new_session=True)
+    # subprocess.Popen("/usr/bin/hyprpaper", start_new_session=True)
 
 
 if __name__ == "__main__":
