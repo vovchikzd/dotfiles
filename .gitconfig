@@ -15,3 +15,7 @@
   dft = difftool
 [init]
 	defaultBranch = master
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
