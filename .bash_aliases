@@ -11,6 +11,11 @@ alias grep='grep --color=always -E'
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
 plt=/home/vovchik/Disks/1Tb/Видео/playlists
 alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие планы/0. Список/list.tex"'
+alias llvmup='cd /home/vovchik/Disks/1Tb/projects/cpp/llvm/llvm-project/ && \
+  git fetch upstream && \
+  git merge upstream/main --ff-only && \
+  git push && \
+  cd -'
 
 format="bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
 lformat="bv*[height=1080]+ba / bv*+ba/b"
