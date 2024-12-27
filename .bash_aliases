@@ -7,12 +7,14 @@ alias lsplt='eza -1 --group-directories-first --absolute --no-quotes --classify=
 alias srb='source $HOME/.bashrc'
 alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
 alias grep='grep --color=always -E'
+alias calc='cal -m'
 
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
 plt=/home/vovchik/Disks/1Tb/Видео/playlists
 alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие планы/0. Список/list.tex"'
 alias llvmup='cd /home/vovchik/Disks/1Tb/projects/cpp/llvm/llvm-project/ && \
   git fetch upstream && \
+  git checkout main && \
   git merge upstream/main --ff-only && \
   git push && \
   cd -'
