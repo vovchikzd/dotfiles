@@ -12,3 +12,5 @@
 --abort-on-error
 
 --abort-on-unavailable-fragments
+
+--cookies-from-browser firefox
