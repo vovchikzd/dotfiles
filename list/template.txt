@@ -904,7 +904,7 @@ Warbreaker (Sanderson) ~ 3141
 The Reckoners (Sanderson) ~ 3549
 Skyward (Sanderson) ~ 6214
 The Mistborn Saga (Sanderson) ~ 14286
-The Stormlight Archive (Sanderson) ~ 20865
+The Stormlight Archive (Sanderson) ~ 26544
 Господин Великой Новгород (Балашов) ~ 599
 Похвала Сергию (Балашов) ~ 912
 Бальтазар Косса (Балашов) ~ 1598
@@ -1259,7 +1259,7 @@ Spiderlight (Tchaikovsky) ~ 913
 The Doors of Eden (Tchaikovsky) ~ 1850
 Dogs of War (Tchaikovsky) ~ 2096
 Echoes of the Fall (Tchaikovsky) ~ 5319
-The Tyrant Philosophers (Tchaikovsky) ~ 3947
+The Tyrant Philosophers (Tchaikovsky) ~ 5876
 Воля вольная (Ремизов) ~ 966
 Guns of the Dawn (Tchaikovsky) ~ 1924
 Terrible Worlds (Tchaikovsky) ~ 2662
@@ -1306,9 +1306,7 @@ The Age of Unreason (Keyes) ~ 5164
 Звезды (Ци Юэ) ~ 1552
 Идеальное несовершенство (Дукай) ~ 1325
 Иные песни (Дукай) ~ 2195
-Красная тетрадь (Беляева) ~ 1583
 Лед (Дукай) ~ 5706
-Терра (Беляева) ~ 2043
 Giants (Hogan) ~ 6405
 Kingdoms of Thorn and Bone (Keyes) ~ 7206
 The High and Faraway (Keyes) ~ 2997
@@ -1600,3 +1598,5 @@ The Wish (Sparks) ~ 1207
 Counting Miracles (Sparks) ~ 1123
 Dreamland (Sparks) ~ 1003
 The Echoes Saga (Quaintrell) ~ 19056
+Все, способные держать оружие... Штурмфогель (Лазарчук) ~ 2441
+Птицы и солнцесветы (Пехов) ~ 1262
