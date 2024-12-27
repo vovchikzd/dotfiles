@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 2                        -- shift 2 spaces when tab
 vim.opt.tabstop = 2                           -- 1 tab == 2 spaces
 vim.opt.smartindent = true                    -- autoindent new lines
 
-vim.opt.scrolloff = 12                         -- minimal number of screen lines to keep above and below the cursor
+vim.opt.scrolloff = 15                         -- minimal number of screen lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8                     -- as above but colums
 vim.opt.tags = "./tags;/"
 
@@ -44,9 +44,12 @@ vim.opt.guifont = "monospace:h17"             --the font used in graphical neovi
 vim.opt.shortmess:append "c"
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+vim.opt.iskeyword:remove {"_", "-"}
+--vim.opt.iskeyword:append {"-"}
 vim.cmd [[cnoreabbrev q1 q!]]
 
+-- don't add comment when insert new line from comment line
+-- (sometimes this is unset while working, don't know why)
 -- since vim.cmd [[set formatoptions-=cro]]
 -- and vim.opt.formatoptions:remove {"c", "r", "o"}
 -- don't work
