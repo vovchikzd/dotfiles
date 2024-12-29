@@ -52,15 +52,15 @@ prepend_previewers = [
   { name = "*.fb2.zip", run = "ebook-preview" },
 
   { mime = "{image,audio,video}/*", run = "mediainfo"},
-  { mime = "application/x-subrip", run = "mediainfo"},
+  { mime = "application/subrip", run = "mediainfo"},
 
   { mime = "application/*zip", run = "ouch" },
-	{ mime = "application/x-tar", run = "ouch" },
-	{ mime = "application/x-bzip2", run = "ouch" },
-	{ mime = "application/x-7z-compressed", run = "ouch" },
-	{ mime = "application/x-rar", run = "ouch" },
-	{ mime = "application/x-xz", run = "ouch" },
+	{ mime = "application/tar", run = "ouch" },
+	{ mime = "application/bzip2", run = "ouch" },
+	{ mime = "application/7z-compressed", run = "ouch" },
+	{ mime = "application/rar", run = "ouch" },
+	{ mime = "application/xz", run = "ouch" },
 	{ name = "*.zip", run = "ouch" },
 
-  { mime = "application/x-bittorrent", run = "torrent-preview" },
+  { mime = "application/bittorrent", run = "torrent-preview" },
 ]

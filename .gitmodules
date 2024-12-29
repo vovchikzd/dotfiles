@@ -16,3 +16,6 @@
 [submodule ".config/yazi/plugins/ebook-preview.yazi"]
 	path = .config/yazi/plugins/ebook-preview.yazi
 	url = https://github.com/vovchikzd/ebook-preview.yazi.git
+[submodule ".config/yazi/plugins/mediainfo.yazi"]
+	path = .config/yazi/plugins/mediainfo.yazi
+	url = https://github.com/boydaihungst/mediainfo.yazi.git
