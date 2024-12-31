@@ -29,12 +29,30 @@ playlist_numbering="$playlist/$numbering"
 tor_proxy='socks5://localhost:9150'
 # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
 
-fmpv() {
-  if [[ $1 == "" ]]; then
-    printf "\033[0;31mWhere is playlist file?\033[0m\n"
+ffmpeg-sub() {
+  if [ "$#" -ne 3 ]; then
+    printf "\033[0;31mRequired 3 parameters: input_video input_subtitles and output_video\033[0m\n" >&2
     return 1
   elif ! [ -f "$1" ]; then
-    printf "\033[0;31mFile $1 doesn't exist\033[0m\n"
+    printf "\033[0;31mFile \"$1\" doesn't exist\033[0m\n" >&2
+    return 1
+  elif ! [ -f "$2" ]; then
+    printf "\033[0;31mFile \"$2\" doesn't exist\033[0m\n" >&2
+    return 1
+  elif [ -f "$3" ]; then
+    printf "\033[0;31mFile \"$3\" already exist\033[0m\n" >&2
+    return 1
+  fi
+
+  ffmpeg -i "$1" -i "$2" -c copy -c:s mov_text -metadata:s:s:0 language=eng "$3"
+}
+
+fmpv() {
+  if [[ $1 == "" ]]; then
+    printf "\033[0;31mWhere is playlist file?\033[0m\n" >&2
+    return 1
+  elif ! [ -f "$1" ]; then
+    printf "\033[0;31mFile $1 doesn't exist\033[0m\n" >&2
     return 1
   fi
   printf "mpv --playlist=$1 &>/dev/null & "
