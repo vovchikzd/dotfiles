@@ -224,7 +224,7 @@ The Son (Meyer) ~ 1912
 Elektra (Saint) ~ 1030
 Atalanta (Saint) ~ 1073
 Ariadne (Saint) ~ 1188
-Empire of the Wolf Series (Swan) ~ 3333
+Empire of the Wolf Series (Swan) ~ 5188
 Seveneves (Stephenson) ~ 3353
 The Goblin Emperor Series (Addison) ~ 3364
 Внучка (Шлинк) ~ 998
@@ -1600,3 +1600,17 @@ Dreamland (Sparks) ~ 1003
 The Echoes Saga (Quaintrell) ~ 19056
 Все, способные держать оружие... Штурмфогель (Лазарчук) ~ 2441
 Птицы и солнцесветы (Пехов) ~ 1262
+Красные цепи (Образцов) ~ 8615
+Время огня (Павлова) ~ 1886
+The Sight (Clement-Davies) ~ 3129
+The Magids (Diana Wynne Jones) ~ 2956
+The Derkholm (Diana Wynne Jones) ~ 2694
+The Dalemark (Diana Wynne Jones) ~ 3416
+The Chrestomanci (Diana Wynne Jones) ~ 5275
+The Land of Ingary[Howl's Moving Castle] (Diana Wynne Jones) ~ 2487
+Дети в гараже моего папы (Максимова) ~ 564
+Желчный ангел (Качур) ~ 981
+Йалка (Чуфистова) ~ 561
+Раз мальчишка, два мальчишка (Демишкевич) ~ 392
+Табия тридцать два (Конаков) ~ 859
+Я? (Фламм) ~ 410
