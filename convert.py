@@ -13,7 +13,7 @@ def clearPath(path: str) -> str:
     result: str = path
     if result[-1] == "/":
         result = result[:-1]
-    if result[:2] != "./":
+    if result[:2] != "./" and result[0] != "/":
         result = "./" + result
     return result
 
@@ -58,6 +58,7 @@ def convertFiles(saFiles: list[str]):
             completedProcess = subprocess.run(["ffmpeg", "-y", "-hide_banner", "-i", sFile, sNewFileName], capture_output=False)
         except:
             print()
+            os.remove(sNewFileName)
             sys.exit(1)
         deleteBiggerFile(sFile, sNewFileName)
 
@@ -86,11 +87,11 @@ def main():
 
     saFilesToConvert: list[str] = getFiles(sWorkingDir)
     if bShowOnly:
+        nNumberOfFiles = len(saFilesToConvert)
+        print(f"\033[0;34mNuber of files: {nNumberOfFiles}\033[0m")
         for sFile in saFilesToConvert:
             sQuotes = "\"" if "'" in sFile else "'"
             print(f"{sQuotes}{sFile}{sQuotes}")
-        print()
-        print(f"\033[0;34mNuber of files: {len(saFilesToConvert)}\033[0m")
         sys.exit(0)
 
     convertFiles(saFilesToConvert)
