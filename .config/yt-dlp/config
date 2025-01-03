@@ -1,11 +1,10 @@
--f "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
+# -f "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
+-f "bv*[height=1080]+ba / bv*+ba/b"
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
 # tor proxy
 --proxy socks5://localhost:9150 
-
-# --proxy "http://127.0.0.1:8080"
 
 -R 0
 
