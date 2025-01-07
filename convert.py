@@ -2,102 +2,197 @@
 
 import os, sys, subprocess, humanize
 
-saFormats: list[str] = [".webm", ".mkv", ".mp4", ".avi", ".ts"]
-saPathsToIgnoge: list[str] = list()
-sSuffix: str = ".converted.webm"
-sTargetExt: str = ".webm"
 nFreedUpSpace: int = 0
 
-
 def clearPath(path: str) -> str:
+    if path == "./" or path == ".":
+        return "."
+    if path == "../" or path == "..":
+        return ".."
+
     result: str = path
     if result[-1] == "/":
         result = result[:-1]
-    if result[:2] != "./" and result[0] != "/":
+    if result[:2] != "./" and result[0] != "/" and result[:3] != "../":
         result = "./" + result
     return result
 
 
-def getFiles(sStartDir: str) -> list[str]:
+def getQuotes(sString: str) -> str:
+    return '"' if "'" in sString else "'"
+
+
+class WorkingInformation:
+    saFormats: list[str] = [".webm", ".mkv", ".mp4", ".avi", ".ts"]
+    saPathsToIgnoge: list[str] = list()
+    saProcessedPaths: list[str] = list()
+    sSuffix: str = ".converted.webm"
+    sTargetExt: str = ".webm"
+    sWorkingDirectory: str = "."
+    bShowOnly: bool = False
+    bShowAll: bool = True
+
+    def __init__(self):
+        args: list[str] = sys.argv[1:]
+        while len(args) > 0:
+            sArgument: str = args.pop(0)
+            match sArgument:
+                case "-s":
+                    self.bShowOnly = True
+                case "-ss":
+                    self.bShowOnly = True
+                    self.bShowAll = False
+                case "-d" if len(args) > 0:
+                    sPassedDir: str = clearPath(args.pop(0))
+                    if os.path.isdir(sPassedDir):
+                        self.sWorkingDirectory = sPassedDir
+                    else:
+                        sQuotes: str = getQuotes(sPassedDir)
+                        print(f"\033[0;31mInvalid directory {sQuotes}{sPassedDir}{sQuotes}\033[0m", file=sys.stderr)
+                        sys.exit(1)
+                case "-i" if len(args) > 0:
+                    self.saPathsToIgnoge.append(clearPath(args.pop(0)))
+                case "-p" if len(args) > 0:
+                    sPassedFile: str = args.pop(0)
+                    if os.path.isfile(sPassedFile):
+                        with open(sPassedFile, "r") as fileProcessed:
+                            global nFreedUpSpace
+                            sFirstLine = fileProcessed.readline().strip()
+                            nFreedUpSpace += int(sFirstLine) if sFirstLine.isdigit() else 0
+                            saReadedLines = [clearPath(line.strip()) for line in fileProcessed.readlines()]
+                            if len(saReadedLines) > 0:
+                                self.saProcessedPaths.extend([line for line in saReadedLines if os.path.isfile(line) and line not in self.saProcessedPaths])
+                    else:
+                        sQuotes: str = getQuotes(sPassedFile)
+                        print(f"\033[0;31mInvalid file {sQuotes}{sPassedFile}{sQuotes}\033[0m", file=sys.stderr)
+                        sys.exit(1)
+                case _:
+                    print(f"\033[0;31mInvalid argument or too few arguments passed\033[0m", file=sys.stderr)
+                    sys.exit(1)
+
+    def path(self) -> str:
+        return self.sWorkingDirectory
+
+    def isIgnore(self, sPath: str) -> bool:
+        return sPath in self.saPathsToIgnoge
+
+    def isNeededFile(self, sPath: str) -> bool:
+        return (os.path.splitext(sPath)[1] in self.saFormats
+                and self.sSuffix not in sPath)
+
+    def isShowOnly(self) -> bool:
+        return self.bShowOnly
+
+    def isShowAll(self) -> bool:
+        return self.bShowAll
+
+    def isProcessed(self, sPath: str) -> bool:
+        return sPath in self.saProcessedPaths
+
+    def addProcessed(self, sPath: str):
+        self.saProcessedPaths.append(sPath)
+
+
+workInfo: WorkingInformation = None
+
+
+def getFiles(sStartDir: str) -> list[tuple[int, str]]:
+    global workInfo
     saDirectories: list[str] = [sStartDir]
     saFiles: list[tuple[int, str]] = list()
     while len(saDirectories) > 0:
-        sWorkingDirectory = saDirectories.pop(0)
-        for sFile in os.listdir(sWorkingDirectory):
-            sWorkingFile = f"{sWorkingDirectory}/{sFile}"
-            if sWorkingFile not in saPathsToIgnoge:
-                if os.path.isdir(sWorkingFile):
-                    saDirectories.append(sWorkingFile)
-                elif (os.path.isfile(sWorkingFile) 
-                      and os.path.splitext(sWorkingFile)[1] in saFormats
-                      and sSuffix not in sWorkingFile):
-                    saFiles.append((os.path.getsize(sWorkingFile), sWorkingFile))
+        sWorkingDirectory: str = saDirectories.pop(0)
+        if not workInfo.isIgnore(sWorkingDirectory):
+            for sFile in os.listdir(sWorkingDirectory):
+                sWorkingFile = f"{sWorkingDirectory}/{sFile}"
+                if (not workInfo.isIgnore(sFile)
+                        and not workInfo.isIgnore(sWorkingFile)):
+                    if os.path.isdir(sWorkingFile):
+                        saDirectories.append(sWorkingFile)
+                    elif (os.path.isfile(sWorkingFile)
+                          and workInfo.isNeededFile(sWorkingFile)):
+                        saFiles.append((os.path.getsize(sWorkingFile), sWorkingFile))
     saFiles.sort(reverse=True)
     return list(map(lambda x: x[1], saFiles))
 
 
-def deleteBiggerFile(sFirstFile: str, sSecondFile: str):
-    nFirstFileSize: int = os.path.getsize(sFirstFile)
-    nSecondFileSize: int = os.path.getsize(sSecondFile)
-    sFileToDelete: str = sFirstFile if nFirstFileSize > nSecondFileSize else sSecondFile
-    bIsRename: bool = False if sSuffix in sFileToDelete else True
-    os.remove(sFileToDelete)
-    if bIsRename:
-        global nFreedUpSpace
-        nFreedUpSpace += abs(nFirstFileSize - nSecondFileSize)
-        os.rename(sSecondFile, sSecondFile.replace(sSuffix, sTargetExt))
+def printFiles(saFiles: list[str]):
+    global workInfo
+    saFilesToPrint: list[str] = list() 
+    if workInfo.isShowAll():
+        saFilesToPrint = [sFile for sFile in saFiles]
+    else:
+        saFilesToPrint = [sFile for sFile in saFiles if not workInfo.isProcessed(sFile)]
+
+    nNumberOfFiles: int = len(saFilesToPrint)
+    print(f"\033[0;34mNuber of files: {nNumberOfFiles}\033[0m")
+    for sFile in saFilesToPrint:
+        sQuotes: str = getQuotes(sFile)
+        sQuotedName = f"{sQuotes}{sFile}{sQuotes}"
+        print(f"\033[0;32m{sQuotedName}\033[0m" if workInfo.isProcessed(sFile) else sQuotedName)
+
+
+def removeExtraFile(sFirstFile: str, sSecondFile: str) -> str:
+    global workInfo, nFreedUpSpace
+    taFiles: list[tuple[int, str]] = [(os.path.getsize(sFirstFile), sFirstFile)
+                                      , (os.path.getsize(sSecondFile), sSecondFile)]
+    taFiles.sort(reverse=True)
+
+    tDelete: tuple[int, str] = taFiles[0]
+    os.remove(tDelete[1])
+
+    sRemainFile: str = taFiles[1][1]
+    sProcessedName: str = sRemainFile
+
+    if workInfo.sSuffix in sRemainFile:
+        nFreedUpSpace += abs(taFiles[0][0] - taFiles[1][0])
+        sNewName: str = sRemainFile.replace(workInfo.sSuffix, workInfo.sTargetExt)
+        os.rename(sRemainFile, sNewName)
+        sProcessedName = sNewName
+
+    return sProcessedName
 
 
 def convertFiles(saFiles: list[str]):
+    global workInfo, nFreedUpSpace
     nFileNumbers: int = len(saFiles)
     for counter, sFile in enumerate(saFiles, 1):
-        sNewFileName: str = f"{os.path.splitext(sFile)[0]}{sSuffix}"
+        if workInfo.isProcessed(sFile):
+            continue
+
+        sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
         subprocess.run("clear")
-        print(f"\033[0;33mConverting file {counter} of {nFileNumbers} ({round((counter / nFileNumbers) * 100, 2)}%)\033[0m")
+        print(f"\033[0;33mConverting file {counter} of {nFileNumbers} ({round((counter * 100) / nFileNumbers, 2)}%)\033[0m")
+
         try:
-            completedProcess = subprocess.run(["ffmpeg", "-y", "-hide_banner", "-i", sFile, sNewFileName], capture_output=False)
+            subprocess.run(["ffmpeg", "-y", "-hide_banner", "-i", sFile, sNewFileName], capture_output=False)
         except:
-            print()
             os.remove(sNewFileName)
+            if len(workInfo.saProcessedPaths) > 0:
+                with open("./processed.txt", "w") as fileProcessed:
+                    print(nFreedUpSpace, end="\n", file=fileProcessed)
+                    print(*workInfo.saProcessedPaths, sep="\n", file=fileProcessed)
+            print()
             sys.exit(1)
-        deleteBiggerFile(sFile, sNewFileName)
+
+        workInfo.addProcessed(removeExtraFile(sFile, sNewFileName))
 
 
 def main():
-    sWorkingDir: str = "."
-    bShowOnly = False
-    args: list[str] = sys.argv[1:]
-    while len(args) != 0:
-        sArgument = args.pop(0)
-        match sArgument:
-            case "-s":
-                bShowOnly = True
-            case "-d" if len(args) > 0:
-                sPassedDir = clearPath(args.pop(0))
-                if os.path.isdir(sPassedDir):
-                    sWorkingDir = sPassedDir
-                else:
-                    print(f"\033[0;31m{sPassedDir} is not a directory", file=sys.stderr)
-                    sys.exit(1)
-            case "-i" if len(args) > 0:
-                saPathsToIgnoge.append(clearPath(args.pop(0)))
-            case _:
-                print("\033[0;31mDon't know such argument or too few arguments passed\033[0m", file=sys.stderr)
-                sys.exit(1)
+    global workInfo
+    saFilesToConvert: list[str] = getFiles(workInfo.path())
 
-    saFilesToConvert: list[str] = getFiles(sWorkingDir)
-    if bShowOnly:
-        nNumberOfFiles = len(saFilesToConvert)
-        print(f"\033[0;34mNuber of files: {nNumberOfFiles}\033[0m")
-        for sFile in saFilesToConvert:
-            sQuotes = "\"" if "'" in sFile else "'"
-            print(f"{sQuotes}{sFile}{sQuotes}")
+    if workInfo.isShowOnly():
+        printFiles(saFilesToConvert)
         sys.exit(0)
 
     convertFiles(saFilesToConvert)
-    if nFreedUpSpace != 0:
+    global nFreedUpSpace
+    if nFreedUpSpace > 0:
         print()
         print(f"\033[0;34mFreed up {humanize.naturalsize(nFreedUpSpace, binary=True)}\033[0m")
 
+
 if __name__ == "__main__":
+    workInfo = WorkingInformation()
     main()
