@@ -1276,7 +1276,7 @@ Time Salvager Series (Chu) ~ 3221
 The War Arts Saga (Chu) ~ 4548
 Tao series (Chu) ~ 7323
 Антоновские яблоки. Жизнь Арсеньева (Бунин) ~ 3565
-Как поймать монстра (Цимеринг) ~ 1566
+Как поймать монстра (Цимеринг) ~ 3114
 Три возраста Окини-сан (Пикуль) ~ 1538
 Крейсера (Пикуль) ~ 1044
 Каторга (Пикуль) ~ 1536
@@ -1437,7 +1437,7 @@ The Sympathizer (Nguyen) ~ 1624
 The Human Stain (Roth) ~ 1547
 Life After Life (Atkinson) ~ 1609
 A Brief History of Seven Killings (James) ~ 2515
-Квендель (Роннефельдт) ~ 1357
+Квендель (Роннефельдт) ~ 2872
 Старость аксолотля (Дукай) ~ 1870
 Разбойничья злая луна (Лукин, Лукина) ~ 5166
 Оникромос (Матушек) ~ 2436
@@ -1614,3 +1614,11 @@ The Land of Ingary[Howl's Moving Castle] (Diana Wynne Jones) ~ 2487
 Раз мальчишка, два мальчишка (Демишкевич) ~ 392
 Табия тридцать два (Конаков) ~ 859
 Я? (Фламм) ~ 410
+Красное бедствие (Хоффман) ~ 1352
+Nostromo (Conrad) ~ 1942
+The Mirror of the Sea (Conrad) ~ 693
+Heart of Darkness (Conrad) ~ 429
+A Personal Record (Conrad) ~ 542
+Under Western Eyes (Conrad) ~ 1284
+The Secret Agent (Conrad) ~ 1074
+Lord Jim (Conrad) ~ 1425
