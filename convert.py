@@ -28,6 +28,7 @@ class WorkingInformation:
     saProcessedPaths: list[str] = list()
     sSuffix: str = ".converted.webm"
     sTargetExt: str = ".webm"
+    sProcessedFile: str = "./processed.txt"
     sWorkingDirectory: str = "."
     bShowOnly: bool = False
     bShowAll: bool = True
@@ -55,7 +56,8 @@ class WorkingInformation:
                 case "-p" if len(args) > 0:
                     sPassedFile: str = args.pop(0)
                     if os.path.isfile(sPassedFile):
-                        with open(sPassedFile, "r") as fileProcessed:
+                        self.sProcessedFile = clearPath(sPassedFile)
+                        with open(self.sProcessedFile, "r") as fileProcessed:
                             global nFreedUpSpace
                             sFirstLine = fileProcessed.readline().strip()
                             nFreedUpSpace += int(sFirstLine) if sFirstLine.isdigit() else 0
@@ -169,7 +171,7 @@ def convertFiles(saFiles: list[str]):
         except:
             os.remove(sNewFileName)
             if len(workInfo.saProcessedPaths) > 0:
-                with open("./processed.txt", "w") as fileProcessed:
+                with open(workInfo.sProcessedFile, "w") as fileProcessed:
                     print(nFreedUpSpace, end="\n", file=fileProcessed)
                     print(*workInfo.saProcessedPaths, sep="\n", file=fileProcessed)
             print()
@@ -191,6 +193,9 @@ def main():
     if nFreedUpSpace > 0:
         print()
         print(f"\033[0;34mFreed up {humanize.naturalsize(nFreedUpSpace, binary=True)}\033[0m")
+
+    if os.path.isfile(workInfo.sProcessedFile):
+        os.remove(workInfo.sProcessedFile)
 
 
 if __name__ == "__main__":
