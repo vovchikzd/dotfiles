@@ -119,7 +119,7 @@ def getFiles(sStartDir: str) -> list[tuple[int, str]]:
 
 
 def printFiles(saFiles: list[str]):
-    global workInfo
+    global workInfo, nFreedUpSpace
     saFilesToPrint: list[str] = list() 
     if workInfo.isShowAll():
         saFilesToPrint = [sFile for sFile in saFiles]
@@ -127,7 +127,9 @@ def printFiles(saFiles: list[str]):
         saFilesToPrint = [sFile for sFile in saFiles if not workInfo.isProcessed(sFile)]
 
     nNumberOfFiles: int = len(saFilesToPrint)
-    print(f"\033[0;34mNuber of files: {nNumberOfFiles}\033[0m")
+    print(f"\033[0;34mNuber of files: {nNumberOfFiles}{
+        f", Freed up: {humanize.naturalsize(nFreedUpSpace, binary=True, format='%.2f')
+    }" if nFreedUpSpace > 0 else ""}\033[0m")
     for sFile in saFilesToPrint:
         sQuotes: str = getQuotes(sFile)
         sQuotedName = f"{sQuotes}{sFile}{sQuotes}"
@@ -155,6 +157,14 @@ def removeExtraFile(sFirstFile: str, sSecondFile: str) -> str:
     return sProcessedName
 
 
+def fillProcessedFile():
+    global workInfo, nFreedUpSpace
+    if len(workInfo.saProcessedPaths) > 0:
+        with open(workInfo.sProcessedFile, "w") as fileProcessed:
+            print(nFreedUpSpace, end="\n", file=fileProcessed)
+            print(*workInfo.saProcessedPaths, sep="\n", file=fileProcessed)
+
+
 def convertFiles(saFiles: list[str]):
     global workInfo, nFreedUpSpace
     nFileNumbers: int = len(saFiles)
@@ -164,20 +174,20 @@ def convertFiles(saFiles: list[str]):
 
         sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
         subprocess.run("clear")
-        print(f"\033[0;33mConverting file {counter} of {nFileNumbers} ({round((counter * 100) / nFileNumbers, 2)}%)\033[0m")
+        print(f"\033[0;33mConverting file {counter} of {nFileNumbers} ({round((counter * 100) / nFileNumbers, 2)}%){
+            f"; Freed up: {humanize.naturalsize(nFreedUpSpace, binary=True, format='%.2f')}" if nFreedUpSpace > 0 else ""
+        }\033[0m")
 
         try:
             subprocess.run(["ffmpeg", "-y", "-hide_banner", "-i", sFile, sNewFileName], capture_output=False)
         except:
             os.remove(sNewFileName)
-            if len(workInfo.saProcessedPaths) > 0:
-                with open(workInfo.sProcessedFile, "w") as fileProcessed:
-                    print(nFreedUpSpace, end="\n", file=fileProcessed)
-                    print(*workInfo.saProcessedPaths, sep="\n", file=fileProcessed)
             print()
             sys.exit(1)
 
         workInfo.addProcessed(removeExtraFile(sFile, sNewFileName))
+        if (counter < nFileNumbers):
+            fillProcessedFile()
 
 
 def main():
@@ -192,7 +202,7 @@ def main():
     global nFreedUpSpace
     if nFreedUpSpace > 0:
         print()
-        print(f"\033[0;34mFreed up {humanize.naturalsize(nFreedUpSpace, binary=True)}\033[0m")
+        print(f"\033[0;34mFreed up {humanize.naturalsize(nFreedUpSpace, binary=True, format='%.2f')}\033[0m")
 
     if os.path.isfile(workInfo.sProcessedFile):
         os.remove(workInfo.sProcessedFile)
