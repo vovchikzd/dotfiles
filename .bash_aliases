@@ -8,6 +8,7 @@ alias srb='source $HOME/.bashrc'
 alias libr='libreoffice /home/vovchik/dotfiles/list/Библиотека.ods &>/dev/null &'
 alias grep='grep --color=always -E'
 alias calc='cal -m'
+alias atree='ouch l --tree'
 
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
 plt=/home/vovchik/Disks/1Tb/Видео/playlists
@@ -78,6 +79,7 @@ rsup() {
          "yazi-cli"
          "eza"
          "tealdeer"
+         "bacon"
        )
 
   for prog in ${progs[@]}
@@ -98,6 +100,20 @@ function yy() {
 
 function pwd() {
   printf "$PWD/$1"
+}
+
+function eat() {
+  if [ "$#" -ne 3 ]; then
+    printf "\033[0;31mRequired 3 parameters: proteins, fats and carbohydrate\033[0m\n" >&2
+    return 1
+  fi
+  proteins=$1
+  fats=$2
+  carbohydrate=$3
+  ccal=$(eva -f3 "4.1 * $proteins + 9.29 * $fats + 4.1 * $carbohydrate")
+  joule=($(eva -f3 "17.2 * $proteins + 38.9 * $fats + 17.2 * $carbohydrate"))
+  printf "${ccal} kCal\n"
+  printf "${joule} kJ\n"
 }
 
 . "$HOME/.cargo/env"
