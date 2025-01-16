@@ -25,9 +25,10 @@ _darcs
 # =====================================
 
 clang-format
-print.hpp
 example_configs.txt
 themes
 list
 autostarts
 images
+convert.py
+yt-prepare.py
