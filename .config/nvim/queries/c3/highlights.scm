@@ -19,7 +19,7 @@
 (initializer_list (arg (param_path (param_path_element (ident) @variable.member))))
 ;; 2) Parameter
 (parameter name: (_) @variable.parameter)
-(call_invocation (arg (param_path (param_path_element [(ident) (ct_ident)] @variable.parameter))))
+(call_invocation (call_arg (ident) @variable.parameter))
 (enum_param_declaration (ident) @variable.parameter)
 ;; 3) Declaration
 (global_declaration (ident) @variable.declaration)
@@ -320,4 +320,9 @@
   (block_comment)
 ] @comment @spell
 
-(doc_comment) @comment.documentation @spell
+(doc_comment_text) @comment.documentation @spell
+(doc_comment_contract_text) @comment.documentation @spell
+
+(doc_comment (doc_comment_contract (at_ident) @keyword (#any-of? @keyword
+        "@require"
+        "@ensure")))
