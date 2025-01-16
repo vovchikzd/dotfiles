@@ -41,3 +41,4 @@ keymap("n", "<C-M-l>", ":w | !clang-format -i --style=file:/home/vovchik/dotfile
 keymap("n", "zz", "ZZ", opts("Bind lower case alternative for ZZ (same as ':x')"))
 keymap("n", "zq", "ZQ", opts("Bind lower case alternative for ZQ (same as ':q!')"))
 keymap("n", "zs", ":w<CR>", opts("Save current buffer"))
+keymap("n", "za", ":qa<CR>", opts("Close all windows"))
