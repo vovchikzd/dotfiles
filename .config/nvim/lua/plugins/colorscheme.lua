@@ -50,16 +50,6 @@ gruvbox = {
   config = function()
     vim.o.background = "dark"
     require("gruvbox").setup(opts)
-    vim.cmd([[colorscheme gruvbox]])
-  end
-}
-
-
-
-gruvbox = {
-  "morhetz/gruvbox",
-  priority = 1000,
-  config = function()
     vim.cmd.colorscheme("gruvbox")
   end
 }
@@ -117,8 +107,6 @@ catppuccin = {
     })
     vim.cmd.colorscheme("catppuccin")
   end,
-
-
 }
 
 -- return dracula
