@@ -9,7 +9,7 @@ false = False
 
 sHelpMessage: str = (
 """
-Usage: yt-prepare [Arguments...] playlist...
+Usage: yt-prepare [Arguments...] playlist... [-- yt-dlp argument...]
 
 Arguments:
     -a, --append     append result to an existing file
