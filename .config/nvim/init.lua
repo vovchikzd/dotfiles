@@ -20,6 +20,10 @@ vim.filetype.add({
     c3i = "c3",
     c3t = "c3",
   },
+  filename = {
+    [".bash_env"] = "bash",
+    [".bash_functions"] = "bash"
+  }
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
