@@ -1,0 +1,66 @@
+append_path() {
+  case ":$PATH:" in
+    *:"$1":*)
+      ;;
+    *)
+      PATH="${PATH:+$PATH:}$1"
+  esac
+}
+
+append_manpath() {
+  case ":$MANPATH:" in
+    *:"$1":*)
+      ;;
+    *)
+      MANPATH="${MANPATH:+$MANPATH:}$1"
+  esac
+}
+
+append_infopath() {
+  case ":$INFOPATH:" in
+    *:"$1":*)
+      ;;
+    *)
+      INFOPATH="${INFOPATH:+$INFOPATH:}$1"
+  esac
+}
+
+if ! which 'clang++' &>/dev/null; then
+  export CXX=g++
+else
+  export CXX=clang++
+fi
+
+if ! which 'clang' &>/dev/null; then
+  export CC=gcc
+else
+  export CC=clang
+fi
+
+source "$HOME/.cargo/env"
+
+export SAL_USE_VCLPLUGIN=qt6
+export QT_QPA_PLATFORMTHEME=qt6ct
+export CMAKE_GENERATOR=Ninja
+export MANPAGER='nvim -c Man! -'
+
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+
+export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep.conf
+
+append_path "$HOME/.local/bin"
+append_path '/usr/local/texlive/2024/bin/x86_64-linux'
+export PATH
+
+append_manpath '/usr/local/texlive/2024/texmf-dist/doc/man'
+export MANPATH
+
+append_infopath '/usr/local/texlive/2024/texmf-dist/doc/info'
+export INFOPATH
+
+unset -f append_path
+unset -f append_manpath
+unset -f append_infopath
