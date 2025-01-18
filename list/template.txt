@@ -1601,7 +1601,7 @@ The Echoes Saga (Quaintrell) ~ 19056
 Все, способные держать оружие... Штурмфогель (Лазарчук) ~ 2441
 Птицы и солнцесветы (Пехов) ~ 1262
 Красные цепи (Образцов) ~ 8615
-Время огня (Павлова) ~ 1886
+Время огня (Павлова) ~ 3788
 The Sight (Clement-Davies) ~ 3129
 The Magids (Diana Wynne Jones) ~ 2956
 The Derkholm (Diana Wynne Jones) ~ 2694
@@ -1622,3 +1622,8 @@ A Personal Record (Conrad) ~ 542
 Under Western Eyes (Conrad) ~ 1284
 The Secret Agent (Conrad) ~ 1074
 Lord Jim (Conrad) ~ 1425
+Island Queen (Riley) ~ 1722
+За правое дело (Гроссман) ~ 3174
+Мудрость чудака (Фейхтвангер) ~ 1632
+Канцелярская крыса (Соловьев) ~ 2927
+Teixcalaan (Martine) ~ 3508
