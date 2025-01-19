@@ -55,6 +55,10 @@ function pwd() {
   printf "$PWD/$1"
 }
 
+function add_favorites() {
+  ~/dotfiles/add_favorite.py "$@"
+}
+
 # function eat() {
 #   if [ "$#" -ne 3 ]; then
 #     printf "\033[0;31mRequired 3 parameters: proteins, fats and carbohydrate\033[0m\n" >&2

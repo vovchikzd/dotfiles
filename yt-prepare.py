@@ -121,9 +121,9 @@ def main(workInfo: WorkInformation):
     def getCycle(sOutputDirname: str, nCount: int, saYtArgs: list[str] = None, bIsNumbering: bool = false, nDirCount: int = 0):
         nNumberLength = len(str(nCount))
         sArgsString = " ".join([quoted(arg) if not arg[0] == "-" else arg for arg in saYtArgs])
-        sResultString =   "clear\n"
-        sResultString +=  "counter=1\n"
+        sResultString =   "counter=1\n"
         sResultString +=  "for url in ${urls[@]}; do\n"
+        sResultString +=  "  clear\n"
         sResultString += f'  num=$(printf "%0{nNumberLength}d" "$counter")\n'
         sResultString += f"  false\n"
         sResultString += f"  while [ $(echo $?) != 0 ]; do\n"
