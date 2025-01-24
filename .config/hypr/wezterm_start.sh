@@ -10,7 +10,6 @@ if [[ $ACTIVE_WM_CLASS == *"wezterm"* ]]; then
     if [[ "$CHILD_PID" == "" ]]; then
         /usr/bin/wezterm start --always-new-process &
     fi
-    # Get current directory of child. The first child should be the shell.
     pushd "/proc/${CHILD_PID}/cwd" &>/dev/null
     SHELL_CWD=$(pwd -P)
     popd &>/dev/null
