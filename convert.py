@@ -32,6 +32,7 @@ class WorkingInformation:
     sWorkingDirectory: str = "."
     bShowOnly: bool = False
     bShowAll: bool = True
+    bIsReverse: bool = True
 
     def __init__(self):
         args: list[str] = sys.argv[1:]
@@ -53,6 +54,8 @@ class WorkingInformation:
                         sys.exit(1)
                 case "-i" if len(args) > 0:
                     self.saPathsToIgnoge.append(clearPath(args.pop(0)))
+                case "-r":
+                    self.bIsReverse = False
                 case "-p" if len(args) > 0:
                     sPassedFile: str = args.pop(0)
                     if os.path.isfile(sPassedFile):
@@ -114,7 +117,7 @@ def getFiles(sStartDir: str) -> list[tuple[int, str]]:
                     elif (os.path.isfile(sWorkingFile)
                           and workInfo.isNeededFile(sWorkingFile)):
                         saFiles.append((os.path.getsize(sWorkingFile), sWorkingFile))
-    saFiles.sort(reverse=True)
+    saFiles.sort(reverse=workInfo.bIsReverse)
     return list(map(lambda x: x[1], saFiles))
 
 
