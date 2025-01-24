@@ -11,8 +11,10 @@ local o = {
 
 	-----Script Settings----
 	device = 'auto', --'auto' is for automatic device detection, or manually change to: 'windows' or 'mac' or 'linux'
-	linux_copy = 'xclip -silent -selection clipboard -in', --copy command that will be used in Linux. OR write a different command
-	linux_paste = 'xclip -selection clipboard -o', --paste command that will be used in Linux. OR write a different command
+	-- linux_copy = 'xclip -silent -selection clipboard -in', --copy command that will be used in Linux. OR write a different command
+	-- linux_paste = 'xclip -selection clipboard -o', --paste command that will be used in Linux. OR write a different command
+  linux_copy = 'wl-copy',
+  linux_paste = 'wl-paste',
 	mac_copy = 'pbcopy', --copy command that will be used in MAC. OR write a different command
 	mac_paste = 'pbpaste', --paste command that will be used in MAC. OR write a different command
 	windows_copy = 'powershell', --'powershell' is for using windows powershell to copy. OR write the copy command, e.g: ' clip'
@@ -26,24 +28,24 @@ local o = {
 	[ ["twitter", "?t=", ""], ["twitch", "?t=", "s"], ["youtube", "&t=", "s"] ]
 	]], --The time attributes which will be added when copying protocols of specific websites from this list. Additional attributes can be added following the same format.
 	protocols_time_attribute = '&t=', --The text that will be copied before the seek time when copying a protocol video from mpv 
-	local_time_attribute = '&time=', --The text that will be copied before the seek time when copying a local video from mpv
+	local_time_attribute = '', --'&time=', --The text that will be copied before the seek time when copying a local video from mpv
 	pastable_time_attributes=[[
 	[" | time="]
 	]], --The time attributes that can be pasted for resume, specific_time_attributes, protocols_time_attribute, local_time_attribute are automatically added
 	copy_keybind=[[
-	["ctrl+c", "ctrl+C", "meta+c", "meta+C"]
+	["ctrl+alt+c", "ctrl+alt+с"]
 	]], --Keybind that will be used to copy
 	running_paste_behavior = 'playlist', --The priority of paste behavior when a video is running. select between 'playlist', 'timestamp', 'force'.
 	paste_keybind=[[
-	["ctrl+v", "ctrl+V", "meta+v", "meta+V"]
+	["ctrl+alt+v", "ctrl+alt+м"]
 	]], --Keybind that will be used to paste
 	copy_specific_behavior = 'path', --Copy behavior when using copy_specific_keybind. select between 'title', 'path', 'timestamp', 'path&timestamp'.
 	copy_specific_keybind=[[
-	["ctrl+alt+c", "ctrl+alt+C", "meta+alt+c", "meta+alt+C"]
+	["ctrl+c", "ctrl+с"]
 	]], --Keybind that will be used to copy based on the copy behavior specified
 	paste_specific_behavior = 'playlist', --Paste behavior when using paste_specific_keybind. select between 'playlist', 'timestamp', 'force'.
 	paste_specific_keybind=[[
-	["ctrl+alt+v", "ctrl+alt+V", "meta+alt+v", "meta+alt+V"]
+	["ctrl+v", "ctrl+м"]
 	]], --Keybind that will be used to paste based on the paste behavior specified
 	paste_protocols=[[
 	["https?://", "magnet:", "rtmp:", "file:"]

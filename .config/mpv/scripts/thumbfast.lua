@@ -1,0 +1,1 @@
+/home/vovchik/dotfiles/.config/mpv/seek-preview/thumbfast.lua
