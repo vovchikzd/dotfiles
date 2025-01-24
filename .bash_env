@@ -55,9 +55,17 @@ append_path "$HOME/.local/bin"
 append_path '/usr/local/texlive/2024/bin/x86_64-linux'
 export PATH
 
+unset MANPATH
+append_manpath '/usr/local/man'
+append_manpath '/usr/local/share/man'
+append_manpath '/usr/share/man'
+append_manpath '/usr/lib/jvm/default/man'
+append_manpath '/usr/local/texlive/2024/bin/x86_64-linux/man'
+append_manpath '/home/vovchik/.local/share/man'
 append_manpath '/usr/local/texlive/2024/texmf-dist/doc/man'
 export MANPATH
 
+unset INFOPATH
 append_infopath '/usr/local/texlive/2024/texmf-dist/doc/info'
 export INFOPATH
 
