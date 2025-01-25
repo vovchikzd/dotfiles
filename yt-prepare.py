@@ -124,7 +124,7 @@ def main(workInfo: WorkInformation):
         sResultString =   "counter=1\n"
         sResultString +=  "for url in ${urls[@]}; do\n"
         sResultString +=  "  clear\n"
-        sResultString += f'  num=$(printf "%0{nNumberLength}d" "$counter")\n'
+        sResultString += f'  num=$(printf "%0{max(nNumberLength, 2)}d" "$counter")\n'
         sResultString += f"  false\n"
         sResultString += f"  while [ $(echo $?) != 0 ]; do\n"
         sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[m\\n"\n'
