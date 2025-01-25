@@ -33,3 +33,6 @@ images
 convert.py
 yt-prepare.py
 gifs
+add_favorite.py
+install_fonts.sh
+rustfmt.toml

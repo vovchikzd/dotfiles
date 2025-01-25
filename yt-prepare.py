@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, sys, subprocess
+import os, sys, subprocess, re
 from pytube import Playlist
 
 true = True
@@ -118,7 +118,7 @@ def main(workInfo: WorkInformation):
         else:
             return sLeftTrimmed[:nAmpersandIndex]
 
-    def getCycle(sOutputDirname: str, nCount: int, saYtArgs: list[str] = None, bIsNumbering: bool = false, nDirCount: int = 0):
+    def getCycle(sOutputDirName: str, nCount: int, saYtArgs: list[str] = None, bIsNumbering: bool = false, nDirCount: int = 0):
         nNumberLength = len(str(nCount))
         sArgsString = " ".join([quoted(arg) if not arg[0] == "-" else arg for arg in saYtArgs])
         sResultString =   "counter=1\n"
@@ -127,7 +127,7 @@ def main(workInfo: WorkInformation):
         sResultString += f'  num=$(printf "%0{nNumberLength}d" "$counter")\n'
         sResultString += f"  false\n"
         sResultString += f"  while [ $(echo $?) != 0 ]; do\n"
-        sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount}\\033[m\\n"\n'
+        sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[m\\n"\n'
         sResultString += f'    yt-dlp -o "{f"{nDirCount}. " if bIsNumbering else ""}{sOutputDirName}/$num. $name" "$url" {sArgsString}\n'
         sResultString += f"  done\n"
         sResultString += f"  ((++counter))\n"
