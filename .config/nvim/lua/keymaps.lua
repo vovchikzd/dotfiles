@@ -34,7 +34,7 @@ keymap("n", "<leader>O", 'O<Esc>0"_D', opts("Insert newline above and stay in no
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
 keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
-keymap("n", "<leader>e", "<cmd>bd!<CR>", opts("\"Kill\" current buffer"))
+keymap("n", "<leader>D", "<cmd>bd!<CR>", opts("\"Kill\" current buffer"))
 
 keymap("n", "<C-M-l>", ":w | !clang-format -i --style=file:/home/vovchik/dotfiles/clang-format %<CR><CR>", opts("Save file and format it with clang-format (c and c++ only)"))
 
