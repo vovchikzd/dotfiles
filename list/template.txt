@@ -675,7 +675,7 @@ Ada, or Ardor (Набоков) ~ 2108
 Transparent Things (Набоков) ~ 317
 Look At The Harlequins (Набоков) ~ 766
 The Traitor Son Cycle (Cameron) ~ 13396
-The Dandelion Dynasty (Liu) ~ 13419
+The Dandelion Dynasty (Liu) ~ 13401
 Strong Motion (Franzen) ~ 2027
 The Twenty-Seventh City (Franzen) ~ 2069
 The Corrections (Franzen) ~ 2322
@@ -1627,3 +1627,7 @@ Island Queen (Riley) ~ 1722
 Мудрость чудака (Фейхтвангер) ~ 1632
 Канцелярская крыса (Соловьев) ~ 2927
 Teixcalaan (Martine) ~ 3508
+The Dragon Defenders (Russell) ~ 1604
+The Levanthria (Beswick) ~ 6093
+The Ministry of Time (Bradley) ~ 1086
+Славгород (Вернер) ~ 1133
