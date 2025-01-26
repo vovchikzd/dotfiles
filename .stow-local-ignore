@@ -36,3 +36,4 @@ gifs
 add_favorite.py
 install_fonts.sh
 rustfmt.toml
+proxy.pac
