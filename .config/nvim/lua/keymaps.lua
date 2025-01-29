@@ -29,8 +29,10 @@ keymap("v", "$", "g_", opts("Select to end of line without newline character"))
 keymap("n", "U", "<C-r>", opts("Redo"))
 
 -- insert new line above/below without insert mode
-keymap("n", "<leader>o", 'o<Esc>0"_D', opts("Insert newline below and stay in normal mode")) -- conflict with tree
-keymap("n", "<leader>O", 'O<Esc>0"_D', opts("Insert newline above and stay in normal mode"))
+-- keymap("n", "<leader>o", 'o<Esc>0"_D', opts("Insert newline below and stay in normal mode")) -- conflict with tree
+-- keymap("n", "<leader>O", 'O<Esc>0"_D', opts("Insert newline above and stay in normal mode"))
+keymap("n", "<leader>]", 'o<Esc>0"_D', opts("Insert newline below and stay in normal mode")) -- conflict with tree
+keymap("n", "<leader>[", 'O<Esc>0"_D', opts("Insert newline above and stay in normal mode"))
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
 keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
