@@ -26,8 +26,8 @@ class WorkingInformation:
     saFormats: list[str] = [".webm", ".mkv", ".mp4", ".avi", ".ts"]
     saPathsToIgnoge: list[str] = list()
     saProcessedPaths: list[str] = list()
-    sSuffix: str = ".converted.webm"
     sTargetExt: str = ".webm"
+    sSuffix: str = None
     sProcessedFile: str = "./processed.txt"
     sWorkingDirectory: str = "."
     bShowOnly: bool = False
@@ -39,6 +39,11 @@ class WorkingInformation:
         while len(args) > 0:
             sArgument: str = args.pop(0)
             match sArgument:
+                case "-t" if len(args) > 0:
+                    sPassedExt = args.pop(0)
+                    if sPassedExt[0] != '.':
+                        sPassedExt = f".{sPassedExt}"
+                    self.sTargetExt = sPassedExt
                 case "-s":
                     self.bShowOnly = True
                 case "-ss":
@@ -74,6 +79,7 @@ class WorkingInformation:
                 case _:
                     print(f"\033[0;31mInvalid argument or too few arguments passed\033[0m", file=sys.stderr)
                     sys.exit(1)
+        self.sSuffix = f".converted{self.sTargetExt}"
 
     def path(self) -> str:
         return self.sWorkingDirectory
