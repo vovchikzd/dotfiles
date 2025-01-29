@@ -33,6 +33,7 @@ rsup() {
          "eza"
          "tealdeer"
          "bacon"
+         "mdbook"
        )
 
   for prog in ${progs[@]}
@@ -57,6 +58,10 @@ function pwd() {
 
 function add_favorites() {
   ~/dotfiles/add_favorite.py "$@"
+}
+
+function eread() {
+  foliate "$1" &>/dev/null &
 }
 
 # function eat() {
