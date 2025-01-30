@@ -2,18 +2,20 @@
 
 ACTIVE_WM_CLASS=$(hyprctl activewindow | grep 'class:')
 if [[ $ACTIVE_WM_CLASS == *"wezterm"* ]]; then
-    PID=$(hyprctl activewindow | grep 'pid:' | awk '{ print $2; }')
-    if [[ "$PID" == "" ]]; then
-        /usr/bin/wezterm start --always-new-process &
-    fi
+  PID=$(hyprctl activewindow | grep 'pid:' | awk '{ print $2; }')
+  if [[ "$PID" == "" ]]; then
+    /usr/bin/wezterm start --always-new-process &
+  else
     CHILD_PID=$(pgrep -P $PID)
     if [[ "$CHILD_PID" == "" ]]; then
-        /usr/bin/wezterm start --always-new-process &
+      /usr/bin/wezterm start --always-new-process &
+    else
+      pushd "/proc/${CHILD_PID}/cwd" &>/dev/null
+      SHELL_CWD=$(/usr/bin/pwd -P)
+      popd &>/dev/null
+      /usr/bin/wezterm start --cwd "$SHELL_CWD" --always-new-process &
     fi
-    pushd "/proc/${CHILD_PID}/cwd" &>/dev/null
-    SHELL_CWD=$(pwd -P)
-    popd &>/dev/null
-    /usr/bin/wezterm start --cwd "$SHELL_CWD" --always-new-process &
+  fi
 else
-    /usr/bin/wezterm start --always-new-process &
+  /usr/bin/wezterm start --always-new-process &
 fi
