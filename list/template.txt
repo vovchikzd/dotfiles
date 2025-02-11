@@ -120,7 +120,6 @@ The Bards of Bone Plain (McKillip) ~ 990
 Rebecca (du Maurier) ~ 1689
 Schindler's Ark (Keneally) ~ 1696
 Family Matters (Mistry) ~ 1698
-Темные святые (Рид) ~ 2696
 Amina al-Sirafi Series (Chakraborty) ~ 1729
 A tree grows in Brooklyn (Smith) ~ 1739
 Hungry as the Sea (Smith) ~ 1753
@@ -1551,7 +1550,6 @@ As Long as the Lemon Trees Grow (Katouh) ~ 1114
 The Last Legacy (Logan) ~ 1836
 I'm Afraid You've Got Dragons (Beagle) ~ 855
 The Bright Sword (Grossman) ~ 2119
-Академия Скура (Рид) ~ 1159
 Медвежий угол (Бакман) ~ 4812
 Ассоциация жильцов (Бакман) ~ 3128
 Три новеллы (Бакман) ~ 209
@@ -1591,7 +1589,7 @@ Dawn of the Black Sun (Burnham) ~ 909
 Чагин (Водолазкин) ~ 941
 Возвращение Мюнхгаузена. Воспоминания о будущем (Кржижановский) ~ 2663
 Борьба за огонь (Жозеф Анри Рони-старший) ~ 2512
-Тайны чароводья (Иванова) ~ 1155
+Тайны чароводья (Иванова) ~ 5515
 The Wings Upon Her Back (Mills) ~ 1241
 The Return (Sparks) ~ 1072
 The Wish (Sparks) ~ 1207
@@ -1632,3 +1630,6 @@ The Levanthria (Beswick) ~ 6093
 The Ministry of Time (Bradley) ~ 1086
 Славгород (Вернер) ~ 1133
 The Green Bone Saga (Fonda Lee) ~ 7125
+Hammer and the Cross (Harrison) ~ 5618
+Испытание Иерусалимом (Шмитт) ~ 543
+Воздушные змеи (Гари) ~ 969
