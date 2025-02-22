@@ -1,0 +1,20 @@
+{
+    "extractor": {
+        "cookies": ["firefox"],
+        "proxy": {
+          "http": "socks5://localhost:9150",
+          "https": "socks5://localhost:9150"
+        },
+        "filename": "{post_date}({username})[{media_id}].{extension}",
+        "ytdl": {
+          "config-file": "~/dotfiles/.config/yt-dlp/config",
+          "enabled": true
+        }
+    },
+    "downloader": {
+        "ytdl": {
+          "config-file": "~/dotfiles/.config/yt-dlp/config",
+          "enabled": true
+        }
+    }
+}
