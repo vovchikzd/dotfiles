@@ -85,6 +85,8 @@ class WorkInformation:
                         args.clear()
                     case "-n" | "--numbering":
                         self.bIsNumbering = true
+                    case "-p" if len(args) > 0:
+                        self.saPlaylists.append(f"http://youtube.com/playlist?list={args.pop(0)}")
                     case _:
                         print(
                             colored(
@@ -122,8 +124,8 @@ def main(workInfo: WorkInformation):
         nNumberLength = len(str(nCount))
         sArgsString = " ".join([quoted(arg) if not arg[0] == "-" else arg for arg in saYtArgs])
         sResultString =   "counter=1\n"
+        sResultString +=  "clear\n"
         sResultString +=  "for url in ${urls[@]}; do\n"
-        sResultString +=  "  clear\n"
         sResultString += f'  num=$(printf "%0{max(nNumberLength, 2)}d" "$counter")\n'
         sResultString += f"  false\n"
         sResultString += f"  while [ $(echo $?) != 0 ]; do\n"
@@ -155,6 +157,10 @@ def main(workInfo: WorkInformation):
                 try:
                     sPlaylistAddres = getPlaylistAddress(sPlaylistUrl)
                     sOutputDirName = f"{playlist.title} [{sPlaylistAddres}]"
+                    if '/' in sOutputDirName:
+                        sOutputDirName = input(f"Incorrect dir name {quoted(sOutputDirName)}, please enter right name: ")
+                    if '/' in sOutputDirName or sOutputDirName == "":
+                        sys.exit(1)
                     sResultString += f"# {sOutputDirName}\n"
                     sResultString += getStringArray(playlist)
                     sResultString += getCycle(sOutputDirName, len(playlist), workInfo.saYtDltArguments, workInfo.bIsNumbering, counter)
