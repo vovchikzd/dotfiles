@@ -25,18 +25,6 @@ append_infopath() {
   esac
 }
 
-if ! which 'clang++' &>/dev/null; then
-  export CXX=g++
-else
-  export CXX=clang++
-fi
-
-if ! which 'clang' &>/dev/null; then
-  export CC=gcc
-else
-  export CC=clang
-fi
-
 source "$HOME/.cargo/env"
 
 export SAL_USE_VCLPLUGIN=qt6

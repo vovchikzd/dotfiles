@@ -15,6 +15,9 @@ alias atree='ouch l --tree'
 
 alias list='codium "/home/vovchik/Disks/1Tb/Книги/Ближайшие планы/0. Список/list.tex"'
 
+alias mmpv='mpv --no-resume-playback --loop-playlist=inf'
+alias ffmpeg='ffmpeg -hide_banner'
+
 dlt=/home/vovchik/Disks/1Tb/Видео/Delete/
 plt=/home/vovchik/Disks/1Tb/Видео/playlists
 
@@ -23,7 +26,7 @@ lformat="bv*[height=1080]+ba / bv*+ba/b"
 bformat="bv*+ba/b"
 name='%(title)s [%(id)s](%(channel)s).%(ext)s'
 numbering="%(playlist_index)s. $name"
-playlist="%(playlist)s [%(playlist_id)s](%(playlist_channel)s)"
+playlist="%(playlist)s [%(playlist_id)s]"
 playlist_numbering="$playlist/$numbering"
 tor_proxy='socks5://localhost:9150'
 # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
