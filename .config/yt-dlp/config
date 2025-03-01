@@ -15,3 +15,7 @@
 --cookies-from-browser firefox
 
 --embed-metadata
+
+--sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
+
+--compat-options filename-sanitization
