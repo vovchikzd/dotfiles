@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, sys, subprocess, humanize
+import os, sys, subprocess, humanize, cv2
 
 nFreedUpSpace: int = 0
 
@@ -33,6 +33,7 @@ class WorkingInformation:
     bShowOnly: bool = False
     bShowAll: bool = True
     bIsReverse: bool = True
+    nOutputHeight: int = 1080
 
     def __init__(self):
         args: list[str] = sys.argv[1:]
@@ -61,6 +62,8 @@ class WorkingInformation:
                     self.saPathsToIgnoge.append(clearPath(args.pop(0)))
                 case "-r":
                     self.bIsReverse = False
+                case "--scale" if len(args) > 0:
+                    self.nOutputHeight = int(args.pop(0))
                 case "-p" if len(args) > 0:
                     sPassedFile: str = args.pop(0)
                     if os.path.isfile(sPassedFile):
@@ -174,6 +177,22 @@ def fillProcessedFile():
             print(*workInfo.saProcessedPaths, sep="\n", file=fileProcessed)
 
 
+def getVideoScale(sFile):
+    nInputFormat = cv2.VideoCapture(sFile)
+    nInputHeight = int(nInputFormat.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    nInputWidth = int(nInputFormat.get(cv2.CAP_PROP_FRAME_WIDTH))
+    return (nInputWidth, nInputHeight)
+
+
+def getOutputScale(nTupleInputScale):
+    global workInfo
+    nOutputHeight = workInfo.nOutputHeight
+    nOutputWidth = int((nOutputHeight * nTupleInputScale[0]) / nTupleInputScale[1])
+    if not nOutputWidth % 2 == 0:
+        nOutputWidth += 1
+    return (nOutputWidth, nOutputHeight)
+
+
 def convertFiles(saFiles: list[str]):
     global workInfo, nFreedUpSpace
     nFileNumbers: int = len(saFiles)
@@ -181,14 +200,25 @@ def convertFiles(saFiles: list[str]):
         if workInfo.isProcessed(sFile):
             continue
 
+        saArgs = ["ffmpeg", "-y", "-hide_banner", "-i", sFile]
+
+        nTupleInputScale = getVideoScale(sFile)
+        nTupleOutputScale = None
+        if nTupleInputScale[1] > workInfo.nOutputHeight:
+            nTupleOutputScale = getOutputScale(nTupleInputScale)
+            saArgs.extend(["-vf", f"scale={nTupleOutputScale[0]}:{nTupleOutputScale[1]}"])
+
         sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
+        saArgs.extend([sNewFileName])
         subprocess.run("clear")
-        print(f"\033[0;33mConverting file {counter} of {nFileNumbers} ({round((counter * 100) / nFileNumbers, 2)}%){
+        print(f"\033[0;33mConverting file {counter} of {nFileNumbers}{
+            "" if nTupleOutputScale is None else f" [scale from {nTupleInputScale[0]}x{nTupleInputScale[1]} to {nTupleOutputScale[0]}x{nTupleOutputScale[1]}]"
+        } ({round((counter * 100) / nFileNumbers, 2)}%){
             f"; Freed up: {humanize.naturalsize(nFreedUpSpace, binary=True, format='%.2f')}" if nFreedUpSpace > 0 else ""
         }\033[0m")
 
         try:
-            subprocess.run(["ffmpeg", "-y", "-hide_banner", "-i", sFile, sNewFileName], capture_output=False)
+            subprocess.run(saArgs, capture_output=False)
         except:
             os.remove(sNewFileName)
             print()

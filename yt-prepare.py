@@ -13,10 +13,12 @@ Usage: yt-prepare [Arguments...] playlist... [-- yt-dlp argument...]
 
 Arguments:
     -a, --append     append result to an existing file
+    -d, --dynamic    add dynamicly numbering progress
     -f, --force      allow rewriting existing file
     -h, --help       show this help message
     -n, --numbering  numbering created directories by passed order
     -o <file>        print result to <file>, default name is 'down.sh'
+    -t, --template   create empty template file (always dynamic numbering)
 
     --               all after this will go as arguments to yt-dlp
 """
@@ -37,10 +39,12 @@ def colored(sToColor: str, color: Color = Color.NEUTRAL):
 
 def isQuoted(sToCheck: str) -> bool:
     tQuotes: tuple[str, str] = ("'", '"')
-    return sToCheck[0] in tQuotes and sToCheck[-1] in tQuotes
+    return len(sToCheck) > 1 and sToCheck[0] == sToCheck[-1] and sToCheck[0] in tQuotes
 
 
-def quoted(sString: str) -> str:
+def quoted(sString: str = "") -> str:
+    if len(sString) == 0:
+        return "''"
     if isQuoted(sString):
         return sString
     sQuote: str = '"' if "'" in sString else "'"
@@ -55,6 +59,8 @@ class WorkInformation:
     bIsWriteShebang: bool = true
     bIsRewriteExistingFile: bool = false
     bIsNumbering: bool = false
+    bIsDynamicNumbering: bool = false
+    bIsCreateTemplate: bool = false
 
     def __init__(self, args):
         if  "-h" in args or "--help" in args:
@@ -87,6 +93,10 @@ class WorkInformation:
                         self.bIsNumbering = true
                     case "-p" if len(args) > 0:
                         self.saPlaylists.append(f"http://youtube.com/playlist?list={args.pop(0)}")
+                    case "-d" | "--dynamic":
+                        self.bIsDynamicNumbering = true
+                    case "-t" | "--template":
+                        self.bIsCreateTemplate = true
                     case _:
                         print(
                             colored(
@@ -97,7 +107,7 @@ class WorkInformation:
                         sys.exit(1)
             else:
                 self.saPlaylists.append(sReadedArgument)
-        if len(self.saPlaylists) == 0:
+        if len(self.saPlaylists) == 0 and not self.bIsCreateTemplate:
             print(colored("Not any url was passed", color=Color.RED))
             print(sHelpMessage)
             sys.exit(1)
@@ -120,16 +130,31 @@ def main(workInfo: WorkInformation):
         else:
             return sLeftTrimmed[:nAmpersandIndex]
 
-    def getCycle(sOutputDirName: str, nCount: int, saYtArgs: list[str] = None, bIsNumbering: bool = false, nDirCount: int = 0):
+    def getCycle(sOutputDirName: str, nCount: int, saYtArgs: list[str] = None, bIsNumbering: bool = false, nDirCount: int = 0, bIsDynNum: bool = false):
         nNumberLength = len(str(nCount))
-        sArgsString = " ".join([quoted(arg) if not arg[0] == "-" else arg for arg in saYtArgs])
-        sResultString =   "counter=1\n"
+        sArgsString = " ".join([quoted(arg) if (len(arg) == 0 or not arg[0] == "-") else arg for arg in saYtArgs])
+        sResultString = ""
+        if bIsDynNum:
+            sResultString += "array_length=${#urls[*]}\n"
+            sResultString += "char_length=${#array_length}\n"
+            sResultString += "\n"
+            sResultString += "if [ $char_length -lt 2 ]; then\n"
+            sResultString += "  char_length=2\n"
+            sResultString += "fi\n"
+            sResultString += "\n"
+        sResultString +=  "counter=1\n"
         sResultString +=  "clear\n"
         sResultString +=  "for url in ${urls[@]}; do\n"
-        sResultString += f'  num=$(printf "%0{max(nNumberLength, 2)}d" "$counter")\n'
+        if bIsDynNum:
+            sResultString += f'  num=$(printf "%0${{char_length}}d" "$counter")\n'
+        else:
+            sResultString += f'  num=$(printf "%0{max(nNumberLength, 2)}d" "$counter")\n'
         sResultString += f"  false\n"
         sResultString += f"  while [ $(echo $?) != 0 ]; do\n"
-        sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
+        if bIsDynNum:
+            sResultString += f'    printf "\\033[0;33mDownloading $counter of ${{array_length}} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
+        else:
+            sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
         sResultString += f'    yt-dlp -o "{f"{nDirCount}. " if bIsNumbering else ""}{sOutputDirName}/$num. $name" "$url" {sArgsString}\n'
         sResultString += f"  done\n"
         sResultString += f"  ((++counter))\n"
@@ -162,8 +187,9 @@ def main(workInfo: WorkInformation):
                     if '/' in sOutputDirName or sOutputDirName == "":
                         sys.exit(1)
                     sResultString += f"# {sOutputDirName}\n"
+                    sResultString += f"# {sPlaylistUrl}\n"
                     sResultString += getStringArray(playlist)
-                    sResultString += getCycle(sOutputDirName, len(playlist), workInfo.saYtDltArguments, workInfo.bIsNumbering, counter)
+                    sResultString += getCycle(sOutputDirName, len(playlist), workInfo.saYtDltArguments, workInfo.bIsNumbering, counter, workInfo.bIsDynamicNumbering)
                     print(sResultString, file=outputFile, end='\n\n')
                 except:
                     saErrorUrls.append(sPlaylistUrl)
@@ -183,10 +209,56 @@ def main(workInfo: WorkInformation):
         sys.exit(1)
 
 
+def createTemplate(workInfo):
+    if (os.path.isfile(workInfo.sOutputFileName)
+            and not workInfo.bIsRewriteExistingFile):
+        print(f"File {quoted(workInfo.sOutputFileName)} exists. Probably you want to use '-o <file> argument.")
+        print("See 'yt-prepare --help' for more information.")
+        sys.exit(1)
+
+    with open(workInfo.sOutputFileName, f"{workInfo.sFileMode}+") as outputFile:
+        if workInfo.bIsWriteShebang:
+            print("#!/usr/bin/env bash\n", file=outputFile)
+            print("source ~/.bash_aliases\n", file=outputFile)
+
+        sArgsString = " ".join([quoted(arg) if (len(arg) == 0 or not arg[0] == "-") else arg for arg in workInfo.saYtDltArguments])
+        sResultString = """urls=(\n\n)\n\n"""
+        sResultString += "array_length=${#urls[*]}\n"
+        if workInfo.bIsNumbering:
+            sResultString += "char_length=${#array_length}\n\n"
+            sResultString += "if [ $char_length -lt 2 ]; then\n"
+            sResultString += "  char_length=2\n"
+            sResultString += "fi\n"
+        sResultString += "\n"
+        sResultString += "counter=1\n"
+        sResultString += "clear\n"
+        sResultString += "for url in ${urls[@]}; do\n"
+        if workInfo.bIsNumbering:
+            sResultString += '  num=$(printf "%0${char_length}d" "$counter")\n'
+        sResultString += '  false\n'
+        sResultString += "  while [ $(echo $?) != 0 ]; do\n"
+        sResultString += r'    printf "\033[0;33mDownloading $counter of ${array_length}\033[0m\n"'
+        sResultString += "\n"
+        if workInfo.bIsNumbering:
+            sResultString += f'    yt-dlp -o "$num. $name" "$url" {sArgsString}\n'
+        else:
+            sResultString += f'    yt-dlp "$url" {sArgsString}\n'
+        sResultString += "  done\n"
+        sResultString += "  ((++counter))\n"
+        sResultString += "done\n"
+        print(sResultString, file=outputFile)
+        
+    subprocess.run(["chmod", "+x", workInfo.sOutputFileName])
+
+
 if __name__ == "__main__":
     args: list[str] = sys.argv[1:]
     if len(args) == 0:
         print(sHelpMessage)
         sys.exit(1)
     workInfo = WorkInformation(args)
-    main(workInfo)
+    if workInfo.bIsCreateTemplate:
+        createTemplate(workInfo)
+        sys.exit(0)
+    else:
+        main(workInfo)
