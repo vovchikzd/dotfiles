@@ -7,14 +7,16 @@
         },
         "filename": "{post_date}({username})[{media_id}].{extension}",
         "ytdl": {
-          "config-file": "~/dotfiles/.config/yt-dlp/config",
-          "enabled": true
+          "enabled": true,
+          "format": "bv*[height=1080]+ba / bv*+ba/b",
+          "cmdline-args": "--embed-metadata"
         }
     },
     "downloader": {
         "ytdl": {
-          "config-file": "~/dotfiles/.config/yt-dlp/config",
-          "enabled": true
+          "enabled": true,
+          "format": "bv*[height=1080]+ba / bv*+ba/b",
+          "cmdline-args": "--embed-metadata"
         }
     }
 }
