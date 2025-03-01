@@ -56,6 +56,10 @@ function pwd() {
   printf "$PWD/$1"
 }
 
+function cpwd() {
+  printf "$PWD/$1" | wl-copy
+}
+
 function add_favorites() {
   ~/dotfiles/add_favorite.py "$@"
 }
