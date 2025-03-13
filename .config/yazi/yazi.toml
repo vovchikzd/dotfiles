@@ -24,6 +24,12 @@ playlist = [
 latex = [
   { run = 'codium "$@"', orphan = true },
 ]
+custom-mpv = [
+  { run = 'mpv --loop-playlist=inf "$@"', orphan = true },
+]
+image-mpv = [
+  { run = 'mpv --loop-file=inf --no-resume-playback "$@"', oprhan = true },
+]
 
 
 [open]
@@ -35,9 +41,10 @@ prepend_rules = [
 
   { name = "*.pdf", use = "okular" },
   { name = "*.djvu", use = "okular" },
-  { mime = "{image}/*", use = "okular"},
 
   { name = "*.plt", use = "playlist" },
+  { mime = "{video}/*", use = "custom-mpv"},
+  { mime = "{image}/*", use = "image-mpv"},
 
   { name = "*.tex", use = "latex" },
 ]
