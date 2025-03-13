@@ -339,7 +339,7 @@ Warrior Bards (Marillier) ~ 4691
 Скорлупы. Кубики (Елизаров) ~ 802
 Библиотекарь (Елизаров) ~ 1189
 Земля (Елизаров) ~ 2722
-The Illborn Saga (Jackson) ~ 4726
+The Illborn Saga (Jackson) ~ 6983
 Путь через века (Шмитт) ~ 4730
 Wayfarers (Chambers) ~ 4810
 Winterlands Series (Hambly) ~ 4821
@@ -576,7 +576,7 @@ The Amazing Adventures of Kavalier and Clay (Chabon) ~ 2664
 The Bound and the Broken Series (Cahill) ~ 10566
 A Place of Greater Safety (Mantel) ~ 3487
 Thomas Cromwell series (Mantel) ~ 7308
-Энергия повластна нам (Иванов) ~ 941
+Энергия подвластна нам (Иванов) ~ 941
 Возвращение Ибадуллы (Иванов) ~ 1039
 Желтый металл (Иванов) ~ 1354
 Древняя русь (Иванов) ~ 7806
@@ -1399,7 +1399,7 @@ When God Laughs (London) ~ 569
 Поселок. Тринадцать лет пути. Великий дух и беглецы. Белое платье Золушки (Булычев) ~ 2069
 Five Stal Billionaire (Tash Aw) ~ 1708
 The Covenant of Water (Verghese) ~ 2581
-Заступа (Белов) ~ 1208
+Заступа (Белов) ~ 2663
 Элена (Пиньейро) ~ 443
 Убыр (Идиатуллин[Измайлов]) ~ 1816
 Rucciя (Идиатуллин) ~ 1469
@@ -1633,7 +1633,7 @@ The Green Bone Saga (Fonda Lee) ~ 7125
 Hammer and the Cross (Harrison) ~ 5618
 Испытание Иерусалимом (Шмитт) ~ 543
 Воздушные змеи (Гари) ~ 969
-The Kystrom Chronicles (Hunt) ~ 1431
+The Kystrom Chronicles (Hunt) ~ 2816
 The Aether Universe (MacLeod) ~ 3750
 Angelmaker (Harkaway) ~ 2079
 Go as a River (Read) ~ 922
@@ -1656,3 +1656,46 @@ The Night's Dawn Trilogy (Hamilton) ~ 14414
 Great North Road (Hamilton) ~ 4014
 Market Forces (Morgan) ~ 1668
 The Berry Pickers (Peters) ~ 924
+Breathmarked (Fonda Lee) ~ 1275
+The Dream Archipelago (Priest) ~ 7309
+Hainish Cycle (Le Guin) ~ 7596
+A Dream of Wessex (Priest) ~ 878
+Airside (Priest) ~ 984
+Always Coming Home (Le Guin) ~ 2820
+An American Story (Priest) ~ 1057
+Annals of the Western Shore (Le Guin) ~ 2761
+Artemis Fowl (Colfer) ~ 10782
+By Blood, By Salt (Odom) ~ 1259
+eXistenZ (Priest) ~ 601
+Expect Me Tomorrow (Priest) ~ 1096
+Fugue for a Darkening Island (Priest) ~ 543
+Lavinia (Le Guin) ~ 999
+Searoad: Chronicles of Klatsand (Le Guin) ~ 953
+Short Circuit (Wedgelock[Priest]) ~ 546
+The Beginning Place (Le Guin) ~ 683
+The Books of Earthsea (Le Guin) ~ 4749
+Orsinia (Le Guin) ~ 2421
+The Extremes (Priest) ~ 1237
+The Eye of the Heron (Le Guin) ~ 566
+The Glamour (Priest) ~ 986
+The Inverted World (Priest) ~ 936
+The Lathe of Heaven (Le Guin) ~ 672
+The Prestige (Priest) ~ 1296
+The Separation (Priest) ~ 1524
+The Wind in the Willows (Grahame) ~ 814
+Братья и сестры (Абрамов) ~ 3870
+Побежденный. Барселоно, 1714 (Пиньоль) ~ 2796
+Там, где цветет полынь (Птицева) ~ 1483
+The Queens of Renthia Series (Durst) ~ 4236
+The Captive's War (Corey) ~ 1591
+The Black Sun's Daughter (Hanover) ~ 4284
+The Age of Uprising (Ford) ~ 4342
+Artemis (Weir) ~ 954
+Project Hail Mary (Weir) ~ 1651
+The Martian (Weir) ~ 1156
+Kaikeyi (Patel) ~ 1543
+The Book of Gothel (McMyne) ~ 1314
+The Lifeboat (Rogan) ~ 855
+Время созидать (Кварталова) ~ 1650
+Жемчужный узел (Прокопьева) ~ 1025
+Temeraire Series (Novik) ~ 13108
