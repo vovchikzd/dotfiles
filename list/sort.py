@@ -9,10 +9,9 @@ def get_tuple(line: str) -> tuple[str, int]:
 def main() -> int:
     sorted_tmp: list[tuple[str, int]] = list()
     with open("template.txt", "r") as tmp:
-        lines: list[tuple[str, int]] = [get_tuple(line.strip()) for line in tmp.readlines()]
-        lines.sort(key=lambda tup: (tup[1], tup[0]))
-        sorted_tmp = lines
+        sorted_tmp = [get_tuple(line.strip()) for line in tmp.readlines()]
 
+    sorted_tmp.sort(key=lambda tup: (tup[1], tup[0]))
     with open("list.tex", "w") as tord:
         print("\\documentclass[a4paper, 11pt]{proc} % proc для двух колонок\n\\input{preamble.tex}\n", file=tord)
         print("\\begin{document}\n\n\\begin{enumerate}", file=tord)

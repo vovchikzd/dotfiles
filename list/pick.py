@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys, random, re
+import sys, random, re, subprocess
 
 def get_tuple(line: str) -> tuple[str, int]:
     tup: list[str] = line.split(" ~ ")
@@ -19,8 +19,8 @@ def main() -> int:
     with open("template.txt", "r") as tmp:
         sorted_tmp = [get_tuple(line.strip()) for line in tmp.readlines()]
 
-    for _ in range(10):
-        random.shuffle(sorted_tmp)
+    # for _ in range(100):
+    #     random.shuffle(sorted_tmp)
 
     print(getRes(*random.choice(sorted_tmp)))
 

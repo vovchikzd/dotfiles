@@ -34,6 +34,8 @@ class WorkingInformation:
     bShowAll: bool = True
     bIsReverse: bool = True
     nOutputHeight: int = 1080
+    saFfmpegArgs: list[str] = list()
+    bIsDeleteSmaller: bool = True
 
     def __init__(self):
         args: list[str] = sys.argv[1:]
@@ -64,6 +66,13 @@ class WorkingInformation:
                     self.bIsReverse = False
                 case "--scale" if len(args) > 0:
                     self.nOutputHeight = int(args.pop(0))
+                case "-f" if len(args) > 0:
+                    sPassedExt = args.pop(0)
+                    if sPassedExt[0] != '.':
+                        sPassedExt = f".{sPassedExt}"
+                    self.saFormats.append(sPassedExt)
+                case "-n":
+                    self.bIsDeleteSmaller = False
                 case "-p" if len(args) > 0:
                     sPassedFile: str = args.pop(0)
                     if os.path.isfile(sPassedFile):
@@ -79,6 +88,9 @@ class WorkingInformation:
                         sQuotes: str = getQuotes(sPassedFile)
                         print(f"\033[0;31mInvalid file {sQuotes}{sPassedFile}{sQuotes}\033[0m", file=sys.stderr)
                         sys.exit(1)
+                case "--":
+                    self.saFfmpegArgs = args.copy()
+                    args.clear()
                 case _:
                     print(f"\033[0;31mInvalid argument or too few arguments passed\033[0m", file=sys.stderr)
                     sys.exit(1)
@@ -150,23 +162,33 @@ def printFiles(saFiles: list[str]):
 
 def removeExtraFile(sFirstFile: str, sSecondFile: str) -> str:
     global workInfo, nFreedUpSpace
-    taFiles: list[tuple[int, str]] = [(os.path.getsize(sFirstFile), sFirstFile)
-                                      , (os.path.getsize(sSecondFile), sSecondFile)]
-    taFiles.sort(reverse=True)
+    if workInfo.bIsDeleteSmaller:
+        taFiles: list[tuple[int, str]] = [(os.path.getsize(sFirstFile), sFirstFile)
+                                          , (os.path.getsize(sSecondFile), sSecondFile)]
+        taFiles.sort(reverse=True)
 
-    tDelete: tuple[int, str] = taFiles[0]
-    os.remove(tDelete[1])
+        tDelete: tuple[int, str] = taFiles[0]
+        os.remove(tDelete[1])
 
-    sRemainFile: str = taFiles[1][1]
-    sProcessedName: str = sRemainFile
+        sRemainFile: str = taFiles[1][1]
+        sProcessedName: str = sRemainFile
 
-    if workInfo.sSuffix in sRemainFile:
-        nFreedUpSpace += abs(taFiles[0][0] - taFiles[1][0])
-        sNewName: str = sRemainFile.replace(workInfo.sSuffix, workInfo.sTargetExt)
-        os.rename(sRemainFile, sNewName)
-        sProcessedName = sNewName
+        if workInfo.sSuffix in sRemainFile:
+            nFreedUpSpace += abs(taFiles[0][0] - taFiles[1][0])
+            sNewName: str = sRemainFile.replace(workInfo.sSuffix, workInfo.sTargetExt)
+            os.rename(sRemainFile, sNewName)
+            sProcessedName = sNewName
 
-    return sProcessedName
+        return sProcessedName
+    else:
+        nFirsSize = os.path.getsize(sFirstFile)
+        nSecondSize = os.path.getsize(sSecondFile)
+        if nSecondSize < nFirsSize:
+            nFreedUpSpace += nFirsSize - nSecondSize
+        os.remove(sFirstFile)
+        sNewName = sSecondFile.replace(workInfo.sSuffix, workInfo.sTargetExt)
+        os.rename(sSecondFile, sNewName)
+        return sNewName
 
 
 def fillProcessedFile():
@@ -208,6 +230,8 @@ def convertFiles(saFiles: list[str]):
             nTupleOutputScale = getOutputScale(nTupleInputScale)
             saArgs.extend(["-vf", f"scale={nTupleOutputScale[0]}:{nTupleOutputScale[1]}"])
 
+        if len(workInfo.saFfmpegArgs) > 0:
+            saArgs.extend(workInfo.saFfmpegArgs)
         sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
         saArgs.extend([sNewFileName])
         subprocess.run("clear")
