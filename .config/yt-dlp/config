@@ -19,3 +19,7 @@
 --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
 
 --compat-options filename-sanitization
+
+--sponsorblock-mark chapter
+
+--sponsorblock-chapter-title '%(category_names)l'
