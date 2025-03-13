@@ -31,5 +31,5 @@ if ! [ -L /home/vovchik/.local/bin/amv ]; then
   fi
 fi
 
-eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
