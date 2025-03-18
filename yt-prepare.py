@@ -155,7 +155,7 @@ def main(workInfo: WorkInformation):
             sResultString += f'    printf "\\033[0;33mDownloading $counter of ${{array_length}} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
         else:
             sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
-        sResultString += f'    yt-dlp -o "{f"{nDirCount}. " if bIsNumbering else ""}{sOutputDirName}/$num. $name" "$url" {sArgsString}\n'
+        sResultString += f'    yt-dlp -o "{f"{nDirCount:02}. " if bIsNumbering else ""}{sOutputDirName}/$num. $name" "$url" {sArgsString}\n'
         sResultString += f"  done\n"
         sResultString += f"  ((++counter))\n"
         sResultString += f"done\n"
