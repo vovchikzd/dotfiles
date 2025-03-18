@@ -1,4 +1,4 @@
 [[manager.prepend_keymap]]
 on   = [ "c", "a" ]
-run  = "plugin ouch --args=zip"
+run  = "plugin ouch zip"
 desc = "Archive selected files"
