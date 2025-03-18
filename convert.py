@@ -36,6 +36,7 @@ class WorkingInformation:
     nOutputHeight: int = 1080
     saFfmpegArgs: list[str] = list()
     bIsDeleteSmaller: bool = True
+    bIsDeleteProcFile: bool = True
 
     def __init__(self):
         args: list[str] = sys.argv[1:]
@@ -73,6 +74,8 @@ class WorkingInformation:
                     self.saFormats.append(sPassedExt)
                 case "-n":
                     self.bIsDeleteSmaller = False
+                case "--save-proc":
+                    self.bIsDeleteProcFile = False
                 case "-p" if len(args) > 0:
                     sPassedFile: str = args.pop(0)
                     if os.path.isfile(sPassedFile):
@@ -267,7 +270,7 @@ def main():
         print()
         print(f"\033[0;34mFreed up {humanize.naturalsize(nFreedUpSpace, binary=True, format='%.2f')}\033[0m")
 
-    if os.path.isfile(workInfo.sProcessedFile):
+    if os.path.isfile(workInfo.sProcessedFile) and workInfo.bIsDeleteProcFile:
         os.remove(workInfo.sProcessedFile)
 
 
