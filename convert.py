@@ -77,9 +77,9 @@ class WorkingInformation:
                 case "--save-proc":
                     self.bIsDeleteProcFile = False
                 case "-p" if len(args) > 0:
-                    sPassedFile: str = args.pop(0)
+                    sPassedFile: str = clearPath(args.pop(0))
+                    self.sProcessedFile = sPassedFile
                     if os.path.isfile(sPassedFile):
-                        self.sProcessedFile = clearPath(sPassedFile)
                         with open(self.sProcessedFile, "r") as fileProcessed:
                             global nFreedUpSpace
                             sFirstLine = fileProcessed.readline().strip()
@@ -87,10 +87,6 @@ class WorkingInformation:
                             saReadedLines = [clearPath(line.strip()) for line in fileProcessed.readlines()]
                             if len(saReadedLines) > 0:
                                 self.saProcessedPaths.extend([line for line in saReadedLines if os.path.isfile(line) and line not in self.saProcessedPaths])
-                    else:
-                        sQuotes: str = getQuotes(sPassedFile)
-                        print(f"\033[0;31mInvalid file {sQuotes}{sPassedFile}{sQuotes}\033[0m", file=sys.stderr)
-                        sys.exit(1)
                 case "--":
                     self.saFfmpegArgs = args.copy()
                     args.clear()
@@ -252,8 +248,7 @@ def convertFiles(saFiles: list[str]):
             sys.exit(1)
 
         workInfo.addProcessed(removeExtraFile(sFile, sNewFileName))
-        if (counter < nFileNumbers):
-            fillProcessedFile()
+        fillProcessedFile()
 
 
 def main():
