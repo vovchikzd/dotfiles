@@ -136,7 +136,7 @@ Pandominion Series (Carey) ~ 1869
 Правила выживания в джакарке (Цимеринг) ~ 1933
 The Poisonwood Bible (Kingsolver) ~ 1942
 Stabat Mater (Козлов) ~ 1943
-Lands of the Firstborn (Hanrahan) ~ 1950
+Lands of the Firstborn (Hanrahan) ~ 4042
 Heritor's Helm (L.A. Buck) ~ 1955
 Закат Нэптедуна (Жилин) ~ 1989
 Рим -- это я (Постегильо) ~ 4712
@@ -722,7 +722,7 @@ The Dreamblood duology (Jemisin) ~ 2976
 The Broken Earth Trilogy (Jemisin) ~ 4322
 The Inheritance Trilogy (Jemisin) ~ 4538
 Avalon Series (Bradley) ~ 14663
-The Song of the Shattered Sands (Beaulieu) ~ 15153
+The Song of the Shattered Sands (Beaulieu) ~ 15443
 Beauty Queens (Bray) ~ 1214
 Going Bovine (Bray) ~ 1364
 Gemma Doyle (Bray) ~ 4738
@@ -1511,7 +1511,7 @@ Exhalation (Chiang) ~ 1133
 Язычник (Кузнецов-Туляпин) ~ 1470
 The Blue Castle (Montgomery) ~ 784
 Ночевала тучка золотая. Солдат и мальчик (Приставкин) ~ 2904
-Сухой овраг (Клима) ~ 1155
+Сухой овраг (Клима) ~ 2376
 The Plot (Korelitz) ~ 1040
 Олений завет (Смышляева) ~ 620
 Олива Денаро (Ардоне) ~ 769
@@ -1699,3 +1699,17 @@ The Lifeboat (Rogan) ~ 855
 Время созидать (Кварталова) ~ 1650
 Жемчужный узел (Прокопьева) ~ 1025
 Temeraire Series (Novik) ~ 13108
+Wars of Light and Shadow (Wurts) ~ 31674
+The Tide Child Trilogy (Barker) ~ 5465
+The Empress of Rome Series (Quinn) ~ 6991
+The Alice Network (Quinn) ~ 1765
+The Book of Wonder (Dunsany) ~ 258
+The Boy, the Mole, the Fox and the Horse[read at pc] (Mackesy) ~ 26
+The Cycle of File (Wurts) ~ 3861
+The Diamond Eye (Quinn) ~ 1473
+The Found and the Lost (Guin) ~ 2968
+The House at the Edge of Night (Banner) ~ 1554
+The Huntress (Quinn) ~ 1939
+The Unreal and the Real (Guin) ~ 2570
+Слово Вирявы (Бауэр) ~ 1263
+Хозяин белых оленей (Куксин) ~ 1115
