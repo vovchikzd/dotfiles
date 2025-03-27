@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os
+import os, sys
 
 def getFiles(spDirectory: str = '.', saFiles: list[str] = None) -> list[str]:
     if saFiles is None:
@@ -16,12 +16,35 @@ def getFiles(spDirectory: str = '.', saFiles: list[str] = None) -> list[str]:
                 saDirs.append(sFilePath)
     return saFiles
 
+def isQuoted(sToCheck):
+    tQuotes = ("'", '"')
+    return (len(sToCheck) > 1
+            and sToCheck[0] == sToCheck[-1]
+            and sToCheck[0] in tQuotes)
+
+def quoted(sStr):
+    if len(sStr) == 0:
+        return "''"
+    if isQuoted(sStr):
+        return sStr
+    sQuote = '"' if "'" in sStr else "'"
+    return f"{sQuote}{sStr}{sQuote}"
+
 
 def main():
     saFilesToRename = [sFile for sFile in getFiles() if 'Z-Library' in sFile or 'z-lib.org' in sFile]
+    saRenamed = list()
     for sFile in saFilesToRename:
         sNewName = sFile.replace(" (Z-Library)", '') if 'Z-Library' in sFile else sFile.replace(" (z-lib.org)", '')
-        os.rename(sFile, sNewName)
+        try:
+            os.rename(sFile, sNewName)
+        except:
+            print(f"Failed to rename {quoted(os.path.basename(sFile))}")
+            sys.exit(1)
+        saRenamed.append((os.path.basename(sFile), os.path.basename(sNewName)))
+    for sOldName, sNewName in saRenamed:
+        print(f"{quoted(sOldName)} -> {quoted(sNewName)}")
+    print(f"Renamed {len(saRenamed)} files")
 
 if __name__ == "__main__":
     main()
