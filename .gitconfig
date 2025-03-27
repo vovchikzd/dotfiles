@@ -19,3 +19,7 @@
 	rebase = true
 [rebase]
 	autoStash = true
+[remote "origin"]
+	prune = true
+[fetch]
+	prune = true
