@@ -36,7 +36,7 @@ keymap("n", "<leader>[", 'O<Esc>0"_D', opts("Insert newline above and stay in no
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode"))
 keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
-keymap("n", "<leader>D", "<cmd>bd!<CR>", opts("\"Kill\" current buffer"))
+keymap("n", "<leader>D", "<cmd>bd!<CR>", opts('"Kill" current buffer'))
 
 keymap("n", "<C-M-l>", ":w | !clang-format -i --style=file:/home/vovchik/dotfiles/clang-format %<CR><CR>", opts("Save file and format it with clang-format (c and c++ only)"))
 
@@ -44,3 +44,6 @@ keymap("n", "zz", "ZZ", opts("Bind lower case alternative for ZZ (same as ':x')"
 keymap("n", "zq", "ZQ", opts("Bind lower case alternative for ZQ (same as ':q!')"))
 keymap("n", "zs", ":w<CR>", opts("Save current buffer"))
 keymap("n", "za", ":qa<CR>", opts("Close all windows"))
+
+keymap("n", "gl", "$", opts("Goto end of line"))
+keymap("n", "gh", "^", opts("Goto first char in line"))
