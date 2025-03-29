@@ -1270,7 +1270,7 @@ The Apt Universe (Tchaikovsky) ~ 25312
 История Пугачева (Пушкин) ~ 533
 Le Morte d'Arthur (Malory) ~ 3632
 Lady Audley's Secret (Braddon) ~ 1664
-Drowned World (Chan) ~ 1458
+Drowned World (Chan) ~ 2706
 Time Salvager Series (Chu) ~ 3221
 The War Arts Saga (Chu) ~ 4548
 Tao series (Chu) ~ 7323
@@ -1713,3 +1713,6 @@ The Huntress (Quinn) ~ 1939
 The Unreal and the Real (Guin) ~ 2570
 Слово Вирявы (Бауэр) ~ 1263
 Хозяин белых оленей (Куксин) ~ 1115
+Прокляты и убиты (Астафьев) ~ 3264
+The Firename Saga (Feist) ~ 4729
+Chronicles of Midkemia (Feist) ~ 49881
