@@ -38,7 +38,17 @@ keymap("t", "<Esc>", "<C-\\><C-n>", opts("Go to normal mode from terminal mode")
 keymap("n", "tt", "<cmd>terminal<CR>", opts("Go to terminal mode"))
 keymap("n", "<leader>D", "<cmd>bd!<CR>", opts('"Kill" current buffer'))
 
-keymap("n", "<C-M-l>", ":w | !clang-format -i --style=file:/home/vovchik/dotfiles/clang-format %<CR><CR>", opts("Save file and format it with clang-format (c and c++ only)"))
+local format = function()
+  local ft = vim.bo.filetype
+  if ft == "cpp" or ft == "c" then
+    vim.api.nvim_command('w | !clang-format -i --style=file:/home/vovchik/dotfiles/clang-format %')
+  elseif ft == "rust" then
+    vim.api.nvim_command('w | !rustfmt --config-path /home/vovchik/dotfiles/rustfmt.toml %')
+  else
+    vim.notify("Unrecognized filetype '"..ft.."'", vim.log.levels.ERROR)
+  end
+end
+keymap("n", "<C-M-l>", format, opts("Save file and format it with clang-format (c, c++, rust)"))
 
 keymap("n", "zz", "ZZ", opts("Bind lower case alternative for ZZ (same as ':x')"))
 keymap("n", "zq", "ZQ", opts("Bind lower case alternative for ZQ (same as ':q!')"))
