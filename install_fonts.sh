@@ -29,7 +29,7 @@ install_fonts() {
 install_fonts
 unset -f install_fonts
 
-if ! [ "$PWD" == "$CUR_DIR"]; then
+if ! [ "$PWD" == "$CUR_DIR" ]; then
   cd "$CUR_DIR"
 fi
 
