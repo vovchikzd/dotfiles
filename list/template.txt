@@ -805,7 +805,7 @@ The Cicero Trilogy (Harris) ~ 4503
 Чумные ночи (Памук) ~ 2554
 The Expanse (Corey) ~ 18775
 The Terror (Simmons) ~ 3023
-Ilium Series (Simmons) ~ 5915
+Troy Series (Simmons) ~ 5915
 Hyperion (Simmons) ~ 9873
 Mary Called Magdalene (George) ~ 2761
 Helen of Troy (George) ~ 2872
@@ -1516,7 +1516,7 @@ The Plot (Korelitz) ~ 1040
 Олений завет (Смышляева) ~ 620
 Олива Денаро (Ардоне) ~ 769
 The Raag of Rta (Mohanty) ~ 2372
-Комиссар Адамберг (Ваграг) ~ 10930
+Комиссар Адамберг (Варгас) ~ 10930
 Alexandria Quartet (Durrell) ~ 4089
 An Instance of the Fingerpost (Pears) ~ 2839
 Sabbatical (Barth) ~ 1493
@@ -1716,3 +1716,18 @@ The Unreal and the Real (Guin) ~ 2570
 Прокляты и убиты (Астафьев) ~ 3264
 The Firename Saga (Feist) ~ 4729
 Chronicles of Midkemia (Feist) ~ 49881
+Эйзен (Яхина) ~ 1655
+Возраст согласия (Кречман) ~ 628
+City of Bones (Wells) ~ 1669
+Dale Stewart/Mike O'Rourke (Simmons) ~ 8336
+Black Hills (Simmons) ~ 2113
+Carrior Comfort (Simmons) ~ 4021
+Drood (Simmons) ~ 3208
+Flashback (Simmons) ~ 2140
+Joe Kurtz (Simmons) ~ 2632
+Phases of Gravity (Simmons) ~ 1056
+Song of Kali (Simmons) ~ 937
+Abominable (Simmons) ~ 2767
+The Crook Factory (Simmons) ~ 2156
+The Fifth Heart (Simmons) ~ 2380
+The Hollow Man (Simmons) ~ 1002

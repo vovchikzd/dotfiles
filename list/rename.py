@@ -2,20 +2,6 @@
 
 import os, sys
 
-def getFiles(spDirectory: str = '.', saFiles: list[str] = None) -> list[str]:
-    if saFiles is None:
-        saFiles = list()
-    saDirs: list[str] = [spDirectory]
-    while len(saDirs) > 0:
-        sDirectory = saDirs.pop(0)
-        for sFile in os.listdir(sDirectory):
-            sFilePath = f"{sDirectory}/{sFile}"
-            if os.path.isfile(sFilePath):
-                saFiles.append(sFilePath)
-            elif os.path.isdir(sFilePath):
-                saDirs.append(sFilePath)
-    return saFiles
-
 def isQuoted(sToCheck):
     tQuotes = ("'", '"')
     return (len(sToCheck) > 1
@@ -32,19 +18,32 @@ def quoted(sStr):
 
 
 def main():
-    saFilesToRename = [sFile for sFile in getFiles() if 'Z-Library' in sFile or 'z-lib.org' in sFile]
-    saRenamed = list()
-    for sFile in saFilesToRename:
-        sNewName = sFile.replace(" (Z-Library)", '') if 'Z-Library' in sFile else sFile.replace(" (z-lib.org)", '')
-        try:
-            os.rename(sFile, sNewName)
-        except:
-            print(f"Failed to rename {quoted(os.path.basename(sFile))}")
-            sys.exit(1)
-        saRenamed.append((os.path.basename(sFile), os.path.basename(sNewName)))
-    for sOldName, sNewName in saRenamed:
-        print(f"{quoted(sOldName)} -> {quoted(sNewName)}")
-    print(f"Renamed {len(saRenamed)} files")
+    saDirs = ["."]
+    saRenamed = 0
+    while len(saDirs) > 0:
+        sDirectory = saDirs.pop(0)
+        for sFile in os.listdir(sDirectory):
+            sFilePath = f"{sDirectory}/{sFile}"
+            if os.path.isdir(sFilePath):
+                saDirs.append(sFilePath)
+            elif os.path.isfile(sFilePath):
+                try:
+                    match sFilePath:
+                        case sFileName if " (Z-Library)" in sFileName:
+                            sNewName = sFileName.replace(" (Z-Library)", "")
+                            os.rename(sFileName, sNewName)
+                            saRenamed += 1
+                        case sFileName if " (z-lib.org)" in sFileName:
+                            sNewName = sFileName.replace(" (z-lib.org)", "")
+                            os.rename(sFileName, sNewName)
+                            saRenamed += 1
+                        case _:
+                            continue
+                except:
+                    print(f"Failed to rename {quoted(os.path.basename(sFile))}", file=sys.stderr)
+                    sys.exit(1)
+    print(f"Renamed {saRenamed} files")
+
 
 if __name__ == "__main__":
     main()
