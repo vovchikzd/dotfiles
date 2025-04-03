@@ -16,3 +16,6 @@
 [submodule ".config/yazi/plugins/mediainfo.yazi"]
 	path = .config/yazi/plugins/mediainfo.yazi
 	url = https://github.com/boydaihungst/mediainfo.yazi.git
+[submodule ".config/mpv/mpv-sponsorblock"]
+	path = .config/mpv/mpv-sponsorblock
+	url = https://github.com/TheCactusVert/mpv-sponsorblock.git
