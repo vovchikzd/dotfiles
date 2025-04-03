@@ -13,7 +13,6 @@ if [[ "$ACTIVE_WM_CLASS" == *"wezterm"* ]]; then
       pushd "/proc/${CHILD_PID}/cwd" &>/dev/null
       SHELL_CWD=$(/usr/bin/pwd -P)
       popd &>/dev/null
-      printf "$SHELL_CWD" > '/home/vovchik/dotfiles/.config/hypr/debug.log'
       /usr/bin/wezterm start --always-new-process --class yazi -e yazi "$SHELL_CWD" &
     fi
   fi
