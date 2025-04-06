@@ -92,7 +92,7 @@ class WorkInformation:
                     case "-n" | "--numbering":
                         self.bIsNumbering = true
                     case "-p" if len(args) > 0:
-                        self.saPlaylists.append(f"http://youtube.com/playlist?list={args.pop(0)}")
+                        self.saPlaylists.append(f"https://youtube.com/playlist?list={args.pop(0)}")
                     case "-d" | "--dynamic":
                         self.bIsDynamicNumbering = true
                     case "-t" | "--template":
@@ -116,9 +116,10 @@ class WorkInformation:
 def main(workInfo: WorkInformation):
 
     def getStringArray(playlist):
+        nAlign = len(str(len(playlist)))
         sArrayStirng = "urls=(\n"
-        for sVideoUrl in playlist:
-            sArrayStirng += f"  {quoted(sVideoUrl)}\n"
+        for counter, sVideoUrl in enumerate(playlist, 1):
+            sArrayStirng += f"  {quoted(sVideoUrl)} # {counter:0{nAlign}}\n"
         sArrayStirng += ")\n\n"
         return sArrayStirng
 
