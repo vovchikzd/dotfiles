@@ -7,6 +7,7 @@ false = False
 
 class Config:
     bIsSilent: bool = true
+    bIsPrintOut: bool = false
     nWorkspace: int = None
     saToDispatch: list[str] = None
 
@@ -46,6 +47,8 @@ class Config:
                 case "--":
                     self.saToDispatch = args.copy()
                     args.clear()
+                case "--print":
+                    self.bIsPrintOut = true
                 case _:
                     print(f"Can't understand what this `{arg}` is mean")
                     sys.exit(1)
@@ -64,7 +67,10 @@ def main():
         saToAppend[-1] += ']'
         saToExec.extend(saToAppend)
     saToExec.extend(conf.saToDispatch)
-    subprocess.run(saToExec)
+    if conf.bIsPrintOut:
+        print(' '.join(saToExec))
+    else:
+        subprocess.run(saToExec)
 
 if __name__ == "__main__":
     main()
