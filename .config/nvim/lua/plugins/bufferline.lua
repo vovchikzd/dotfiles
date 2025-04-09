@@ -3,7 +3,7 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<S-l>", ":bnext<CR>", opts) -- go to next buffer
 keymap("n", "<S-h>", ":bprevious<CR>", opts) -- go to prev buffer
-keymap("n", "<leader>d", "<cmd>bdelete<CR>", opts) -- close current tab
+keymap("n", "<leader>d", "<cmd>bdelete!<CR>", opts) -- close current tab
 
 return {
   "akinsho/bufferline.nvim",

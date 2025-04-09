@@ -8,6 +8,7 @@ local key_opts = function(description)
 end
 
 local on_attach_default = function()
+  vim.diagnostic.enable(false)
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",
   })
@@ -27,10 +28,15 @@ local clangd_setup = function()
                    "cp", "CPP", "c++", "hp", "hxx", "HPP", "h++"},
       capabilities = capabilities,
       on_attach = function()
-        vim.diagnostic.enable(false)
         on_attach_default()
         keymap("n", "<leader>gd", vim.lsp.buf.declaration , key_opts("Go to declaration of thing under cursor"))
       end,
+      cmd = {
+        "clangd",
+        "--all-scopes-completion",
+        "--clang-tidy",
+        "--experimental-modules-support",
+      },
     })
   end
 end
