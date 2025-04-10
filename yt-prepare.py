@@ -182,11 +182,7 @@ def main(workInfo: WorkInformation):
                 sResultString: str = ""
                 try:
                     sPlaylistAddres = getPlaylistAddress(sPlaylistUrl)
-                    sOutputDirName = f"{playlist.title} [{sPlaylistAddres}]"
-                    if '/' in sOutputDirName:
-                        sOutputDirName = input(f"Incorrect dir name {quoted(sOutputDirName)}, please enter right name: ")
-                    if '/' in sOutputDirName or sOutputDirName == "":
-                        sys.exit(1)
+                    sOutputDirName = f"{playlist.title} [{sPlaylistAddres}]".replace('"', r'\"').replace("/", "_")
                     sResultString += f"# {sOutputDirName}\n"
                     sResultString += f"# {sPlaylistUrl}\n"
                     sResultString += getStringArray(playlist)
@@ -246,7 +242,7 @@ def createTemplate(workInfo):
             sResultString += f'    yt-dlp "$url" {sArgsString}\n'
         sResultString += "  done\n"
         sResultString += "  ((++counter))\n"
-        sResultString += "done\n"
+        sResultString += "done\n\n"
         print(sResultString, file=outputFile)
         
     subprocess.run(["chmod", "+x", workInfo.sOutputFileName])
