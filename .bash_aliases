@@ -1,8 +1,8 @@
 # eval "$(zoxide init --cmd cd bash)"
 # eval "$(starship init bash)"
 
-alias ll='eza -lh --icons --group-directories-first --classify=always'
-alias la='eza -lhaa --icons --group-directories-first --classify=always'
+alias ll='eza -lh --icons --group-directories-first --classify=always --total-size'
+alias la='eza -lhaa --icons --group-directories-first --classify=always --total-size'
 alias ls='eza -1 --group-directories-first --classify=always'
 alias lt='eza -1 --tree --group-directories-first --classify=always'
 alias lsplt='eza -1 --group-directories-first --absolute --no-quotes --classify=always'
