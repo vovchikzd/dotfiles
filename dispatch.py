@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import subprocess, sys
+import subprocess, sys, re
 
 true = True
 false = False
@@ -8,6 +8,7 @@ false = False
 class Config:
     bIsSilent: bool = true
     bIsPrintOut: bool = false
+    bIsShowCmd: bool = false
     nWorkspace: int = None
     saToDispatch: list[str] = None
 
@@ -33,6 +34,23 @@ class Config:
         return nPassedWorkspace
 
 
+    def getCurrentWorkspace() -> str:
+        saCmd = ["hyprctl", "activeworkspace"]
+        try:
+            subRun = subprocess.run(saCmd, capture_output=true)
+            sOutput = subRun.stdout.decode("utf-8")
+            saId = re.findall(r'.*ID (\d\d?).*', sOutput)
+            sResultWorkspace = None
+            if len(saId) > 1:
+                sResultWorkspace = saId[0]
+            else:
+                sAnotTry = re.findall(r'.* ID \d\d? \((.*)\)', sOutput)
+                sResultWorkspace = sAnotTry[0] if len(sAnotTry) > 0 else None
+            return sResultWorkspace
+        except:
+            return None
+
+
     def __init__(self, args: list[str]):
         while len(args) > 0:
             arg = args.pop(0)
@@ -49,9 +67,15 @@ class Config:
                     args.clear()
                 case "--print":
                     self.bIsPrintOut = true
+                case "-s":
+                    self.bIsShowCmd = true
                 case _:
                     print(f"Can't understand what this `{arg}` is mean")
                     sys.exit(1)
+        if self.nWorkspace is None:
+            sFoundWorkspace = Config.getCurrentWorkspace()
+            if sFoundWorkspace is not None:
+                self.nWorkspace = Config.validateWorkspaceNumber(sFoundWorkspace)
 
 
 def main():
@@ -70,6 +94,8 @@ def main():
     if conf.bIsPrintOut:
         print(' '.join(saToExec))
     else:
+        if conf.bIsShowCmd:
+            print(' '.join(saToExec))
         subprocess.run(saToExec)
 
 if __name__ == "__main__":
