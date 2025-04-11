@@ -35,7 +35,7 @@ The Pastures of Heaven (Steinbeck) ~ 811
 Miss Subways (Duchovny) ~ 812
 We Need New Names (Bulawayo) ~ 819
 Женщина в Берлине (Хиллерс) ~ 823
-Writers \& lowers (King) ~ 829
+Writers & lowers (King) ~ 829
 A Russian Journal (Steinbeck) ~ 851
 The Sisters Brothers (Dewitt) ~ 852
 Darkness at Noon (Koestler) ~ 854
@@ -171,7 +171,7 @@ The Tortall Universe (Pierce) ~ 17464
 Little, Big (Crowley) ~ 2464
 Орда встречного ветра (чуть поломан) ~ 2502
 Птицы (Торин) ~ 2554
-Bellman \& Black (Setterfield) ~ 1054
+Bellman & Black (Setterfield) ~ 1054
 Once Upon A River (Setterfield) ~ 1548
 Фараон (Прус) ~ 2618
 Angelfall (Ee) ~ 2705
@@ -356,7 +356,7 @@ The Stand (King) ~ 5141
 Dragons of Terra (Naslund) ~ 5171
 The Atlas Series (Blake) ~ 5271
 Iconoclasts Series (Shel) ~ 5348
-Burningblade \& Silvereye Series (Wexler) ~ 5392
+Burningblade & Silvereye Series (Wexler) ~ 5392
 Ascendant (Rivera) ~ 5494
 Хозяйка Шварцвальда (Харт) ~ 1300
 Когда запоют мертвецы (Харт) ~ 1666
@@ -590,7 +590,7 @@ Flaubert's Parrot (Barnes) ~ 720
 Staring at the Sun (Barnes) ~ 743
 The Only Story (Barnes) ~ 743
 England, England (Barnes) ~ 993
-A History of the World in $10 \frac{1}{2}$ Chapters (Barnes) ~ 1176
+A History of the World in $10 1/2$ Chapters (Barnes) ~ 1176
 Dilogy of Julian Barnes (Barnes) ~ 1534
 Arthur and George (Barnes) ~ 1783
 Танамор (Соболь) ~ 2398
@@ -690,7 +690,7 @@ The Sun Eater Series (Ruocchio) ~ 16940
 За миллиард лет до конца света (Стругацкие) ~ 453
 Извне (Стругацкие) ~ 525
 Пикник на обочине (Стругацкие) ~ 594
-Отель <<У Погибшего Альпиниста>> (Стругацкие) ~ 671
+Отель #sym.quote.angle.l.double\У Погибшего Альпиниста#sym.quote.angle.r.double (Стругацкие) ~ 671
 Гадкие лебеди (Стругацкие) ~ 756
 Полдень, XXII век (Стругацкие) ~ 1092
 Стругацкие цикл (Стругацкие) ~ 9412
@@ -1159,7 +1159,7 @@ The Scavenger Trilogy (Parker[Holt]) ~ 6415
 The Fencer Trilogy (Parker[Holt]) ~ 6115
 The Engineer Trilogy (Parker[Holt]) ~ 7194
 Savages (Parker[Holt]) ~ 1885
-J.W. Wells \& Co. (Parker[Holt]) ~ 10705
+J.W. Wells & Co. (Parker[Holt]) ~ 10705
 Corax (Parker[Holt]) ~ 3488
 This is How You Lose the Time War (Gladstone) ~ 416
 Sailing to Redoubt (Litka) ~ 1216
@@ -1495,7 +1495,7 @@ Serena (Rash) ~ 1215
 Prydain series (Lloyd Alexander) ~ 2953
 Westmark trilogy (Lloyd Alexander) ~ 1793
 Vesper Holly series (Lloyd Alexander) ~ 2355
-Stone \& Sky (Diamanti) ~ 4481
+Stone & Sky (Diamanti) ~ 4481
 My Life as an Indian (Schultz) ~ 1410
 The Age of Magic (Okri) ~ 484
 On Wilder Seas (Marmery) ~ 862
