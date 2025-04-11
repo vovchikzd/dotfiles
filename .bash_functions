@@ -36,6 +36,7 @@ rsup() {
          "mdbook"
          "serie"
          "repgrep"
+         "typst-cli"
        )
 
   for prog in ${progs[@]}
