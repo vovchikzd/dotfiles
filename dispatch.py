@@ -10,7 +10,7 @@ class Config:
     bIsPrintOut: bool = false
     bIsShowCmd: bool = false
     nWorkspace: int = None
-    saToDispatch: list[str] = None
+    saToDispatch: list[str] = list()
 
     def isdigit(sCheck: str) -> bool:
         for ch in sCheck:
@@ -63,7 +63,11 @@ class Config:
                     print("'-w' required passing number of workspace", file=sys.stderr)
                     sys.exit(1)
                 case "--":
-                    self.saToDispatch = args.copy()
+                    for arg in args:
+                        if ' ' in arg:
+                            self.saToDispatch.append(f"'{arg}'")
+                        else:
+                            self.saToDispatch.append(arg)
                     args.clear()
                 case "--print":
                     self.bIsPrintOut = true

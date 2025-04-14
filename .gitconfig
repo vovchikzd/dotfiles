@@ -23,3 +23,5 @@
 	prune = true
 [fetch]
 	prune = true
+[advice]
+	addIgnoredFile = false

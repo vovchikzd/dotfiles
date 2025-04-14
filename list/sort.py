@@ -17,6 +17,7 @@ def main() -> int:
         """#set text(
              size: 8.5pt
              , font: "Hack Nerd Font"
+             , hyphenate: true
            )
            #set page(margin: (
              top: 5mm
@@ -25,14 +26,14 @@ def main() -> int:
              , left: 5mm
            ))
            #set par(
-             leading: 0.7em
-             , spacing: 1.5pt
+             leading: 7pt
+             , spacing: 7pt
            )
 
            #columns(2, gutter: 0pt)[
         """), file=outFile)
         for line in sorted_tmp:
-            print(f"+ {line[0]} -- {line[1]}", file=outFile)
+            print(f"  + {line[0]} -- {line[1]}", file=outFile)
             if ('(' not in line[0] or ')' not in line[0]):
                 print(f"\033[0;33m{line}\033[0m")
         print("]", file=outFile)
