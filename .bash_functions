@@ -84,20 +84,28 @@ function eread() {
 #   printf "${joule} kJ\n"
 # }
 
-# ffmpeg-sub() {
-#   if [ "$#" -ne 3 ]; then
-#     printf "\033[0;31mRequired 3 parameters: input_video input_subtitles and output_video\033[0m\n" >&2
-#     return 1
-#   elif ! [ -f "$1" ]; then
-#     printf "\033[0;31mFile \"$1\" doesn't exist\033[0m\n" >&2
-#     return 1
-#   elif ! [ -f "$2" ]; then
-#     printf "\033[0;31mFile \"$2\" doesn't exist\033[0m\n" >&2
-#     return 1
-#   elif [ -f "$3" ]; then
-#     printf "\033[0;31mFile \"$3\" already exist\033[0m\n" >&2
-#     return 1
-#   fi
-#
-#   ffmpeg -i "$1" -i "$2" -c copy -c:s mov_text -metadata:s:s:0 language=eng "$3"
-# }
+function shutdown() {
+  if [ "$1" == "-c" ]; then
+    systemctl poweroff --when=cancel
+    return
+  elif [ "$1" == "now" ]; then
+    systemctl poweroff
+    return
+  else
+    systemctl poweroff --when=$(date -d '+6 min' -Imin)
+    return
+  fi
+}
+
+function reboot() {
+  if [ "$1" == "-c" ]; then
+    systemctl reboot --when=cancel
+    return
+  elif [ "$1" == "now" ]; then
+    systemctl reboot
+    return
+  else
+    systemctl reboot --when=$(date -d '+6 min' -Imin)
+    return
+  fi
+}
