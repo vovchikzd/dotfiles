@@ -1,8 +1,32 @@
 #!/usr/bin/env python3
 
-import os, sys, subprocess, humanize, cv2
+import os, sys, subprocess, humanize, cv2, inspect
 
 nFreedUpSpace: int = 0
+
+def printHelp(file = sys.stdout):
+    print(inspect.cleandoc(
+        """
+        Usage:
+            convert [OPTIONS]
+
+            Options:
+                -d,                 provide working directory, in which find files (by default cwd)
+                -f,                 add format to seart formats list, allow to use multiple time
+                -h,  --help         print this help message
+                -i,                 paths or files to ignore, allow to use multiple time
+                -n,                 if passed old file will be deleted instead of smaller ones
+                -p,                 provide processed file from older starts, allow to use multiple time
+                -r,                 sort files in reverse order (by default descending)
+                -s,                 only read, sort and print files to stdout
+                -ss,                only read, sort and print files to stdout, except those from
+                                    processed file (see -p option)
+                     --scale        provide a height to scale to
+                     --save-proc    if passed processed file (see -p option) will not be deleted
+                -t,                 provide an extension to convert to (by default is webm)
+                --                  all from here will be passed as ffmpeg arguments
+        """
+    ), file=file)
 
 def clearPath(path: str) -> str:
     if path == "./" or path == ".":
@@ -33,13 +57,16 @@ class WorkingInformation:
     bShowOnly: bool = False
     bShowAll: bool = True
     bIsReverse: bool = True
-    nOutputHeight: int = 1080
+    nOutputHeight: int = None
     saFfmpegArgs: list[str] = list()
     bIsDeleteSmaller: bool = True
     bIsDeleteProcFile: bool = True
 
     def __init__(self):
         args: list[str] = sys.argv[1:]
+        if "--help" in args or "-h" in args:
+            printHelp()
+            sys.exit(0)
         while len(args) > 0:
             sArgument: str = args.pop(0)
             match sArgument:
@@ -92,6 +119,7 @@ class WorkingInformation:
                     args.clear()
                 case _:
                     print(f"\033[0;31mInvalid argument or too few arguments passed\033[0m", file=sys.stderr)
+                    printHelp(sys.stderr)
                     sys.exit(1)
         self.sSuffix = f".converted{self.sTargetExt}"
 
@@ -225,12 +253,14 @@ def convertFiles(saFiles: list[str]):
 
         nTupleInputScale = getVideoScale(sFile)
         nTupleOutputScale = None
-        if nTupleInputScale[1] > workInfo.nOutputHeight:
+        if workInfo.nOutputHeight is not None and nTupleInputScale[1] > workInfo.nOutputHeight:
             nTupleOutputScale = getOutputScale(nTupleInputScale)
             saArgs.extend(["-vf", f"scale={nTupleOutputScale[0]}:{nTupleOutputScale[1]}"])
 
         if len(workInfo.saFfmpegArgs) > 0:
             saArgs.extend(workInfo.saFfmpegArgs)
+        else:
+            saArgs.extend(["-map", "0"])
         sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
         saArgs.extend([sNewFileName])
         subprocess.run("clear")
