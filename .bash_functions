@@ -87,25 +87,23 @@ function eread() {
 function shutdown() {
   if [ "$1" == "-c" ]; then
     systemctl poweroff --when=cancel
-    return
   elif [ "$1" == "now" ]; then
     systemctl poweroff
-    return
+  elif [ "$#" -eq 1 ]; then
+    systemctl poweroff --when="$1"
   else
     systemctl poweroff --when=$(date -d '+6 min' -Imin)
-    return
   fi
 }
 
 function reboot() {
   if [ "$1" == "-c" ]; then
     systemctl reboot --when=cancel
-    return
   elif [ "$1" == "now" ]; then
     systemctl reboot
-    return
+  elif [ "$#" -eq 1 ]; then
+    systemctl reboot --when="$1"
   else
     systemctl reboot --when=$(date -d '+6 min' -Imin)
-    return
   fi
 }
