@@ -573,7 +573,7 @@ The Yiddish Policemen's Union (Chabon) ~ 1489
 Moonglow (Chabon) ~ 1597
 Telegraph Avenue (Chabon) ~ 1949
 The Amazing Adventures of Kavalier and Clay (Chabon) ~ 2664
-The Bound and the Broken Series (Cahill) ~ 10566
+The Bound and the Broken Series (Cahill) ~ 15948
 A Place of Greater Safety (Mantel) ~ 3487
 Thomas Cromwell series (Mantel) ~ 7308
 Энергия подвластна нам (Иванов) ~ 941
@@ -1731,3 +1731,8 @@ Abominable (Simmons) ~ 2767
 The Crook Factory (Simmons) ~ 2156
 The Fifth Heart (Simmons) ~ 2380
 The Hollow Man (Simmons) ~ 1002
+The Book if Doors (Brown) ~ 1410
+Дальше ваш билет недействителен (Гари) ~ 559
+Июль 41 года (Бакланов) ~ 3354
+Повинная голова (Гари) ~ 902
+Свет женщины (Гари) ~ 339
