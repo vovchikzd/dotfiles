@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.default_prog = {"/usr/bin/bash"}
+config.default_prog = {"/usr/bin/fish"}
 config.enable_wayland = false
 
 config.color_scheme = "Gruvbox dark, medium (base16)"
