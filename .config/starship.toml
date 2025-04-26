@@ -13,10 +13,19 @@ $memory_usage\
 $cmd_duration\
 $fill\
 $line_break\
+$status\
 $character"""
 #$time\
 
 add_newline = true
+
+[status]
+disabled = false
+format = "[$status ]($style)"
+symbol = ""
+style = "bold red"
+recognize_signal_code = true
+map_symbol = true
 
 [character]
 success_symbol = '[->](bold green)'
