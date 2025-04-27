@@ -25,3 +25,7 @@
 --sponsorblock-mark chapter
 
 --sponsorblock-chapter-title '%(category_names)l'
+
+--use-postprocessor DeArrow:when=pre_process
+
+--extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
