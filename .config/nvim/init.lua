@@ -34,6 +34,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"typst"},  -- для каких файлов включить
+  callback = function()
+    vim.bo.textwidth = 80       -- максимальная длина строки
+    vim.bo.wrapmargin = 0       -- отключаем wrapmargin (устаревший аналог)
+    vim.bo.formatoptions = vim.bo.formatoptions .. "t"  -- перенос по textwidth
+    vim.bo.formatoptions = vim.bo.formatoptions:gsub("c", "")  -- отключаем автоформат комментариев
+  end,
+})
+
 local opts = {
   change_detection = {
     -- automatically check for config file changes and reload the ui
