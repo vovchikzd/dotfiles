@@ -6,7 +6,6 @@ function show_speed()
 end
 
 mp.add_key_binding("S", "show_speed", show_speed)
-mp.add_key_binding("Ы", "show_speed", show_speed)
 
 mp.observe_property("speed", "number", function(_, _)
     if not initialized then
