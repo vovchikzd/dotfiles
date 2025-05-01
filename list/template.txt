@@ -626,7 +626,7 @@ Powder Mage (McClellan) ~ 11832
 Salterton Trilogy (Davies) ~ 3550
 The Deptford Trilogy (Davies) ~ 3592
 Cornish Trilogy (Davies) ~ 4712
-Shadov of the Leviathan (Bennett) ~ 1351
+Shadov of the Leviathan (Bennett) ~ 2913
 The Divine Cities (Bennett) ~ 5219
 The Founders Trilogy (Bennett) ~ 5437
 Codex Alera (Butcher) ~ 12066
@@ -1171,7 +1171,7 @@ The Dark Profit Saga (Pike) ~ 5654
 Flux Catastrophe Series (Weiss) ~ 2673
 Nettle Bone (Kingfisher) ~ 884
 The Old Kingdom Series (Nix) ~ 7802
-Fallen Gods Series (Kaner) ~ 2424
+Fallen Gods Series (Kaner) ~ 3869
 Семья Резо (Базен) ~ 2287
 Семья Буссардель (Эриа) ~ 5534
 Ругон-Маккары (Золя) ~ 29811
@@ -1394,7 +1394,7 @@ The Son of the Wolf (London) ~ 537
 The Strength of the Strong (London) ~ 522
 The Turtles of Tasman (London) ~ 474
 When God Laughs (London) ~ 569
-Мое Пост-Имаго (Торин) ~ 1773
+Таинственные истории из Габена (Торин) ~ 4162
 Пташка (Скворцова) ~ 1577
 Поселок. Тринадцать лет пути. Великий дух и беглецы. Белое платье Золушки (Булычев) ~ 2069
 Five Stal Billionaire (Tash Aw) ~ 1708
@@ -1736,3 +1736,8 @@ The Book if Doors (Brown) ~ 1410
 Июль 41 года (Бакланов) ~ 3354
 Повинная голова (Гари) ~ 902
 Свет женщины (Гари) ~ 339
+The Aenigma Lights (Andrews) ~ 3990
+Black Hind's Wake Series (Hannaford) ~ 2568
+The Humane Society for Creatures & Cryptids (Gillis) ~ 1780
+The Keeper Origins Trilogy (Andrews) ~ 6902
+Пластиковый океан (Хуэй) ~ 1280
