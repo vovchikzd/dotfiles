@@ -3,8 +3,12 @@
 	name = Vladimir Zdorenko
 [core]
 	editor = nvim
+  compression = 9
+  whitespace = error
+  preloadindex = true
 [diff]
   tool = difftastic
+  renames = copies
 [difftool]
   prompt = false
 [difftool "difftastic"]
@@ -13,15 +17,35 @@
   difftool = true
 [alias]
   dft = difftool
+  lg = "log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
 [init]
 	defaultBranch = master
 [pull]
 	rebase = true
 [rebase]
 	autoStash = true
+  missingCommitsCheck = warn
 [remote "origin"]
 	prune = true
 [fetch]
 	prune = true
 [advice]
 	addIgnoredFile = false
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+[push]
+  autoSetupRemote = true
+  default = current
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+[color "branch"]
+  current = magenta
+  local = default
+  remote = yellow
+  upstream = green
+  plain = blue
