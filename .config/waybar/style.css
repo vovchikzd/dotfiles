@@ -17,6 +17,7 @@
 #memory,
 #cpu,
 #language,
+#custom-notification,
 #bluetooth {
     padding: 0 10px;
     color: #ffffff;
@@ -263,4 +264,9 @@ label:focus {
 
 #network.disconnected {
     background-color: #f53c3c;
+}
+
+#custom-notification {
+  margin: 0px 20px 0px 0px;
+  font-family: "Hack Nerd Font";
 }
