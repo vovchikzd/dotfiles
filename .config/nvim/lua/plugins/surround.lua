@@ -41,13 +41,13 @@ local miniSurround = {
 
       -- Module mappings. Use `''` (empty string) to disable one.
       mappings = {
-        add = 'csa', -- Add surrounding in Normal and Visual modes
-        delete = 'csd', -- Delete surrounding
-        find = 'csf', -- Find surrounding (to the right)
-        find_left = 'csF', -- Find surrounding (to the left)
-        highlight = 'csh', -- Highlight surrounding
-        replace = 'csr', -- Replace surrounding
-        update_n_lines = 'csn', -- Update `n_lines`
+        add = 'ma', -- Add surrounding in Normal and Visual modes
+        delete = 'md', -- Delete surrounding
+        find = 'mf', -- Find surrounding (to the right)
+        find_left = 'mF', -- Find surrounding (to the left)
+        highlight = 'mh', -- Highlight surrounding
+        replace = 'mr', -- Replace surrounding
+        update_n_lines = 'mn', -- Update `n_lines`
 
         suffix_last = 'l', -- Suffix to search with "prev" method
         suffix_next = 'n', -- Suffix to search with "next" method
