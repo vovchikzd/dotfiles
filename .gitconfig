@@ -1,8 +1,8 @@
 [user]
-	email = vovchikzd@gmail.com
-	name = Vladimir Zdorenko
+  email = vovchikzd@gmail.com
+  name = Vladimir Zdorenko
 [core]
-	editor = nvim
+  editor = nvim
   compression = 9
   whitespace = error
   preloadindex = true
@@ -19,18 +19,19 @@
   dft = difftool
   lg = "log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [pull]
-	rebase = true
+  rebase = true
 [rebase]
-	autoStash = true
+  autoStash = true
   missingCommitsCheck = warn
+  updateRefs = true
 [remote "origin"]
-	prune = true
+  prune = true
 [fetch]
-	prune = true
+  prune = true
 [advice]
-	addIgnoredFile = false
+  addIgnoredFile = false
 [status]
   branch = true
   showStash = true
