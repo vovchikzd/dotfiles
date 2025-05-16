@@ -24,6 +24,8 @@ def main():
         sDirectory = saDirs.pop(0)
         for sFile in os.listdir(sDirectory):
             sFilePath = f"{sDirectory}/{sFile}"
+            if sFile == 'lost+found':
+                continue
             if os.path.isdir(sFilePath):
                 saDirs.append(sFilePath)
             elif os.path.isfile(sFilePath):
