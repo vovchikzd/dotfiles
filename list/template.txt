@@ -306,7 +306,7 @@ Red Sky in Morning (Lynch) ~ 724
 The Black Snow (Lynch) ~ 850
 Prophet Song (Lynch) ~ 958
 Grace (Lynch) ~ 1250
-Граф Аверин (Дашкевич [Фламмер]) ~ 4277
+Граф Аверин (Дашкевич [Фламмер]) ~ 6322
 Wayward Children Series (MgGuire) ~ 4282
 A Far Country (Mason) ~ 891
 North Woods (Mason) ~ 1083
@@ -1836,3 +1836,4 @@ The Devils (Abercrombie) ~ 2384
 Мицелий (Кадлечкова) ~ 2926
 Демонология по Волкову (Тимошенко) ~ 2766
 Left-Handed Booksellers of London (Nix) ~ 2130
+Путешествие из Петербурга в Москву (Радищев) ~ 822
