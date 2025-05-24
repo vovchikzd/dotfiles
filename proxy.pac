@@ -5,6 +5,7 @@ function FindProxyForURL(url, host) {
       || dnsDomainIs(host, "www.human-nonhuman.info")
       || dnsDomainIs(host, "linktr.ee")
       || dnsDomainIs(host, "anilibria.tv")
+      || dnsDomainIs(host, "anilibria.top")
       || dnsDomainIs(host, "tiktok.com")
       || dnsDomainIs(host, "x.com")
       ) {
