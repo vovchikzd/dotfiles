@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-import os, sys, subprocess, re
-from pytube import Playlist
+import os, sys, subprocess, re, yt_dlp
 
 true = True
 false = False
@@ -31,6 +30,31 @@ class Color:
     GREEN: str = "\033[0;32m"
     YELLOW: str = "\033[0;33m"
     BLUE: str = "\033[0;34m"
+
+
+def get_playlist_title(playlist_url):
+    ydl_opts = {
+        'extract_flat': True,
+        'quiet': True,       
+    }
+    
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(playlist_url, download=False)
+        return result.get('title') if result else None
+
+
+def get_playlist_videos(playlist_url):
+    ydl_opts = {
+        'extract_flat': True,
+        'quiet': True,
+    }
+    
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(playlist_url, download=False)
+        
+        if 'entries' in result:
+            return [entry['url'] for entry in result['entries']]
+        return []
 
 
 def colored(sToColor: str, color: Color = Color.NEUTRAL):
@@ -114,11 +138,14 @@ class WorkInformation:
 
 
 def main(workInfo: WorkInformation):
+    nVideosInsidePlaylist = {}
 
-    def getStringArray(playlist):
-        nAlign = len(str(len(playlist)))
+    def getStringArray(sPlaylistUrl):
+        videoUrls = get_playlist_videos(sPlaylistUrl)
+        nVideosInsidePlaylist[sPlaylistUrl] = len(videoUrls)
+        nAlign = len(str(len(videoUrls)))
         sArrayStirng = "urls=(\n"
-        for counter, sVideoUrl in enumerate(playlist, 1):
+        for counter, sVideoUrl in enumerate(videoUrls, 1):
             sArrayStirng += f"  {quoted(sVideoUrl)} # {counter:0{nAlign}}\n"
         sArrayStirng += ")\n\n"
         return sArrayStirng
@@ -177,16 +204,15 @@ def main(workInfo: WorkInformation):
                 print("source ~/.bash_aliases\n", file=outputFile)
 
             for counter, sPlaylistUrl in enumerate(workInfo.saPlaylists, 1):
-                playlist = Playlist(sPlaylistUrl)
 
                 sResultString: str = ""
                 try:
                     sPlaylistAddres = getPlaylistAddress(sPlaylistUrl)
-                    sOutputDirName = f"{playlist.title} [{sPlaylistAddres}]".replace('"', r'\"').replace("/", "_")
+                    sOutputDirName = f"{get_playlist_title(sPlaylistUrl)} [{sPlaylistAddres}]".replace('"', r'\"').replace("/", "_")
                     sResultString += f"# {sOutputDirName}\n"
                     sResultString += f"# {sPlaylistUrl}\n"
-                    sResultString += getStringArray(playlist)
-                    sResultString += getCycle(sOutputDirName, len(playlist), workInfo.saYtDltArguments, workInfo.bIsNumbering, counter, workInfo.bIsDynamicNumbering)
+                    sResultString += getStringArray(sPlaylistUrl)
+                    sResultString += getCycle(sOutputDirName, nVideosInsidePlaylist[sPlaylistUrl], workInfo.saYtDltArguments, workInfo.bIsNumbering, counter, workInfo.bIsDynamicNumbering)
                     print(sResultString, file=outputFile, end='\n\n')
                 except:
                     saErrorUrls.append(sPlaylistUrl)
@@ -256,6 +282,5 @@ if __name__ == "__main__":
     workInfo = WorkInformation(args)
     if workInfo.bIsCreateTemplate:
         createTemplate(workInfo)
-        sys.exit(0)
     else:
         main(workInfo)
