@@ -138,7 +138,7 @@ local opts = {
     search = {
       -- when `true`, flash will be activated during regular search by default.
       -- You can always toggle when searching with `require("flash").toggle()`
-      enabled = true,
+      enabled = false,
       highlight = { backdrop = false },
       jump = { history = true, register = true, nohlsearch = true },
       search = {
