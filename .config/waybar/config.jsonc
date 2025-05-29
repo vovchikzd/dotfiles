@@ -42,10 +42,13 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
       "format": "{:%H:%M %d.%m.%Y}",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-      // "format-alt": "{:%d.%m.%Y}"
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "calendar": {
+        "format": {
+          "today": "<span color='#77757c'><b><u>{}</u></b></span>"
+        }
+      }
     },
     "memory": {
         "interval": 30,
