@@ -44,8 +44,8 @@ vim.opt.guifont = "monospace:h17"             --the font used in graphical neovi
 vim.opt.shortmess:append "c"
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.opt.iskeyword:remove {"_", "-"}
--- vim.opt.iskeyword:append {"-", "_"}
+-- vim.opt.iskeyword:remove {"_", "-"}
+vim.opt.iskeyword:append {"-", "_"}
 vim.cmd [[cnoreabbrev q1 q!]]
 
 -- don't add comment when insert new line from comment line
