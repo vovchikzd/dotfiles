@@ -10,6 +10,8 @@
 
 --extractor-retries 0
 
+--fragment-retries 0
+
 --abort-on-error
 
 --abort-on-unavailable-fragments
@@ -27,5 +29,9 @@
 --sponsorblock-chapter-title '%(category_names)l'
 
 --use-postprocessor DeArrow:when=pre_process
+
+--embed-subs
+--sub-langs "en,eng,enUS,en-US,ru,rus,ruRU,ru-RU"
+--no-write-auto-subs
 
 # --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
