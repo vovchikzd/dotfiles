@@ -235,7 +235,7 @@ def main(workInfo: WorkInformation):
 def createTemplate(workInfo):
     if (os.path.isfile(workInfo.sOutputFileName)
             and not workInfo.bIsRewriteExistingFile):
-        print(f"File {quoted(workInfo.sOutputFileName)} exists. Probably you want to use '-o <file> argument.")
+        print(f"File {quoted(workInfo.sOutputFileName)} exists. Probably you want to use '-o <file>' argument.")
         print("See 'yt-prepare --help' for more information.")
         sys.exit(1)
 
