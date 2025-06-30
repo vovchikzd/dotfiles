@@ -31,7 +31,7 @@
 --use-postprocessor DeArrow:when=pre_process
 
 --embed-subs
---sub-langs "en,eng,enUS,en-US,ru,rus,ruRU,ru-RU"
+--sub-langs "en.*,ru.*"
 --no-write-auto-subs
 
 # --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
