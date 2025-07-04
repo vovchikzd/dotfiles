@@ -202,6 +202,7 @@ def main(workInfo: WorkInformation):
             if workInfo.bIsWriteShebang:
                 print("#!/usr/bin/env bash\n", file=outputFile)
                 print("source ~/.bash_aliases\n", file=outputFile)
+                print("pip install -U yt-dlp\n", file=outputFile)
 
             for counter, sPlaylistUrl in enumerate(workInfo.saPlaylists, 1):
 
@@ -243,6 +244,7 @@ def createTemplate(workInfo):
         if workInfo.bIsWriteShebang:
             print("#!/usr/bin/env bash\n", file=outputFile)
             print("source ~/.bash_aliases\n", file=outputFile)
+            print("pip install -U yt-dlp\n", file=outputFile)
 
         sArgsString = " ".join([quoted(arg) if (len(arg) == 0 or not arg[0] == "-") else arg for arg in workInfo.saYtDltArguments])
         sResultString = """urls=(\n\n)\n\n"""
