@@ -8,7 +8,12 @@ def get_duration(filename: str) -> float:
                              "default=noprint_wrappers=1:nokey=1", filename],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
-    return float(result.stdout)
+    to_ret = None
+    try:
+        to_ret = float(result.stdout)
+    except:
+        to_ret = 0
+    return to_ret
 
 
 def get_mime(sFilePath):
