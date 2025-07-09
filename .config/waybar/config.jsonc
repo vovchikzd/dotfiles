@@ -43,6 +43,7 @@
     },
     "clock": {
       "format": "{:%H:%M %d.%m.%Y}",
+      "locale": "en_GB.utf8", // need generate locale to use it
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "calendar": {
         "format": {
