@@ -259,8 +259,8 @@ def convertFiles(saFiles: list[str]):
 
         if len(workInfo.saFfmpegArgs) > 0:
             saArgs.extend(workInfo.saFfmpegArgs)
-        else:
-            saArgs.extend(["-map", "0"])
+        # else:
+        #     saArgs.extend(["-map", "0"])
         sNewFileName: str = f"{os.path.splitext(sFile)[0]}{workInfo.sSuffix}"
         saArgs.extend([sNewFileName])
         subprocess.run("clear")

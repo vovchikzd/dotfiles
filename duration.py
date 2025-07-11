@@ -40,6 +40,7 @@ def main():
             if os.path.isdir(sCurrentFile):
                 saDirs.append(sCurrentFile)
             elif os.path.isfile(sCurrentFile) and isVideo(sCurrentFile):
+            # elif os.path.isfile(sCurrentFile) and isAudio(sCurrentFile):
                 nFileCounter += 1
                 nTotalTime += get_duration(sCurrentFile)
     if nFileCounter > 0:
