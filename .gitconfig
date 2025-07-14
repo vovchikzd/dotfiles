@@ -17,11 +17,9 @@
   difftool = true
 [alias]
   dft = difftool
-  lg = "log --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n%C(yellow)%N'"
+  lg = "log --graph --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%s%n%C(yellow)%N'"
 [init]
   defaultBranch = master
-; [pull]
-;   rebase = true
 [rebase]
   autoStash = true
   missingCommitsCheck = warn
@@ -50,3 +48,7 @@
   remote = yellow
   upstream = green
   plain = blue
+[log]
+	date = format:%d.%m.%Y %I:%M:%S %p
+[blame]
+	date = format:%d.%m.%Y %I:%M:%S %p
