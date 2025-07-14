@@ -34,4 +34,6 @@
 --sub-langs "en.*,ru.*"
 --no-write-auto-subs
 
+--mtime
+
 # --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
