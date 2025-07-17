@@ -10,7 +10,7 @@ end
 local on_attach_default = function()
   vim.diagnostic.enable(false)
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "rounded",
+    border = "rounded",
   })
   keymap("n", "K", vim.lsp.buf.hover, key_opts("Open information about thing under cursor"))
   keymap("n", "<leader>r", vim.lsp.buf.rename, key_opts("Remane all uses of the name under cursor"))
@@ -33,9 +33,9 @@ local clangd_setup = function()
       end,
       cmd = {
         "clangd",
-        "--all-scopes-completion",
+        "--background-index",
         "--clang-tidy",
-        "--experimental-modules-support",
+        -- "",
       },
     })
   end
