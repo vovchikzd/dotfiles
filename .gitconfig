@@ -28,6 +28,7 @@
   prune = true
 [fetch]
   prune = true
+  pruneTags = true
 [advice]
   addIgnoredFile = false
 [status]
