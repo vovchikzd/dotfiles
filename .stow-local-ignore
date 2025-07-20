@@ -38,3 +38,8 @@ install_fonts.sh
 rustfmt.toml
 proxy.pac
 weights
+dispatch.py
+getYtLinks.py
+passwords.kdbx
+alphabet
+duration.py
