@@ -1,5 +1,5 @@
-# -f "bv*[height=720]+ba[format_note*=original] / bv*[height=1080]+ba[format_note*=original] / bv*+ba[format_note*=original]/b"
--f "bv*[height=1080]+ba[format_note*=original] / bv*+ba[format_note*=original]/b"
+# -f "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba/b"
+-f "bv*[height=1080]+ba / bv*+ba/b"
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
