@@ -1,5 +1,6 @@
 -- :help options
 
+vim.o.background = "dark"
 vim.opt.fileencoding = "utf-8"
 vim.opt.colorcolumn = "81"
 vim.opt.cursorline = true

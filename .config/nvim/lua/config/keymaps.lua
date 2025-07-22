@@ -33,7 +33,7 @@ keymap('n', "<leader>[", "O<Esc>0\"_D", opts("Insert newline above and stay in n
 
 
 keymap('n', "<S-l>", "<cmd>bnext<CR>", opts("Go to next buffer"))
-keymap('n', "<S-h", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
+keymap('n', "<S-h>", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
 keymap('n', "<leader>bd", "<cmd>bd<CR>", opts("Close current buffer (tab)"))
 
 keymap('n', "gl", '$', opts("Goto end of line"))
