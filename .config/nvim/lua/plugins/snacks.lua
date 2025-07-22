@@ -5,7 +5,7 @@ return {
     indent = { animate = { enabled = false } }
     , scope = { enabled = true }
     , scroll = { enabled = true }
-    , explorer = { replace_netrw = true }
+    , explorer = {}
 
     , image = { convert = { notify = false } }
     , picker = {

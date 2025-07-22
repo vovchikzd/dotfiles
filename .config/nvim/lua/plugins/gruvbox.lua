@@ -1,14 +1,14 @@
 return {
   "sainnhe/gruvbox-material"
   , priority = 1000
-  , config = function()
+  , init = function()
     vim.g.gruvbox_material_background = "medium" -- "sort", "medium", "hard"
-    vim.g.gruvbox_material_foreground = "material" -- "material", "mix", "original"
+    vim.g.gruvbox_material_foreground = "original" -- "material", "mix", "original"
     vim.g.gruvbox_material_enable_italic = true
     vim.g.gruvbox_material_transparent_background = 0
     vim.g.gruvbox_material_dim_inactive_windows = 0
     -- "grey background", "green background", "blue background", "red background", "reverse"
-    vim.g.gruvbox_material_visual = "reverse"
+    vim.g.gruvbox_material_visual = "grey background"
     -- "grey", "red", "orange", "yellow", "green", "aqua", "blue", "purple"
     vim.g.gruvbox_material_menu_selection_background = "grey"
     -- "none", "gray"

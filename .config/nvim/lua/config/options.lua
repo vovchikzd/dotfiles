@@ -28,7 +28,7 @@ vim.opt.showtabline = 2
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.shortmess:append 'c'
-vim.opt.iskeyword:append {'-', '_'}
+vim.opt.iskeyword:append { '-', '_' }
 -- vim.opt.iskeyword:remove {'-', '_'}
 vim.cmd [[cnoreabbrev q1 q!]]
 
