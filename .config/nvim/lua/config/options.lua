@@ -1,6 +1,5 @@
 -- :help options
 
-vim.o.background = "dark"
 vim.opt.fileencoding = "utf-8"
 vim.opt.colorcolumn = "81"
 vim.opt.cursorline = true
@@ -30,6 +29,10 @@ vim.opt.wrap = false
 vim.opt.shortmess:append 'c'
 vim.opt.iskeyword:append { '-', '_' }
 -- vim.opt.iskeyword:remove {'-', '_'}
+
+
+vim.o.background = "dark"
+
 vim.cmd [[cnoreabbrev q1 q!]]
 
 -- don't add comment when insert new line from comment line
