@@ -10,7 +10,18 @@ return {
     vim.o.winborder = "rounded"
   end
   , opts = {
-    keymap = { preset = "super-tab" } -- :h blink-cmp-config-keymap
+    keymap = {
+      preset = "super-tab"
+      , ['<CR>'] = {
+        function(cmp)
+          if cmp.snippet_active() then return cmp.accept()
+          else return cmp.select_and_accept() end
+        end,
+        'snippet_forward',
+        'fallback'
+      }
+      , ['<C-CR>'] = { 'show', 'show_documentation', 'hide_documentation' }
+    } -- :h blink-cmp-config-keymap
     , appearance = { nerd_font_variant = "normal" }
     , completion = {
       documentation = { auto_show = false }
@@ -60,6 +71,7 @@ return {
         }
       }
       , ghost_text = { enabled = true }
+      , list = { selection = { auto_insert = false } }
     }
     , sources = {
       default = { "lsp", "path", "buffer" }
@@ -88,7 +100,7 @@ return {
       implementation = "prefer_rust_with_warning"
       , sorts = { "exact", "score", "sort_text" }
     }
-    , signature = { enabled = true }
+    , signature = { enabled = false }
     , cmdline = { completion = { menu = { auto_show = true } } }
   }
   , opts_extend = { "sources.default" } -- warn: what that is?
