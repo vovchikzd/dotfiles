@@ -149,7 +149,7 @@ class WorkingInformation:
 workInfo: WorkingInformation = None
 
 
-def getFiles(sStartDir: str) -> list[tuple[int, str]]:
+def getFiles(sStartDir: str) -> list[str]:
     global workInfo
     saDirectories: list[str] = [sStartDir]
     saFiles: list[tuple[int, str]] = list()
