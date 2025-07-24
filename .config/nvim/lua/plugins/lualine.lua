@@ -1,5 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim"
   , dependencies = { "echasnovski/mini.icons" }
-  , config = true
+  , opts = {
+    winbar = { lualine_c = { "navic" } }
+  }
 }
