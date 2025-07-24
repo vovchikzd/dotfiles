@@ -100,7 +100,10 @@ return {
       implementation = "prefer_rust_with_warning"
       , sorts = { "exact", "score", "sort_text" }
     }
-    , signature = { enabled = false }
+    , signature = {
+      enabled = true
+      , trigger = { enabled = false, show_on_trigger_character = false }
+    }
     , cmdline = { completion = { menu = { auto_show = true } } }
   }
   , opts_extend = { "sources.default" } -- warn: what that is?
