@@ -2,9 +2,9 @@ local servers = {
   clangd = {
     filetypes = {"c", "h", "cc", "cpp", "hh", "hpp", "cxx", "H", "C", "cppm",
                   "cp", "CPP", "c++", "hp", "hxx", "HPP", "h++"}
-    , cmd = { "clangd",  "--background-index", "--clang-tidy", "--experimental-modules-support"
-              , "--background-index-priority=normal", "--fallback-style=Google"
-              , "--header-insertion=never", "--pch-storage=memory" }
+    , cmd = { "clangd",  "--background-index", "--fallback-style=Google"
+              , "--background-index-priority=normal", "--pch-storage=memory"
+              , "--header-insertion=never" }
   }
   , zls = {}
   , rust_analyzer = {}
@@ -31,4 +31,7 @@ return {
       end
     end
   end
+  , keys = {
+    { "<leader>lr", vim.lsp.buf.rename, desc = "Rename symbol" }
+  }
 }

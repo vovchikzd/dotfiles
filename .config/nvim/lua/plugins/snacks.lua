@@ -26,7 +26,7 @@ end
 
 local explorer = function()
   local current_file = vim.fn.expand("%:p")
-  local res, ind = string.find(current_file, "/.", 1, true)
+  local res, _ = string.find(current_file, "/.", 1, true)
   if res then
     Snacks.explorer.open({ hidden = true })
   else
@@ -53,10 +53,10 @@ return {
     }
   }
   , keys = {
-    { "<leader><space>", function() files() end, desc = "Find Files" }
+    { "<leader><space>", files, desc = "Find Files" }
     , {"<C-/>", function() Snacks.picker.grep({ dirs = { vim.fn.expand("%:p") }}) end, desc = "Grep Current File (Buffer)"}
-    , {"<leader>f", function() grep() end, desc = "Grep Files"}
+    , {"<leader>f", grep, desc = "Grep Files"}
 
-    , {"<leader>e", function() explorer() end, desc = "File Explorer"}
+    , {"<leader>e", explorer, desc = "File Explorer"}
   }
 }
