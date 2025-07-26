@@ -16,6 +16,7 @@ Arguments:
     -f, --force      allow rewriting existing file
     -h, --help       show this help message
     -n, --numbering  numbering created directories by passed order
+        --no-dir     don't create subfolder
     -o <file>        print result to <file>, default name is 'down.sh'
     -t, --template   create empty template file (always dynamic numbering)
 
@@ -85,6 +86,7 @@ class WorkInformation:
     bIsNumbering: bool = false
     bIsDynamicNumbering: bool = false
     bIsCreateTemplate: bool = false
+    bIsCreateSubfolder: bool = true
 
     def __init__(self, args):
         if  "-h" in args or "--help" in args:
@@ -121,6 +123,8 @@ class WorkInformation:
                         self.bIsDynamicNumbering = true
                     case "-t" | "--template":
                         self.bIsCreateTemplate = true
+                    case "--no-dir":
+                        self.bIsCreateSubfolder = false
                     case _:
                         print(
                             colored(
@@ -183,7 +187,8 @@ def main(workInfo: WorkInformation):
             sResultString += f'    printf "\\033[0;33mDownloading $counter of ${{array_length}} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
         else:
             sResultString += f'    printf "\\033[0;33mDownloading $counter of {nCount} ({re.sub(' \\[.*\\]', '', sOutputDirName)})\\033[0m\\n"\n'
-        sResultString += f'    yt-dlp -o "{f"{nDirCount:02}. " if bIsNumbering else ""}{sOutputDirName}/$num. $name" "$url" {sArgsString}\n'
+        sSubfolder = f"{f"{nDirCount:02}. " if bIsNumbering else ""}{sOutputDirName}/" if workInfo.bIsCreateSubfolder else ""
+        sResultString += f'    yt-dlp -o "{sSubfolder}$num. $name" "$url" {sArgsString}\n'
         sResultString += f"  done\n"
         sResultString += f"  ((++counter))\n"
         sResultString += f"done\n"
