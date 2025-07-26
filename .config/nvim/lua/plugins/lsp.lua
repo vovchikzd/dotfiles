@@ -33,5 +33,6 @@ return {
   end
   , keys = {
     { "<leader>lr", vim.lsp.buf.rename, desc = "Rename symbol" }
+    , { "<leader>lf", vim.diagnostic.open_float, desc = "Open diagnostic message in new window" }
   }
 }
