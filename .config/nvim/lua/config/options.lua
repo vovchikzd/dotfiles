@@ -42,3 +42,6 @@ vim.cmd [[cnoreabbrev q1 q!]]
 -- and vim.opt.formatoptions:remove {"c", "r", "o"}
 -- don't work
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]])
+
+-- options to override rust 4 spaces indentations
+vim.cmd([[au Filetype rust setl ts=2 sts=2 sw=2]])
