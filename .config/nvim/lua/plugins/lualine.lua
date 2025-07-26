@@ -5,7 +5,7 @@ return {
     sections = {
       lualine_a = {}
       , lualine_b = {}
-      , lualine_c = { "lsp_status", "filename", "navic" }
+      , lualine_c = { "lsp_status", "location", "navic" }
 
       , lualine_x = { "encoding", "fileformat", "filetype" }
       , lualine_y = { "branch", "diff", "diagnostics" }

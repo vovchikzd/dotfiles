@@ -26,6 +26,7 @@ vim.opt.undofile = true
 vim.opt.showtabline = 2
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
+vim.opt.showmode = false
 vim.opt.shortmess:append 'c'
 vim.opt.iskeyword:append { '-', '_' }
 -- vim.opt.iskeyword:remove {'-', '_'}
