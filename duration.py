@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-import os, pathlib, sys, subprocess, datetime, humanize, mimetypes
-from functools import reduce
+import os, sys, subprocess, datetime, humanize, mimetypes
 
 true, false = True, False
 
@@ -50,9 +49,11 @@ class Config:
                     self.isAudio = true
                     self.isVideo = true
                 case "-r":
+                    self.isSort = true
                     self.isReverce = false
                 case _:
                     print(f"Unkhown arg: {arg}", file=sys.stderr)
+                    exit(1)
 
 
 def main():
@@ -76,7 +77,7 @@ def main():
         if config.isSort:
             aFileDur.sort(reverse=config.isReverce, key=lambda x: x[1])
             for sFile, nDur in aFileDur:
-                print(f"{humanize.precisedelta(datetime.timedelta(seconds=nDur))} -- {sFile}")
+                print(f"{humanize.precisedelta(datetime.timedelta(seconds=nDur))} -- {os.path.basename(sFile)}")
             print()
 
         nTotalTime = sum([tup[1] for tup in aFileDur])
