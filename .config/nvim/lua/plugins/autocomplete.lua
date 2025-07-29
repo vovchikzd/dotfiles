@@ -1,6 +1,6 @@
 return {
   "saghen/blink.cmp"
-  , build = { "rustup update", "cargo build --release" }
+  , build = { "cargo build --release" }
   , dependencies = {
     "xzbdmw/colorful-menu.nvim"
     , "echasnovski/mini.icons"
