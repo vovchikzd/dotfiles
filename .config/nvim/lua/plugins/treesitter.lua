@@ -7,7 +7,7 @@ return {
     require("nvim-treesitter.configs").setup({
       ensure_installed = { 'c', "cpp", "python", "lua", "bash", "rust", "cmake",
         "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-        "llvm", "nasm", "ninja", "tmux", "markdown", "latex", "typst", "zig",
+        "llvm", "nasm", "ninja", "tmux", "markdown", "typst", "zig",
         "fish", "gnuplot", "hyprlang", "make", "markdown_inline", "printf",
         "regex", "sql", "toml", "xml", "yaml" }
       , auto_install = true
