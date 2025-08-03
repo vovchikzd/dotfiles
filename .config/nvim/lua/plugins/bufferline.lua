@@ -1,8 +1,13 @@
 return {
   "akinsho/bufferline.nvim"
-  , config = function()
-    local status_ok, bufferline = pcall(require, "bufferline")
-    if not status_ok then return end
-    bufferline.setup()
-  end
+  , dependencies = "nvim-tree/nvim-web-devicons"
+  , opts = {
+    options = {
+      themable = true
+      , diagnostic = "nvim_lsp"
+      , color_icons = true
+      , show_buffer_icons = true
+      , separator_style = "thick"
+    }
+  }
 }
