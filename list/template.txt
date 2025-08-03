@@ -99,7 +99,7 @@ Blook Over Bright Haven (Wang) ~ 1442
 Milkman (Burns) ~ 1452
 I Have Some Questions For You (Makkai) ~ 1458
 Одаренная девочка (Гайворонская) ~ 2910
-To Kill a Mockingbird (Lee) ~ 1483
+To Kill a Mockingbird (Lee) ~ 1087
 Belgravia (Fellowes) ~ 1489
 Lady Chatterley's Lover (Lawrence) ~ 1499
 Цикл Лихо (Лехчина) ~ 1508
@@ -124,7 +124,6 @@ Amina al-Sirafi Series (Chakraborty) ~ 1729
 A tree grows in Brooklyn (Smith) ~ 1739
 Hungry as the Sea (Smith) ~ 1753
 Шестьдесят килограммов солнечного света (Халльгрим) ~ 1750
-Бабий Яр (Кузнецов) ~ 1776
 Финист-ясный сокол (Рубанов) ~ 1781
 Half of a Yellow Sun (Adichie) ~ 1802
 Зверь 44 (Рудашевский) ~ 660
@@ -145,10 +144,8 @@ The African Trilogy (Achebe) ~ 2057
 Catch-22 (Heller) ~ 2076
 Цикл Сожженные земли (Щучкина) ~ 2111
 The Witch Elm (French) ~ 2125
-Доктор Живаго (Пастернак) ~ 2030
 A Thousand Moons (Barry) ~ 686
 Days Without End (Barry) ~ 806
-Цыган (Калинин) ~ 2178
 Hundred Kingdoms Series (Christo) ~ 2190
 The Talent Trilogy (Miro) ~ 2193
 Uncle Tom's Cabin (Stowe) ~ 2205
@@ -158,7 +155,6 @@ The Price of Power (Michel) ~ 2267
 Ложится мгла на старые ступени (Чудаков) ~ 2304
 Sisters of the Sky (Kortchik) ~ 1138
 The Countess of the Revolution (Kortchik) ~ 1193
-Спартак (Джованьоли) ~ 2332
 Cutting for Stone (Verghese) ~ 2337
 Война с саламандрами (Чапек) ~ 2356
 The Sword of Kaigen (Wang) ~ 2383
@@ -188,7 +184,6 @@ The Idiot dilogy (Batuman) ~ 2730
 Истинное волшебство (Способина) ~ 2029
 Прядущая (Способина) ~ 4170
 Sword of Honour (Waugh) ~ 2742
-Открытая книга (Каверин) ~ 2750
 Ледяная скорлупа (Штерн) ~ 594
 Ковчег 47 Либра (Штерн) ~ 1075
 Феникс сапиенс (Штерн) ~ 1151
@@ -202,7 +197,6 @@ China Room (Sahota) ~ 582
 Ours are the Streets (Sahota) ~ 746
 The Year of the Runaways (Sahota) ~ 1632
 11/22/63 (King) ~ 2962
-Дом в котором… (Петросян) ~ 2971
 Lone Wolf (Picoult) ~ 1308
 Handle With care (Picoult) ~ 1708
 Underworld (DeLillo) ~ 3032
@@ -227,7 +221,6 @@ Seveneves (Stephenson) ~ 3353
 The Goblin Emperor Series (Addison) ~ 3364
 Внучка (Шлинк) ~ 998
 Зельб (Шлинк) ~ 2455
-Господа офицеры (Васильев) ~ 3474
 Мистер вечный канун (Торин, Яковлев) ~ 3497
 Some of Your Blood (Sturgeon) ~ 452
 The Cosmic Rape (Sturgeon) ~ 455
@@ -245,17 +238,13 @@ The War Pianist (Robotham) ~ 1184
 The Berlin Girl (Robotham) ~ 1213
 Zoe Bentley Mystery Series (Omer) ~ 3583
 The Band Series (Eames) ~ 3591
-Угрюм-река (Шишков) ~ 3598
 Вечная мерзлота (Ремизов) ~ 3607
 The Burning Kingdoms Series (Suri) ~ 3618
 Хождение по мукам (Толстой) ~ 3684
 Under the Dome (King) ~ 3690
-Семьдесят два градуса ниже нуля (Санин) ~ 3728
 The Campus Trilogy (Lodge) ~ 3734
 Eidyn Series (Lee) ~ 3735
 Tales of Tremaine Series (Virdi) ~ 7825
-Сага о Йёсте Берлинге (Лагерлёф) ~ 1579
-Перстень Лёвёншёльдов (Лагерлёф) ~ 2213
 City of Sacrifice Series (Fletcher) ~ 3789
 The Forsyte Saga (Galsworthy) ~ 3795
 The Inheritance Games (Barnes) ~ 3801
@@ -276,7 +265,6 @@ The Golden Key (Roberson, Elliot, Rawn) ~ 3827
 Седьмая функция языка (Бине) ~ 1404
 HHhH (Бине) ~ 1444
 Gravity's Rainbow (Pynchon) ~ 3830
-Щит и Меч (Кожевников) ~ 3837
 Революция (Перес-Реверте) ~ 1309
 Капитан Алатристе (Перес-Реверте) ~ 5338
 Moist von Lipwig (Pratchett) ~ 3956
@@ -311,7 +299,6 @@ A Far Country (Mason) ~ 891
 North Woods (Mason) ~ 1083
 Winter Soldier (Mason) ~ 1139
 Piano Tuner (Mason) ~ 1206
-Благоволительницы (Литтел) ~ 4330
 Russka (Rutherfurd) ~ 4378
 Строговы. Соль земли (Марков) ~ 4379
 Piranesi (Clarke) ~ 705
@@ -364,7 +351,6 @@ The Dragon Misfits Series (Holmberg) ~ 5552
 An Ember in the Ashes (Sabaa) ~ 5626
 Gunmetal Gods Series (Akhtar) ~ 5632
 The Queen's Thief (Turner) ~ 5644
-Гардемарины, вперед! (Соротокина) ~ 5645
 The Zimiamvia Series (Eddison) ~ 5693
 Night Angel Trilogy (Weeks) ~ 5694
 A Fine and Private Place (Beagle) ~ 966
@@ -375,7 +361,6 @@ Tamsin (Beagle) ~ 1239
 Тихий Дон (Шолохов) ~ 5764
 Gormenghast (Peake) ~ 5800
 Красные луны Квертинда (5 кн.) ~ 5812
-Петербургские трущобы (Крестовский) ~ 5871
 The Winnowind Flame (Williams) ~ 5900
 Отверженные (Гюго) ~ 5924
 Атака мертвецов (Джафаров) ~ 750
@@ -421,7 +406,6 @@ Bodies of Light (Moss) ~ 1032
 Night Waking (Moss) ~ 1292
 Signs for Lost Children (Moss) ~ 1357
 Ibis trilogy (Ghosh) ~ 6957
-Дозоры (Лукьяненко) ~ 6957
 The Lord of The Rings (Tolkien) ~ 7024
 The Lays of Anuskaya (Beaulieu) ~ 7078
 Хроника объявленной смерти (Маркес) ~ 319
@@ -444,7 +428,6 @@ They and I (Jerome) ~ 752
 All Roads Lead to Calvary (Jerome) ~ 1012
 Three Man in a Boat (Jerome) ~ 1457
 Paul Kelver (Jerome) ~ 1496
-Гарри Поттер и Методы Рационального Мышления (Юдковский) ~ 7206
 Tales of the Ketty Jay (Wooding) ~ 7226
 Дети Шини (Мартин) ~ 7229
 The Kingkiller Chronicle (Rothfuss) ~ 7264
@@ -462,9 +445,7 @@ The Draconis Memoria Series (Ryan) ~ 7358
 Uprooted (Novik) ~ 1680
 Spinning Silver (Novik) ~ 1724
 The Scholomance Series (Novik) ~ 3985
-Емельян Пугачев (Шишков) ~ 7511
 Проклятые короли (Дрюон) ~ 7570
-Зал ожидания (Фейхтвангер) ~ 7616
 Разрыв-трава (Калашников) ~ 1947
 Последнее отступление (Калашников) ~ 2115
 Жестокий век (Калашников) ~ 3565
@@ -757,7 +738,6 @@ The Children's Book (Byatt) ~ 3000
 Подполковник медицинской службы (Герман) ~ 749
 Один год (Герман) ~ 2118
 Наши знакомые (Герман) ~ 2372
-Россия молодая (Герман) ~ 4439
 Трилогия об Устименко (Герман) ~ 6621
 Kithamar Series (Abraham) ~ 2764
 Long Price Quartet (Abraham) ~ 5751
@@ -766,7 +746,6 @@ Fractalverse Series (Paolini) ~ 4550
 Inheritance Cycle (Paolini) ~ 12541
 Божьи Воины (Сапковский) ~ 6227
 Cormoran Strike (Galbraith) ~ 17803
-Амур-батюшка (Задорнов) ~ 4228
 Сага о русских аргонавтах (Задорнов) ~ 5789
 Дальний Восток (Задорнов) ~ 7824
 Конгрегация (Попова) ~ 17890
@@ -868,7 +847,6 @@ Quichotte (Rushdie) ~ 1483
 Victory City (Rushdie) ~ 1211
 Haroun and Luka (Rushdie) ~ 1212
 East, West (Rushdie) ~ 436
-Полари (Суржиков) ~ 23125
 Kushiel Universe (Carey) ~ 23139
 The Shattered Sea (Abercrombie) ~ 3192
 The First Law world (Abercrombie) ~ 19977
@@ -1172,7 +1150,6 @@ The Old Kingdom Series (Nix) ~ 7802
 Fallen Gods Series (Kaner) ~ 3869
 Семья Резо (Базен) ~ 2287
 Семья Буссардель (Эриа) ~ 5534
-Ругон-Маккары (Золя) ~ 29811
 By Nightfall (Cunningham) ~ 787
 Day (Cunningham) ~ 687
 Flesh and Blood (Cunningham) ~ 1512
@@ -1189,7 +1166,6 @@ The Snow Queen (Cunningham) ~ 674
 Таинственное пламя царицы Лоаны (Эко) ~ 1635
 Amiznt Soul (Makarios) ~ 1147
 Ловец чудес (Хоффман) ~ 1667
-Трилогия об Иосифе Флавии (Фейхтвангер) ~ 5258
 Фалько (Перес-Реверте) ~ 2859
 Баталист. Территория команчей (Перес-Реверте) ~ 1364
 Боевые псы не пляшут (Перес-Реверте) ~ 366
@@ -1261,11 +1237,6 @@ The Tyrant Philosophers (Tchaikovsky) ~ 5876
 Guns of the Dawn (Tchaikovsky) ~ 1924
 Terrible Worlds (Tchaikovsky) ~ 2662
 The Apt Universe (Tchaikovsky) ~ 25312
-Дубровский (Пушкин) ~ 274
-Капитанская дочка (Пушкин) ~ 385
-Евгений Онегин (Пушкин) ~ 293
-Повести покойного Ивана Петровича Белкина (Пушкин) ~ 302
-История Пугачева (Пушкин) ~ 533
 Le Morte d'Arthur (Malory) ~ 3632
 Lady Audley's Secret (Braddon) ~ 1664
 Drowned World (Chan) ~ 2706
@@ -1337,16 +1308,11 @@ The Chronicles of Narnia (Lewis) ~ 4385
 Двенадцать стульев. Золотой теленок (Ильф, Петров) ~ 2348
 Изгнанники (Дойль) ~ 1142
 Меч ислама. Псы господни. Черный лебедь (Сабатини) ~ 2788
-Наследник из Калькутты (Штильмарк) ~ 3100
 Не оглядывайся назад!.. (Максимов) ~ 1088
 Парижские тайны (Эжен Сю) ~ 5995
 Сильные мира сего. Крушение столпов. Свидание в аду (Дрюон) ~ 3419
 Скарамуш. Возвращение Скарамуша (Сабатини) ~ 2961
-Собор. Роман о петербургском зодчем (Измайлова) ~ 2456
 Сэр Найджел. Белый отряд (Дойль) ~ 2866
-Территория (Куваев) ~ 1350
-Тесей. Царь должен умереть. Бык из моря (Рено) ~ 2496
-Я, Клавдий. Божественный Клавдий (Грейвз) ~ 4023
 District of Columbia (Passos) ~ 3464
 Manhattan Transfer (Passos) ~ 1405
 One Man's Initiation: 1917 (Passos) ~ 308
@@ -1500,15 +1466,12 @@ On Wilder Seas (Marmery) ~ 862
 Exhalation (Chiang) ~ 1133
 Елтышевы (Сенчин) ~ 688
 Письмовник (Шишкин) ~ 967
-Лже-Нероню. Иеффай и его дочь (Фейхтвангер) ~ 2426
 Сексуальная жизнь наших предков (Питцорно) ~ 1630
-Лебединая песнь (Головкина[Римская-Ккорсакова]) ~ 4310
 2666 (Боланьо) ~ 4276
 Третий рейх (Боланьо) ~ 1055
 Потерял слепой дуду (Григоренко) ~ 563
 Язычник (Кузнецов-Туляпин) ~ 1470
 The Blue Castle (Montgomery) ~ 784
-Ночевала тучка золотая. Солдат и мальчик (Приставкин) ~ 2904
 Сухой овраг (Клима) ~ 2376
 The Plot (Korelitz) ~ 1040
 Олений завет (Смышляева) ~ 620
@@ -1585,7 +1548,6 @@ Dawn of the Black Sun (Burnham) ~ 909
 Идти бестрепетно (Водолазкин) ~ 909
 Соловьев и Ларионов (Водолазкин) ~ 1154
 Чагин (Водолазкин) ~ 941
-Возвращение Мюнхгаузена. Воспоминания о будущем (Кржижановский) ~ 2663
 Борьба за огонь (Жозеф Анри Рони-старший) ~ 2512
 Тайны чароводья (Иванова) ~ 5515
 The Wings Upon Her Back (Mills) ~ 1241
@@ -1681,7 +1643,6 @@ The Lathe of Heaven (Le Guin) ~ 672
 The Prestige (Priest) ~ 1296
 The Separation (Priest) ~ 1524
 The Wind in the Willows (Grahame) ~ 814
-Братья и сестры (Абрамов) ~ 3870
 Побежденный. Барселоно, 1714 (Пиньоль) ~ 2796
 Там, где цветет полынь (Птицева) ~ 1483
 The Queens of Renthia Series (Durst) ~ 4236
@@ -1711,7 +1672,6 @@ The Huntress (Quinn) ~ 1939
 The Unreal and the Real (Guin) ~ 2570
 Слово Вирявы (Бауэр) ~ 1263
 Хозяин белых оленей (Куксин) ~ 1115
-Прокляты и убиты (Астафьев) ~ 3264
 The Firename Saga (Feist) ~ 4729
 Chronicles of Midkemia (Feist) ~ 49881
 Эйзен (Яхина) ~ 1655
@@ -1844,10 +1804,29 @@ Cabbages and Kings (O. Henry) ~ 715
 Возвращение в Острок (Филипенко) ~ 472
 Все, способные дышать дыхание (Горалик) ~ 1488
 Замыслы (Филипенко) ~ 421
-Испанская баллада (Фейхтвангер) ~ 2926
 Красный крест (Филипенко) ~ 478
 Кремулятор (Филипенко) ~ 564
 Нет (Горалик, Кузнецов) ~ 1531
 Половина неба (Горалик, Львовский) ~ 500
 Травля (Филипенко) ~ 500
 Черный ксеноархеолог (Максимов) ~ 1890
+Луна 84 (Ханипаев) ~ 2993
+Thursday Next (Fforde) ~ 8496
+North Bath (Russo) ~ 6189
+Kingsbridge (Follett) ~ 12404
+Kingdom of Oak and Steel (Latham) ~ 1933
+Cradle (Wight) ~ 14904
+Precipice (Harris) ~ 1354
+The Southern Reach (VanderMeer) ~ 2639
+Dark Matter (Crouch) ~ 955
+Katabasis (Kuang) ~ 1852
+The Bell Jar (Plath) ~ 103
+The Latinist (Prins) ~ 1134
+The Overstory (Powers) ~ 1988
+The Recognitions (Gaddis) ~ 4834
+The Shepherd's Hut (Winton) ~ 707
+Wellness (Hill) ~ 2301
+Большая суета (Ханипаев) ~ 963
+Европейское воспитание (Гари) ~ 615
+Полубрат (Кристенсен) ~ 2859
+Холодные глаза (Ханипаев) ~ 1397
