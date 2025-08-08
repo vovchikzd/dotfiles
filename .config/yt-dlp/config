@@ -36,4 +36,7 @@
 
 --mtime
 
-# --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
+--replace-in-metadata title ё е
+--replace-in-metadata title : ''
+
+--extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
