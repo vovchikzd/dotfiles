@@ -1,3 +1,3 @@
 function rsyncb
-  command rsync -rPahv --delete-before --exclude='**/lost+found/' $argv
+  command rsync -rPSahv --preallocate --delete-before --exclude='**/lost+found/' $argv
 end

@@ -1,3 +1,3 @@
 function rsync
-  command rsync -rPahv --delete-delay --exclude='**/lost+found/' $argv
+  command rsync -rPSahv --preallocate --delete-delay --exclude='**/lost+found/' $argv
 end
