@@ -8,6 +8,7 @@ function FindProxyForURL(url, host) {
       || dnsDomainIs(host, "anilibria.top")
       || dnsDomainIs(host, "tiktok.com")
       || dnsDomainIs(host, "x.com")
+      || dnsDomainIs(host, "gosuslugi.ru")
       ) {
         return "SOCKS5 127.0.0.1:9150";
     }
