@@ -4,9 +4,15 @@ local servers = {
                   "cp", "CPP", "c++", "hp", "hxx", "HPP", "h++"}
     , cmd = { "clangd",  "--background-index", "--fallback-style=Google"
               , "--background-index-priority=normal", "--pch-storage=memory"
-              , "--header-insertion=never" }
+              , "--header-insertion=never", "--function-arg-placeholders=0" }
   }
-  , zls = {}
+  , zls = {
+    settings = {
+      enable_build_on_save = true
+      , enable_argument_placeholders = false
+      , highlight_global_var_declarations = true
+    }
+  }
   , rust_analyzer = {}
   , lua_ls = {}
   , pyright = {}
