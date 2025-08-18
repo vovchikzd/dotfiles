@@ -211,7 +211,6 @@ The Shadow Histories (Parry) ~ 3228
 The Sword and the Scimitar (Ball) ~ 3237
 American Rust (Meyer) ~ 1334
 The Son (Meyer) ~ 1912
-Жизнь и судьба (Гроссман) ~ 3251
 Elektra (Saint) ~ 1030
 Atalanta (Saint) ~ 1073
 Ariadne (Saint) ~ 1188
@@ -239,7 +238,6 @@ Zoe Bentley Mystery Series (Omer) ~ 3583
 The Band Series (Eames) ~ 3591
 Вечная мерзлота (Ремизов) ~ 3607
 The Burning Kingdoms Series (Suri) ~ 3618
-Хождение по мукам (Толстой) ~ 3684
 Under the Dome (King) ~ 3690
 The Campus Trilogy (Lodge) ~ 3734
 Eidyn Series (Lee) ~ 3735
@@ -449,9 +447,6 @@ The Scholomance Series (Novik) ~ 3985
 Последнее отступление (Калашников) ~ 2115
 Жестокий век (Калашников) ~ 3565
 The Reborn Empire Series (Madson) ~ 7707
-Тень евнуха (Кабре) ~ 1472
-Ваша честь (Кабре) ~ 1474
-Я исповедуюсь (Кабре) ~ 2603
 Elizabeth Strout ~ 8663
 Marwood and Lovett Series (Taylor) ~ 7795
 Сказания о людях тайги (Черкасов, Москвитина) ~ 7873
@@ -745,7 +740,6 @@ Inheritance Cycle (Paolini) ~ 12541
 Божьи Воины (Сапковский) ~ 6227
 Cormoran Strike (Galbraith) ~ 17803
 Сага о русских аргонавтах (Задорнов) ~ 5789
-Дальний Восток (Задорнов) ~ 7824
 Конгрегация (Попова) ~ 17890
 This is What Happened (Herron) ~ 663
 Nobody Walks (Herron) ~ 690
@@ -1188,14 +1182,6 @@ The Cautious Traveller's Guide to the Wasterlands (Brooks) ~ 1124
 Черная изба (Лунева, Колмакова) ~ 1447
 Человек недостойный (Дадзай) ~ 334
 Ладный мир (Сова) ~ 2436
-Бедныe люди. Белые ночи. Мальчик у Христа на ёлке (Достоевский) ~ 728
-Бесы (Достоевский) ~ 2703
-Братья Карамазовы (Достоевский) ~ 3621
-Игрок (Достоевский) ~ 564
-Идиот (Достоевский) ~ 2869
-Подросток (Достоевский) ~ 2297
-Преступление и наказание (Достоевский) ~ 2310
-Униженные и оскорбленные (Достоевский) ~ 1538
 The Reindeer People (Hobb) ~ 2084
 Alien Earth (Hobb) ~ 1617
 Cloven Hooves (Hobb) ~ 1441
@@ -1240,7 +1226,6 @@ Drowned World (Chan) ~ 2706
 Time Salvager Series (Chu) ~ 3221
 The War Arts Saga (Chu) ~ 4548
 Tao series (Chu) ~ 7323
-Антоновские яблоки. Жизнь Арсеньева (Бунин) ~ 3565
 Как поймать монстра (Цимеринг) ~ 3114
 Три возраста Окини-сан (Пикуль) ~ 1538
 Крейсера (Пикуль) ~ 1044
@@ -1445,7 +1430,6 @@ Time and Time Again (Elton) ~ 1272
 И жили они долго и счастливо (Селютина) ~ 4255
 Кафедра (Грекова) ~ 975
 Крабат (Пройслер) ~ 629
-Мисс Черити (Мюрай) ~ 1026
 Gutenberg's Apprentice (Christie) ~ 1302
 The Deathless trilogy (Newman) ~ 3829
 The Witch's Compendium of Monsters (Dimova) ~ 1352
@@ -1551,7 +1535,6 @@ The Wish (Sparks) ~ 1207
 Counting Miracles (Sparks) ~ 1123
 Dreamland (Sparks) ~ 1003
 The Echoes Saga (Quaintrell) ~ 19056
-Все, способные держать оружие... Штурмфогель (Лазарчук) ~ 2441
 Птицы и солнцесветы (Пехов) ~ 1262
 Красные цепи (Образцов) ~ 8615
 Время огня (Павлова) ~ 3788
@@ -1575,9 +1558,7 @@ Under Western Eyes (Conrad) ~ 1284
 The Secret Agent (Conrad) ~ 1074
 Lord Jim (Conrad) ~ 1425
 Island Queen (Riley) ~ 1722
-За правое дело (Гроссман) ~ 3174
 Мудрость чудака (Фейхтвангер) ~ 1632
-Канцелярская крыса (Соловьев) ~ 2927
 Teixcalaan (Martine) ~ 3508
 The Dragon Defenders (Russell) ~ 1604
 The Levanthria (Beswick) ~ 6093
