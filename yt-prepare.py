@@ -219,9 +219,11 @@ def main(workInfo: WorkInformation):
                     sResultString += f"# {sPlaylistUrl}\n"
                     sResultString += getStringArray(sPlaylistUrl)
                     sResultString += getCycle(sOutputDirName, nVideosInsidePlaylist[sPlaylistUrl], workInfo.saYtDltArguments, workInfo.bIsNumbering, counter, workInfo.bIsDynamicNumbering)
-                    print(sResultString, file=outputFile, end='\n\n')
+                    print(sResultString, file=outputFile, end='\n')
                 except:
                     saErrorUrls.append(sPlaylistUrl)
+
+            print("~/dotfiles/rename.py", file=outputFile, end="\n\n\n")
 
         subprocess.run(["chmod", "+x", workInfo.sOutputFileName])
     except FileNotFoundError:
@@ -276,6 +278,7 @@ def createTemplate(workInfo):
         sResultString += "  done\n"
         sResultString += "  ((++counter))\n"
         sResultString += "done\n\n"
+        sResultString += "~/dotfiles/rename.py\n\n"
         print(sResultString, file=outputFile)
         
     subprocess.run(["chmod", "+x", workInfo.sOutputFileName])
