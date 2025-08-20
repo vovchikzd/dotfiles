@@ -3,8 +3,8 @@ if status is-interactive
   set dlt '/home/vovchik/Disks/1Tb/Видео/Delete/'
   set plt '/home/vovchik/Disks/1Tb/Видео/playlists/'
   
-  set -g format 'bv*[height=720]+ba[language~="en.*"]+ba[language~="ru.*"] / bv[height>=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
-  set -g lformat 'bv[height>=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
+  set -g format 'bv*[height=720]+ba[language~="en.*"]+ba[language~="ru.*"] / bv[height=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
+  set -g lformat 'bv[height=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
   set -g bformat "bv+ba/b"
   set -g name '%(title)s [%(id)s](%(channel)s).%(ext)s'
   set -g numbering "%(playlist_index)s. $name"
