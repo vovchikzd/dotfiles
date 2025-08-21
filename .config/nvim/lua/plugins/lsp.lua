@@ -25,7 +25,7 @@ local servers = {
 return {
   "neovim/nvim-lspconfig"
   , ft = { "cpp", "c", "lua", "python", "rust", "zig", "cmake", "typst", "fish", "bash", "sh" }
-  , cmd = { "LspInfo" }
+  , cmd = { "LspInfo", "LspStart" }
   , init = function()
     vim.diagnostic.config({ virtual_text = { current_line = true }})
   end
