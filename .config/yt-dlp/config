@@ -1,7 +1,5 @@
-# -f 'bv*[height=720]+ba[language~="en.*"]+ba[language~="ru.*"] / bv[height=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
--f 'bv[height=1080]+ba[language~="en.*"]+ba[language~="ru.*"] / bv+ba/b'
-
---audio-multistreams
+# -f "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba / b"
+-f "bv*[height=1080]+ba / bv*+ba / b"
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
