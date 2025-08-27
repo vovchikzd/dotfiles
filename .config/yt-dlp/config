@@ -3,8 +3,6 @@
 
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
--N 20
-
 # tor proxy
 --proxy socks5://localhost:9150 
 
