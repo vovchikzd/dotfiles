@@ -1,6 +1,6 @@
 [user]
   email = vovchikzd@gmail.com
-  name = Vladimir Zdorenko
+  name = vovchikzd
 [core]
   editor = nvim
   compression = 9
@@ -16,15 +16,13 @@
   cmd = difft "$LOCAL" "$REMOTE"
 [pager]
   difftool = true
-[alias]
-  dft = difftool
-  lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%s%n%C(yellow)%N'"
 [init]
   defaultBranch = master
 [rebase]
   autoStash = true
-  missingCommitsCheck = warn
   updateRefs = true
+  autoSquash = false
+  missingCommitsCheck = warn
 [remote "origin"]
   prune = true
 [fetch]
@@ -54,3 +52,12 @@
 	date = format:%d.%m.%Y %I:%M:%S %p
 [blame]
 	date = format:%d.%m.%Y %I:%M:%S %p
+[alias]
+  dft = difftool
+  lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%s%n%C(yellow)%N'"
+  sw = switch
+  dt = switch --detach
+  br = branch
+  ba = branch -a
+  mr = merge
+  sq = merge --squash
