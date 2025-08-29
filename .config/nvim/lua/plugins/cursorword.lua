@@ -1,4 +1,4 @@
 return {
-  "echasnovski/mini.cursorword"
+  "nvim-mini/mini.cursorword"
   , opts = { delay = 0 }
 }

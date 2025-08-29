@@ -3,7 +3,7 @@ return {
   , lazy = true
   , dependencies = {
     "nvim-treesitter/nvim-treesitter"
-      , "echasnovski/mini.icons"
+      , "nvim-mini/mini.icons"
   }
   , opts = {
     backends = { "lsp", "treesitter" }

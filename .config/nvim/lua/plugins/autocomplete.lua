@@ -3,7 +3,7 @@ return {
   , build = { "cargo build --release" }
   , dependencies = {
     "xzbdmw/colorful-menu.nvim"
-    , "echasnovski/mini.icons"
+    , "nvim-mini/mini.icons"
   }
   , lazy = false
   , init = function()
