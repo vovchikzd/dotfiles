@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys, random, re, subprocess
+import sys, random, re, os, ezodf
 
 def get_tuple(line: str) -> tuple[str, int]:
     tup: list[str] = line.split(" ~ ")
@@ -15,14 +15,17 @@ def getRes(sTitle, nSize):
         return f"{sTitle} ({nSize})"
 
 def main() -> int:
-    sorted_tmp: list[tuple[str, int]] = list()
+    sorted_tmp: list[str] = list()
     with open("template.txt", "r") as tmp:
-        sorted_tmp = [get_tuple(line.strip()) for line in tmp.readlines()]
+        sorted_tmp = [getRes(*get_tuple(line.strip())) for line in tmp.readlines()]
 
-    # for _ in range(100):
-    #     random.shuffle(sorted_tmp)
+    ods_file_path = "/home/vovchik/dotfiles/list/Библиотека.ods"
+    if os.path.isfile(ods_file_path):
+        for row in list(ezodf.opendoc(ods_file_path).sheets[0].rows())[1:]:
+            if row[6].value == "нет" or row[6].value == "no":
+                sorted_tmp.append(f"{row[2].value} by {row[1].value}")
 
-    print(getRes(*random.choice(sorted_tmp)))
+    print(random.choice(sorted_tmp))
 
     return 0
 
