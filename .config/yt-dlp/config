@@ -6,6 +6,8 @@
 # tor proxy
 --proxy socks5://localhost:9150 
 
+--paths temp:/tmp/yt_dlp
+
 -R 0
 
 --extractor-retries 0
@@ -30,7 +32,8 @@
 
 --use-postprocessor DeArrow:when=pre_process
 
---force-keyframes-at-cuts
+# --force-keyframes-at-cuts
+--round-cuts-to-keyframes # unmerged option
 
 --embed-subs
 --sub-langs "en.*,ru.*"
