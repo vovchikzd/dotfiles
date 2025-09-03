@@ -1,5 +1,8 @@
 import lib.Logger as log
 from lib.commondef import *
+from lib.Video import Video
+from lib.Playlist import Playlist
+from lib.Channel import Channel
 import re, os
 
 class Config:
@@ -92,23 +95,41 @@ class Config:
                     self.bIsCreateSubFolders = False
                     log.info("Don't create any subfolders for channels or playlists")
 
+                case "--":
+                    self.saYtDlpCommonArgs = args.copy()
+                    args.clear()
+                    log.info(f"Common yt-dlp args: `{
+                      ' '.join([quoted(arg) if (' ' in arg or '"' in arg or "'" in arg) else arg for arg in self.saYtDlpCommonArgs])
+                    }`")
+
+                case "--vd":
+                    saVidArgs = list()
+                    while len(args) > 0:
+                        sVidArg = args.pop(0)
+                        saVidArgs.append(saVidArgs)
+                        if isUrl(sVidArg):
+                            break
+                    if (len(saVidArgs) == 0 or not isUrl(saVidArgs[-1])):
+                        log.error(f"'--vd' requires followed link, see '--help' for more information")
+                    self.aVideos.append(Video(saVidArgs))
+
                 case url if isUrl(url):
-                    self.addLink(url)
+                    pass
 
                 case _:
                     log.error(f"Unknown argument: {quoted(arg)}")
 
-    def addLink(self, url):
-        pass
-
     def __init__(self, argv):
         self.sStartCmd = ' '.join([quoted(arg) if (' ' in arg or '"' in arg or "'" in arg) else arg for arg in argv])
         args: list[str] = argv[1:]
+
         if len(args) == 0:
             log.error("Requires at least one argument, see '--help' for more information")
         if not any(isUrl(arg) for arg in args):
             log.error("Requires at least one link")
+
         self.parseArgs(args)
+
         if (self.sYtDlpExecPath is None or self.sYtDlpExecPath == ''):
             self.sYtDlpExecPath = findExecPath("yt-dlp")
             if self.sYtDlpExecPath != '':

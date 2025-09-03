@@ -21,11 +21,11 @@ playlist = "https://www.youtube.com/playlist?list=PLbtaNY5hOUWllKafXAqHG7aJVwPXO
 with open("down.py", "w") as out:
     print("#!/usr/bin/env python3\n", file=out)
     print("urls = [", file=out)
-    for cnt, url in enumerate(get_playlist_videos(playlist), 18):
+    for cnt, url in enumerate(get_playlist_videos(playlist), 33):
         print(f'  ["yt-dlp", "{url}", "-o", "{cnt:02}. {name}"],', file=out)
     print("]\n", file=out)
 
-    print("""import concurrent.futures, subprocess
+    print(r"""import concurrent.futures, subprocess
 
 def download(cmd):
     while True:
@@ -37,7 +37,18 @@ def download(cmd):
             continue
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    futures = [executor.submit(download, cmd) for cmd in urls]
+def progress(current, total, length=50):
+    fraction = current / total
+    fill = int(fraction * length) * '█'
+    padding = (length - len(fill)) * ' '
+    ending = '\033[?25h\n' if current == total else '\r'
+    print(f"\033[?25l\033[KProgress: |{fill}{padding}| {round(fraction * 100, 2)}% ({current}/{total})", end=ending)
 
-    concurrent.futures.wait(futures)""", file=out)
+
+total_length = len(urls)
+progress(0, total_length)
+with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    future_to_task = { executor.submit(download, cmd) for cmd in urls }
+
+    for i, _ in enumerate(concurrent.futures.as_completed(future_to_task), 1):
+        progress(i, total_length)""", file=out)

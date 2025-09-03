@@ -3,7 +3,7 @@
 import os, sys, subprocess, yt_dlp
 import lib.Logger as log
 from lib.commondef import *
-import lib.Config as Config
+from lib.Config import Config
 
 sHelpMessage = (
 """Simple yt-dlp wrapper to write download script for concurrent downloading
@@ -36,13 +36,28 @@ Options:
     --no-dir         doesn't create any subdirectory for channel/playlist,
                      unless otherwise set in channel/playlist settings,
                      see '--vd', '--ch', '--pl'
-    --               all after this use as yt-dlp arg for every download
+    --vd             allow to set some settings specific for one video
+                     all arguments between this and first url will be use as
+                     settings only for that video
+                     Allowed settings are:
+                       --num <num>    set number for a video
+                                      any invalid number will be ignored
+                       --name <name>  set name for the video instead of default
+                                      template '%(title)s [%(id)s](%(channel)s).%(ext)s'
+                                      if starts with number will overwrite '--num <num>'
+                       --dir <name>   set output directory <name>
+                       --force        forse the link be threated as video even if
+                                      it is not recodnized as such
+                       --args <args>  all between this and url will be used as yt-dlp args
+                                      overwrite '--' option
+    --               all after this will be used as yt-dlp args for every download
+                     can by overwritten, see '--vd', '--ch', '--pl'
 """
 )
 
 
 def main(argv):
-    conf = Config.Config(argv)
+    conf = Config(argv)
 
 
 if __name__ == "__main__":

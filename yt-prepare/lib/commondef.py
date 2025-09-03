@@ -1,6 +1,6 @@
 import validators, yt_dlp, os, sys, lib.Logger as log
 
-def quoted(msg: str):
+def quoted(msg: str | None):
     if (msg is None or msg == ''):
         return "''"
     
