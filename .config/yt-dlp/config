@@ -32,8 +32,7 @@
 
 --use-postprocessor DeArrow:when=pre_process
 
-# --force-keyframes-at-cuts
---round-cuts-to-keyframes # unmerged option
+--force-keyframes-at-cuts
 
 --embed-subs
 --sub-langs "en.*,ru.*"
