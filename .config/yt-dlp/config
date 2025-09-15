@@ -33,6 +33,7 @@
 --use-postprocessor DeArrow:when=pre_process
 
 # --force-keyframes-at-cuts
+--no-force-keyframes-at-cuts
 
 --embed-subs
 --sub-langs "en.*,ru.*"
@@ -40,4 +41,4 @@
 
 --mtime
 
---extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
+# --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
