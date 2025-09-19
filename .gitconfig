@@ -54,7 +54,7 @@
 	date = format:%d.%m.%Y %I:%M:%S %p
 [alias]
   dft = difftool
-  lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%B%n%C(yellow)%N'"
+  lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'"
   sw = switch
   dt = switch --detach
   br = branch
