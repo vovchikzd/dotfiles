@@ -31,7 +31,7 @@ def main():
                     sNewTitle = sNewTitle.replace("ё", "е")
                 if sNewTitle != file:
                     os.rename(sFilePath, f"{sDir}/{sNewTitle}")
-                    print(f"renamed '{sFilePath}' -> '{sDir}/{sNewTitle}'")
+                    print(f"renamed \"{sFilePath}\" -> '{sDir}/{sNewTitle}'")
 
 if __name__ == "__main__":
     main()
