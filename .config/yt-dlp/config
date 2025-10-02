@@ -41,4 +41,6 @@
 
 --mtime
 
+-t sleep
+
 --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
