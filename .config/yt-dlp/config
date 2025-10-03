@@ -21,6 +21,7 @@
 --cookies-from-browser firefox
 
 --embed-metadata
+--embed-thumbnail
 
 --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
 
