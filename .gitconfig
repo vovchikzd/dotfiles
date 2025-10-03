@@ -61,3 +61,4 @@
   ba = branch -a
   mr = merge
   sq = merge --squash
+  cx = cherry-pick -x
