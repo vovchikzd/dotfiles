@@ -12,14 +12,14 @@ return {
   , opts = {
     keymap = {
       preset = "super-tab"
-      , ['<CR>'] = {
-        function(cmp)
-          if cmp.snippet_active() then return cmp.accept()
-          else return cmp.select_and_accept() end
-        end,
-        'snippet_forward',
-        'fallback'
-      }
+      -- , ['<CR>'] = {
+      --   function(cmp)
+      --     if cmp.snippet_active() then return cmp.accept()
+      --     else return cmp.select_and_accept() end
+      --   end,
+      --   'snippet_forward',
+      --   'fallback'
+      -- }
       , ['<C-CR>'] = { 'show', 'show_documentation', 'hide_documentation' }
     } -- :h blink-cmp-config-keymap
     , appearance = { nerd_font_variant = "normal" }
