@@ -9,12 +9,10 @@
   commentChar = "//"
   commentString = "//"
 [diff]
-  tool = difftastic
+  external = difft
   renames = copies
 [difftool]
   prompt = false
-[difftool "difftastic"]
-  cmd = difft "$LOCAL" "$REMOTE"
 [pager]
   difftool = true
 [init]
@@ -54,8 +52,8 @@
 [blame]
 	date = format:%d.%m.%Y %I:%M:%S %p
 [alias]
-  dft = difftool
   lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'"
+  history = "log -p --ext-diff --pretty=format:'%C(magenta)%H %C(brightcyan)%ad %C(auto)%n%s'"
   sw = switch
   dt = switch --detach
   br = branch
