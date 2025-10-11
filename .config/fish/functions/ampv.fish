@@ -1,3 +1,3 @@
 function ampv --wraps mpv
-  mpv --no-resume-playback --loop-file=inf --really-quiet $argv
+  mpv --no-resume-playback --loop-playlist=inf $argv
 end
