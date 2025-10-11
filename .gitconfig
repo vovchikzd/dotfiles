@@ -51,6 +51,8 @@
 	date = format:%d.%m.%Y %I:%M:%S %p
 [blame]
 	date = format:%d.%m.%Y %I:%M:%S %p
+[merge]
+    conflictStyle = "diff3"
 [alias]
   lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'"
   history = "log -p --ext-diff --pretty=format:'%an%n%C(magenta)%H %C(brightcyan)%ad %C(auto)%n%s'"
@@ -61,3 +63,4 @@
   mr = merge
   sq = merge --squash
   cx = cherry-pick -x
+  st = status

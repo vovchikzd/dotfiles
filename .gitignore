@@ -4,4 +4,4 @@ __pycache__
 sudoStart
 hyprpaper.conf
 wallpapers/
-waybar-restart.py
+waybar_restart.py
