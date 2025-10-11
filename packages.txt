@@ -62,6 +62,7 @@ id3lib
 inotify-tools
 iw
 java-runtime-common
+jujutsu
 kdf
 keepassxc
 kotlin
