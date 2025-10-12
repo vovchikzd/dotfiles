@@ -1,3 +1,3 @@
 function cyay
-  yay -Sy &>/dev/null; and yay -Qu | sort; and yay -Qu | wc -l
+  yay -Sy &>/dev/null; and yay -Qu | sort | tee /dev/stderr | wc -l
 end
