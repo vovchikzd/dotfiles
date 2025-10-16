@@ -22,6 +22,7 @@
 
 --embed-metadata
 --embed-thumbnail
+--convert-thumbnails png
 
 --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
 
