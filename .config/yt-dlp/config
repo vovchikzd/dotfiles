@@ -18,7 +18,7 @@
 
 --abort-on-unavailable-fragments
 
---cookies-from-browser firefox
+# --cookies-from-browser firefox
 
 --embed-metadata
 --embed-thumbnail
@@ -44,5 +44,8 @@
 --mtime
 
 -t sleep
+-t mkv
 
---extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
+# --mark-watched
+
+# --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
