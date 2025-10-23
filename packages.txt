@@ -23,6 +23,7 @@ cmake
 cpio
 ctags
 dbeaver
+deno
 downgrade
 doxygen
 doxygen-docs
