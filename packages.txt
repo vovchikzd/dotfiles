@@ -2,6 +2,7 @@
 amd-ucode
 ani-cli
 ascii
+asciiquarium
 at
 b3sum
 base
@@ -22,6 +23,7 @@ clipse
 cmake
 cpio
 ctags
+dateutils
 dbeaver
 deno
 downgrade
@@ -45,6 +47,7 @@ glfw
 glm
 glow
 gnuplot
+grex
 grim
 grub
 gst-plugin-pipewire
