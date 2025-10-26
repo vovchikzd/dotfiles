@@ -24,6 +24,11 @@
 --embed-thumbnail
 --convert-thumbnails png
 
+# --js-runtimes deno
+# --js-runtimes node
+# --remote-components ejs:github
+# --remote-components ejs:npm
+
 --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
 
 --compat-options filename-sanitization
@@ -46,6 +51,6 @@
 -t sleep
 -t mkv
 
-# --mark-watched
+--mark-watched
 
 # --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
