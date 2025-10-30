@@ -18,7 +18,6 @@ local servers = {
   , pyright = {}
   , neocmake = {}
   , tinymist = {}
-  , fish_lsp = {}
   , bashls = {}
 }
 
