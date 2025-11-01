@@ -24,27 +24,27 @@ class Config:
     def __init__(self, args: list[str] | None = None):
         if args is None or len(args) == 0:
             return
+        saAllArgs: list[str] = list()
+        for sArg in args:
+            if sArg.startswith("--"):
+                saAllArgs.append(sArg[2:])
+            elif sArg.startswith("-"):
+                for ch in sArg[1:]:
+                    saAllArgs.append(ch)
+            else:
+                print(f"Invalid arg `{sArg}`; ignored")
 
-        if "--help" in args or "-h" in args:
+        if "help" in saAllArgs or "h" in saAllArgs:
             print(sHelpMessage, end='')
             sys.exit(0)
 
-        if "--quiet" in args or "-q" in args:
+        if "quiet" in saAllArgs or "q" in saAllArgs:
             devnull = open(os.devnull, "w")
             sys.stdout = devnull
             sys.stderr = devnull
 
-        while len(args) > 0:
-            sOrigArg = args.pop(0)
-            arg: str | None = None
-            if sOrigArg.startswith("--"):
-                arg = sOrigArg[2:]
-            elif sOrigArg.startswith("-"):
-                arg = sOrigArg[1]
-                if len(sOrigArg) > 2:
-                    args = list(sOrigArg[2:]) + args
-            else:
-                arg = sOrigArg
+        while len(saAllArgs) > 0:
+            arg = saAllArgs.pop(0)
             match arg:
                 case "all" | "a":
                     self.bIsGroupSingle = True
@@ -55,10 +55,10 @@ class Config:
                 case "quiet" | "q":
                     pass
                 case _:
-                    print(f"Unknown arg: '{sOrigArg}'. Ingored.", file=sys.stderr)
+                    print(f"Unknown arg: '{arg}'. Ingored.", file=sys.stderr)
 
 def main():
-    conf = Config(sys.argv[1:])
+    conf: Config = Config(sys.argv[1:])
     sFolderToFiles: dict[str, list[str]] = dict()
     sToFindChannel: list[tuple[str, str]] = list()
     saIgnoredFiles: list[str] = list()
@@ -100,7 +100,7 @@ def main():
             os.rename(sFile, os.path.join(sFolder, sFile))
 
     if len(sToFindChannel) > 0:
-        sFindDir = "find_channel_vids"
+        sFindDir: str = "find_channel_vids"
         if not os.path.isdir(sFindDir):
             os.mkdir(sFindDir)
         if conf.bIsShowGroups:
