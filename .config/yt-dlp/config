@@ -29,7 +29,7 @@
 # --remote-components ejs:github
 # --remote-components ejs:npm
 
---sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo
+--sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo #,hook
 
 --compat-options filename-sanitization
 
