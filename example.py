@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import yt_dlp, subprocess
+from datetime import datetime
 
 def get_playlist_videos(url):
     ydl_opts = {
@@ -19,18 +20,24 @@ def get_playlist_videos(url):
 file = "down.py"
 name = "%(title)s [%(id)s](%(channel)s).%(ext)s"
 playlist = "https://www.youtube.com/playlist?list=PLbtaNY5hOUWllKafXAqHG7aJVwPXOhH-G"
-# playlist = "https://www.youtube.com/@SanctusEchinus/streams"
+# playlist = "https://www.youtube.com/playlist?list=PLbtaNY5hOUWkH93BO6HfijWawIvDl8xfN"
 with open(file, "w") as out:
     print("#!/usr/bin/env python3\n", file=out)
     print("urls = [", file=out)
     vids = get_playlist_videos(playlist)
-    for cnt, url in enumerate(vids, 1):
-        print(f'  ["yt-dlp", "{url}", "-o", "{cnt:02}. {name}", "--paths", "temp:."],', file=out)
+    align = len(str(len(vids)))
+    for cnt, url in enumerate(vids, 6):
+        print(f'  ["yt-dlp", "{url}", "-o", "{cnt:0{align}}. {name}", "--paths", "temp:."],', file=out)
+    print(f'  ["yt-dlp", "https://www.youtube.com/watch?v=r5w-8wGRKt8", "-o", "thinking/{name}", "--paths", "temp:."],', file=out)
+    print(f'  ["yt-dlp", "https://www.youtube.com/watch?v=6gMDOrizAbQ", "-o", "thinking/{name}", "--paths", "temp:."],', file=out)
+    print(f'  ["yt-dlp", "https://www.youtube.com/watch?v=OgYzJuCto44", "-o", "thinking/{name}", "--paths", "temp:."],', file=out)
+    print(f'  ["yt-dlp", "https://youtu.be/ISAAyZzCcbE?si=P-i_A6_IEdcMBp9H", "-o", "/home/vovchik/Disks/1Tb/Видео/Видео для телефона/reload/{name}", "--paths", "temp:."],', file=out)
+    print(f'  ["yt-dlp", "https://youtu.be/1hjkJE4utss?si=CenN4d-y9B2bDSpK", "-o", "/home/vovchik/Disks/1Tb/Видео/Видео для телефона/reload/{name}", "--paths", "temp:."],', file=out)
     print("]\n", file=out)
 
     print(r"""import concurrent.futures, subprocess, os
 
-MAX_WORKERS=5
+MAX_WORKERS=1
 total_length = len(urls)
 bIsShowProgressBar = MAX_WORKERS > 1 and total_length > 1
 
