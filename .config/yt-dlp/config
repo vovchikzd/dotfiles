@@ -6,7 +6,7 @@
 # tor proxy
 --proxy socks5://localhost:9150 
 
---paths temp:/tmp/yt_dlp
+# --paths temp:/tmp/yt_dlp
 
 -R 0
 
@@ -29,7 +29,7 @@
 # --remote-components ejs:github
 # --remote-components ejs:npm
 
---sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo #,hook
+--sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
 
 --compat-options filename-sanitization
 
