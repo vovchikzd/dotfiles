@@ -8,6 +8,7 @@ if status is-interactive
   set -g bformat "bv*+ba / b"
   set -g name '%(title)s [%(id)s](%(channel)s).%(ext)s'
   set -g name_orig '%(title)s [%(id)s](%(channel)s).orig.%(ext)s'
+  set -g channel_folder_name "%(channel)s/$name"
   set -g numbering "%(playlist_index)s. $name"
   set -g playlist "%(playlist)s [%(playlist_id)s]"
   set -g playlist_numbering "$playlist/$numbering"
