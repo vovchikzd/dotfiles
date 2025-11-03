@@ -57,6 +57,24 @@ class Config:
                 case _:
                     print(f"Unknown arg: '{arg}'. Ingored.", file=sys.stderr)
 
+
+def sanitaze_name(sName: str) -> str:
+    if sName is None or sName == "":
+        return sName
+
+    while sName.startswith('.'):
+        sName = sName[1:]
+
+    return (sName
+            .replace("&", "_")
+            .replace(":", "")
+            .replace("!", "")
+            .replace("/", "_")
+            .replace("|", "_")
+            .replace("\\", "_")
+            )
+    
+
 def main():
     conf: Config = Config(sys.argv[1:])
     sFolderToFiles: dict[str, list[str]] = dict()
@@ -73,7 +91,7 @@ def main():
 
         saChannel: list[str] = re.findall(r"^.*\[.*\]\((.*)\)\..+$", sFile)
         if len(saChannel) == 1:
-            sFolder = saChannel[0]
+            sFolder = sanitaze_name(saChannel[0])
             sFolderToFiles[sFolder] = sFolderToFiles.get(sFolder, list()) + [sFile]
         else:
             saId: list[str] = re.findall(r"^.*\[(.*)\]\..+$", sFile)
