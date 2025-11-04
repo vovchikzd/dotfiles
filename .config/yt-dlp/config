@@ -24,10 +24,10 @@
 --embed-thumbnail
 --convert-thumbnails png
 
-# --js-runtimes deno
-# --js-runtimes node
-# --remote-components ejs:github
-# --remote-components ejs:npm
+--js-runtimes deno
+--js-runtimes node
+--remote-components ejs:github
+--remote-components ejs:npm
 
 --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
 
