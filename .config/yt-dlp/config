@@ -18,7 +18,7 @@
 
 --abort-on-unavailable-fragments
 
-# --cookies-from-browser firefox
+--cookies-from-browser firefox
 
 --embed-metadata
 --embed-thumbnail
@@ -45,6 +45,8 @@
 --embed-subs
 --sub-langs "en.*,ru.*"
 --no-write-auto-subs
+--convert-subs srt
+--ppa "ModifyChapters:-c:s copy"
 
 --mtime
 
