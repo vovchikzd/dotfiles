@@ -6,6 +6,7 @@ function FindProxyForURL(url, host) {
       || dnsDomainIs(host, "linktr.ee")
       || dnsDomainIs(host, "anilibria.top")
       || dnsDomainIs(host, "gosuslugi.ru")
+      || dnsDomainIs(host, "tr.anidub.com")
       ) {
         return "SOCKS5 127.0.0.1:9150";
     }
