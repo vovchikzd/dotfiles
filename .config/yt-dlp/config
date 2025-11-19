@@ -6,7 +6,7 @@
 # tor proxy
 --proxy socks5://localhost:9150 
 
-# --paths temp:/tmp/yt_dlp
+--paths temp:"/home/vovchik/Disks/1Tb/Видео/Delete/ytdl_tmp"
 
 -R 0
 
@@ -14,11 +14,11 @@
 
 --fragment-retries 0
 
---abort-on-error
+# --abort-on-error
 
 --abort-on-unavailable-fragments
 
---cookies-from-browser firefox
+# --cookies-from-browser firefox
 
 --embed-metadata
 --embed-thumbnail
@@ -45,7 +45,7 @@
 --embed-subs
 --sub-langs "en.*,ru.*"
 --no-write-auto-subs
---convert-subs srt
+--convert-subs vtt
 --ppa "ModifyChapters:-c:s copy"
 
 --mtime
@@ -54,5 +54,3 @@
 -t mkv
 
 --mark-watched
-
-# --extractor-args "youtube:player-client=default,-tv,web_safari,web_embedded"
