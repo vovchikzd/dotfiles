@@ -3,17 +3,16 @@ if status is-interactive
   set dlt '/home/vovchik/Disks/1Tb/Видео/Delete/'
   set plt '/home/vovchik/Disks/1Tb/Видео/playlists/'
   
-  set -g format "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba / b"
-  set -g lformat "bv*[height=1080]+ba / bv*+ba / b"
-  set -g bformat "bv*+ba / b"
-  set -g name '%(title)s [%(id)s](%(channel)s).%(ext)s'
-  set -g name_orig '%(title)s [%(id)s](%(channel)s).orig.%(ext)s'
-  set -g channel_folder_name "%(channel)s/$name"
-  set -g numbering "%(playlist_index)s. $name"
-  set -g playlist "%(playlist)s [%(playlist_id)s]"
-  set -g playlist_numbering "$playlist/$numbering"
-  set -g tor_proxy 'socks5://localhost:9150'
-  # autonumber yt-dlp --autonumber-start 14 $URL -o "%(autonumber)s. %(title)s [%(id)s].%(ext)s"
+  set -gx format "bv*[height=720]+ba / bv*[height=1080]+ba / bv*+ba / b"
+  set -gx lformat "bv*[height=1080]+ba / bv*+ba / b"
+  set -gx bformat "bv*+ba / b"
+  set -gx name '%(title)s [%(id)s](%(channel)s).%(ext)s'
+  set -gx name_orig '%(title)s [%(id)s](%(channel)s).orig.%(ext)s'
+  set -gx channel_folder_name "%(channel)s/$name"
+  set -gx numbering "%(playlist_index)s. $name"
+  set -gx playlist "%(playlist)s [%(playlist_id)s]"
+  set -gx playlist_numbering "$playlist/$numbering"
+  set -gx tor_proxy 'socks5://localhost:9150'
 
   set fish_user_paths /home/vovchik/.cargo/bin $HOME/.local/bin
 
