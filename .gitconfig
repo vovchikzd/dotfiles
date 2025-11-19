@@ -70,3 +70,4 @@
   st = status
   cl = clean -d
   rlb = !git reset --hard HEAD && git clean -d
+  tags = tag --sort=v:refname
