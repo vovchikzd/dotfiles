@@ -1,3 +1,3 @@
 function rsync --wraps rsync
-  command rsync -rPSahv --preallocate --delete-delay --exclude='**/lost+found/' $argv
+  command rsync -rPSahv --preallocate --delete-delay --exclude='**/lost+found/' --exclude='**/ytdl_tmp/' $argv
 end
