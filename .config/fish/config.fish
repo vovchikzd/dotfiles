@@ -10,7 +10,7 @@ if status is-interactive
   set -gx name_orig '%(title)s [%(id)s](%(channel)s).orig.%(ext)s'
   set -gx channel_folder_name "%(channel)s/$name"
   set -gx numbering "%(playlist_index)s. $name"
-  set -gx playlist "%(playlist)s [%(playlist_id)s]"
+  set -gx playlist "%(playlist)s"
   set -gx playlist_numbering "$playlist/$numbering"
   set -gx tor_proxy 'socks5://localhost:9150'
 
