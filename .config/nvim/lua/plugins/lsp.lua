@@ -10,7 +10,7 @@ local servers = {
     settings = {
       enable_build_on_save = true
       , enable_argument_placeholders = false
-      , highlight_global_var_declarations = true
+      , highlight_global_var_declarations = false
     }
   }
   , rust_analyzer = {}
