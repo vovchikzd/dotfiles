@@ -59,13 +59,14 @@ class Config:
 
 
 def sanitaze_name(sName: str) -> str:
-    if sName is None or sName == "":
-        return sName
+    sFolderName = sName.strip()
+    if sFolderName is None or sFolderName == "":
+        return sFolderName
 
-    while sName.startswith('.'):
-        sName = sName[1:]
+    while sFolderName.startswith('.'):
+        sFolderName = sFolderName[1:]
 
-    return (sName
+    return (sFolderName
             .replace("&", "_")
             .replace(":", "")
             .replace("!", "")
@@ -128,7 +129,7 @@ def main():
                 if conf.bIsShowGroups:
                     print(f"  {sFile}")
                 os.rename(sFile, os.path.join(sFindDir, sFile))
-                print(f"{sUrl} --> {sFile}", file=fLinks)
+                print(f"{sUrl}", file=fLinks)
 
     # if len(saIgnoredFiles) > 0:
     #     print("Ignored Files:")
