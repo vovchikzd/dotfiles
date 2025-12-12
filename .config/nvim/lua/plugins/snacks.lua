@@ -24,15 +24,15 @@ local grep = function()
   end
 end
 
-local explorer = function()
-  local current_file = vim.fn.expand("%:p")
-  local res, _ = string.find(current_file, "/.", 1, true)
-  if res then
-    Snacks.explorer.open({ hidden = true })
-  else
-    Snacks.explorer.open()
-  end
-end
+-- local explorer = function()
+--   local current_file = vim.fn.expand("%:p")
+--   local res, _ = string.find(current_file, "/.", 1, true)
+--   if res then
+--     Snacks.explorer.open({ hidden = true })
+--   else
+--     Snacks.explorer.open()
+--   end
+-- end
 
 
 return {
@@ -43,7 +43,7 @@ return {
     indent = { animate = { enabled = false } }
     , scope = { enabled = true }
     , scroll = { enabled = false }
-    , explorer = {}
+    , explorer = { enabled = false }
 
     , image = { convert = { notify = false } }
     , picker = {
@@ -57,6 +57,6 @@ return {
     , {"<C-/>", function() Snacks.picker.grep({ dirs = { vim.fn.expand("%:p") }}) end, desc = "Grep Current File (Buffer)"}
     , {"<leader>f", grep, desc = "Grep Files"}
 
-    , {"<leader>e", explorer, desc = "File Explorer"}
+    -- , {"<leader>e", explorer, desc = "File Explorer"}
   }
 }
