@@ -1,0 +1,16 @@
+font-family = FiraCode Nerd Font
+font-size = 11
+font-shaping-break = no-cursor
+command = fish
+theme = Gruvbox Dark
+window-inherit-working-directory = false
+gtk-single-instance = false
+resize-overlay = never
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+app-notifications = no-clipboard-copy
+window-padding-x = 10
+window-padding-y = 7
+confirm-close-surface = false
+cursor-style = block
+shell-integration-features = no-cursor
