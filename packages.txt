@@ -119,6 +119,7 @@ pyside6
 python-fonttools
 python-humanize
 python-matplotlib
+python-openai-whisper
 python-opencv
 python-pillow
 python-pip
@@ -143,6 +144,7 @@ spoofdpi-bin
 startup-notification
 steam
 stow
+strace
 swaync
 telegram-desktop
 termdown
