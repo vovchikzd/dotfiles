@@ -14,7 +14,7 @@
 
 --fragment-retries 0
 
---abort-on-error
+--no-abort-on-error
 
 --abort-on-unavailable-fragments
 
@@ -37,8 +37,6 @@
 
 --sponsorblock-chapter-title '%(category_names)l'
 
---use-postprocessor DeArrow:when=pre_process
-
 --force-keyframes-at-cuts
 # --no-force-keyframes-at-cuts
 
@@ -47,6 +45,7 @@
 --no-write-auto-subs
 --convert-subs vtt
 --ppa "ModifyChapters:-c:s copy"
+--ppa "ThumbnailsConvertor:-vf zscale=w=-1:h=1080:f=lanczos -q:v 0"
 
 --mtime
 
