@@ -13,4 +13,5 @@ window-padding-x = 10
 window-padding-y = 7
 confirm-close-surface = false
 cursor-style = block
+cursor-style-blink = false
 shell-integration-features = no-cursor
