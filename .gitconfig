@@ -1,6 +1,7 @@
 [user]    
   email = vovchikzd@gmail.com
   name = vovchikzd
+
 [core]
   editor = nvim
   compression = 9
@@ -8,58 +9,89 @@
   preloadindex = true
   commentChar = "//"
   commentString = "//"
+
 [diff]
   external = difft
   renames = copies
+
 [difftool]
   prompt = false
+
 [pager]
   difftool = true
+
 [init]
   defaultBranch = master
+
 [rebase]
   autoStash = true
   updateRefs = true
   autoSquash = false
   missingCommitsCheck = warn
+
 [remote "origin"]
   prune = true
+
 [fetch]
   prune = true
   pruneTags = true
+
 [pull]
   ff = only
+  default = current
+  rebase = true
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
+
 [advice]
   addIgnoredFile = false
+  addEmptyPathspec = false
+  pushNonFastForward = false
+  statusHints = false
+
 [status]
   branch = true
   showStash = true
   showUntrackedFiles = all
+
 [push]
   autoSetupRemote = true
   default = current
+  followTags = true
+
 [color "decorate"]
   HEAD = red
   branch = blue
   tag = yellow
   remoteBranch = magenta
+
 [color "branch"]
   current = magenta
   local = cyan
   remote = yellow
   upstream = green
   plain = blue
+
 [log]
 	date = format:%d.%m.%Y %I:%M:%S %p
+
 [blame]
 	date = format:%d.%m.%Y %I:%M:%S %p
+
 [merge]
   conflictStyle = "diff3"
+
 [clean]
   requireForce = false
+
 [alias]
-  lg = "log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white) %an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'"
-  history = "log -p --ext-diff --pretty=format:'%an%n%C(magenta)%H %C(brightcyan)%ad %C(auto)%n%s'"
+  lg = log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'
+  history = log -p --ext-diff --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad %C(auto)%n%s'
+  hst = history
   sw = switch
   dt = switch --detach
   br = branch
@@ -67,7 +99,18 @@
   mr = merge
   sq = merge --squash
   cx = cherry-pick -x
-  st = status
+  st = status --short
   cl = clean -d
   rlb = !git reset --hard HEAD && git clean -d
-  tags = tag --sort=v:refname
+  sync = "!f() { \
+    TARGET_BRANCH=${1:-master}; \
+    CURRENT_BRANCH=$(git branch --show-current); \
+    if [ \"$TARGET_BRANCH\" = \"$CURRENT_BRANCH\" ]; then \
+      printf '\\x1b[1;31m[ERROR]\\x1b[0m Trying sync %s branch with itself\\n' \"$TARGET_BRANCH\"; \
+      exit 1; \
+    fi; \
+    git switch \"$TARGET_BRANCH\" && \
+    git pull && \
+    git switch \"$CURRENT_BRANCH\" && \
+    git merge \"$TARGET_BRANCH\" --no-edit; \
+  }; f"
