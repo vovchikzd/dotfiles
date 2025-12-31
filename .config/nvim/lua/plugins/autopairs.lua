@@ -18,6 +18,11 @@ return {
         :with_move(cond.done())
         :with_del(cond.done())
         :with_cr(cond.none())
+      , Rule('|', '|', "zig")
+        :with_pair(cond.before_text("=> "))
+        :with_move(cond.done())
+        :with_del(cond.done())
+        :with_cr(cond.none())
     })
 
   end
