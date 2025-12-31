@@ -14,11 +14,19 @@ def main():
             md5(open(sSeconFile, 'rb').read()).hexdigest()
     ):
         sSeconFile = random.choice(saFilesPaths)
+
     with open(sConfigFile, "w") as fConfigFile:
-        print(f"preload = {sFirstFile}", file=fConfigFile)
-        print(f"preload = {sSeconFile}", file=fConfigFile)
-        print(f"wallpaper = DP-2, {sFirstFile}", file=fConfigFile)
-        print(f"wallpaper = DP-3, {sSeconFile}", file=fConfigFile)
+        print( "wallpaper {", file=fConfigFile)
+        print( "  monitor = DP-2", file=fConfigFile)
+        print(f"  path = {sFirstFile}", file=fConfigFile)
+        print( "  fit_mode = cover", file=fConfigFile)
+        print( "}", file=fConfigFile)
+        print(file=fConfigFile)
+        print( "wallpaper {", file=fConfigFile)
+        print( "  monitor = DP-3", file=fConfigFile)
+        print(f"  path = {sSeconFile}", file=fConfigFile)
+        print( "  fit_mode = cover", file=fConfigFile)
+        print( "}", file=fConfigFile)
     subprocess.Popen(
         "/usr/bin/hyprpaper"
         , start_new_session=True
