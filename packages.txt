@@ -1,4 +1,5 @@
 7zip
+alacritty
 amd-ucode
 ani-cli
 ascii
@@ -39,9 +40,10 @@ ffmpegthumbnailer
 ffnvcodec-headers
 firefox
 fish
-fish-lsp
 flameshot-git
 foliate
+gdb
+ghostty
 git
 glfw
 glm
@@ -106,6 +108,7 @@ openssh
 otf-font-awesome
 ouch
 pavucontrol-qt
+perf
 pinta
 pipewire
 pipewire-alsa
@@ -140,7 +143,6 @@ scons
 sdl2-compat
 sha3sum
 slurp
-spoofdpi-bin
 startup-notification
 steam
 stow
@@ -183,7 +185,6 @@ xpadneo-dkms
 yad
 yarn
 zen-browser-bin
-zig-git
 zip
 zram-generator
 zsh
