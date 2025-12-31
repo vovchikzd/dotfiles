@@ -2,7 +2,7 @@
 -- Runs write-watch-later-config periodically
 
 local options = require 'mp.options'
-local o = { save_interval = 10 }
+local o = { save_interval = 300 }
 options.read_options(o)
 
 local function save()
