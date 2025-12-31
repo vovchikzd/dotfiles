@@ -29,23 +29,22 @@
 --remote-components ejs:github
 --remote-components ejs:npm
 
---sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
-
 --compat-options filename-sanitization
 
---sponsorblock-mark chapter
-
---sponsorblock-chapter-title '%(category_names)l'
-
---force-keyframes-at-cuts
-# --no-force-keyframes-at-cuts
+# since it break video/audio, use custom script through --exec
+--exec '~/dotfiles/spbl_custom.py %(filepath,_filename|)q %(webpage_url)s %(duration)s'
+# --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
+#
+# --sponsorblock-mark chapter
+#
+# --sponsorblock-chapter-title '%(category_names)l'
 
 --embed-subs
 --sub-langs "en.*,ru.*"
 --no-write-auto-subs
 --convert-subs vtt
 --ppa "ModifyChapters:-c:s copy"
---ppa "ThumbnailsConvertor:-vf zscale=w=-1:h=1080:f=lanczos -q:v 0"
+--ppa "ThumbnailsConvertor:-vf zscale=w=-2:h=1080:f=lanczos -q:v 0"
 
 --mtime
 
