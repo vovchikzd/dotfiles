@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import os, sys, subprocess, datetime, humanize, mimetypes
+import os, sys, subprocess, mimetypes
+from datetime import timedelta
 
 true, false = True, False
 
@@ -77,11 +78,11 @@ def main():
         if config.isSort:
             aFileDur.sort(reverse=config.isReverce, key=lambda x: x[1])
             for sFile, nDur in aFileDur:
-                print(f"{humanize.precisedelta(datetime.timedelta(seconds=nDur))} -- {os.path.basename(sFile)}")
+                print(f"{timedelta(seconds=nDur)} -- {os.path.basename(sFile)}")
             print()
 
         nTotalTime = sum([tup[1] for tup in aFileDur])
-        print(humanize.precisedelta(datetime.timedelta(seconds=nTotalTime)))
+        print(timedelta(seconds=nTotalTime))
         print(f"Number of files: {len(aFileDur)}")
 
 if __name__ == "__main__":
