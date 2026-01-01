@@ -47,12 +47,8 @@ def main(sFilePath, sWebUrl, sDuration):
         exit(0)
 
     nDuration = float(sDuration)
-    if round(spnbl_segments[-1].end) == nDuration:
+    if round(spnbl_segments[-1].end) >= nDuration:
         spnbl_segments[-1].end = nDuration
-
-    if any([seg.end > nDuration for seg in spnbl_segments]):
-        print("Looks like file is ulready trimmed")
-        exit(0)
 
     naCleanSkipRanges = cleanRanges([(s.start, s.end) for s in spnbl_segments])
     naSaveRanges = getSaveRanges(naCleanSkipRanges, nDuration)
