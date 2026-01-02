@@ -26,7 +26,7 @@
 [rebase]
   autoStash = true
   updateRefs = true
-  autoSquash = false
+  autoSquash = true
   missingCommitsCheck = warn
 
 [remote "origin"]
@@ -101,7 +101,8 @@
   cx = cherry-pick -x
   st = status --short
   cl = clean -d
-  rlb = !git reset --hard HEAD && git clean -d
+  rollback = !git reset --hard HEAD && git clean -d
+  rlb = rollback
   sync = "!f() { \
     TARGET_BRANCH=${1:-master}; \
     CURRENT_BRANCH=$(git branch --show-current); \
