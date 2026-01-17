@@ -1,7 +1,7 @@
 function rsup --description 'Update rust and all apps'
   command rustup update; or return $status
   set progs bat cpc fd-find procs ripgrep sd starship tokei dua-cli zoxide\
-    difftastic neocmakelsp yazi-fm yazi-cli eza tealdeer bacon mdbook\
+    difftastic neocmakelsp yazi-build eza tealdeer bacon mdbook\
     serie repgrep typst-cli
   # bottom 
   for prog in $progs
