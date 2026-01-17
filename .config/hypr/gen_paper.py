@@ -27,6 +27,7 @@ def main():
         print(f"  path = {sSeconFile}", file=fConfigFile)
         print( "  fit_mode = cover", file=fConfigFile)
         print( "}", file=fConfigFile)
+        print( "splash = false", file=fConfigFile)
     subprocess.Popen(
         "/usr/bin/hyprpaper"
         , start_new_session=True
