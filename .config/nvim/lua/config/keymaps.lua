@@ -34,7 +34,14 @@ keymap('n', "<leader>[", "O<Esc>0\"_D", opts("Insert newline above and stay in n
 
 keymap('n', "<S-l>", "<cmd>bnext<CR>", opts("Go to next buffer"))
 keymap('n', "<S-h>", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
-keymap('n', "<leader>bd", "<cmd>bd<CR>", opts("Close current buffer (tab)"))
+local bd_func = function ()
+  vim.cmd("bd")
+  if vim.fn.bufname(vim.fn.bufnr()) == '' and not vim.api.nvim_buf_get_option(0, 'modified') then
+    vim.cmd("q")
+  end
+end
+keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
+-- keymap('n', "<leader>d", "<cmd>bd<CR>", opts("Close current buffer (tab)"))
 
 keymap('n', "gl", '$', opts("Goto end of line"))
 keymap('n', "gh", '^', opts("Goto first char in line"))
