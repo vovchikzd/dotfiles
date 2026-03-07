@@ -4,7 +4,7 @@
 -o '%(title)s [%(id)s](%(channel)s).%(ext)s'
 
 # tor proxy
---proxy socks5://localhost:9150 
+# --proxy socks5://localhost:9150 
 
 --paths temp:"/home/vovchik/Disks/1Tb/Видео/Delete/ytdl_tmp"
 
@@ -18,7 +18,7 @@
 
 --abort-on-unavailable-fragments
 
-# --cookies-from-browser firefox
+--cookies-from-browser firefox
 
 --embed-metadata
 --embed-thumbnail

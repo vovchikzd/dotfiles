@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
+# todo: rewrite
 
-import subprocess, sys, re
+import sys, re
+from subprocess import run as def_run
+
+def run(*args, **kwargs):
+    kwargs["check"] = True
+    return def_run(*args, **kwargs)
 
 true = True
 false = False
@@ -37,7 +43,7 @@ class Config:
     def getCurrentWorkspace() -> str:
         saCmd = ["hyprctl", "activeworkspace"]
         try:
-            subRun = subprocess.run(saCmd, capture_output=true)
+            subRun = run(saCmd, capture_output=true)
             sOutput = subRun.stdout.decode("utf-8")
             saId = re.findall(r'.*ID (\d\d?).*', sOutput)
             sResultWorkspace = None
@@ -65,7 +71,10 @@ class Config:
                 case "--":
                     for arg in args:
                         if ' ' in arg:
-                            self.saToDispatch.append(f"'{arg}'")
+                            if "'" in arg:
+                                self.saToDispatch.append(f'"{arg}"')
+                            else:
+                                self.saToDispatch.append(f"'{arg}'")
                         else:
                             self.saToDispatch.append(arg)
                     args.clear()
@@ -100,7 +109,7 @@ def main():
     else:
         if conf.bIsShowCmd:
             print(' '.join(saToExec))
-        subprocess.run(saToExec)
+        run(saToExec)
 
 if __name__ == "__main__":
     main()

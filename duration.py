@@ -3,6 +3,12 @@
 import os, sys, subprocess, mimetypes
 from datetime import timedelta
 
+def_print = print
+
+def print(*args, **kwargs):
+    kwargs["flush"] = False
+    def_print(*args, **kwargs)
+
 true, false = True, False
 
 def get_duration(filename: str) -> float:
@@ -53,7 +59,7 @@ class Config:
                     self.isSort = true
                     self.isReverce = false
                 case _:
-                    print(f"Unkhown arg: {arg}", file=sys.stderr)
+                    def_print(f"Unkhown arg: {arg}", file=sys.stderr)
                     exit(1)
 
 

@@ -7,5 +7,6 @@ function rsync --wraps rsync
     --exclude='**/.build/' \
     --exclude='**/.zig-cache/' \
     --exclude='**/zig-out/' \
+    --exclude='**/mpv_cache/' \
     $argv
 end

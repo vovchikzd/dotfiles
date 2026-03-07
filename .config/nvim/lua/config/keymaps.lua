@@ -45,4 +45,7 @@ keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
 
 keymap('n', "gl", '$', opts("Goto end of line"))
 keymap('n', "gh", '^', opts("Goto first char in line"))
+keymap('v', "gl", 'g_', opts("Goto end of line"))
+keymap('v', "gh", '^', opts("Goto first char in line"))
 
+keymap('v', 'p', "P", opts("Paste without overriding register"))

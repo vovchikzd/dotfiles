@@ -53,7 +53,7 @@ def main(args):
             saResLinks.append(fromName(arg))
         else:
             saResLinks.append(f"{sPreamble}{arg}")
-    print(*[quoted(link) for link in saResLinks], sep='\n')
+    print(*[link for link in saResLinks], sep='\n')
 
 
 

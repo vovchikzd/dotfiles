@@ -19,11 +19,11 @@ def main() -> int:
     with open("template.txt", "r") as tmp:
         sorted_tmp = [getRes(*get_tuple(line.strip())) for line in tmp.readlines()]
 
-    ods_file_path = "/home/vovchik/dotfiles/list/Библиотека.ods"
-    if os.path.isfile(ods_file_path):
-        for row in list(ezodf.opendoc(ods_file_path).sheets[0].rows())[1:]:
-            if row[6].value == "нет" or row[6].value == "no":
-                sorted_tmp.append(f"{row[2].value} by {row[1].value}")
+    # ods_file_path = "/home/vovchik/dotfiles/list/Библиотека.ods"
+    # if os.path.isfile(ods_file_path):
+    #     for row in list(ezodf.opendoc(ods_file_path).sheets[0].rows())[1:]:
+    #         if row[6].value == "нет" or row[6].value == "no":
+    #             sorted_tmp.append(f"{row[2].value} by {row[1].value}")
 
     print(random.choice(sorted_tmp))
 

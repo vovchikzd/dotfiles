@@ -9,6 +9,11 @@
   preloadindex = true
   commentChar = "//"
   commentString = "//"
+  ignoreCase = false
+
+[gc]
+  auto = 2500
+  autoDetach = true
 
 [diff]
   external = difft
@@ -26,15 +31,22 @@
 [rebase]
   autoStash = true
   updateRefs = true
-  autoSquash = true
-  missingCommitsCheck = warn
+  autoSquash = false
+  missingCommitsCheck = error
 
-[remote "origin"]
-  prune = true
+[commit]
+  verbose = true
 
 [fetch]
   prune = true
   pruneTags = true
+  fsckObjects = true
+
+[transfer]
+  fsckObjects = true
+
+[receive]
+  fsckObjects = true
 
 [pull]
   ff = only
@@ -77,16 +89,19 @@
   plain = blue
 
 [log]
-	date = format:%d.%m.%Y %I:%M:%S %p
+	date = format:%d.%m.%Y %H:%M:%S
 
 [blame]
-	date = format:%d.%m.%Y %I:%M:%S %p
+	date = format:%d.%m.%Y %H:%M:%S
 
 [merge]
   conflictStyle = "diff3"
 
 [clean]
   requireForce = false
+
+[rerere]
+  enable = true
 
 [alias]
   lg = log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'
@@ -103,6 +118,8 @@
   cl = clean -d
   rollback = !git reset --hard HEAD && git clean -d
   rlb = rollback
+  sha = !git stash apply && git stash drop
+  undo = reset --mixed HEAD~
   sync = "!f() { \
     TARGET_BRANCH=${1:-master}; \
     CURRENT_BRANCH=$(git branch --show-current); \
