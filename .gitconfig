@@ -119,7 +119,7 @@
   rollback = !git reset --hard HEAD && git clean -d
   rlb = rollback
   sha = !git stash apply && git stash drop
-  undo = reset --mixed HEAD~
+  undo = "!f() { git reset --mixed HEAD~${1:-1}; }; f"
   sync = "!f() { \
     TARGET_BRANCH=${1:-master}; \
     CURRENT_BRANCH=$(git branch --show-current); \

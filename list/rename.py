@@ -39,6 +39,10 @@ def main():
                             sNewName = sFileName.replace(" (z-lib.org)", "")
                             os.rename(sFileName, sNewName)
                             saRenamed += 1
+                        case sFileName if " (z-library.sk, 1lib.sk, z-lib.sk)" in sFileName:
+                            sNewName = sFileName.replace(" (z-library.sk, 1lib.sk, z-lib.sk)", "")
+                            os.rename(sFileName, sNewName)
+                            saRenamed += 1
                         case _:
                             continue
                 except:
