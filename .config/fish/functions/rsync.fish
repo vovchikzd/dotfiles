@@ -8,5 +8,6 @@ function rsync --wraps rsync
     --exclude='**/.zig-cache/' \
     --exclude='**/zig-out/' \
     --exclude='**/mpv_cache/' \
+    --exclude='**/*.!qB' \
     $argv
 end

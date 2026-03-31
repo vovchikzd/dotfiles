@@ -1,4 +1,5 @@
 7zip
+advanced-passgen-bin
 alacritty
 amd-ucode
 ani-cli
@@ -34,6 +35,7 @@ efibootmgr
 electron34
 element-desktop
 espeak
+ex-vi-compat
 fastfetch
 ffmpeg
 ffmpegthumbnailer
@@ -60,9 +62,11 @@ hyprcursor
 hyprland
 hyprland-protocols
 hyprlang
+hyprlauncher
 hyprpaper
 hyprpicker
 hyprpolkitagent
+hyprshutdown
 hyprwayland-scanner
 id3lib
 inotify-tools
@@ -80,6 +84,7 @@ libpulse
 libreoffice-fresh
 libreoffice-fresh-ru
 libvlc
+lighttpd
 linux
 linux-firmware
 linux-headers
@@ -109,7 +114,6 @@ otf-font-awesome
 ouch
 pavucontrol-qt
 perf
-pinta
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -136,6 +140,7 @@ qt5ct
 qt6ct
 quadcastrgb
 r
+reflector
 rofi
 rsync
 satty
@@ -159,7 +164,6 @@ tree-sitter-cli
 ttf-ms-win11-auto
 v4l2loopback-dkms
 valgrind
-vi
 vim
 vlc
 vulkan-extra-layers

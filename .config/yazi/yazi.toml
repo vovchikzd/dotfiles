@@ -10,53 +10,53 @@ image_quality = 90
 
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true },
+	{ run = 'nvim %s', block = true },
 ]
 foliate = [
-  { run = 'foliate "$@"', orphan = true },
+  { run = 'foliate %s', orphan = true },
 ]
 okular = [
-  { run = 'okular "$@"', orphan = true },
+  { run = 'okular %s', orphan = true },
 ]
 playlist = [
-  { run = 'mpv --playlist="$@"', orphan = true },
+  { run = 'mpv --playlist=%s', orphan = true },
 ]
 latex = [
-  { run = 'codium "$@"', orphan = true },
+  { run = 'codium %s', orphan = true },
 ]
 custom-mpv = [
-  { run = 'mpv --loop-playlist=inf "$@"', orphan = true },
+  { run = 'mpv --loop-playlist=inf %s', orphan = true },
 ]
 image-mpv = [
-  { run = 'mpv --loop-file=inf --no-resume-playback "$@"', oprhan = true },
+  { run = 'mpv --loop-file=inf --no-resume-playback %s', oprhan = true },
 ]
 
 
 [open]
 prepend_rules = [
-	{ name = "*.epub", use = "foliate" },
-  { name = "*.fb2", use = "foliate" },
-  { name = "*.fb2.zip", use = "foliate" },
-  { name = "*.mobi", use = "foliate" },
+	{ url = "*.epub", use = "foliate" },
+  { url = "*.fb2", use = "foliate" },
+  { url = "*.fb2.zip", use = "foliate" },
+  { url = "*.mobi", use = "foliate" },
 
-  { name = "*.pdf", use = "okular" },
-  { name = "*.djvu", use = "okular" },
+  { url = "*.pdf", use = "okular" },
+  { url = "*.djvu", use = "okular" },
 
-  { name = "*.plt", use = "playlist" },
+  { url = "*.plt", use = "playlist" },
   { mime = "{video}/*", use = "custom-mpv"},
   { mime = "{image}/*", use = "image-mpv"},
 
-  { name = "*.tex", use = "latex" },
+  { url = "*.tex", use = "latex" },
 ]
 
 [plugin]
 prepend_previewers = [
-  { name = "*.md", run = "glow" },
+  { url = "*.md", run = "glow" },
 
-  { name = "*.epub", run = "ebook-preview" },
-  { name = "*.fb2", run =  "ebook-preview" },
-  { name = "*.mobi", run = "ebook-preview" },
-  { name = "*.fb2.zip", run = "ebook-preview" },
+  { url = "*.epub", run = "ebook-preview" },
+  { url = "*.fb2", run =  "ebook-preview" },
+  { url = "*.mobi", run = "ebook-preview" },
+  { url = "*.fb2.zip", run = "ebook-preview" },
 
   { mime = "{image,audio,video}/*", run = "mediainfo"},
   { mime = "application/subrip", run = "mediainfo"},
@@ -67,7 +67,7 @@ prepend_previewers = [
 	{ mime = "application/7z-compressed", run = "ouch" },
 	{ mime = "application/rar", run = "ouch" },
 	{ mime = "application/xz", run = "ouch" },
-	{ name = "*.zip", run = "ouch" },
+	{ url = "*.zip", run = "ouch" },
 
   { mime = "application/bittorrent", run = "torrent-preview" },
 ]
