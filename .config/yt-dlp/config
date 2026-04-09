@@ -14,11 +14,12 @@
 
 --fragment-retries 0
 
---no-abort-on-error
+--abort-on-error
 
 --abort-on-unavailable-fragments
 
 --cookies-from-browser firefox
+# --no-cookies-from-browser
 
 --embed-metadata
 --embed-thumbnail
@@ -43,7 +44,8 @@
 --no-write-auto-subs
 --convert-subs vtt
 --ppa "ModifyChapters:-c:s copy"
---ppa "ThumbnailsConvertor:-vf zscale=w=-2:h=1080:f=lanczos -q:v 0"
+--ppa "ThumbnailsConvertor:-vf zscale=w=1920:h=-2:f=lanczos -q:v 0"
+--ppa "VideoRemuxer+ffmpeg:-bsf:v setts=ts=TS-STARTPTS"
 
 --mtime
 
@@ -52,3 +54,4 @@
 
 --mark-watched
 --playlist-random
+--force-overwrites

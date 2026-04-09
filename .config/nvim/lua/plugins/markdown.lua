@@ -1,7 +1,7 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim"
   , dependencies = {
-    "nvim-treesitter/nvim-treesitter"
+    "neovim-treesitter/nvim-treesitter"
     , "nvim-mini/mini.icons"
   }
   , ft = "markdown"

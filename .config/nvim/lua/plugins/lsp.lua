@@ -1,7 +1,6 @@
 local servers = {
   clangd = {
-    filetypes = {"c", "h", "cc", "cpp", "hh", "hpp", "cxx", "H", "C", "cppm",
-                  "cp", "CPP", "c++", "hp", "hxx", "HPP", "h++"}
+    filetypes = {"c", "cpp"}
     , cmd = { "clangd",  "--background-index", "--fallback-style=Google"
               , "--background-index-priority=normal", "--pch-storage=memory"
               , "--header-insertion=never", "--function-arg-placeholders=0" }
@@ -23,8 +22,9 @@ local servers = {
 
 return {
   "neovim/nvim-lspconfig"
-  , ft = { "cpp", "c", "lua", "python", "rust", "zig", "cmake", "typst", "fish", "bash", "sh" }
-  , cmd = { "LspInfo", "LspStart" }
+  -- , ft = { "cpp", "c", "lua", "python", "rust", "zig", "cmake", "typst", "fish", "bash", "sh" }
+  -- , cmd = { "LspInfo", "LspStart" }
+  , lazy = false
   , init = function()
     vim.diagnostic.config({ virtual_text = { current_line = true }})
   end
