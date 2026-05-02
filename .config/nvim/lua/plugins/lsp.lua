@@ -22,13 +22,10 @@ local servers = {
 
 return {
   "neovim/nvim-lspconfig"
-  -- , ft = { "cpp", "c", "lua", "python", "rust", "zig", "cmake", "typst", "fish", "bash", "sh" }
-  -- , cmd = { "LspInfo", "LspStart" }
-  , lazy = false
+  , ft = { "cpp", "c", "lua", "python", "rust", "zig", "cmake", "typst", "fish", "bash", "sh" }
+  , cmd = { "LspInfo", "LspStart" }
   , init = function()
     vim.diagnostic.config({ virtual_text = { current_line = true }})
-  end
-  , config = function()
     for server, config in pairs(servers) do
       vim.lsp.enable(server)
       if config and next(config) ~= nil then

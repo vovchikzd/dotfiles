@@ -1,8 +1,11 @@
 return {
   "saghen/blink.cmp"
-  , build = { "cargo build --release" }
+  , build = function()
+    require("blink.cmp").build():wait(60000)
+  end
   , dependencies = {
-    "xzbdmw/colorful-menu.nvim"
+    "saghen/blink.lib"
+    , "xzbdmw/colorful-menu.nvim"
     , "nvim-mini/mini.icons"
   }
   , lazy = false
