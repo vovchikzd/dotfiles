@@ -1,6 +1,5 @@
 {
     "extractor": {
-        "cookies": ["firefox"],
         "proxy": {
           "http": "socks5://localhost:9150",
           "https": "socks5://localhost:9150"
