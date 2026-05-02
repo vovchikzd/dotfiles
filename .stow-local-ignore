@@ -48,3 +48,6 @@ packages.txt
 rename.py
 yay_install.sh
 group.py
+audiosub.py
+githooks/
+.xmake/
