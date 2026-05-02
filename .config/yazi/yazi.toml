@@ -1,6 +1,7 @@
 [mgr]
 show_hidden = false
 sort_by = "natural"
+# sort_reverse = true
 sort_sensitive = true
 sort_dir_first = true
 show_symlink = true
@@ -38,6 +39,8 @@ prepend_rules = [
   { url = "*.fb2", use = "foliate" },
   { url = "*.fb2.zip", use = "foliate" },
   { url = "*.mobi", use = "foliate" },
+
+  { url = "*.srt", use = "edit" },
 
   { url = "*.pdf", use = "okular" },
   { url = "*.djvu", use = "okular" },
