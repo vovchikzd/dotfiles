@@ -1,0 +1,18 @@
+local exec = hl.exec_cmd
+
+hl.on("hyprland.start", function()
+  exec("/usr/bin/waybar")
+  exec("/home/vovchik/dotfiles/autostarts/desktop_portal.sh")
+  exec("/usr/bin/clipse -clear-all")
+  exec("/usr/bin/clipse -listen")
+  -- exec("XDG_CURRENT_DESKTOP=gnome telegram-desktop -startintray")
+  exec("/home/vovchik/dotfiles/.config/hypr/gen_paper.py")
+  exec("/usr/lib/firefox/firefox", { workspace = "1" })
+  exec("/usr/bin/ghostty", { workspace = "2 silent" })
+  exec("/usr/bin/ghostty", { workspace = "11 silent" })
+  exec("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  exec("/home/vovchik/tor_install/tor-browser/Browser/firefox", { workspace = "20 silent" })
+  exec("systemctl --user start hyprpolkitagent")
+  exec("swaync")
+  exec("flameshot")
+end)
