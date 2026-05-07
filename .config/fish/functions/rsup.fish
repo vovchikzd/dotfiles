@@ -5,6 +5,6 @@ function rsup --description 'Update rust and all apps'
     serie repgrep typst-cli
   # bottom 
   for prog in $progs
-    command cargo install $prog --locked; or return $status
+    command cargo install $prog; or return $status
   end
 end
