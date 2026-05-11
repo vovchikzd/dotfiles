@@ -6,13 +6,18 @@ return {
   }
   , config = function ()
     vim.g.compile_mode = {
-      input_word_completion = true
+      default_command = ""
+      , input_word_completion = true
       , baleia_setup = true
-      , error_threshhold = require("compile-mode").level.ERROR
+      , error_threshold = require("compile-mode").level.ERROR
       , auto_jump_to_first_error = true
       , time_format = "%d.%m.%Y %H:%M:%S"
       , focus_compilation_buffer = true
       , bang_expansion = true
+      , recompile_no_fail = true
     }
   end
+  , keys = {
+    { "<leader>m", "<cmd>Compile<CR>" }
+  }
 }
