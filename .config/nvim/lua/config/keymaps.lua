@@ -34,6 +34,7 @@ keymap('n', "<leader>[", "O<Esc>0\"_D", opts("Insert newline above and stay in n
 
 keymap('n', "<S-l>", "<cmd>bnext<CR>", opts("Go to next buffer"))
 keymap('n', "<S-h>", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
+
 local bd_func = function ()
   vim.cmd("bd")
   if vim.fn.bufname(vim.fn.bufnr()) == '' and not vim.api.nvim_buf_get_option(0, 'modified') then
@@ -41,11 +42,10 @@ local bd_func = function ()
   end
 end
 keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
--- keymap('n', "<leader>d", "<cmd>bd<CR>", opts("Close current buffer (tab)"))
 
-keymap('n', "gl", '$', opts("Goto end of line"))
-keymap('n', "gh", '^', opts("Goto first char in line"))
-keymap('v', "gl", 'g_', opts("Goto end of line"))
-keymap('v', "gh", '^', opts("Goto first char in line"))
+keymap({ 'n', 'v' }, "gl", "g_", opts("Goto end of line"))
+keymap({ 'n', 'v' }, "gh", '^', opts("Goto first char in line"))
+keymap({ 'n', 'v' }, "gj", 'G', opts("Goto last line"))
+keymap({ 'n', 'v' }, "gk", "gg", opts("Goto first line"))
 
 keymap('v', 'p', "P", opts("Paste without overriding register"))

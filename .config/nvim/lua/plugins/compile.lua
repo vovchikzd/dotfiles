@@ -2,7 +2,7 @@ return {
   "ej-shafran/compile-mode.nvim"
   , dependencies = {
     "nvim-lua/plenary.nvim"
-    , { "m00qek/baleia.nvim", tag = "v1.3.0" }
+    , { "m00qek/baleia.nvim", tag = "v1.3.0", submodules = false }
   }
   , config = function ()
     vim.g.compile_mode = {
