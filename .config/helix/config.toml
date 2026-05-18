@@ -1,0 +1,3 @@
+theme = "gruvbox"
+[editor]
+line-number = "relative"
