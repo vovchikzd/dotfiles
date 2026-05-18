@@ -1,3 +1,3 @@
 function help
-  command $argv --help | v -R
+  command $argv --help | nvim -R -c "set nomodifiable" -
 end

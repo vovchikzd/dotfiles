@@ -28,7 +28,7 @@ keymap('v', 'K', ":m '<-2<CR>gv=gv", opts("Move visual blok(line) up"))
 keymap('v', '$', "g_", opts("Select to end of line without newline character"))
 keymap('n', 'U', "<C-r>", opts("Redo"))
 
-keymap('n', "<leader>]", "o<Esc>0\"_D", opts("Insert newline below and stay in normal mode")) -- conflict with tree
+keymap('n', "<leader>]", "o<Esc>0\"_D", opts("Insert newline below and stay in normal mode"))
 keymap('n', "<leader>[", "O<Esc>0\"_D", opts("Insert newline above and stay in normal mode"))
 
 
@@ -49,3 +49,5 @@ keymap({ 'n', 'v' }, "gj", 'G', opts("Goto last line"))
 keymap({ 'n', 'v' }, "gk", "gg", opts("Goto first line"))
 
 keymap('v', 'p', "P", opts("Paste without overriding register"))
+
+vim.api.nvim_create_user_command('Q', ":qa", { nargs = '?' })

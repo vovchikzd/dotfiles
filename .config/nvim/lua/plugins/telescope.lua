@@ -82,5 +82,7 @@ return {
       end
     end
     keymap({ 'n', 'v' }, "<leader>.", find_files_git_root_cwd_fallback, key_opts("Find files"))
+
+    keymap({ 'n', 'v' }, "<leader>tr", pck.lsp_references, key_opts("See lsp refs"))
   end
 }
