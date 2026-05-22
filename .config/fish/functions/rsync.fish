@@ -10,5 +10,6 @@ function rsync --wraps rsync
     --exclude='**/zig-pkg/' \
     --exclude='**/mpv_cache/' \
     --exclude='**/*.!qB' \
+    --exclude='**/*.zip.part' \
     $argv
 end

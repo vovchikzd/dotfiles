@@ -29,7 +29,8 @@ return {
     , completion = {
       documentation = { auto_show = true }
       , menu = {
-        draw = {
+        auto_show = false
+        , draw = {
           components = {
             kind_icon = {
               text = function(ctx)
@@ -73,11 +74,12 @@ return {
           , columns = { {"kind_icon"}, { "label", gap = 1 } }
         }
       }
-      , ghost_text = { enabled = true }
+      , ghost_text = { enabled = false }
       , list = { selection = { auto_insert = false } }
     }
     , sources = {
-      default = { "lsp", "path", "buffer" }
+      -- default = { "lsp", "path", "buffer" }
+      default = { "buffer", "lsp", "path" }
       , providers = {
         buffer = {
           opts = {

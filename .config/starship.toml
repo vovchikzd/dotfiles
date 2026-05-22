@@ -5,10 +5,6 @@ $directory\
 $git_branch\
 $git_commit\
 $git_status\
-$c\
-$cmake\
-$rust\
-$python\
 $memory_usage\
 $cmd_duration\
 $fill\
@@ -16,6 +12,10 @@ $line_break\
 $status\
 $character"""
 #$time\
+#$c\
+#$cmake\
+#$rust\
+#$python\
 
 add_newline = true
 
@@ -84,9 +84,9 @@ version_format = 'v${raw}'
 detect_extensions = ["c", "h", "cc", "cpp", "hh", "hpp", "cxx", "H", "C", "cppm", "pcm"]
 detect_files = []
 detect_folders = []
-commands = [ [ 'clang', '--version' ] ]
+commands = [ [ 'gcc', '--version' ] ]
 style = 'bold 148'
-format = '[C/C++ $name $version]($style) '
+format = '[$name $version]($style) '
 
 [cmake]
 version_format = 'v${raw}'
