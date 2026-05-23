@@ -58,9 +58,7 @@
 
 --parse-metadata ":(?P<meta_synopsis>)"
 --parse-metadata ":(?P<meta_purl>)"
---parse-metadata ":(?P<meta_comment>)"
 
---parse-metadata "%(webpage_url)s:meta_webpage_url"
 --parse-metadata "%(release_date>%Y%m%d%,upload_date>%Y%m%d|)s:meta_date"
 --parse-metadata "%(release_timestamp,timestamp|)s:meta_timestamp"
 --parse-metadata "%(playlist_webpage_url|)s:meta_playlist"
