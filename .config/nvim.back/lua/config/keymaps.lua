@@ -1,0 +1,68 @@
+local opts = function(description)
+  return { noremap = true, silent = true, desc = description }
+end
+
+local keymap = vim.keymap.set
+
+keymap('', "<Space>", "<Nop>", opts("Space as leader key"))
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+keymap('n', "<leader>|", "<C-w>v", opts("Vertical split"))
+keymap('n', "<leader>\\", "<C-w>s", opts("Horizontal split"))
+keymap('n', "<leader>c", "<C-w>c", opts("Close split"))
+
+keymap('n', "<C-h>", "<C-w>h", opts("Go to left window"))
+keymap('n', "<C-j>", "<C-w>j", opts("Go to below window"))
+keymap('n', "<C-k>", "<C-w>k", opts("Go to above window"))
+keymap('n', "<C-l>", "<C-w>l", opts("Go to right window"))
+
+keymap('n', "<esc>", "<cmd>nohlsearch<CR>", opts("Disable highlight after search"))
+
+keymap('v', '<', "<gv", opts("Remove indent and stay in visual mode"))
+keymap('v', '>', ">gv", opts("Add indent and stay in visual mode"))
+
+keymap('v', 'J', ":m '>+1<CR>gv=gv", opts("Move visual blok(line) down"))
+keymap('v', 'K', ":m '<-2<CR>gv=gv", opts("Move visual blok(line) up"))
+
+keymap('v', '$', "g_", opts("Select to end of line without newline character"))
+keymap('n', 'U', "<C-r>", opts("Redo"))
+
+keymap('n', "<leader>]", "o<Esc>0\"_D", opts("Insert newline below and stay in normal mode"))
+keymap('n', "<leader>[", "O<Esc>0\"_D", opts("Insert newline above and stay in normal mode"))
+
+
+keymap('n', "<S-l>", "<cmd>bnext<CR>", opts("Go to next buffer"))
+keymap('n', "<S-h>", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
+
+local bd_func = function ()
+  vim.cmd("bd")
+  if vim.fn.bufname(vim.fn.bufnr()) == '' and not vim.api.nvim_buf_get_option(0, 'modified') then
+    vim.cmd("q")
+  end
+end
+keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
+keymap('n', "<leader>w", "<cmd>w<CR>", opts("Save buffer"))
+
+keymap({ 'n', 'v' }, "gl", "g_", opts("Goto end of line"))
+keymap({ 'n', 'v' }, "gh", '^', opts("Goto first char in line"))
+keymap({ 'n', 'v' }, "gj", 'G', opts("Goto last line"))
+keymap({ 'n', 'v' }, "gk", "gg", opts("Goto first line"))
+
+keymap('v', 'p', "P", opts("Paste without overriding register"))
+keymap('v', "<leader>y", "\"+y", opts("Yank selection to system clipboard"))
+keymap('v', "<leader>p", "\"+P", opts("Paste from system clipboard"))
+keymap('v', "<leader>P", "\"+P", opts("Paste from system clipboard"))
+for _, key in pairs({'p', 'P'}) do
+  keymap('n', "<leader>"..key, "\"+"..key, opts("Paste from system clipboard"))
+end
+
+-- for _, arrow in pairs({ "<up>", "<down>", "<left>", "<right>" }) do
+--   keymap("", arrow, "<nop>", opts("Disable arrow key"))
+--   keymap("i", arrow, "<nop>", opts("Disable arrow key"))
+-- end
+--
+-- vim.opt.mouse = ""
+-- vim.opt.mousescroll = "ver:0,hor:0"
+
+vim.api.nvim_create_user_command('Q', ":qa", { nargs = '?' })
