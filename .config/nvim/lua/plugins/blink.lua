@@ -1,7 +1,7 @@
 return {
   "saghen/blink.cmp"
   , build = function()
-    require("blink.cmp").build():wait(60000)
+    require("blink.cmp").build():pwait()
   end
   , dependencies = {
     "saghen/blink.lib"
@@ -110,7 +110,7 @@ return {
       enabled = true
       , trigger = { enabled = false, show_on_trigger_character = false }
     }
-    , cmdline = { completion = { menu = { auto_show = true } } }
+    , cmdline = { completion = { menu = { auto_show = false } } }
   }
   , opts_extend = { "sources.default" } -- warn: what that is?
 }

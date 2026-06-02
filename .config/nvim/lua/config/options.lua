@@ -1,5 +1,6 @@
 -- :help options
 
+vim.opt.exrc = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.colorcolumn = "81"
 vim.opt.cursorline = true
@@ -11,7 +12,6 @@ vim.opt.tabstop = 2
 vim.opt.smartindent = true
 vim.opt.scrolloff = 15
 vim.opt.sidescrolloff = 8
-vim.opt.mouse = ''
 vim.opt.backup = false
 vim.opt.cmdheight = 1
 vim.opt.conceallevel = 0

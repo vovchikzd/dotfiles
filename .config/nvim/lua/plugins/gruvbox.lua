@@ -1,7 +1,7 @@
 return {
   "sainnhe/gruvbox-material"
   , priority = 1000
-  , init = function()
+  , config = function()
     vim.g.gruvbox_material_background = "medium" -- "sort", "medium", "hard"
     vim.g.gruvbox_material_foreground = "original" -- "material", "mix", "original"
     vim.g.gruvbox_material_enable_italic = true

@@ -42,6 +42,8 @@ local bd_func = function ()
   end
 end
 keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
+keymap('n', "<leader>w", "<cmd>w<CR>", opts("Save buffer"))
+keymap('n', "<leader>q", "<cmd>qa<CR>", opts("Close nvim"))
 
 keymap({ 'n', 'v' }, "gl", "g_", opts("Goto end of line"))
 keymap({ 'n', 'v' }, "gh", '^', opts("Goto first char in line"))
@@ -49,5 +51,19 @@ keymap({ 'n', 'v' }, "gj", 'G', opts("Goto last line"))
 keymap({ 'n', 'v' }, "gk", "gg", opts("Goto first line"))
 
 keymap('v', 'p', "P", opts("Paste without overriding register"))
+keymap('v', "<leader>y", "\"+y", opts("Yank selection to system clipboard"))
+keymap('v', "<leader>p", "\"+P", opts("Paste from system clipboard"))
+keymap('v', "<leader>P", "\"+P", opts("Paste from system clipboard"))
+for _, key in pairs({'p', 'P'}) do
+  keymap('n', "<leader>"..key, "\"+"..key, opts("Paste from system clipboard"))
+end
+
+for _, arrow in pairs({ "<up>", "<down>", "<left>", "<right>" }) do
+  keymap("", arrow, "<nop>", opts("Disable arrow key"))
+  keymap("i", arrow, "<nop>", opts("Disable arrow key"))
+end
+
+vim.opt.mouse = ""
+vim.opt.mousescroll = "ver:0,hor:0"
 
 vim.api.nvim_create_user_command('Q', ":qa", { nargs = '?' })
