@@ -13,8 +13,8 @@ image_quality = 90
 edit = [
 	{ run = 'nvim %s', block = true },
 ]
-foliate = [
-  { run = 'foliate %s', orphan = true },
+readest = [
+  { run = 'readest %s', orphan = true },
 ]
 okular = [
   { run = 'okular %s', orphan = true },
@@ -35,10 +35,10 @@ image-mpv = [
 
 [open]
 prepend_rules = [
-	{ url = "*.epub", use = "foliate" },
-  { url = "*.fb2", use = "foliate" },
-  { url = "*.fb2.zip", use = "foliate" },
-  { url = "*.mobi", use = "foliate" },
+	{ url = "*.epub", use = "readest" },
+  { url = "*.fb2", use = "readest" },
+  { url = "*.fb2.zip", use = "readest" },
+  { url = "*.mobi", use = "readest" },
 
   { url = "*.srt", use = "edit" },
 
