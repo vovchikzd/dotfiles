@@ -1,6 +1,3 @@
-[submodule ".config/yazi/plugins/glow.yazi"]
-	path = .config/yazi/plugins/glow.yazi
-	url = https://github.com/Reledia/glow.yazi.git
 [submodule ".config/yazi/plugins/ouch.yazi"]
 	path = .config/yazi/plugins/ouch.yazi
 	url = https://github.com/ndtoan96/ouch.yazi.git
