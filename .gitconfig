@@ -120,15 +120,3 @@
   rlb = rollback
   sha = !git stash apply && git stash drop
   undo = "!f() { git reset --mixed HEAD~${1:-1}; }; f"
-  sync = "!f() { \
-    TARGET_BRANCH=${1:-master}; \
-    CURRENT_BRANCH=$(git branch --show-current); \
-    if [ \"$TARGET_BRANCH\" = \"$CURRENT_BRANCH\" ]; then \
-      printf '\\x1b[1;31m[ERROR]\\x1b[0m Trying sync %s branch with itself\\n' \"$TARGET_BRANCH\"; \
-      exit 1; \
-    fi; \
-    git switch \"$TARGET_BRANCH\" && \
-    git pull && \
-    git switch \"$CURRENT_BRANCH\" && \
-    git merge \"$TARGET_BRANCH\" --no-edit; \
-  }; f"

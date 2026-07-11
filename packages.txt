@@ -1,5 +1,4 @@
 7zip
-advanced-passgen-bin
 alacritty
 amd-ucode
 ani-cli
@@ -10,6 +9,7 @@ b3sum
 base
 base-devel
 bash-language-server
+bc
 bear
 bluetuith
 bluez-obex
@@ -22,6 +22,7 @@ ccache
 chatterino2-git
 clang
 clipse
+cloc
 cmake
 cpio
 ctags
@@ -31,9 +32,11 @@ deno
 downgrade
 doxygen
 doxygen-docs
+drawy
 efibootmgr
 electron34
 element-desktop
+emacs
 espeak
 ex-vi-compat
 fastfetch
@@ -43,7 +46,6 @@ ffnvcodec-headers
 firefox
 fish
 flameshot-git
-foliate
 gdb
 ghostty
 git
@@ -69,13 +71,19 @@ hyprpolkitagent
 hyprshutdown
 hyprwayland-scanner
 id3lib
+include-what-you-use
 inotify-tools
 iw
 java-runtime-common
 jujutsu
+kakoune
+kakoune-lsp
+kanata-bin
 kdf
+kdialog
 keepassxc
 kotlin
+krita
 lib32-mesa-utils
 libc++
 libc++abi
@@ -113,6 +121,7 @@ openssh
 otf-font-awesome
 ouch
 pavucontrol-qt
+pdfgrep
 perf
 pipewire
 pipewire-alsa
@@ -121,9 +130,11 @@ pipewire-pulse
 polkit-kde-agent
 postgresql
 proxychains-ng
+pv
 pyright
 pyside6
 python-fonttools
+python-git
 python-humanize
 python-matplotlib
 python-openai-whisper
@@ -140,6 +151,8 @@ qt5ct
 qt6ct
 quadcastrgb
 r
+re2c
+readest
 reflector
 rofi
 rsync
@@ -155,6 +168,7 @@ strace
 swaync
 telegram-desktop
 termdown
+thunderbird
 tinymist
 tmux
 tor
@@ -174,7 +188,6 @@ vulkan-tools
 vulkan-utility-libraries
 vulkan-validation-layers
 waybar
-webcord
 wev
 wezterm
 wget
@@ -190,5 +203,6 @@ yad
 yarn
 zen-browser-bin
 zip
+zk
 zram-generator
 zsh
