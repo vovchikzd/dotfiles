@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 
 import os, json
+from sys import stderr
 from subprocess import run as def_run
+ffprobe = "ffprobe" if (def_run(["ffprobe", "-versoin"], capture_output=True).returncode == 0) else "/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/ffprobe"
+if (def_run([ffprobe, "-version"], capture_output=True).returncode != 0):
+    print("Can't find working ffprobe", file=stderr)
+    exit(1)
 
-base_get_streams_cmd = ["ffprobe", "-v", "quiet", "-print_format", "json", "-show_streams", "-select_streams"]
+base_get_streams_cmd = [ffprobe, "-v", "quiet", "-print_format", "json", "-show_streams", "-select_streams"]
 
 def run(*args, **kwargs):
     kwargs["check"] = True
@@ -22,6 +27,34 @@ def catch_run(*args, **kwargs):
 def del_file(file_path: str):
     if os.path.isfile(file_path):
         os.remove(file_path)
+
+def get_meta(file_path: str, meta: str) -> str:
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"File {file_path} doesn't exist")
+
+    cmd = [ffprobe, "-v", "error", "-show_entries", f"format_tags={meta}"
+           , "-of", "default=noprint_wrappers=1:nokey=1", file_path]
+
+    res = catch_run(cmd)
+    if res.returncode != 0:
+        print(f"Error occured while getting {meta} for {file_path}", file=stderr)
+        exit(5)
+
+    return res.stdout.strip()
+
+def get_duration(file_path: str) -> float:
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"File {file_path} doesn't exist")
+
+    cmd = [ffprobe, "-v", "error", "-show_entries", "format=duration"
+           , "-of", "default=noprint_wrappers=1:nokey=1", file_path]
+
+    res = catch_run(cmd)
+    if res.returncode != 0:
+        print(f"Error occured while getting duration for {file_path}", file=stderr)
+        exit(5)
+
+    return float(res.stdout)
 
 
 class Stream:

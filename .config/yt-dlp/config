@@ -62,3 +62,8 @@
 --parse-metadata "%(release_timestamp,timestamp|)s:meta_timestamp"
 --parse-metadata "%(playlist_webpage_url|)s:meta_playlist"
 --parse-metadata "%(channel_url,channel|)s:meta_channel"
+
+--match-filters 'availability != subscriber_only & availability != private & availability != premium_only'
+--compat-options no-youtube-unavailable-videos
+
+--ffmpeg-location '/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/'
