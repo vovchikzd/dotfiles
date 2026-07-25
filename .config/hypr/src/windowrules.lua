@@ -16,7 +16,7 @@ rule({
     class = "mpv"
   }
   , float = true
-  , keep_aspect_ration = true
+  , keep_aspect_ratio = true
   , center = true
 })
 
