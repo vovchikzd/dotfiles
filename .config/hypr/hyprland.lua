@@ -1,10 +1,10 @@
 require("src.monitors")
 require("src.programs")
 require("src.autostart")
-
 require("src.env")
 require("src.look_and_feel")
 require("src.input")
 require("src.keybindings")
 require("src.workspaces")
+
 require("src.windowrules")
