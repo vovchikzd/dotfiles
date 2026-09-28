@@ -13,6 +13,7 @@ if status is-interactive
   set -gx playlist "%(playlist)s"
   set -gx playlist_numbering "$playlist/$numbering"
   set -gx tor_proxy 'socks5://localhost:9150'
+  set -gx proxy http_proxy=$tor_proxy https_proxy=$tor_proxy
 
   set fish_user_paths /home/vovchik/.cargo/bin $HOME/.local/bin
 

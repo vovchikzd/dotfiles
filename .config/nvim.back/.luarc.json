@@ -1,7 +1,0 @@
-{
-  "workspace": {
-    "library": [
-      "/home/vovchik/nvim_build/nvim_src/runtime/lua/vim/_core/shared.lua"
-    ]
-  }
-}

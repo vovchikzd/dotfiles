@@ -24,13 +24,13 @@ rule({
   name = "picture-in-picture-from-browser"
   , match = {
     class = "(firefox|zen|Tor Browser)"
-    , title = "(Picture-in-Picture)"
+    , title = "Picture-in-Picture"
   }
   , pin = true
   , float = true
   , rounding = 0
+  , move = { 1302, 728 }
   , size = { 608, 342 }
-  , move = { 1300, 726 }
   , no_initial_focus = true
   , keep_aspect_ratio = true
 })

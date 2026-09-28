@@ -19,6 +19,12 @@ install_fonts() {
     printf 'password here' | sudo -S mkdir /usr/local/share/fonts || return 1
   fi
 
+  curl \
+    -LO 'https://github.com/wayou/comic-mono-font/raw/refs/heads/master/LigaComicMono-Bold.ttf' \
+    -LO 'https://github.com/wayou/comic-mono-font/raw/refs/heads/master/LigaComicMono.ttf' \
+    -LO 'https://github.com/wayou/comic-mono-font/raw/refs/heads/master/LigaComicMonoNerdFont-Bold.ttf' \
+    -LO 'https://github.com/wayou/comic-mono-font/raw/refs/heads/master/LigaComicMonoNerdFont-Regular.ttf' || return 1
+
   printf 'password here' | sudo -S find . -type f -regextype posix-egrep -iregex '.*\.(otf|ttf)$' -exec bash -c 'mv "$0" "$@" /usr/local/share/fonts/' {} + || return 1
 
   cd "$CUR_DIR" && rm -fr "$TMP_DIR" || return 1

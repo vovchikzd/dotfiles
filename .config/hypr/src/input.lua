@@ -11,6 +11,7 @@ hl.config({
         kb_rules   = "",
 
         follow_mouse = 0,
+        float_switch_override_focus = 0,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 

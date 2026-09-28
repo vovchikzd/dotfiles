@@ -37,12 +37,18 @@ keymap('n', "<S-h>", "<cmd>bprevious<CR>", opts("Go to previous buffer"))
 
 local bd_func = function ()
   vim.cmd("bd")
-  if vim.fn.bufname(vim.fn.bufnr()) == '' and not vim.api.nvim_buf_get_option(0, 'modified') then
+  local listed_buffers = vim.tbl_filter(function(buf)
+    return vim.api.nvim_buf_get_option(buf, 'buflisted')
+  end, vim.api.nvim_list_bufs())
+
+  if vim.fn.bufname(vim.fn.bufnr()) == ''
+     and not vim.api.nvim_buf_get_option(0, 'modified')
+     and #listed_buffers == 1 then
     vim.cmd("q")
   end
 end
 keymap('n', "<leader>d", bd_func, opts("Close current buffer (tab)"))
-keymap('n', "<leader>w", "<cmd>w<CR>", opts("Save buffer"))
+keymap('n', "<leader>w", "<cmd>wa<CR>", opts("Save buffer"))
 keymap('n', "<leader>q", "<cmd>qa<CR>", opts("Close nvim"))
 
 keymap({ 'n', 'v' }, "gl", "g_", opts("Goto end of line"))

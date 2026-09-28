@@ -36,60 +36,24 @@ def isAudio(sFilePath):
     type = get_mime(sFilePath)
     return type is not None and 'audio' in type
 
+files = [f for f in sys.argv[1:] if isVideo(f) or isAudio(f)]
 
-class Config:
-    isAudio = false
-    isVideo = true
-    isSort = false
-    isReverce = true
-    
-    def __init__(self, args):
-        while len(args) > 0:
-            arg = args.pop(0)
-            match arg:
-                case "--audio":
-                    self.isAudio = true
-                    self.isVideo = false
-                case "--sort":
-                    self.isSort = true
-                case "--all":
-                    self.isAudio = true
-                    self.isVideo = true
-                case "-r":
-                    self.isSort = true
-                    self.isReverce = false
-                case _:
-                    def_print(f"Unkhown arg: {arg}", file=sys.stderr)
-                    exit(1)
-
-
-def main():
-    config = Config(sys.argv[1:])
-    saDirs = ['.']
-    aFileDur: list[tuple[str, float]] = list()
-    while len(saDirs) > 0:
-        sCurrentDir = saDirs.pop(0)
-        for file in os.listdir(sCurrentDir):
-            if 'lost+found' in file:
-                continue
-            sCurrentFile = f"{sCurrentDir}/{file}"
-            if os.path.isdir(sCurrentFile):
-                saDirs.append(sCurrentFile)
-            elif os.path.isfile(sCurrentFile):
-                if ((config.isVideo and isVideo(sCurrentFile))
-                    or (config.isAudio and isAudio(sCurrentFile))):
-                    aFileDur.append((sCurrentFile, get_duration(sCurrentFile)))
-
-    if len(aFileDur):
-        if config.isSort:
-            aFileDur.sort(reverse=config.isReverce, key=lambda x: x[1])
-            for sFile, nDur in aFileDur:
-                print(f"{timedelta(seconds=nDur)} -- {os.path.basename(sFile)}")
-            print()
-
-        nTotalTime = sum([tup[1] for tup in aFileDur])
-        print(timedelta(seconds=nTotalTime))
-        print(f"Number of files: {len(aFileDur)}")
-
-if __name__ == "__main__":
-    main()
+sum_duration = 0
+is_print_filenames = len(files) > 1
+is_print_sum_time = "-s" in sys.argv[1:]
+is_print_seconds = "--seconds" in sys.argv[1:]
+file_end = " " if is_print_filenames else "\n"
+for file in files:
+    duration = get_duration(file)
+    sum_duration += duration
+    if is_print_seconds:
+        print(duration, end=file_end)
+    else:
+        print(f"{timedelta(seconds=duration)}", end=file_end)
+    if is_print_filenames:
+        print(file)
+if is_print_sum_time:
+    if is_print_seconds:
+        print(sum_duration)
+    else:
+        print(timedelta(seconds=sum_duration))

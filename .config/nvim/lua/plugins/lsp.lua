@@ -3,7 +3,8 @@ local servers = {
     filetypes = {"c", "cpp"}
     , cmd = { "clangd",  "--background-index", "--fallback-style=Google"
               , "--background-index-priority=normal", "--pch-storage=memory"
-              , "--header-insertion=never", "--function-arg-placeholders=0" }
+              , "--header-insertion=never", "--function-arg-placeholders=0" --}
+              , "--clang-tidy", "--clang-tidy-checks=bugprone-*,readability-*,misc-*" }
   }
   , zls = {
     settings = {
@@ -26,7 +27,7 @@ return {
   , cmd = { "LspInfo", "LspStart" }
   , init = function()
     vim.diagnostic.enable(false)
-    vim.diagnostic.config({ virtual_text = false })
+    vim.diagnostic.config({ virtual_text = true })
     for server, config in pairs(servers) do
       vim.lsp.enable(server)
       if config and next(config) ~= nil then

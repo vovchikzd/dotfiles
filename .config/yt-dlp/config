@@ -32,8 +32,10 @@
 
 --compat-options filename-sanitization
 
---sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
+# --sponsorblock-remove sponsor,interaction,intro,preview,outro,selfpromo,hook
+--no-sponsorblock
 --no-force-keyframes-at-cuts
+--exec "http_proxy=socks5://localhost:9150 https_proxy=socks5://localhost:9150 '/home/vovchik/Disks/1Tb/Видео/trim.py' %(filepath)q"
 
 --sponsorblock-mark chapter
 
@@ -62,8 +64,9 @@
 --parse-metadata "%(release_timestamp,timestamp|)s:meta_timestamp"
 --parse-metadata "%(playlist_webpage_url|)s:meta_playlist"
 --parse-metadata "%(channel_url,channel|)s:meta_channel"
+--parse-metadata "%(id|)s:meta_id"
+--parse-metadata "%(webpage_url|)s:meta_comment"
+--parse-metadata "%(webpage_url|)s:meta_url"
 
 --match-filters 'availability != subscriber_only & availability != private & availability != premium_only'
 --compat-options no-youtube-unavailable-videos
-
---ffmpeg-location '/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/'

@@ -1,0 +1,14 @@
+{
+    ["7z"] = {
+        reponame = "builtin-repo",
+        description = "A file archiver with a high compression ratio.",
+        versions = {
+            "21.02"
+        }
+    },
+    git = {
+        reponame = "builtin-repo",
+        description = "A free and open source distributed version control system",
+        versions = { }
+    }
+}

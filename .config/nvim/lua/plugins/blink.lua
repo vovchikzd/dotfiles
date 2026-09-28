@@ -29,7 +29,7 @@ return {
     , completion = {
       documentation = { auto_show = true }
       , menu = {
-        auto_show = false
+        auto_show = true
         , draw = {
           components = {
             kind_icon = {
@@ -110,7 +110,7 @@ return {
       enabled = true
       , trigger = { enabled = false, show_on_trigger_character = false }
     }
-    , cmdline = { completion = { menu = { auto_show = false } } }
+    , cmdline = { completion = { menu = { auto_show = true } } }
   }
   , opts_extend = { "sources.default" } -- warn: what that is?
 }

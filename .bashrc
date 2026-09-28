@@ -30,6 +30,6 @@
 #     ln -s '/home/vovchik/Disks/1Tb/projects/c/advcpmv/advmv' /home/vovchik/.local/bin/amv
 #   fi
 # fi
-#
-# eval "$(starship init bash)"
-# eval "$(zoxide init --cmd cd bash)"
+
+eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"

@@ -95,7 +95,7 @@
 	date = format:%d.%m.%Y %H:%M:%S
 
 [merge]
-  conflictStyle = "diff3"
+  conflictStyle = "zdiff3"
 
 [clean]
   requireForce = false
@@ -105,8 +105,8 @@
 
 [alias]
   lg = log --graph --shortstat --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad%C(auto) %D%n%B%C(yellow)%N'
-  history = log -p --ext-diff --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad %C(auto)%n%s'
-  hst = history
+  hist = log -p --ext-diff --pretty=format:'%C(magenta)%h %C(white)%an %C(brightcyan)%ad %C(auto)%n%s'
+  hst = hist
   sw = switch
   dt = switch --detach
   br = branch
@@ -116,6 +116,7 @@
   cx = cherry-pick -x
   st = status --short
   cl = clean -d
+  amend = commit -a --amend --no-edit
   rollback = !git reset --hard HEAD && git clean -d
   rlb = rollback
   sha = !git stash apply && git stash drop

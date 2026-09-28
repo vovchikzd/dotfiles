@@ -1,8 +1,8 @@
 7zip
 alacritty
 amd-ucode
-ani-cli
 ascii
+asciidoc
 asciiquarium
 at
 b3sum
@@ -16,15 +16,16 @@ bluez-obex
 bluez-utils
 btop
 btrfs-progs
-c3c
 calibre
 ccache
 chatterino2-git
+chromium
 clang
 clipse
 cloc
 cmake
 cpio
+croc
 ctags
 dateutils
 dbeaver
@@ -37,7 +38,6 @@ efibootmgr
 electron34
 element-desktop
 emacs
-espeak
 ex-vi-compat
 fastfetch
 ffmpeg
@@ -78,7 +78,6 @@ java-runtime-common
 jujutsu
 kakoune
 kakoune-lsp
-kanata-bin
 kdf
 kdialog
 keepassxc
@@ -112,6 +111,7 @@ networkmanager
 nftables
 ninja
 ntfs-3g
+ntfsprogs
 nyx
 obs-studio
 okular
@@ -166,7 +166,6 @@ steam
 stow
 strace
 swaync
-telegram-desktop
 termdown
 thunderbird
 tinymist
@@ -201,8 +200,6 @@ xorg-server
 xpadneo-dkms
 yad
 yarn
-zen-browser-bin
 zip
-zk
 zram-generator
 zsh

@@ -47,9 +47,10 @@ prepend_rules = [
 
   { url = "*.plt", use = "playlist" },
   { mime = "{video}/*", use = "custom-mpv"},
+  { mime = "{audio}/*", use = "custom-mpv"},
   { mime = "{image}/*", use = "image-mpv"},
 
-  { url = "*.tex", use = "latex" },
+  { url = "*.tex", use = "edit" },
 ]
 
 [plugin]

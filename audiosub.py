@@ -3,10 +3,15 @@
 import os, json
 from sys import stderr
 from subprocess import run as def_run
-ffprobe = "ffprobe" if (def_run(["ffprobe", "-versoin"], capture_output=True).returncode == 0) else "/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/ffprobe"
+ffprobe = "ffprobe" if (def_run(["ffprobe", "-version"], capture_output=True).returncode == 0) else "/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/ffprobe"
 if (def_run([ffprobe, "-version"], capture_output=True).returncode != 0):
     print("Can't find working ffprobe", file=stderr)
     exit(1)
+
+ffmpeg = "ffmpeg" if (def_run(["ffmpeg", "-version"], capture_output=True).returncode == 0) else "/home/vovchik/ffmpeg_latest/ffmpeg-master-latest-linux64-gpl/bin/ffmpeg"
+if (def_run([ffmpeg, "-version"], capture_output=True).returncode != 0):
+    print("Can't find working ffmpeg", file=stderr)
+    exit(2)
 
 base_get_streams_cmd = [ffprobe, "-v", "quiet", "-print_format", "json", "-show_streams", "-select_streams"]
 
@@ -157,3 +162,21 @@ def select_subtitle(file_path: str, language: str = "eng") -> int | None:
         if len(selected_streams) == 1:
             index = selected_streams[0].index
     return index
+
+def extract_cover(
+    file_path: str
+    , cover_path: str
+    , ffmpeg_codecs: list[str] = ["-c", "copy"]
+    , ffmpeg_filters: list[str] = None
+) -> bool:
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"File {file_path} doesn't exist")
+
+    cmd = [
+        ffmpeg, "-hide_banner", "-nostdin"
+        , "-y", "-i", file_path
+        , "-map", "0:v", "-map", "-0:V"
+    ] + (ffmpeg_codecs if ffmpeg_codecs is not None else []) + (
+            ffmpeg_filters if ffmpeg_filters is not None else []
+        ) + [cover_path]
+    return catch_run(cmd).returncode == 0

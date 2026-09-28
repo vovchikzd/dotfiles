@@ -1,9 +1,4 @@
 If:
   PathMatch: [.*\.cpp, .*\.hpp, .*\.cxx, .*\.cppm, .*\.CPP, .*\.c++, .*\.cp, .*\.hp, .*\.hxx, .*\.HPP, .*\.h++, .*\.cc]
 CompileFlags:
-  Add: [-std=c++26, -stdlib=libc++]
-
-If:
-  PathMatch: [.*\.c, .*\.h]
-CompileFlags:
-  Add: [-std=c99]
+  Add: [-std=c++26]

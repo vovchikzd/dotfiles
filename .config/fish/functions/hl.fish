@@ -1,3 +1,3 @@
-function hl
-  command $argv --help | nvim -R -c "set nomodifiable" -
+function hl --wraps rg
+  command rg --passthru --no-line-number $argv
 end
