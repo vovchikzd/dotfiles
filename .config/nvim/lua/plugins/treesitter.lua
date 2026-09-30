@@ -1,6 +1,5 @@
 return {
-  "neovim-treesitter/nvim-treesitter"
-  , dependencies = { 'neovim-treesitter/treesitter-parser-registry' }
+  "nvim-treesitter/nvim-treesitter"
   , branch = "main"
   , lazy = false
   , build = ":TSUpdate"
@@ -8,7 +7,7 @@ return {
     vim.api.nvim_create_autocmd('FileType', {
       pattern = { 'c', "cpp", "python", "lua", "bash", "rush", "cmake",
         "gitconfig", "gitrebase", "gitignore", "gitattributes", "gitcommit",
-        "llvm", "nasm", "ninja", "tmux", "markdown", "typst", "zig", "fish",
+        "llvm", "nasm", "ninja", "markdown", "typst", "zig", "fish",
         "gnuplot", "hyprlang", "make", "sql", "toml", "xml", "yaml"
       }
       , callback = function()
@@ -23,7 +22,7 @@ return {
     local ts = require("nvim-treesitter")
     ts.install({ 'c', "cpp", "python", "lua", "bash", "rust", "cmake",
       "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-      "llvm", "nasm", "ninja", "tmux", "markdown", "typst", "zig",
+      "llvm", "nasm", "ninja", "markdown", "typst", "zig",
       "fish", "gnuplot", "hyprlang", "make", "markdown_inline", "printf",
       "regex", "sql", "toml", "xml", "yaml" })
     ts.setup({
