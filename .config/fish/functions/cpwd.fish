@@ -1,3 +1,3 @@
 function cpwd
-  printf "$PWD/$(string replace -a '%' '%%' $argv[1])" | wl-copy
+  printf '%s/%s' $PWD $argv[1] | wl-copy
 end
